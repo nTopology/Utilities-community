@@ -1,0 +1,145 @@
+name: Sync approved submissions to private repo
+
+# When a PR is merged into Utilities-community that touches packages/**,
+# copy the same package folder(s) into the private nTopology/Utilities repo
+# on a new branch, then open a follow-up PR there for maintainer review.
+#
+# Required secret on this repo:
+#   PRIVATE_REPO_TOKEN  - fine-grained PAT, repo access "nTopology/Utilities",
+#                         permissions: Contents: read & write, Pull requests: read & write.
+
+on:
+  pull_request:
+    types: [closed]
+    branches: [main]
+
+permissions:
+  contents: read
+  pull-requests: read
+
+jobs:
+  sync:
+    # Only run on actual merges (closing without merging skips).
+    if: github.event.pull_request.merged == true
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: List changed files in the merged PR
+        id: changes
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/sync
+          gh pr view "$PR_NUMBER" --repo "${{ github.repository }}" --json files \
+            --jq '.files[].path' > /tmp/sync/changed.txt
+          echo "Changed files:"; cat /tmp/sync/changed.txt
+          if grep -q '^packages/' /tmp/sync/changed.txt; then
+            echo "has_packages=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "has_packages=false" >> "$GITHUB_OUTPUT"
+            echo "No packages/** changes; nothing to sync."
+          fi
+
+      - name: Stop if no package changes
+        if: steps.changes.outputs.has_packages != 'true'
+        run: echo "Skipping - no packages/** in this PR." && exit 0
+
+      - name: Checkout Utilities-community at the merged commit
+        if: steps.changes.outputs.has_packages == 'true'
+        uses: actions/checkout@v5
+        with:
+          ref: ${{ github.event.pull_request.merge_commit_sha }}
+          path: community
+
+      - name: Checkout private Utilities with PRIVATE_REPO_TOKEN
+        if: steps.changes.outputs.has_packages == 'true'
+        uses: actions/checkout@v5
+        with:
+          repository: nTopology/Utilities
+          token: ${{ secrets.PRIVATE_REPO_TOKEN }}
+          path: private
+          fetch-depth: 0
+
+      - name: Copy package folders from community into private and push branch
+        if: steps.changes.outputs.has_packages == 'true'
+        env:
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+          PR_TITLE: ${{ github.event.pull_request.title }}
+        run: |
+          set -euo pipefail
+          # Collect unique top-level package folders from the changed-files list,
+          # e.g. "packages/foo/bar/manifest.json" -> "packages/foo/bar".
+          packages=$(grep '^packages/' /tmp/sync/changed.txt \
+            | awk -F/ 'NF >= 3 {print $1"/"$2"/"$3}' | sort -u)
+          if [ -z "$packages" ]; then
+            echo "No top-level package folders detected."
+            exit 0
+          fi
+          echo "Will sync these package folders:"
+          echo "$packages"
+
+          cd "$GITHUB_WORKSPACE/private"
+          git config user.name  "nTop Community Sync"
+          git config user.email "noreply@ntop.com"
+
+          BRANCH="sync/community-pr-${PR_NUMBER}"
+          git checkout -B "$BRANCH"
+
+          # rsync each package folder community -> private. --delete handles
+          # file removals inside the same package; we never touch other folders.
+          while IFS= read -r pkg; do
+            [ -n "$pkg" ] || continue
+            mkdir -p "$pkg"
+            rsync -av --delete "../community/$pkg/" "$pkg/"
+            git add "$pkg"
+          done <<< "$packages"
+
+          if git diff --cached --quiet; then
+            echo "No effective changes to sync (community state matches private)."
+            exit 0
+          fi
+
+          git commit -m "Sync community PR #${PR_NUMBER}: ${PR_TITLE}"
+          git push -u origin "$BRANCH" --force
+
+      - name: Open follow-up PR on private repo
+        if: steps.changes.outputs.has_packages == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.PRIVATE_REPO_TOKEN }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+          PR_TITLE: ${{ github.event.pull_request.title }}
+          PR_AUTHOR: ${{ github.event.pull_request.user.login }}
+          PR_URL: ${{ github.event.pull_request.html_url }}
+        run: |
+          set -euo pipefail
+          BRANCH="sync/community-pr-${PR_NUMBER}"
+
+          # If a PR for this branch already exists (re-run), don't duplicate.
+          EXISTING=$(gh pr list --repo nTopology/Utilities --head "$BRANCH" --json number --jq '.[0].number' || echo "")
+          if [ -n "$EXISTING" ]; then
+            echo "Follow-up PR already exists: #$EXISTING"
+            exit 0
+          fi
+
+          BODY=$(cat <<EOF
+          Auto-synced from \`nTopology/Utilities-community\` PR [#${PR_NUMBER}](${PR_URL}) by @${PR_AUTHOR}.
+
+          The contributor PR was reviewed on the public mirror; this follow-up PR
+          carries the same files into the private source repo so the next deploy
+          can publish them on community.ntop.com.
+
+          ---
+
+          Approve and merge when ready. CI will run \`scripts/validate-manifests.js\`
+          on the changed manifests before the deploy step.
+          EOF
+          )
+
+          gh pr create \
+            --repo nTopology/Utilities \
+            --base main \
+            --head "$BRANCH" \
+            --title "[sync] ${PR_TITLE}" \
+            --body "$BODY"
