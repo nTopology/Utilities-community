@@ -1,0 +1,16 @@
+{
+  "id": "example",
+  "type": "Notebook",
+  "title": "example",
+  "summary": "example more than 10",
+  "author": "ajayprasad97asd",
+  "version": "1.0.0",
+  "ntopVersion": "5.47",
+  "license": "MIT",
+  "domain": "Thermal",
+  "complexity": "Intermediate",
+  "tags": [
+    "example"
+  ],
+  "preview": "geometry"
+}
