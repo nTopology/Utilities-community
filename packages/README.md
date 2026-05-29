@@ -17,15 +17,17 @@ The package lives at `packages/DaveMakesStuff/non-linear-twist-to-implicit/`.
 ## Usage
 
 1. Open the provided `.ntop` file in nTop 4.12+.
-2. Connect your input geometry / fields to the exposed inlets.
-3. Tune parameters. Export via the standard nTop exporters.
+2. Input implicit body to apply twist to.
+3. Input scalar field (in degrees) to drive twist along z axis
+4. Tune parameters. Export via the standard nTop exporters.
 
 ## Inputs & outputs
 
 | Name | Type | Notes |
 |------|------|-------|
-| `input_1` | Body | Required. |
-| `output_1` | Implicit Body | Main result. |
+| Implicit | Implicit Body | Required. |
+| Rotation Field | Scalar Field (in degrees) | Required. |
+| Output | Implicit Body | Main result. |
 
 ## License
 
