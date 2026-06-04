@@ -1,0 +1,16 @@
+{
+  "id": "sileom-simulate",
+  "type": "Connector",
+  "title": "Sileom Simulate",
+  "summary": "GPU-accelerated, meshless static structural analysis connector that runs high-performance FEA directly inside your nTop workflow.",
+  "author": "Sileom",
+  "org": "Sileom",
+  "version": "2026.2.0",
+  "ntopVersion": "5.48+",
+  "license": "Proprietary",
+  "domain": "Simulation",
+  "application": "Structural Analysis",
+  "complexity": "Intermediate",
+  "tags": ["simulation", "structural", "gpu", "meshless", "fea", "solver", "static"],
+  "preview": "bundle"
+}
