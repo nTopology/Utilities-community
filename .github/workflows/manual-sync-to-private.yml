@@ -114,22 +114,16 @@ jobs:
 
           # Build commit message listing all synced packages
           PKG_LIST=$(cat /tmp/changed_packages.txt | sed 's/^/  - /')
-          git commit -m "Manual sync from Utilities-community
-
-Synced packages:
-$PKG_LIST
-
-Triggered by: $ACTOR"
+          COMMIT_MSG="Manual sync from Utilities-community\n\nSynced packages:\n${PKG_LIST}\n\nTriggered by: ${ACTOR}"
+          git commit -m "$(printf '%b' "$COMMIT_MSG")"
 
           git push -u origin "$BRANCH" --force
 
           # Build PR body
-          BODY="Manual sync from \`nTopology/Utilities-community\` triggered by @${ACTOR}.
-
-**Packages synced:**
-$(cat /tmp/changed_packages.txt | sed 's/^/- /')
-${NOTES:+
-**Notes:** $NOTES}"
+          PKG_BODY=$(cat /tmp/changed_packages.txt | sed 's/^/- /')
+          NOTES_LINE=""
+          if [ -n "$NOTES" ]; then NOTES_LINE="\n\n**Notes:** ${NOTES}"; fi
+          BODY="Manual sync from \`nTopology/Utilities-community\` triggered by @${ACTOR}.\n\n**Packages synced:**\n${PKG_BODY}${NOTES_LINE}"
 
           # Check if PR already exists for this branch
           EXISTING=$(gh pr list --repo nTopology/Utilities --head "$BRANCH" --json number --jq '.[0].number' || echo "")
