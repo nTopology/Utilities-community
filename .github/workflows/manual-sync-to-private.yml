@@ -1,0 +1,146 @@
+name: Manual sync to private repo
+
+# Manually triggered workflow that diffs packages/ between this community repo
+# and the private nTopology/Utilities repo, then pushes any new or changed
+# packages to a branch on the private repo and opens a follow-up PR there.
+#
+# Additive only: files are never deleted from the private repo. The private
+# repo may contain extra files (internal assets, test files) not present in
+# the community repo and those are left untouched.
+#
+# Required secret on this repo:
+#   PRIVATE_REPO_TOKEN  - fine-grained PAT, repo access "nTopology/Utilities",
+#                         permissions: Contents: read & write, Pull requests: read & write.
+
+on:
+  workflow_dispatch:
+    inputs:
+      notes:
+        description: 'Optional notes for the PR description'
+        required: false
+        default: ''
+
+permissions:
+  contents: read
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout community repo (main)
+        uses: actions/checkout@v5
+        with:
+          ref: main
+          path: community
+          lfs: true
+
+      - name: Checkout private Utilities repo
+        uses: actions/checkout@v5
+        with:
+          repository: nTopology/Utilities
+          token: ${{ secrets.PRIVATE_REPO_TOKEN }}
+          path: private
+          fetch-depth: 0
+          lfs: true
+
+      - name: Diff packages and collect changed folders
+        id: diff
+        run: |
+          set -euo pipefail
+
+          changed=""
+
+          for pkg_path in community/packages/*/*; do
+            [ -d "$pkg_path" ] || continue
+
+            # e.g. packages/Sileom/sileom-simulate
+            rel="${pkg_path#community/}"
+
+            # rsync dry-run: list files that would be transferred (no --delete,
+            # private repo may contain extra files not present in community)
+            delta=$(rsync -avn "$pkg_path/" "private/$rel/" 2>/dev/null || true)
+
+            # If rsync reports any file changes (skip the summary lines)
+            if echo "$delta" | grep -qvE '^(sending|sent|total|$)'; then
+              echo "Changed: $rel"
+              changed="$changed $rel"
+            fi
+          done
+
+          if [ -z "$changed" ]; then
+            echo "No differences found between community and private. Nothing to sync."
+            echo "has_changes=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "has_changes=true" >> "$GITHUB_OUTPUT"
+            # Trim leading space and write to a file for the next step
+            echo "$changed" | xargs -n1 > /tmp/changed_packages.txt
+            echo "Packages to sync:"
+            cat /tmp/changed_packages.txt
+          fi
+
+      - name: Stop if nothing to sync
+        if: steps.diff.outputs.has_changes != 'true'
+        run: echo "Nothing to sync." && exit 0
+
+      - name: Push changed packages to private repo branch
+        if: steps.diff.outputs.has_changes == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.PRIVATE_REPO_TOKEN }}
+          NOTES: ${{ inputs.notes }}
+          ACTOR: ${{ github.actor }}
+        run: |
+          set -euo pipefail
+
+          cd private
+          git config user.name  "$ACTOR"
+          git config user.email "$ACTOR@users.noreply.github.com"
+
+          TIMESTAMP=$(date +%Y%m%d-%H%M%S)
+          BRANCH="sync/manual-${TIMESTAMP}"
+          git checkout -B "$BRANCH"
+
+          while IFS= read -r pkg; do
+            [ -n "$pkg" ] || continue
+            mkdir -p "$pkg"
+            rsync -av "../community/$pkg/" "$pkg/"
+            git add "$pkg"
+          done < /tmp/changed_packages.txt
+
+          if git diff --cached --quiet; then
+            echo "No effective changes after sync."
+            exit 0
+          fi
+
+          # Build commit message listing all synced packages
+          PKG_LIST=$(cat /tmp/changed_packages.txt | sed 's/^/  - /')
+          git commit -m "Manual sync from Utilities-community
+
+Synced packages:
+$PKG_LIST
+
+Triggered by: $ACTOR"
+
+          git push -u origin "$BRANCH" --force
+
+          # Build PR body
+          BODY="Manual sync from \`nTopology/Utilities-community\` triggered by @${ACTOR}.
+
+**Packages synced:**
+$(cat /tmp/changed_packages.txt | sed 's/^/- /')
+${NOTES:+
+**Notes:** $NOTES}"
+
+          # Check if PR already exists for this branch
+          EXISTING=$(gh pr list --repo nTopology/Utilities --head "$BRANCH" --json number --jq '.[0].number' || echo "")
+          if [ -n "$EXISTING" ]; then
+            echo "PR already exists: #$EXISTING"
+            exit 0
+          fi
+
+          gh pr create \
+            --repo nTopology/Utilities \
+            --base main \
+            --head "$BRANCH" \
+            --title "[manual sync] Community packages $(date +%Y-%m-%d)" \
+            --body "$BODY"
