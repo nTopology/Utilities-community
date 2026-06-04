@@ -100,6 +100,13 @@ jobs:
           BRANCH="sync/manual-${TIMESTAMP}"
           git checkout -B "$BRANCH"
 
+          # Sync .gitattributes so LFS tracking rules (*.exe, *.msi) are
+          # present in the private repo before large files are committed.
+          if [ -f "../community/.gitattributes" ]; then
+            cp "../community/.gitattributes" .gitattributes
+            git add .gitattributes
+          fi
+
           while IFS= read -r pkg; do
             [ -n "$pkg" ] || continue
             mkdir -p "$pkg"
