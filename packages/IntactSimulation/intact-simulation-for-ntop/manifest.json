@@ -1,0 +1,16 @@
+{
+  "id": "intact-simulation-for-ntop",
+  "type": "Connector",
+  "title": "Intact.Simulation for nTop",
+  "summary": "No-preprocessing FEA connector that simulates complex implicit geometry directly in nTop without meshing, geometry cleanup, or model simplification.",
+  "author": "IntactSimulation",
+  "org": "Intact.Simulation",
+  "version": "2.0.1",
+  "ntopVersion": "5.48+",
+  "license": "Proprietary",
+  "domain": "Simulation",
+  "application": "FEA/CFD",
+  "complexity": "Intermediate",
+  "tags": ["fea", "structural", "thermal", "modal", "implicit", "meshless", "simulation"],
+  "preview": "bundle"
+}
