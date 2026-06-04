@@ -1,0 +1,21 @@
+{
+  "id": "non-linear-twist-to-implicit",
+  "type": "Bundle",
+  "title": "Non Linear Twist to Implicit",
+  "summary": "Add a field-driven variable twist to an implicit around the z axis",
+  "author": "DaveMakesStuff",
+  "version": "0.1.0",
+  "ntopVersion": "4.12+",
+  "license": "MIT",
+  "domain": "Geometry",
+  "complexity": "Intermediate",
+  "tags": [
+    "implicit",
+    "twist",
+    "rotation",
+    "spiral",
+    "helix",
+    "field driven"
+  ],
+  "preview": "bundle"
+}
