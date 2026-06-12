@@ -1,0 +1,26 @@
+{
+  "id": "strange-attractor-generator",
+  "type": "Notebook",
+  "title": "Strange Attractor Generator",
+  "summary": "Select from fifty-two \"Strange Attractor\" vector fields to generate visually interesting and mathematically intriguing curves.\n",
+  "author": "DaveMakesStuff",
+  "version": "0.1.0",
+  "ntopVersion": "4.12+",
+  "license": "MIT",
+  "domain": "Geometry",
+  "application": "Artistic",
+  "complexity": "Intermediate",
+  "tags": [
+    "strange attractor",
+    "attractor",
+    "attractors",
+    "vector field",
+    "streamline",
+    "streamlines",
+    "math art",
+    "chaotic system",
+    "fractal",
+    "art"
+  ],
+  "preview": "geometry"
+}
