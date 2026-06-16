@@ -1,0 +1,32 @@
+mass
+Conventional_UAV.mass
+oper
+a a 3.0
+d2 pm 0
+x
+st
+Conventional_UAV.st
+ft
+Conventional_UAV_base.ft
+d2 d2 0
+r r 0.0
+d1 rm 0
+x
+ft
+Conventional_UAV_roll.ft
+r r 0
+d1 d1 0
+p p 0.0
+d2 pm 0
+x
+ft
+Conventional_UAV_pitch.ft
+q q 0
+d2 d2 0
+y y 0.0
+d3 ym 0
+x
+ft
+Conventional_UAV_yaw.ft
+
+quit

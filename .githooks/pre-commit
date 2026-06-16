@@ -1,0 +1,30 @@
+#!/bin/sh
+# Block commits containing files over 50 MB that aren't tracked by Git LFS.
+
+MAX_MB=50
+MAX_BYTES=$((MAX_MB * 1024 * 1024))
+FAILED=0
+
+for file in $(git diff --cached --name-only); do
+  [ -f "$file" ] || continue
+
+  # Skip files already tracked by LFS
+  if git check-attr filter "$file" | grep -q "filter: lfs"; then
+    continue
+  fi
+
+  size=$(wc -c < "$file")
+  if [ "$size" -gt "$MAX_BYTES" ]; then
+    echo "ERROR: '$file' is $(( size / 1024 / 1024 )) MB (limit: ${MAX_MB} MB)"
+    echo "  Track it with Git LFS before committing:"
+    echo "    git lfs track \"$file\""
+    echo "    git add .gitattributes \"$file\""
+    FAILED=1
+  fi
+done
+
+if [ "$FAILED" -eq 1 ]; then
+  echo ""
+  echo "Commit blocked. Add large files to Git LFS and try again."
+  exit 1
+fi

@@ -1,0 +1,22 @@
+{
+  "id": "multi-material-printing-export",
+  "type": "Bundle",
+  "title": "Exporting an nTop File for Multi-Material Printing",
+  "summary": "Export multi-body nTop designs to 3MF, STEP, or STL for multi-material FDM printing, with a PLA nosecone + carbon fiber implant as a worked example.",
+  "author": "natalie-scala",
+  "version": "0.1.0",
+  "license": "MIT",
+  "domain": "Additive Manufacturing",
+  "complexity": "Intermediate",
+  "tags": [
+    "multi-material",
+    "3mf",
+    "fdm",
+    "slicer",
+    "bambu",
+    "mesh",
+    "boolean",
+    "export"
+  ],
+  "preview": "bundle"
+}
