@@ -60,6 +60,14 @@ Each package should include a `README.md` covering:
 ## Contributing
 
 1. Fork this repo and create a branch.
-2. Add your package under `packages/<your-handle>/<package-id>/`.
-3. Make sure `manifest.json` and `README.md` are present and complete.
-4. Open a pull request.
+2. Run the following once to activate the included git hooks:
+   ```bash
+   git config core.hooksPath .githooks
+   ```
+3. Add your package under `packages/<your-handle>/<package-id>/`.
+4. Make sure `manifest.json` and `README.md` are present and complete.
+5. Open a pull request.
+
+### Large files
+
+Files over 50 MB must be tracked with [Git LFS](https://git-lfs.github.com) — the pre-commit hook will catch this and tell you what to run if you forget.
