@@ -1,0 +1,22 @@
+{
+  "id": "trim-curve-at-point",
+  "type": "Block",
+  "title": "Trim Curve at Point",
+  "summary": "Trim a curve at a point",
+  "author": "DaveMakesStuff",
+  "version": "0.1.0",
+  "ntopVersion": "5.47",
+  "license": "MIT",
+  "domain": "Geometry",
+  "application": "Curve",
+  "complexity": "Beginner",
+  "tags": [
+    "curve",
+    "spline",
+    "line",
+    "trim",
+    "split",
+    "cut"
+  ],
+  "preview": "geometry"
+}
