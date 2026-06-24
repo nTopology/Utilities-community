@@ -1,0 +1,21 @@
+{
+  "id": "pipe-fittings-from-graph",
+  "type": "Block",
+  "title": "Pipe Fittings from Graph",
+  "summary": "Add aesthetic \"pipe fittings\" to a graph.",
+  "author": "DaveMakesStuff",
+  "version": "0.1.0",
+  "ntopVersion": "4.12+",
+  "license": "MIT",
+  "domain": "Geometry",
+  "application": "Novelty",
+  "complexity": "Intermediate",
+  "tags": [
+    "graph",
+    "lattice",
+    "pipe",
+    "aesthetic",
+    "novelty"
+  ],
+  "preview": "geometry"
+}
