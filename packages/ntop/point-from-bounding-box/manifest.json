@@ -1,0 +1,22 @@
+{
+  "id": "point-from-bounding-box",
+  "type": "Block",
+  "title": "Point from Bounding Box",
+  "summary": "Input an implicit body and extract a point on the bounding box based on the min, max, or centroid values of the bounding box in x, y, and z.",
+  "author": "ntop",
+  "org": "nTop",
+  "version": "1.0.0",
+  "ntopVersion": "5.43+",
+  "license": "MIT",
+  "domain": "Geometry",
+  "complexity": "Beginner",
+  "tags": [
+    "bounding-box",
+    "implicit",
+    "centroid",
+    "min-max",
+    "coordinate"
+  ],
+  "preview": "graph",
+  "verified": true
+}

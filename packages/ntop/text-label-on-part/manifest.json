@@ -1,0 +1,22 @@
+{
+  "id": "text-label-on-part",
+  "type": "Block",
+  "title": "Text Label on Part",
+  "summary": "This custom block applies a text label engraving or embossing on a part.",
+  "author": "ntop",
+  "org": "nTop",
+  "version": "1.0.0",
+  "ntopVersion": "5.43+",
+  "license": "MIT",
+  "domain": "Geometry",
+  "complexity": "Beginner",
+  "tags": [
+    "text",
+    "label",
+    "engraving",
+    "embossing",
+    "marking"
+  ],
+  "preview": "graph",
+  "verified": true
+}

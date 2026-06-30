@@ -1,0 +1,23 @@
+{
+  "id": "stdev",
+  "type": "Block",
+  "title": "STDEV",
+  "summary": "In statistics, the standard deviation is a measure of the amount of variation or dispersion of a set of values. A low standard deviation indicates that the values tend to be close to the mean of the set, while a high standard deviation indi",
+  "author": "ntop",
+  "org": "nTop",
+  "version": "1.0.0",
+  "ntopVersion": "5.43+",
+  "license": "MIT",
+  "domain": "Geometry",
+  "complexity": "Beginner",
+  "tags": [
+    "stdev",
+    "statistics",
+    "standard",
+    "deviation",
+    "measure",
+    "amount"
+  ],
+  "preview": "graph",
+  "verified": true
+}

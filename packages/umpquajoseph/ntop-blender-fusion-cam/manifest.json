@@ -1,0 +1,25 @@
+{
+  "id": "ntop-blender-fusion-cam",
+  "type": "Bundle",
+  "title": "nTop → Blender → Fusion: Lightweight Mesh Export & CAM",
+  "summary": "Decimate dense nTop meshes in Blender to reduce file size by 10x, then machine the lightweighted model in Fusion 360 using mesh-compatible CAM toolpaths.",
+  "author": "JosephHarris",
+  "version": "0.1.0",
+  "license": "MIT",
+  "domain": "Manufacturing",
+  "complexity": "Intermediate",
+  "tags": [
+    "blender",
+    "fusion 360",
+    "cam",
+    "mesh",
+    "decimation",
+    "lightweighting",
+    "manufacturing",
+    "cnc",
+    "voronoi",
+    "scaffold",
+    "file size"
+  ],
+  "preview": "bundle"
+}

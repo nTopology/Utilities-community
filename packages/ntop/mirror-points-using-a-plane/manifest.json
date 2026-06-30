@@ -1,0 +1,22 @@
+{
+  "id": "mirror-points-using-a-plane",
+  "type": "Block",
+  "title": "Mirror Points using a Plane",
+  "summary": "Mirror a set of points using a plane",
+  "author": "ntop",
+  "org": "nTop",
+  "version": "1.0.0",
+  "ntopVersion": "5.44+",
+  "license": "MIT",
+  "domain": "Geometry",
+  "complexity": "Beginner",
+  "tags": [
+    "mirror",
+    "points",
+    "using",
+    "plane",
+    "set"
+  ],
+  "preview": "graph",
+  "verified": true
+}

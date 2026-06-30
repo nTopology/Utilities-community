@@ -1,0 +1,23 @@
+{
+  "id": "implicit-body-from-logo",
+  "type": "Block",
+  "title": "Implicit Body from Logo",
+  "summary": "Imports a .png image file and turns it into an extruded body with a given depth.",
+  "author": "ntop",
+  "org": "nTop",
+  "version": "1.0.0",
+  "ntopVersion": "5.43+",
+  "license": "MIT",
+  "domain": "Geometry",
+  "complexity": "Beginner",
+  "tags": [
+    "implicit",
+    "body",
+    "from",
+    "logo",
+    "imports",
+    "png"
+  ],
+  "preview": "graph",
+  "verified": true
+}

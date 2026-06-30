@@ -1,0 +1,23 @@
+{
+  "id": "extrude-flat-cad-face",
+  "type": "Block",
+  "title": "Extrude Flat CAD Face",
+  "summary": "This custom block takes a flat cad face and will extrude it normal to the face.",
+  "author": "ntop",
+  "org": "nTop",
+  "version": "1.0.0",
+  "ntopVersion": "5.44+",
+  "license": "MIT",
+  "domain": "Geometry",
+  "complexity": "Beginner",
+  "tags": [
+    "extrude",
+    "flat",
+    "cad",
+    "face",
+    "normal",
+    "planar"
+  ],
+  "preview": "graph",
+  "verified": true
+}

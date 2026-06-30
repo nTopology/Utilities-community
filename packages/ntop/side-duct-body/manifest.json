@@ -1,0 +1,25 @@
+{
+  "id": "side-duct-body",
+  "type": "Block",
+  "title": "Side Duct Body",
+  "summary": "Creates an air duct implicit body that transitions from a parallelogram cross-section at the inlet to a circular cross-section at the outlet, following a user-defined spline path.",
+  "author": "ntop",
+  "org": "nTop",
+  "version": "1.0.4",
+  "ntopVersion": "5.28+",
+  "license": "MIT",
+  "domain": "Aerospace",
+  "complexity": "Intermediate",
+  "tags": [
+    "duct",
+    "aerospace",
+    "spline",
+    "implicit",
+    "inlet",
+    "outlet",
+    "transition",
+    "parallelogram"
+  ],
+  "preview": "geometry",
+  "packageFile": "Side Duct Body.ntop"
+}

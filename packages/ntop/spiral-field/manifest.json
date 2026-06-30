@@ -1,0 +1,22 @@
+{
+  "id": "spiral-field",
+  "type": "Block",
+  "title": "Spiral Field",
+  "summary": "This custom block takes a radius and creates an involute that begins with that radius created. Equations used: https://math.stackexchange.com/questions/411855/implicit-representation-of-the-involute-of-a-circle/415023",
+  "author": "ntop",
+  "org": "nTop",
+  "version": "1.0.0",
+  "ntopVersion": "5.44+",
+  "license": "MIT",
+  "domain": "Geometry",
+  "complexity": "Beginner",
+  "tags": [
+    "spiral",
+    "field",
+    "involute",
+    "implicit",
+    "parametric"
+  ],
+  "preview": "graph",
+  "verified": true
+}

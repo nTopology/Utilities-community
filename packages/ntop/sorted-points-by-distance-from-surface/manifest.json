@@ -1,0 +1,23 @@
+{
+  "id": "sorted-points-by-distance-from-surface",
+  "type": "Block",
+  "title": "Sorted Points by Distance from Surface",
+  "summary": "This custom block sorts a set of points based on the distance from a surface of a given implicit.",
+  "author": "ntop",
+  "org": "nTop",
+  "version": "1.0.0",
+  "ntopVersion": "5.44+",
+  "license": "MIT",
+  "domain": "Geometry",
+  "complexity": "Beginner",
+  "tags": [
+    "sorted",
+    "points",
+    "distance",
+    "surface",
+    "proximity",
+    "ordering"
+  ],
+  "preview": "graph",
+  "verified": true
+}

@@ -1,0 +1,22 @@
+{
+  "id": "centroid-of-points",
+  "type": "Block",
+  "title": "Centroid of Points",
+  "summary": "This custom blocks creates the centroidal point of a list of points",
+  "author": "ntop",
+  "org": "nTop",
+  "version": "1.0.0",
+  "ntopVersion": "5.44+",
+  "license": "MIT",
+  "domain": "Geometry",
+  "complexity": "Beginner",
+  "tags": [
+    "centroid",
+    "points",
+    "average",
+    "geometry",
+    "list"
+  ],
+  "preview": "graph",
+  "verified": true
+}

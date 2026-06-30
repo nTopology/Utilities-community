@@ -1,0 +1,23 @@
+{
+  "id": "filter-mesh-for-largest-mesh",
+  "type": "Block",
+  "title": "Filter Mesh for Largest Mesh",
+  "summary": "Filters mesh by splitting the surface mesh and removing all items except the mesh with the largest triangle count.",
+  "author": "ntop",
+  "org": "nTop",
+  "version": "1.0.0",
+  "ntopVersion": "5.43+",
+  "license": "MIT",
+  "domain": "Geometry",
+  "complexity": "Beginner",
+  "tags": [
+    "filter",
+    "mesh",
+    "largest",
+    "filters",
+    "splitting",
+    "surface"
+  ],
+  "preview": "graph",
+  "verified": true
+}

@@ -1,0 +1,22 @@
+{
+  "id": "gear-profile",
+  "type": "Block",
+  "title": "Gear Profile",
+  "summary": "This workflow creates a gear profile based on the inputs below.",
+  "author": "ntop",
+  "org": "nTop",
+  "version": "1.0.0",
+  "ntopVersion": "5.43+",
+  "license": "MIT",
+  "domain": "Mechanical",
+  "complexity": "Beginner",
+  "tags": [
+    "gear",
+    "profile",
+    "parametric",
+    "mechanical",
+    "teeth"
+  ],
+  "preview": "graph",
+  "verified": true
+}

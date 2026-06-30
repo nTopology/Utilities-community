@@ -1,0 +1,22 @@
+{
+  "id": "extract-base-file-name",
+  "type": "Block",
+  "title": "Extract Base File Name",
+  "summary": "This custom block extracts the base file name from a file path with an option to include the file extension. For example, \"C/Users/NAME/Downloads/model.stl\" -> \"model\"/\"model.stl\"",
+  "author": "ntop",
+  "org": "nTop",
+  "version": "1.0.0",
+  "ntopVersion": "5.44+",
+  "license": "MIT",
+  "domain": "Geometry",
+  "complexity": "Beginner",
+  "tags": [
+    "file-path",
+    "filename",
+    "string",
+    "utility",
+    "extension"
+  ],
+  "preview": "graph",
+  "verified": true
+}

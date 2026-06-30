@@ -1,0 +1,22 @@
+{
+  "id": "filter-scalar-point-map-by-value",
+  "type": "Block",
+  "title": "Filter Scalar Point Map by Value",
+  "summary": "This Custom Block filters out a scalar point map based on a condition and a reference value",
+  "author": "ntop",
+  "org": "nTop",
+  "version": "1.0.0",
+  "ntopVersion": "5.44+",
+  "license": "MIT",
+  "domain": "Geometry",
+  "complexity": "Beginner",
+  "tags": [
+    "filter",
+    "scalar",
+    "point-map",
+    "threshold",
+    "condition"
+  ],
+  "preview": "graph",
+  "verified": true
+}

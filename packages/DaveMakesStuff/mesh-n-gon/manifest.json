@@ -1,0 +1,24 @@
+{
+  "id": "mesh-n-gon",
+  "type": "Block",
+  "title": "Mesh N-gon",
+  "summary": "Create a surface mesh with n sides",
+  "author": "DaveMakesStuff",
+  "version": "0.1.0",
+  "ntopVersion": "4.12+",
+  "license": "MIT",
+  "domain": "Geometry",
+  "application": "Mesh",
+  "complexity": "Beginner",
+  "tags": [
+    "mesh",
+    "radius",
+    "triangle",
+    "square",
+    "pentagon",
+    "hexagon",
+    "circle",
+    "n-gon"
+  ],
+  "preview": "geometry"
+}

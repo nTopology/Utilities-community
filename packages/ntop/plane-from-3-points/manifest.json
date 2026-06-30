@@ -1,0 +1,21 @@
+{
+  "id": "plane-from-3-points",
+  "type": "Block",
+  "title": "Plane from 3 Points",
+  "summary": "Create a plane from 3 points.",
+  "author": "ntop",
+  "org": "nTop",
+  "version": "1.0.0",
+  "ntopVersion": "5.43+",
+  "license": "MIT",
+  "domain": "Geometry",
+  "complexity": "Beginner",
+  "tags": [
+    "plane",
+    "three-points",
+    "geometry",
+    "construction"
+  ],
+  "preview": "graph",
+  "verified": true
+}

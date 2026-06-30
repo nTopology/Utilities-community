@@ -1,0 +1,22 @@
+{
+  "id": "graph-from-curve",
+  "type": "Block",
+  "title": "Graph from Curve",
+  "summary": "This custom block produces a graph lattice given a curve.",
+  "author": "ntop",
+  "org": "nTop",
+  "version": "1.0.0",
+  "ntopVersion": "5.44+",
+  "license": "MIT",
+  "domain": "Geometry",
+  "complexity": "Beginner",
+  "tags": [
+    "graph",
+    "curve",
+    "lattice",
+    "skeleton",
+    "beam"
+  ],
+  "preview": "graph",
+  "verified": true
+}

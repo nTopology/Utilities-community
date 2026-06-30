@@ -25,13 +25,13 @@ Example files are included in the installer and can be found at:
 %APPDATA%\Local\Programs\Intact.Simulation for nTop\Getting Started
 ```
 
-See the [Getting Started](https://www.intactsimulation.com/ntop) page for examples and more information.
+See the [Getting Started](https://intact-solutions.com/intact_docs/IntactnTop_manual.html#getting-started) page for examples and more information.
 
 ## Licensing
 
-- **Trial license:** Visit the [Intact.Simulation for nTop page](https://www.intactsimulation.com/ntop) to submit a trial request.
+- **Trial license:** Visit the [Intact.Simulation for nTop page](https://www.intact-solutions.com/purchase_trial/ntop) to submit a trial request.
 - **Purchase a license:** Use the pricing section on the same page to complete a transaction online.
-- **Custom or enterprise licensing:** [Contact the Intact sales team](https://www.notion.so/p/284f7e542d2180a88f47fdc94fd860eb) for custom licensing, enterprise needs, or additional questions.
+- **Custom or enterprise licensing:** [Contact the Intact sales team](https://intact-solutions.com/intact_docs/contact.html) for custom licensing, enterprise needs, or additional questions.
 
 ## License
 

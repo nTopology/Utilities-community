@@ -1,0 +1,23 @@
+{
+  "id": "axis-through-cad-cylinder-or-hole",
+  "type": "Block",
+  "title": "Axis through CAD Cylinder or Hole",
+  "summary": "This CB will create an axis through a CAD cylinder or hole. You need to define the edge you want the axis to go through and a face that is normal to that axis.",
+  "author": "ntop",
+  "org": "nTop",
+  "version": "1.0.0",
+  "ntopVersion": "5.43+",
+  "license": "MIT",
+  "domain": "Geometry",
+  "complexity": "Beginner",
+  "tags": [
+    "axis",
+    "cad",
+    "cylinder",
+    "hole",
+    "edge",
+    "normal"
+  ],
+  "preview": "graph",
+  "verified": true
+}

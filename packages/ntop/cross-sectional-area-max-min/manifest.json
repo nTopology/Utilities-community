@@ -1,0 +1,24 @@
+{
+  "id": "cross-sectional-area-max-min",
+  "type": "Block",
+  "title": "Cross Sectional Area Max-Min",
+  "summary": "This block returns the largest and smallest Cross-Sectional area of an Implicit Body, as well as their Z locations in the form of a list. Max is before Min in the lists.",
+  "author": "ntop",
+  "org": "nTop",
+  "version": "1.0.0",
+  "ntopVersion": "5.44+",
+  "license": "MIT",
+  "domain": "Geometry",
+  "complexity": "Beginner",
+  "tags": [
+    "cross-section",
+    "area",
+    "maximum",
+    "minimum",
+    "implicit",
+    "measurement"
+  ],
+  "preview": "graph",
+  "coverImage": "cover.png",
+  "verified": true
+}

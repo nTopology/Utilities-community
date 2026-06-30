@@ -1,0 +1,22 @@
+{
+  "id": "true-false-field",
+  "type": "Block",
+  "title": "True False Field",
+  "summary": "This custom block creates a field composed of 0s and 1s. If the translation location = 0, the field will equal 1 at all positive values of the field and 0 for negative values of the field. To reverse this, check the Flip input. This can be ",
+  "author": "ntop",
+  "org": "nTop",
+  "version": "1.0.0",
+  "ntopVersion": "5.44+",
+  "license": "MIT",
+  "domain": "Geometry",
+  "complexity": "Beginner",
+  "tags": [
+    "boolean-field",
+    "binary",
+    "mask",
+    "threshold",
+    "implicit"
+  ],
+  "preview": "graph",
+  "verified": true
+}

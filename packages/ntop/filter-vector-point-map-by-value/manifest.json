@@ -1,0 +1,22 @@
+{
+  "id": "filter-vector-point-map-by-value",
+  "type": "Block",
+  "title": "Filter Vector Point Map by Value",
+  "summary": "This Custom Block filters out a Vector Point Map based on a condition and a reference value.",
+  "author": "ntop",
+  "org": "nTop",
+  "version": "1.0.0",
+  "ntopVersion": "5.44+",
+  "license": "MIT",
+  "domain": "Geometry",
+  "complexity": "Beginner",
+  "tags": [
+    "filter",
+    "vector",
+    "point-map",
+    "threshold",
+    "condition"
+  ],
+  "preview": "graph",
+  "verified": true
+}

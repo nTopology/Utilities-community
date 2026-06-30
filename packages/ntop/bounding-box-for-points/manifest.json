@@ -1,0 +1,22 @@
+{
+  "id": "bounding-box-for-points",
+  "type": "Block",
+  "title": "Bounding Box for Points",
+  "summary": "This custom block creates a Bounding Box for a set of points",
+  "author": "ntop",
+  "org": "nTop",
+  "version": "1.0.0",
+  "ntopVersion": "5.44+",
+  "license": "MIT",
+  "domain": "Geometry",
+  "complexity": "Beginner",
+  "tags": [
+    "bounding-box",
+    "points",
+    "extents",
+    "geometry",
+    "spatial"
+  ],
+  "preview": "graph",
+  "verified": true
+}

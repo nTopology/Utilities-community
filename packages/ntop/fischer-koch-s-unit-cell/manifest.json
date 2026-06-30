@@ -1,0 +1,23 @@
+{
+  "id": "fischer-koch-s-unit-cell",
+  "type": "Block",
+  "title": "Fischer Koch S Unit Cell",
+  "summary": "Creates a custom unit cell from a Fischer-Koch S surface periodic pattern field with options for wall thickness and midsurface offset.",
+  "author": "ntop",
+  "org": "nTop",
+  "version": "1.0.0",
+  "ntopVersion": "5.44+",
+  "license": "MIT",
+  "domain": "Additive Manufacturing",
+  "complexity": "Beginner",
+  "tags": [
+    "fischer-koch",
+    "unit-cell",
+    "tpms",
+    "lattice",
+    "periodic",
+    "surface"
+  ],
+  "preview": "geometry",
+  "verified": true
+}

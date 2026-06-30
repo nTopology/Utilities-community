@@ -1,0 +1,23 @@
+{
+  "id": "extrude-cad-face",
+  "type": "Block",
+  "title": "Extrude CAD Face",
+  "summary": "This custom block extrudes a CAD face normal to the surface up to a given height.",
+  "author": "ntop",
+  "org": "nTop",
+  "version": "1.0.0",
+  "ntopVersion": "5.44+",
+  "license": "MIT",
+  "domain": "Geometry",
+  "complexity": "Beginner",
+  "tags": [
+    "extrude",
+    "cad",
+    "face",
+    "normal",
+    "height",
+    "solid"
+  ],
+  "preview": "graph",
+  "verified": true
+}

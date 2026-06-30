@@ -1,0 +1,23 @@
+{
+  "id": "perforate-with-normal-holes",
+  "type": "Block",
+  "title": "Perforate with Normal Holes",
+  "summary": "Creates a random distribution of normal-direction holes in one or more surfaces.  It lets the user specify an exact quantity of holes that are randomly distributed and somewhat equally spaced.",
+  "author": "ntop",
+  "org": "nTop",
+  "version": "1.0.0",
+  "ntopVersion": "5.43+",
+  "license": "MIT",
+  "domain": "Geometry",
+  "complexity": "Beginner",
+  "tags": [
+    "perforate",
+    "holes",
+    "random",
+    "distribution",
+    "surface",
+    "normal-direction"
+  ],
+  "preview": "graph",
+  "verified": true
+}

@@ -1,0 +1,22 @@
+{
+  "id": "parametric-impeller",
+  "type": "Notebook",
+  "title": "Parametric Impeller",
+  "summary": "This parametric notebook generates exponentially twisted primary and secondary vanes, all driven by adjustable parameters such as twist rate, vane count, and radial taper.",
+  "author": "ntop",
+  "org": "nTop",
+  "version": "1.0.0",
+  "ntopVersion": "5.45+",
+  "license": "MIT",
+  "domain": "Mechanical",
+  "application": "Turbomachinery",
+  "complexity": "Intermediate",
+  "tags": [
+    "turbo",
+    "impeller",
+    "parametric"
+  ],
+  "preview": "geometry",
+  "verified": true,
+  "featured": true
+}

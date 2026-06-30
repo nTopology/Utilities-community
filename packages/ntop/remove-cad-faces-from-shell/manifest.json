@@ -1,0 +1,23 @@
+{
+  "id": "remove-cad-faces-from-shell",
+  "type": "Block",
+  "title": "Remove CAD Faces from Shell",
+  "summary": "This custom block takes a CAD Body and multiple CAD faces and will shell the body, removing those faces from the shell.",
+  "author": "ntop",
+  "org": "nTop",
+  "version": "1.0.0",
+  "ntopVersion": "5.43+",
+  "license": "MIT",
+  "domain": "Geometry",
+  "complexity": "Beginner",
+  "tags": [
+    "remove",
+    "cad",
+    "faces",
+    "shell",
+    "hollow",
+    "open-shell"
+  ],
+  "preview": "graph",
+  "verified": true
+}

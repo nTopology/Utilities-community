@@ -1,0 +1,23 @@
+{
+  "id": "center-point-of-cad-cylinder-or-hole",
+  "type": "Block",
+  "title": "Center Point of CAD Cylinder or Hole",
+  "summary": "The CB will give you the Center Point of a CAD cylinder or hole.",
+  "author": "ntop",
+  "org": "nTop",
+  "version": "1.0.0",
+  "ntopVersion": "5.44+",
+  "license": "MIT",
+  "domain": "Geometry",
+  "complexity": "Beginner",
+  "tags": [
+    "center",
+    "cad",
+    "cylinder",
+    "hole",
+    "geometry",
+    "coordinate"
+  ],
+  "preview": "graph",
+  "verified": true
+}

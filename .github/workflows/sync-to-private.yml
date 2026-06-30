@@ -67,6 +67,11 @@ jobs:
         env:
           PR_NUMBER: ${{ github.event.pull_request.number }}
           PR_TITLE: ${{ github.event.pull_request.title }}
+          # Original community-side PR author. We commit on the private repo
+          # AS this user so they show up in the private repo's GitHub
+          # contributor graph - which is what build-data.js reads for the
+          # "Contributors" stat shown on community.ntop.com.
+          PR_AUTHOR: ${{ github.event.pull_request.user.login }}
         run: |
           set -euo pipefail
           # Collect unique top-level package folders from the changed-files list,
@@ -81,8 +86,12 @@ jobs:
           echo "$packages"
 
           cd "$GITHUB_WORKSPACE/private"
-          git config user.name  "nTop Community Sync"
-          git config user.email "noreply@ntop.com"
+          # Commit AS the original contributor so the private repo's
+          # contributor graph (used by build-data.js) credits them. The
+          # @users.noreply.github.com address is the standard GitHub format
+          # that GitHub maps back to a login when generating the graph.
+          git config user.name  "${PR_AUTHOR}"
+          git config user.email "${PR_AUTHOR}@users.noreply.github.com"
 
           BRANCH="sync/community-pr-${PR_NUMBER}"
           git checkout -B "$BRANCH"
@@ -93,6 +102,12 @@ jobs:
             [ -n "$pkg" ] || continue
             mkdir -p "$pkg"
             rsync -av --delete "../community/$pkg/" "$pkg/"
+            # Stamp communitySource so the private repo knows this package
+            # originated from the community repo (used for commit history link).
+            if [ -f "$pkg/manifest.json" ]; then
+              jq '. + {"communitySource": true}' "$pkg/manifest.json" > /tmp/_manifest.json \
+                && mv /tmp/_manifest.json "$pkg/manifest.json"
+            fi
             git add "$pkg"
           done <<< "$packages"
 

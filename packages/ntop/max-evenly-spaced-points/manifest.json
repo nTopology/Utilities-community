@@ -1,0 +1,22 @@
+{
+  "id": "max-evenly-spaced-points",
+  "type": "Block",
+  "title": "Max Evenly Spaced Points",
+  "summary": "This custom block creates almost evenly spaced points on a body based on a desired point spacing using a hexagonal packaging approach.",
+  "author": "ntop",
+  "org": "nTop",
+  "version": "1.0.0",
+  "ntopVersion": "5.43+",
+  "license": "MIT",
+  "domain": "Geometry",
+  "complexity": "Beginner",
+  "tags": [
+    "evenly-spaced",
+    "points",
+    "hexagonal-packing",
+    "distribution",
+    "sampling"
+  ],
+  "preview": "graph",
+  "verified": true
+}

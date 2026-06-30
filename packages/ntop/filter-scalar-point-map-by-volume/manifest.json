@@ -1,0 +1,23 @@
+{
+  "id": "filter-scalar-point-map-by-volume",
+  "type": "Block",
+  "title": "Filter Scalar Point Map by Volume",
+  "summary": "Filters a scalar point map by volume. There are options for inside, outside and on the boundary for filtering the points.",
+  "author": "ntop",
+  "org": "nTop",
+  "version": "1.0.0",
+  "ntopVersion": "5.44+",
+  "license": "MIT",
+  "domain": "Geometry",
+  "complexity": "Beginner",
+  "tags": [
+    "filter",
+    "scalar",
+    "point-map",
+    "volume",
+    "inside",
+    "outside"
+  ],
+  "preview": "graph",
+  "verified": true
+}

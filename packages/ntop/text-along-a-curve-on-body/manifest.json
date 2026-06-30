@@ -1,0 +1,23 @@
+{
+  "id": "text-along-a-curve-on-body",
+  "type": "Block",
+  "title": "Text along a Curve on Body",
+  "summary": "This custom block takes a line of text and converts it to an implicit body. This uses the Arial Bold Font.",
+  "author": "ntop",
+  "org": "nTop",
+  "version": "1.0.0",
+  "ntopVersion": "5.28+",
+  "license": "MIT",
+  "domain": "Geometry",
+  "complexity": "Beginner",
+  "tags": [
+    "text",
+    "curve",
+    "implicit",
+    "font",
+    "engraving",
+    "label"
+  ],
+  "preview": "graph",
+  "verified": true
+}

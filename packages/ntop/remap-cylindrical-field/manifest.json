@@ -1,0 +1,22 @@
+{
+  "id": "remap-cylindrical-field",
+  "type": "Block",
+  "title": "Remap Cylindrical Field",
+  "summary": "Remap a scalar field into a cylindrical space. The only values that will be mapped are values along the positive X-axis, and the Y-axis between -length/2 and +length/2. This block will not attempt to scale the field values to compensate for",
+  "author": "ntop",
+  "org": "nTop",
+  "version": "1.0.0",
+  "ntopVersion": "5.43+",
+  "license": "MIT",
+  "domain": "Geometry",
+  "complexity": "Beginner",
+  "tags": [
+    "remap",
+    "cylindrical",
+    "scalar-field",
+    "coordinate-transform",
+    "mapping"
+  ],
+  "preview": "graph",
+  "verified": true
+}

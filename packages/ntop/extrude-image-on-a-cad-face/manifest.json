@@ -1,0 +1,23 @@
+{
+  "id": "extrude-image-on-a-cad-face",
+  "type": "Block",
+  "title": "Extrude Image on a CAD Face",
+  "summary": "This custom block adds a bitmap image to a CAD face and extrudes it normal to the surface to the provided height.",
+  "author": "ntop",
+  "org": "nTop",
+  "version": "1.0.0",
+  "ntopVersion": "5.44+",
+  "license": "MIT",
+  "domain": "Geometry",
+  "complexity": "Beginner",
+  "tags": [
+    "extrude",
+    "image",
+    "bitmap",
+    "cad",
+    "face",
+    "emboss"
+  ],
+  "preview": "graph",
+  "verified": true
+}

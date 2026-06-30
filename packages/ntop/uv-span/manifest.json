@@ -1,0 +1,22 @@
+{
+  "id": "uv-span",
+  "type": "Block",
+  "title": "UV Span",
+  "summary": "This custom block will calculate the span in the U or V direction of a CAD Face.",
+  "author": "ntop",
+  "org": "nTop",
+  "version": "1.0.0",
+  "ntopVersion": "5.44+",
+  "license": "MIT",
+  "domain": "Geometry",
+  "complexity": "Beginner",
+  "tags": [
+    "uv",
+    "span",
+    "cad-face",
+    "measurement",
+    "parametric"
+  ],
+  "preview": "graph",
+  "verified": true
+}

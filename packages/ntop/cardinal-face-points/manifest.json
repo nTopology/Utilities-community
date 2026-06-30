@@ -1,0 +1,22 @@
+{
+  "id": "cardinal-face-points",
+  "type": "Block",
+  "title": "Cardinal Face Points",
+  "summary": "This CB will return the center point on the 'face' of the object bounding box.",
+  "author": "ntop",
+  "org": "nTop",
+  "version": "1.0.0",
+  "ntopVersion": "5.43+",
+  "license": "MIT",
+  "domain": "Geometry",
+  "complexity": "Beginner",
+  "tags": [
+    "cardinal",
+    "face",
+    "center-point",
+    "bounding-box",
+    "geometry"
+  ],
+  "preview": "graph",
+  "verified": true
+}

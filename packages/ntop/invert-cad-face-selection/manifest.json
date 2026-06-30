@@ -1,0 +1,23 @@
+{
+  "id": "invert-cad-face-selection",
+  "type": "Block",
+  "title": "Invert CAD Face Selection",
+  "summary": "Removes specified CAD Faces from a list of CAD Faces",
+  "author": "ntop",
+  "org": "nTop",
+  "version": "1.0.0",
+  "ntopVersion": "5.44+",
+  "license": "MIT",
+  "domain": "Geometry",
+  "complexity": "Beginner",
+  "tags": [
+    "invert",
+    "cad",
+    "face",
+    "selection",
+    "removes",
+    "specified"
+  ],
+  "preview": "graph",
+  "verified": true
+}

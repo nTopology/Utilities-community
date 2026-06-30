@@ -1,0 +1,26 @@
+{
+  "id": "csv-airfoil-sdf",
+  "type": "Notebook",
+  "title": "CSV Airfoil SDF",
+  "summary": "Import airfoil coordinate data from a CSV file and generate a smooth signed-distance-field (SDF) implicit body ready for use in nTop workflows.",
+  "author": "jeffh1505",
+  "version": "0.1.0",
+  "ntopVersion": "4.12+",
+  "license": "MIT",
+  "domain": "Aerospace",
+  "application": "Geometry",
+  "complexity": "Intermediate",
+  "tags": [
+    "airfoil",
+    "csv",
+    "sdf",
+    "implicit",
+    "aerospace",
+    "wing",
+    "naca",
+    "profile",
+    "import",
+    "geometry"
+  ],
+  "preview": "geometry"
+}

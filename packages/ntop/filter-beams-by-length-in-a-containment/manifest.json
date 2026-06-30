@@ -1,0 +1,23 @@
+{
+  "id": "filter-beams-by-length-in-a-containment",
+  "type": "Block",
+  "title": "Filter Beams by Length in a Containment",
+  "summary": "This custom block filters lattice beams selectively by the length in a defined containment.",
+  "author": "ntop",
+  "org": "nTop",
+  "version": "1.0.0",
+  "ntopVersion": "5.44+",
+  "license": "MIT",
+  "domain": "Additive Manufacturing",
+  "complexity": "Beginner",
+  "tags": [
+    "filter",
+    "beams",
+    "length",
+    "containment",
+    "lattice",
+    "selective"
+  ],
+  "preview": "graph",
+  "verified": true
+}

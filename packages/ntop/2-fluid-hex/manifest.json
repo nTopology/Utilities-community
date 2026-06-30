@@ -1,0 +1,22 @@
+{
+  "id": "2-fluid-hex",
+  "type": "Notebook",
+  "title": "2 Fluid Heat Exchanger",
+  "summary": "This generation of high-efficiency, dual-fluid heat exchangers is driven by Gyroid TPMS to maximize internal surface area and optimize thermal performance.",
+  "author": "ntop",
+  "org": "nTop",
+  "version": "1.0.0",
+  "ntopVersion": "5.44",
+  "license": "MIT",
+  "domain": "Thermal",
+  "complexity": "Intermediate",
+  "tags": [
+    "lattice",
+    "tpms",
+    "am"
+  ],
+  "preview": "geometry",
+  "coverImage": "cover.png",
+  "verified": true,
+  "featured": true
+}

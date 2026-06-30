@@ -1,0 +1,20 @@
+{
+  "id": "filter-beams-by-direction",
+  "type": "Block",
+  "title": "Filter Beams by Direction",
+  "summary": "Filter lattice beams by direction using a scalar field.",
+  "author": "DaveMakesStuff",
+  "version": "0.1.0",
+  "ntopVersion": "4.12+",
+  "license": "MIT",
+  "domain": "Geometry",
+  "complexity": "Intermediate",
+  "tags": [
+    "lattice",
+    "graph",
+    "direction",
+    "beams",
+    "filter"
+  ],
+  "preview": "geometry"
+}

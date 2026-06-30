@@ -1,0 +1,20 @@
+{
+  "id": "single-panel-wing",
+  "type": "Block",
+  "title": "Single Panel Wing",
+  "summary": "Create a Single Panel Wing driven by Root Chord Length, Wing Span, QC Angle, and Taper Ratio.",
+  "author": "ntop",
+  "org": "nTop",
+  "version": "0.1.0",
+  "ntopVersion": "5.45+",
+  "license": "MIT",
+  "domain": "Aerospace",
+  "complexity": "Intermediate",
+  "tags": [
+    "wing",
+    "aircraft"
+  ],
+  "preview": "geometry",
+  "verified": true,
+  "featured": true
+}

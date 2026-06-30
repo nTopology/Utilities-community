@@ -1,0 +1,22 @@
+{
+  "id": "filter-meshes-by-body",
+  "type": "Block",
+  "title": "Filter Meshes by Body",
+  "summary": "Given a list of meshes, this custom block will filter any meshes that do not overlap with a body (or vice versa if you select inside body).",
+  "author": "ntop",
+  "org": "nTop",
+  "version": "1.0.0",
+  "ntopVersion": "5.44+",
+  "license": "MIT",
+  "domain": "Geometry",
+  "complexity": "Beginner",
+  "tags": [
+    "filter",
+    "meshes",
+    "body",
+    "overlap",
+    "containment"
+  ],
+  "preview": "graph",
+  "verified": true
+}

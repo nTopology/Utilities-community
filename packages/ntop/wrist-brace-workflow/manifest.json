@@ -1,0 +1,20 @@
+{
+  "id": "wrist-brace-workflow",
+  "type": "Notebook",
+  "title": "Wrist Brace Workflow",
+  "summary": "This notebook walks through how to create a wrist brace with a voronoi and other lattices throughout the design. This is the simplified version of two nTop Files for the Wrist Brace Application Workbook. To learn how to split the wrist brac",
+  "author": "ntop",
+  "org": "nTop",
+  "version": "1.0.0",
+  "ntopVersion": "5.45+",
+  "license": "MIT",
+  "domain": "Medical",
+  "complexity": "Intermediate",
+  "tags": [
+    "wrist",
+    "brace",
+    "medical"
+  ],
+  "preview": "geometry",
+  "verified": true
+}

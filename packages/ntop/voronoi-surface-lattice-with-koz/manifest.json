@@ -1,0 +1,22 @@
+{
+  "id": "voronoi-surface-lattice-with-koz",
+  "type": "Block",
+  "title": "Voronoi Surface Lattice with KOZ",
+  "summary": "This custom block creates a Voronoi Surface Lattice that avoids input Keep Out Zones (KOZ)",
+  "author": "ntop",
+  "org": "nTop",
+  "version": "1.0.0",
+  "ntopVersion": "5.44+",
+  "license": "MIT",
+  "domain": "Additive Manufacturing",
+  "complexity": "Beginner",
+  "tags": [
+    "voronoi",
+    "surface",
+    "lattice",
+    "keep-out-zone",
+    "additive"
+  ],
+  "preview": "graph",
+  "verified": true
+}

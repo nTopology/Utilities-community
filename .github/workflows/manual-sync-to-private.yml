@@ -111,6 +111,12 @@ jobs:
             [ -n "$pkg" ] || continue
             mkdir -p "$pkg"
             rsync -av "../community/$pkg/" "$pkg/"
+            # Stamp communitySource so the private repo knows this package
+            # originated from the community repo (used for commit history link).
+            if [ -f "$pkg/manifest.json" ]; then
+              jq '. + {"communitySource": true}' "$pkg/manifest.json" > /tmp/_manifest.json \
+                && mv /tmp/_manifest.json "$pkg/manifest.json"
+            fi
             git add "$pkg"
           done < /tmp/changed_packages.txt
 

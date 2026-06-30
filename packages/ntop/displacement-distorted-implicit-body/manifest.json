@@ -1,0 +1,23 @@
+{
+  "id": "displacement-distorted-implicit-body",
+  "type": "Block",
+  "title": "Displacement Distorted Implicit Body",
+  "summary": "This blocks takes a Displacement Vector Point Map and turns it into a distorted body through field remapping. This block is great for visualizing what a deformed part will look like after Static Structural Analysis in nTop or from a .CSV fi",
+  "author": "ntop",
+  "org": "nTop",
+  "version": "1.0.0",
+  "ntopVersion": "5.44+",
+  "license": "MIT",
+  "domain": "Simulation",
+  "complexity": "Beginner",
+  "tags": [
+    "displacement",
+    "distortion",
+    "implicit",
+    "field-remapping",
+    "structural-analysis",
+    "deformation"
+  ],
+  "preview": "graph",
+  "verified": true
+}

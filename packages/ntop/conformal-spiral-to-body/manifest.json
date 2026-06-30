@@ -1,0 +1,23 @@
+{
+  "id": "conformal-spiral-to-body",
+  "type": "Block",
+  "title": "Conformal Spiral to Body",
+  "summary": "This custom block creates a spiral that is conformal to an implicit body.",
+  "author": "ntop",
+  "org": "nTop",
+  "version": "1.0.0",
+  "ntopVersion": "5.44+",
+  "license": "MIT",
+  "domain": "Geometry",
+  "complexity": "Beginner",
+  "tags": [
+    "conformal",
+    "spiral",
+    "implicit",
+    "surface-mapping",
+    "curve"
+  ],
+  "preview": "graph",
+  "coverImage": "cover.png",
+  "verified": true
+}

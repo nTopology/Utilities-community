@@ -1,0 +1,34 @@
+ ---------------------------------------------------------------
+ Vortex Lattice Output -- Total Forces
+
+ Configuration: Conventional_UAV                                            
+     # Surfaces =   3
+     # Strips   =  60
+     # Vortices = 720
+
+  Sref = 0.13600       Cref = 0.13040       Bref =  1.0502    
+  Xref = 0.39100E-01   Yref =  0.0000       Zref =  0.0000    
+
+ Standard axis orientation,  X fwd, Z down         
+
+ Run case:  -unnamed-                              
+
+  Alpha =   3.00000     pb/2V =  -0.00000     p'b/2V =  -0.00000
+  Beta  =   0.00000     qc/2V =   0.00000
+  Mach  =     0.061     rb/2V =  -0.00000     r'b/2V =  -0.00000
+
+  CXtot =   0.01630     Cltot =  -0.00000     Cl'tot =  -0.00000
+  CYtot =  -0.00000     Cmtot =  -0.01287
+  CZtot =  -0.56454     Cntot =  -0.00000     Cn'tot =  -0.00000
+
+  CLtot =   0.56462
+  CDtot =   0.01326
+  CDvis =   0.00000     CDind = 0.0132645
+  CLff  =   0.56532     CDff  = 0.0137559    | Trefftz
+  CYff  =  -0.00000         e =    0.9119    | Plane  
+
+   aileron         =   0.00000
+   elevator        =   0.00000
+   rudder          =  -0.00000
+
+ ---------------------------------------------------------------

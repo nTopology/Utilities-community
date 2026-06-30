@@ -1,0 +1,22 @@
+{
+  "id": "area-of-3-points",
+  "type": "Block",
+  "title": "Area of 3 Points",
+  "summary": "Calculates the area of the triangle created from 3 points in coordinate space.",
+  "author": "ntop",
+  "org": "nTop",
+  "version": "1.0.0",
+  "ntopVersion": "5.44+",
+  "license": "MIT",
+  "domain": "Geometry",
+  "complexity": "Beginner",
+  "tags": [
+    "area",
+    "triangle",
+    "geometry",
+    "coordinate",
+    "measurement"
+  ],
+  "preview": "graph",
+  "verified": true
+}

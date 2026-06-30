@@ -1,0 +1,22 @@
+{
+  "id": "u-or-v-plane",
+  "type": "Block",
+  "title": "U or V Plane",
+  "summary": "This custom block will place a plane that is centered at the UV Origin with a normal pointing in the U or V direction.",
+  "author": "ntop",
+  "org": "nTop",
+  "version": "1.0.0",
+  "ntopVersion": "5.44+",
+  "license": "MIT",
+  "domain": "Geometry",
+  "complexity": "Beginner",
+  "tags": [
+    "plane",
+    "uv",
+    "origin",
+    "normal",
+    "direction"
+  ],
+  "preview": "graph",
+  "verified": true
+}

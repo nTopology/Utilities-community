@@ -1,0 +1,24 @@
+{
+  "id": "single-direction-streamlines",
+  "type": "Block",
+  "title": "Single Direction Streamlines",
+  "summary": "Create streamlines in one direction by trimming at seed points",
+  "author": "DaveMakesStuff",
+  "version": "0.1.0",
+  "ntopVersion": "5.47",
+  "license": "MIT",
+  "domain": "Simulation",
+  "application": "streamlines",
+  "complexity": "Intermediate",
+  "tags": [
+    "streamline",
+    "seed points",
+    "vector field",
+    "domain",
+    "simulation",
+    "terminal speed",
+    "curves",
+    "trim"
+  ],
+  "preview": "geometry"
+}

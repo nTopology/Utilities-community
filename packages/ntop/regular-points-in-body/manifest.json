@@ -1,0 +1,22 @@
+{
+  "id": "regular-points-in-body",
+  "type": "Block",
+  "title": "Regular Points in Body",
+  "summary": "This custom block creates a grid of evenly spaced points in a body",
+  "author": "ntop",
+  "org": "nTop",
+  "version": "1.0.0",
+  "ntopVersion": "5.44+",
+  "license": "MIT",
+  "domain": "Geometry",
+  "complexity": "Beginner",
+  "tags": [
+    "grid",
+    "points",
+    "evenly-spaced",
+    "body",
+    "sampling"
+  ],
+  "preview": "graph",
+  "verified": true
+}

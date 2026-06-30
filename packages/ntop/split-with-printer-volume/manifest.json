@@ -1,0 +1,23 @@
+{
+  "id": "split-with-printer-volume",
+  "type": "Block",
+  "title": "Split with Printer Volume",
+  "summary": "This custom block will split a body into different sections to fit inside the printer using the rectangular cell map.",
+  "author": "ntop",
+  "org": "nTop",
+  "version": "1.0.0",
+  "ntopVersion": "5.43+",
+  "license": "MIT",
+  "domain": "Additive Manufacturing",
+  "complexity": "Beginner",
+  "tags": [
+    "split",
+    "printer",
+    "volume",
+    "additive",
+    "build-volume",
+    "sectioning"
+  ],
+  "preview": "graph",
+  "verified": true
+}

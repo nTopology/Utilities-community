@@ -1,0 +1,23 @@
+{
+  "id": "center-plane-of-mesh-face",
+  "type": "Block",
+  "title": "Center Plane of Mesh Face",
+  "summary": "Given a face, this custom block will place four random points on the face and then create a plane that is normal to the first three points and is centered between all four points. For best results choos either a small portion of a mesh face",
+  "author": "ntop",
+  "org": "nTop",
+  "version": "1.0.0",
+  "ntopVersion": "5.43+",
+  "license": "MIT",
+  "domain": "Geometry",
+  "complexity": "Beginner",
+  "tags": [
+    "center",
+    "plane",
+    "mesh",
+    "face",
+    "normal",
+    "sampling"
+  ],
+  "preview": "graph",
+  "verified": true
+}

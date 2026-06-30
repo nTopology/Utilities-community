@@ -1,0 +1,22 @@
+{
+  "id": "boolean-intersect-listless",
+  "type": "Block",
+  "title": "Boolean Intersect [Listless]",
+  "summary": "Create an Implicit Body where the input bodies spatially overlap.  Functions in the same way as a Boolean Intersect block, but does not uses lists and only accepts 2 inputs.",
+  "author": "ntop",
+  "org": "nTop",
+  "version": "1.0.0",
+  "ntopVersion": "5.44+",
+  "license": "MIT",
+  "domain": "Geometry",
+  "complexity": "Beginner",
+  "tags": [
+    "boolean",
+    "intersect",
+    "implicit",
+    "overlap",
+    "two-input"
+  ],
+  "preview": "graph",
+  "verified": true
+}

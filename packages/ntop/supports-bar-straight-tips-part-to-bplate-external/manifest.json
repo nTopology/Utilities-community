@@ -1,0 +1,23 @@
+{
+  "id": "supports-bar-straight-tips-part-to-bplate-external",
+  "type": "Block",
+  "title": "CB - Supports - Bar - Straight Tips - Part to BPlate (External)",
+  "summary": "This CB creates cylindrical bar supports with straight tips and flared base from the build plate to the part.  Supports external part surfaces only...i.e. surfaces with clear line of sight to build plate.",
+  "author": "ntop",
+  "org": "nTop",
+  "version": "1.0.0",
+  "ntopVersion": "5.43+",
+  "license": "MIT",
+  "domain": "Additive Manufacturing",
+  "complexity": "Beginner",
+  "tags": [
+    "supports",
+    "bar",
+    "straight",
+    "tips",
+    "part",
+    "bplate"
+  ],
+  "preview": "graph",
+  "verified": true
+}

@@ -1,0 +1,29 @@
+{
+  "id": "ntop-avl-integration",
+  "type": "Bundle",
+  "title": "nTop–AVL Aerodynamic Integration",
+  "summary": "Automate vortex-lattice aerodynamic analysis of a conventional UAV by driving AVL directly from nTop geometry parameters — outputs CL, CD, stability derivatives, static margin, and trim deflections in a single run.",
+  "author": "TianxiangGu",
+  "version": "0.1.0",
+  "license": "MIT",
+  "domain": "Aerospace",
+  "application": "Analysis",
+  "complexity": "Advanced",
+  "tags": [
+    "avl",
+    "vortex lattice",
+    "aerodynamics",
+    "uav",
+    "stability",
+    "flight mechanics",
+    "conventional uav",
+    "wing",
+    "horizontal tail",
+    "vertical tail",
+    "airfoil",
+    "trim",
+    "static margin",
+    "control surface"
+  ],
+  "preview": "bundle"
+}

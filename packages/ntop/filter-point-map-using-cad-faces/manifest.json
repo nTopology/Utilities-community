@@ -1,0 +1,23 @@
+{
+  "id": "filter-point-map-using-cad-faces",
+  "type": "Block",
+  "title": "Filter Point Map using CAD Faces",
+  "summary": "This Custom Block filters out a point map by excluding the result of the points near CAD faces.",
+  "author": "ntop",
+  "org": "nTop",
+  "version": "1.0.0",
+  "ntopVersion": "5.44+",
+  "license": "MIT",
+  "domain": "Geometry",
+  "complexity": "Beginner",
+  "tags": [
+    "filter",
+    "point-map",
+    "cad",
+    "faces",
+    "proximity",
+    "exclusion"
+  ],
+  "preview": "graph",
+  "verified": true
+}

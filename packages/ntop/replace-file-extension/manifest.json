@@ -1,0 +1,22 @@
+{
+  "id": "replace-file-extension",
+  "type": "Block",
+  "title": "Replace File Extension",
+  "summary": "This custom block replaces the file extension of a file path with an option to add a suffix before the extension.",
+  "author": "ntop",
+  "org": "nTop",
+  "version": "1.0.0",
+  "ntopVersion": "5.44+",
+  "license": "MIT",
+  "domain": "Geometry",
+  "complexity": "Beginner",
+  "tags": [
+    "file-path",
+    "extension",
+    "string",
+    "utility",
+    "suffix"
+  ],
+  "preview": "graph",
+  "verified": true
+}

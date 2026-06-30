@@ -1,0 +1,22 @@
+{
+  "id": "replace-values-in-a-list",
+  "type": "Block",
+  "title": "Replace Values in a List",
+  "summary": "This custom block replaces (substitutes) values of an initial list with newly defined values at the selected index of the initial list.",
+  "author": "ntop",
+  "org": "nTop",
+  "version": "1.0.0",
+  "ntopVersion": "5.44+",
+  "license": "MIT",
+  "domain": "Geometry",
+  "complexity": "Beginner",
+  "tags": [
+    "replace",
+    "list",
+    "index",
+    "substitution",
+    "data"
+  ],
+  "preview": "graph",
+  "verified": true
+}

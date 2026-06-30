@@ -1,0 +1,22 @@
+{
+  "id": "remove-duplicate-points",
+  "type": "Block",
+  "title": "Remove Duplicate Points",
+  "summary": "This custom block removes duplicate points in a point list based on a selected distance threshold.",
+  "author": "ntop",
+  "org": "nTop",
+  "version": "1.0.0",
+  "ntopVersion": "5.44+",
+  "license": "MIT",
+  "domain": "Geometry",
+  "complexity": "Beginner",
+  "tags": [
+    "remove",
+    "duplicate",
+    "points",
+    "deduplication",
+    "distance-threshold"
+  ],
+  "preview": "graph",
+  "verified": true
+}

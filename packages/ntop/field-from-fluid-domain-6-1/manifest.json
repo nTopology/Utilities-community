@@ -1,0 +1,23 @@
+{
+  "id": "field-from-fluid-domain-6-1",
+  "type": "Block",
+  "title": "Field from Fluid Domain - 6.1",
+  "summary": "This Custom Block will allow users the generate an Implicit Body from a Point Map, by letting users define Lower and Upper Bounds they wish to truncate (i.e. eliminate) in order to shape the new geometry. Version 6.1 has fewer inputs expose",
+  "author": "ntop",
+  "org": "nTop",
+  "version": "1.0.0",
+  "ntopVersion": "5.42+",
+  "license": "MIT",
+  "domain": "Simulation",
+  "complexity": "Beginner",
+  "tags": [
+    "field",
+    "fluid",
+    "point-map",
+    "implicit",
+    "bounds",
+    "truncation"
+  ],
+  "preview": "graph",
+  "verified": true
+}

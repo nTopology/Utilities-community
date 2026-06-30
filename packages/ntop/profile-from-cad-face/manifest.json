@@ -1,0 +1,23 @@
+{
+  "id": "profile-from-cad-face",
+  "type": "Block",
+  "title": "Profile from CAD Face",
+  "summary": "This custom block takes a flat cad face and converts it to a profile.",
+  "author": "ntop",
+  "org": "nTop",
+  "version": "1.0.0",
+  "ntopVersion": "5.44+",
+  "license": "MIT",
+  "domain": "Geometry",
+  "complexity": "Beginner",
+  "tags": [
+    "profile",
+    "cad",
+    "face",
+    "conversion",
+    "flat",
+    "planar"
+  ],
+  "preview": "graph",
+  "verified": true
+}

@@ -1,0 +1,22 @@
+{
+  "id": "fill-mesh",
+  "type": "Block",
+  "title": "Fill Mesh",
+  "summary": "This custom block will take in an open mesh and will create a solid that is within the same bounds.",
+  "author": "ntop",
+  "org": "nTop",
+  "version": "1.0.0",
+  "ntopVersion": "5.44+",
+  "license": "MIT",
+  "domain": "Geometry",
+  "complexity": "Beginner",
+  "tags": [
+    "fill",
+    "mesh",
+    "solid",
+    "open-mesh",
+    "watertight"
+  ],
+  "preview": "graph",
+  "verified": true
+}

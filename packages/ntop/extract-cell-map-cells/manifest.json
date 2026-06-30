@@ -1,0 +1,23 @@
+{
+  "id": "extract-cell-map-cells",
+  "type": "Block",
+  "title": "Extract Cell Map Cells",
+  "summary": "Extracts the Cells of a Cell Map as seperate Mesh Boxes. The boxes will be undersized from the cell by roughly 10%.",
+  "author": "ntop",
+  "org": "nTop",
+  "version": "1.0.0",
+  "ntopVersion": "5.44+",
+  "license": "MIT",
+  "domain": "Geometry",
+  "complexity": "Beginner",
+  "tags": [
+    "extract",
+    "cell",
+    "map",
+    "cells",
+    "extracts",
+    "seperate"
+  ],
+  "preview": "graph",
+  "verified": true
+}

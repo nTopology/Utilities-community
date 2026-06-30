@@ -1,0 +1,23 @@
+{
+  "id": "checkerboard-texture",
+  "type": "Block",
+  "title": "Checkerboard Texture",
+  "summary": "Returns an infinite checkerboard field along one axis with values of 0 and 1.",
+  "author": "ntop",
+  "org": "nTop",
+  "version": "1.0.0",
+  "ntopVersion": "5.43+",
+  "license": "MIT",
+  "domain": "Geometry",
+  "complexity": "Beginner",
+  "tags": [
+    "checkerboard",
+    "texture",
+    "returns",
+    "infinite",
+    "field",
+    "along"
+  ],
+  "preview": "graph",
+  "verified": true
+}

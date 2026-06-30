@@ -1,0 +1,124 @@
+Conventional_UAV
+0.06122                       ! Mach
+0 0 0.0                      ! iYsym  iZsym  Zsym
+0.1360 0.1304 1.0502  ! Sref  Cref  Bref
+0.0391 0.0000 0.0000  ! Xref  Yref  Zref
+
+# =====================================================================
+SURFACE
+Main Wing
+12 1.0 20 -1.0
+INDEX
+1
+
+SECTION
+-0.0000  -0.5251  0.0250  0.1110  0.00
+AFILE
+sd7062.txt
+
+SECTION
+-0.0000  -0.4726  0.0250  0.1147  0.00
+AFILE
+sd7062.txt
+CONTROL
+aileron  1.0  0.75  0 0 0
+
+SECTION
+-0.0000  -0.2626  0.0250  0.1295  0.00
+AFILE
+sd7062.txt
+CONTROL
+aileron  1.0  0.75  0 0 0
+
+SECTION
+0.0000  0.0000  0.0250  0.1480  0.00
+AFILE
+sd7062.txt
+
+SECTION
+-0.0000  0.2626  0.0250  0.1295  0.00
+AFILE
+sd7062.txt
+CONTROL
+aileron  -1.0  0.75  0 0 0
+
+SECTION
+-0.0000  0.4726  0.0250  0.1147  0.00
+AFILE
+sd7062.txt
+CONTROL
+aileron  -1.0  0.75  0 0 0
+
+SECTION
+-0.0000  0.5251  0.0250  0.1110  0.00
+AFILE
+sd7062.txt
+
+# =====================================================================
+SURFACE
+Horizontal Tail
+12 1.0 20 -1.0
+INDEX
+2
+
+SECTION
+0.4295  -0.1255  0.0100  0.0689  -3.00
+NACA
+0015
+
+SECTION
+0.4236  -0.1004  0.0100  0.0748  -3.00
+NACA
+0015
+CONTROL
+elevator  1.0  0.6645  0 0 0
+
+SECTION
+0.4000  0.0000  0.0100  0.0984  -3.00
+NACA
+0015
+CONTROL
+elevator  1.0  0.7450  0 0 0
+
+SECTION
+0.4236  0.1004  0.0100  0.0748  -3.00
+NACA
+0015
+CONTROL
+elevator  1.0  0.6645  0 0 0
+
+SECTION
+0.4295  0.1255  0.0100  0.0689  -3.00
+NACA
+0015
+
+# =====================================================================
+SURFACE
+Vertical Tail
+12 1.0 20 -1.0
+INDEX
+3
+
+SECTION
+0.4000  0.0000  0.0000  0.1141  0.00
+NACA
+0015
+
+SECTION
+0.4046  0.0000  0.0137  0.1095  0.00
+NACA
+0015
+CONTROL
+rudder  1.0  0.70  0 0 0
+
+SECTION
+0.4411  0.0000  0.1232  0.0730  0.00
+NACA
+0015
+CONTROL
+rudder  1.0  0.70  0 0 0
+
+SECTION
+0.4456  0.0000  0.1369  0.0685  0.00
+NACA
+0015

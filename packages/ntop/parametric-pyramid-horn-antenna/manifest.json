@@ -1,0 +1,23 @@
+{
+  "id": "parametric-pyramid-horn-antenna",
+  "type": "Notebook",
+  "title": "Parametric Pyramid Horn Antenna",
+  "summary": "This block synthesizes a Pyramid Horn Antenna by iterating to find an optimal \u03c7 (Chi) value. It generates a 3D manifold including the feed waveguide and flared aperture. Refer to the Technical Diagram for dimension mapping: A/B (Aperture) a",
+  "author": "ntop",
+  "org": "nTop",
+  "version": "1.0.0",
+  "ntopVersion": "5.45+",
+  "license": "MIT",
+  "domain": "Mechanical",
+  "complexity": "Intermediate",
+  "tags": [
+    "antenna",
+    "waveguide",
+    "rf",
+    "parametric",
+    "aperture",
+    "horn"
+  ],
+  "preview": "geometry",
+  "verified": true
+}

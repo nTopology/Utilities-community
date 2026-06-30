@@ -1,0 +1,22 @@
+{
+  "id": "filter-points-by-plane",
+  "type": "Block",
+  "title": "Filter Points by Plane",
+  "summary": "Filters a scalar point map to retain those within the negative  field of a plane.",
+  "author": "ntop",
+  "org": "nTop",
+  "version": "1.0.0",
+  "ntopVersion": "5.43+",
+  "license": "MIT",
+  "domain": "Geometry",
+  "complexity": "Beginner",
+  "tags": [
+    "filter",
+    "points",
+    "plane",
+    "scalar",
+    "half-space"
+  ],
+  "preview": "graph",
+  "verified": true
+}

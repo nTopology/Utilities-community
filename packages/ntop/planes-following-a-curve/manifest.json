@@ -1,0 +1,22 @@
+{
+  "id": "planes-following-a-curve",
+  "type": "Block",
+  "title": "Planes Following a Curve",
+  "summary": "This custom block outputs planes spaced at the given distance a part and have a z direction normal to the surface and a x direction that follows the provided curve.",
+  "author": "ntop",
+  "org": "nTop",
+  "version": "1.0.0",
+  "ntopVersion": "5.43+",
+  "license": "MIT",
+  "domain": "Geometry",
+  "complexity": "Beginner",
+  "tags": [
+    "planes",
+    "curve",
+    "spaced",
+    "normal",
+    "frenet-frame"
+  ],
+  "preview": "graph",
+  "verified": true
+}

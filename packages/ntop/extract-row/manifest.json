@@ -1,0 +1,21 @@
+{
+  "id": "extract-row",
+  "type": "Block",
+  "title": "Extract Row",
+  "summary": "Extract a row from a table.",
+  "author": "ntop",
+  "org": "nTop",
+  "version": "1.0.0",
+  "ntopVersion": "5.44+",
+  "license": "MIT",
+  "domain": "Geometry",
+  "complexity": "Beginner",
+  "tags": [
+    "table",
+    "row",
+    "data",
+    "lookup"
+  ],
+  "preview": "graph",
+  "verified": true
+}

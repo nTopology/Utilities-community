@@ -1,0 +1,22 @@
+{
+  "id": "implicit-axis",
+  "type": "Block",
+  "title": "Implicit Axis",
+  "summary": "This custom block takes in an implicit and will output the axis for the part in either the U, V or W direction.",
+  "author": "ntop",
+  "org": "nTop",
+  "version": "1.0.0",
+  "ntopVersion": "5.44+",
+  "license": "MIT",
+  "domain": "Geometry",
+  "complexity": "Beginner",
+  "tags": [
+    "implicit",
+    "axis",
+    "uvw",
+    "direction",
+    "orientation"
+  ],
+  "preview": "graph",
+  "verified": true
+}

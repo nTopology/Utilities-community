@@ -1,0 +1,22 @@
+{
+  "id": "move-object",
+  "type": "Block",
+  "title": "Move Object",
+  "summary": "This block moves the object's center to the new location provided and rotates the object if you choose.",
+  "author": "ntop",
+  "org": "nTop",
+  "version": "1.0.0",
+  "ntopVersion": "5.43+",
+  "license": "MIT",
+  "domain": "Geometry",
+  "complexity": "Beginner",
+  "tags": [
+    "move",
+    "translate",
+    "rotate",
+    "transform",
+    "placement"
+  ],
+  "preview": "graph",
+  "verified": true
+}

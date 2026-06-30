@@ -1,0 +1,23 @@
+{
+  "id": "area-ruling-hello-world",
+  "type": "Notebook",
+  "title": "Area Ruling Hello World",
+  "summary": "Demo showing how to set up an area ruling optimization. Optimizes 8 parameters so the actual area ruling curve matches a Sears-Haack target curve, quantified using RMSE.",
+  "author": "ntop",
+  "org": "nTop",
+  "version": "1.0.0",
+  "ntopVersion": "5.44+",
+  "license": "MIT",
+  "domain": "Aerospace",
+  "complexity": "Intermediate",
+  "tags": [
+    "area-ruling",
+    "optimization",
+    "aerospace",
+    "rmse",
+    "sears-haack",
+    "parametric"
+  ],
+  "preview": "geometry",
+  "verified": true
+}

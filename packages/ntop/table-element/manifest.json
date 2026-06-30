@@ -1,0 +1,23 @@
+{
+  "id": "table-element",
+  "type": "Block",
+  "title": "Table Element",
+  "summary": "Access an element in a table from row and column indices.",
+  "author": "ntop",
+  "org": "nTop",
+  "version": "1.0.0",
+  "ntopVersion": "5.44+",
+  "license": "MIT",
+  "domain": "Geometry",
+  "complexity": "Beginner",
+  "tags": [
+    "table",
+    "element",
+    "row",
+    "column",
+    "lookup",
+    "data"
+  ],
+  "preview": "graph",
+  "verified": true
+}

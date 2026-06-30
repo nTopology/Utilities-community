@@ -1,0 +1,22 @@
+{
+  "id": "remap-spherical-field",
+  "type": "Block",
+  "title": "Remap Spherical Field",
+  "summary": "Remap a scalar field into a spherical space. The only values that will be mapped are values along the positive X-axis, the Y-axis between -length/2 and +length/2, and the positive Z-axis. This block will not attempt to scale the field value",
+  "author": "ntop",
+  "org": "nTop",
+  "version": "1.0.0",
+  "ntopVersion": "5.43+",
+  "license": "MIT",
+  "domain": "Geometry",
+  "complexity": "Beginner",
+  "tags": [
+    "remap",
+    "spherical",
+    "scalar-field",
+    "coordinate-transform",
+    "mapping"
+  ],
+  "preview": "graph",
+  "verified": true
+}

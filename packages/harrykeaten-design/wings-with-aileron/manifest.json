@@ -1,0 +1,24 @@
+{
+  "id": "wings-with-aileron",
+  "type": "Notebook",
+  "title": "Wings with Aileron",
+  "summary": "Parametric wing block with integrated aileron geometry, ready for aerodynamic and structural workflows in nTop.",
+  "author": "harrykeaten-design",
+  "version": "0.1.0",
+  "ntopVersion": "4.12+",
+  "license": "MIT",
+  "domain": "Aerospace",
+  "application": "Geometry",
+  "complexity": "Intermediate",
+  "tags": [
+    "wing",
+    "aileron",
+    "control surface",
+    "aerospace",
+    "parametric",
+    "uav",
+    "airfoil",
+    "flight"
+  ],
+  "preview": "geometry"
+}
