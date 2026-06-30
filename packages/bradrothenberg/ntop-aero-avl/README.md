@@ -77,14 +77,6 @@ aerodeck validate /path/to/ntop_export/
 - Control effectiveness and trim requirements
 - Elevon forces and hinge loading
 
-## Development Status
-
-| Phase | Status |
-|-------|--------|
-| Phase 1: Core infrastructure, AVL integration, CLI | ✅ Complete |
-| Phase 2: XFOIL integration, aero deck generation | 🔄 In progress |
-| Phase 3: PDF reports, HTML visualisation, CI/CD | 📅 Planned |
-
 ## License
 
 MIT — see the [source repository](https://github.com/bradrothenberg/nTopAero_AVL) for details.
