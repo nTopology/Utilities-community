@@ -22,7 +22,7 @@ The package lives at `packages/DaveMakesStuff/unique-values-in-scalar-list/`.
 | Name | Type | Notes |
 |------|------|-------|
 | `Scalar List` | Scalar List| Input list |
-| `Unique Values` | Scalar List | A list of unique values from the inupt list in ascending order |
+| `Unique Values` | Scalar List | A list of unique values from the input list in ascending order |
 
 ## License
 
