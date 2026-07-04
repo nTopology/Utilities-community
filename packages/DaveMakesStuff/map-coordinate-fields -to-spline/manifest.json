@@ -1,0 +1,21 @@
+{
+  "id": "map-coordinate-fields-to-spline",
+  "type": "Bundle",
+  "title": "Map Coordinate Fields to Spline",
+  "summary": "Four blocks for mapping X and Y coordinate fields onto a spline. ",
+  "author": "DaveMakesStuff",
+  "version": "0.1.0",
+  "ntopVersion": "4.12+",
+  "license": "MIT",
+  "domain": "Geometry",
+  "complexity": "Advanced",
+  "tags": [
+    "spline",
+    "scalar field",
+    "coordinate field",
+    "mapping",
+    "Frenet",
+    "remapping"
+  ],
+  "preview": "bundle"
+}
