@@ -1,0 +1,20 @@
+{
+  "id": "frenet-vector-fields-from-spline",
+  "type": "Block",
+  "title": "Frenet Vector Fields from Spline",
+  "summary": "Create a vector field from the tangent, normal or binormal vectors of a spline.",
+  "author": "DaveMakesStuff",
+  "version": "0.1.0",
+  "ntopVersion": "4.12+",
+  "license": "MIT",
+  "domain": "Geometry",
+  "complexity": "Intermediate",
+  "tags": [
+    "vector. vector field",
+    "spline",
+    "normal",
+    "binormal",
+    "tangent"
+  ],
+  "preview": "geometry"
+}

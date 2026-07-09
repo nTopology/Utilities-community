@@ -1,0 +1,21 @@
+{
+  "id": "order-points-using-hilbert-curve",
+  "type": "Notebook",
+  "title": "Order Points Using Hilbert Curve",
+  "summary": "Orders a list of points on the XY plane according to position along a Hilbert Curve.",
+  "author": "DaveMakesStuff",
+  "version": "0.1.0",
+  "ntopVersion": "4.12+",
+  "license": "MIT",
+  "domain": "Geometry",
+  "complexity": "Intermediate",
+  "tags": [
+    "point",
+    "point list",
+    "Hilbert Curve",
+    "SFC",
+    "Space-filling curve",
+    "sort points"
+  ],
+  "preview": "geometry"
+}

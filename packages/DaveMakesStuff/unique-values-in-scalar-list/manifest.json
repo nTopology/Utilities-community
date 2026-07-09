@@ -1,0 +1,18 @@
+{
+  "id": "unique-values-in-scalar-list",
+  "type": "Block",
+  "title": "Unique Values in Scalar List",
+  "summary": "Lists the unique values from a scalar list in ascending order.",
+  "author": "DaveMakesStuff",
+  "version": "0.1.0",
+  "ntopVersion": "4.12+",
+  "license": "MIT",
+  "domain": "Geometry",
+  "complexity": "Beginner",
+  "tags": [
+    "list",
+    "scalar list",
+    "unique values"
+  ],
+  "preview": "geometry"
+}
