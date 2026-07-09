@@ -1,0 +1,19 @@
+{
+  "id": "subdivide-graph",
+  "type": "Block",
+  "title": "Subdivide Graph",
+  "summary": "Subdivide graph segments.",
+  "author": "DaveMakesStuff",
+  "version": "0.1.0",
+  "ntopVersion": "4.12+",
+  "license": "MIT",
+  "domain": "Geometry",
+  "complexity": "Beginner",
+  "tags": [
+    "graph",
+    "lattice",
+    "subdivide",
+    "line"
+  ],
+  "preview": "geometry"
+}

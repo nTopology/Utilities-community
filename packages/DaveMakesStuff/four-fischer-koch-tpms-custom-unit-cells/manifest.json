@@ -1,0 +1,19 @@
+{
+  "id": "four-fischer-koch-tpms-custom-unit-cells",
+  "type": "Block",
+  "title": "Four Fischer Koch TPMS Custom Unit Cells",
+  "summary": "Generate a Custom Unit Cell from Fischer Koch C, CY, S or Y TPMS fields with options to bias the field or select wall output. ",
+  "author": "DaveMakesStuff",
+  "version": "0.1.0",
+  "ntopVersion": "4.12+",
+  "license": "MIT",
+  "domain": "Geometry",
+  "complexity": "Intermediate",
+  "tags": [
+    "TPMS",
+    "triply periodic minimal surface",
+    "custom unit cell",
+    "periodic lattice"
+  ],
+  "preview": "geometry"
+}

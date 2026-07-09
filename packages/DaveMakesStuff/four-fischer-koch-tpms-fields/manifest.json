@@ -1,0 +1,19 @@
+{
+  "id": "four-fischer-koch-tpms-fields",
+  "type": "Block",
+  "title": "Four Fischer Koch TPMS Fields",
+  "summary": "A set of four TPMS fields discovered by Werner Fischer and Elke Koch",
+  "author": "DaveMakesStuff",
+  "version": "0.1.0",
+  "ntopVersion": "4.12+",
+  "license": "MIT",
+  "domain": "Geometry",
+  "complexity": "Intermediate",
+  "tags": [
+    "TPMS",
+    "Triply Periodic Minimal Surface",
+    "Fischer-Koch",
+    "scalar field"
+  ],
+  "preview": "geometry"
+}

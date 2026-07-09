@@ -1,0 +1,20 @@
+{
+  "id": "rotate-vector-field-with-axis-field",
+  "type": "Block",
+  "title": "Rotate Vector Field with Axis Field",
+  "summary": "Rotate  local vectors in a vector field around local vectors in an \"axis\" vector field.",
+  "author": "DaveMakesStuff",
+  "version": "0.1.0",
+  "ntopVersion": "4.12+",
+  "license": "MIT",
+  "domain": "Geometry",
+  "complexity": "Intermediate",
+  "tags": [
+    "vector",
+    "vector field",
+    "rotate",
+    "axis",
+    "Rodrigues Rotation"
+  ],
+  "preview": "geometry"
+}
