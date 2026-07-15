@@ -1,0 +1,19 @@
+{
+  "id": "point-list-to-and-from-coordinate-text-string",
+  "type": "Bundle",
+  "title": "Point List To and From Coordinate Text String",
+  "summary": "A pair of blocks to convert between a Point List and an xyz Coordinate Text String",
+  "author": "DaveMakesStuff",
+  "version": "0.1.0",
+  "ntopVersion": "4.12+",
+  "license": "MIT",
+  "domain": "Geometry",
+  "complexity": "Beginner",
+  "tags": [
+    "point",
+    "point list",
+    "coordinate text string",
+    "point coordinates"
+  ],
+  "preview": "geometry"
+}
