@@ -1,0 +1,19 @@
+{
+  "id": "point-index-field-from-graph",
+  "type": "Block",
+  "title": "Point Index Field From Graph",
+  "summary": "Create a scalar field of the index values of nearest vertices in a graph.",
+  "author": "DaveMakesStuff",
+  "version": "0.1.0",
+  "ntopVersion": "4.12+",
+  "license": "MIT",
+  "domain": "Geometry",
+  "complexity": "Beginner",
+  "tags": [
+    "index field",
+    "scalar field",
+    "point index",
+    "vertex index"
+  ],
+  "preview": "geometry"
+}
