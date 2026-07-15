@@ -1,0 +1,18 @@
+{
+  "id": "catenary-spline-from-line",
+  "type": "Block",
+  "title": "Catenary Spline From Line",
+  "summary": "Create a \"sagging\" spline from a line using \"Length Factor\" input to modify amount of sag.",
+  "author": "DaveMakesStuff",
+  "version": "0.1.0",
+  "ntopVersion": "4.12+",
+  "license": "MIT",
+  "domain": "Geometry",
+  "complexity": "Intermediate",
+  "tags": [
+    "line",
+    "spline",
+    "catenary"
+  ],
+  "preview": "geometry"
+}
