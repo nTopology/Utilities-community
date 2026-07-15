@@ -1,0 +1,18 @@
+{
+  "id": "conformal-vector-field",
+  "type": "Block",
+  "title": "Conformal Vector Field",
+  "summary": "Create a vector field that is conformal to the surface of an input body with option to align with plane or direction",
+  "author": "DaveMakesStuff",
+  "version": "0.1.0",
+  "ntopVersion": "4.12+",
+  "license": "MIT",
+  "domain": "Geometry",
+  "complexity": "Intermediate",
+  "tags": [
+    "vector",
+    "vector field",
+    "conformal"
+  ],
+  "preview": "geometry"
+}
