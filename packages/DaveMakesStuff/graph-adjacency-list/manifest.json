@@ -1,0 +1,20 @@
+{
+  "id": "graph-adjacency-list",
+  "type": "Block",
+  "title": "Graph Adjacency List",
+  "summary": "Creates an indexed text list of adjacent vertices for each vertex within a graph.",
+  "author": "DaveMakesStuff",
+  "version": "0.1.0",
+  "ntopVersion": "4.12+",
+  "license": "MIT",
+  "domain": "Geometry",
+  "complexity": "Intermediate",
+  "tags": [
+    "graph",
+    "adjacent",
+    "connected",
+    "neighbor",
+    "index"
+  ],
+  "preview": "geometry"
+}
