@@ -5,6 +5,7 @@
   "summary": "Production-ready Python pipeline that ingests nTop panel geometry CSV exports and automatically generates comprehensive aerodynamic decks using AVL and XFOIL, with human-readable PDF reports and machine-readable JSON output for downstream 6-DOF simulation.",
   "author": "bradrothenberg",
   "version": "0.1.0",
+  "ntopVersion": "4.26.4",
   "license": "MIT",
   "domain": "Aerospace",
   "application": "Analysis",
@@ -29,5 +30,7 @@
     "pdf report",
     "stability derivatives"
   ],
-  "preview": "bundle"
+  "preview": "bundle",
+  "distribution": "redirect",
+  "redirectUrl": "https://github.com/bradrothenberg/nTopAero_AVL"
 }
