@@ -9,7 +9,11 @@ name: Sync approved submissions to private repo
 #                         permissions: Contents: read & write, Pull requests: read & write.
 
 on:
-  pull_request:
+  # pull_request_target (not pull_request) so PRs from forks still get
+  # PRIVATE_REPO_TOKEN - GitHub withholds secrets from plain `pull_request`
+  # runs triggered by a fork. Safe here because the job only runs post-merge
+  # and never executes code from the fork branch itself.
+  pull_request_target:
     types: [closed]
     branches: [main]
 
