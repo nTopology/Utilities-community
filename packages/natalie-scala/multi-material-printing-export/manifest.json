@@ -5,6 +5,7 @@
   "summary": "Export multi-body nTop designs to 3MF, STEP, or STL for multi-material FDM printing, with a PLA nosecone + carbon fiber implant as a worked example.",
   "author": "natalie-scala",
   "version": "0.1.0",
+  "ntopVersion": "4.12+",
   "license": "MIT",
   "domain": "Additive Manufacturing",
   "complexity": "Intermediate",

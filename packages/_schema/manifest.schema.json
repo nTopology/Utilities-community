@@ -1,0 +1,93 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "nTop Community Package Manifest",
+  "type": "object",
+  "required": [
+    "id", "type", "title", "summary", "author",
+    "version", "ntopVersion", "license",
+    "domain", "complexity", "tags", "preview"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9-]*[a-z0-9]$",
+      "description": "Kebab-case slug. Must equal the containing folder name."
+    },
+    "type": {
+      "enum": ["Notebook", "Block", "Connector", "Script", "Bundle"]
+    },
+    "title": {
+      "type": "string",
+      "minLength": 2,
+      "maxLength": 80
+    },
+    "summary": {
+      "type": "string",
+      "minLength": 10,
+      "maxLength": 240
+    },
+    "author": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9._-]*$"
+    },
+    "org": { "type": "string", "maxLength": 60 },
+    "version": {
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+(\\.\\d+)?([+-][A-Za-z0-9.-]+)?$"
+    },
+    "ntopVersion": {
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+(\\+|\\.\\d+)?$"
+    },
+    "license": {
+      "type": "string",
+      "minLength": 2,
+      "maxLength": 40
+    },
+    "domain": {
+      "enum": [
+        "Aerospace", "Additive Manufacturing", "Medical",
+        "Mechanical", "Thermal", "Simulation", "Optimization",
+        "Geometry", "AI Tools"
+      ]
+    },
+    "application": { "type": "string", "maxLength": 60 },
+    "complexity": {
+      "enum": ["Beginner", "Intermediate", "Advanced"]
+    },
+    "tags": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 1, "maxLength": 24 },
+      "minItems": 1,
+      "maxItems": 8
+    },
+    "preview": {
+      "enum": ["geometry", "code", "graph", "bundle"]
+    },
+    "coverImage": {
+      "type": "string",
+      "maxLength": 120,
+      "description": "Optional filename of an uploaded showcase image inside the package folder. If omitted, build-data.js auto-detects cover.{png,jpg,jpeg,webp,svg,gif}."
+    },
+    "packageFile": {
+      "type": "string",
+      "maxLength": 120,
+      "description": "Optional filename of the primary downloadable artifact inside the package folder (e.g. my-block.ntop). If omitted, build-data.js prefers the first .ntop file, then the first non-meta file."
+    },
+    "verified": { "type": "boolean", "default": false },
+    "featured": { "type": "boolean", "default": false },
+    "releaseTag": { "type": "string" },
+    "communitySource": { "type": "boolean", "default": false },
+    "distribution": {
+      "enum": ["download", "redirect", "request"],
+      "default": "download",
+      "description": "How users get this package. 'download': a file in this folder (default). 'redirect': send users to an external URL (e.g. a GitHub repo) — requires redirectUrl. 'request': show a request-access form instead of a download."
+    },
+    "redirectUrl": {
+      "type": "string",
+      "maxLength": 500,
+      "description": "Required when distribution is 'redirect'. External URL the primary button opens instead of a local download."
+    }
+  }
+}

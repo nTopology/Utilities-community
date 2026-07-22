@@ -18,9 +18,7 @@
     "aerospace",
     "wing",
     "naca",
-    "profile",
-    "import",
-    "geometry"
+    "profile"
   ],
   "preview": "geometry"
 }
