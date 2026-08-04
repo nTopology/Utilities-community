@@ -29,7 +29,7 @@ The package lives at `packages/natalie-scala/airfoil-shaped-landing-gear/`.
 | `Diagonal Length` | Unit Length | Required. |
 | `Diagonal Angle` | Unit Length | Required. |
 | `Wheel Face Length` | Unit Length | Required. |
-| `NACA 4-digit code` | Unit Length | Required. |
+| `NACA 4-digit code` | Code | Required. |
 | `Axle Hole Radius` | Unit Length | Required. |
 | `Fuselage` | Implicit Body | Required. |
 | `Curved Plate Thickness` | Unit Length | Required. |
