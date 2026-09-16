@@ -1,0 +1,9 @@
+{
+  "method": "Observed browser UI and DOM checks through the connected Chrome browser",
+  "desktop": {"viewport_width": 1715, "document_scroll_width": 1700, "all_nine_report_images_loaded": true, "screenshot_reviewed": true},
+  "mobile_dark": {"viewport_width": 390, "viewport_height": 844, "document_scroll_width": 375, "no_main_section_horizontal_overflow": true, "screenshot_reviewed": true},
+  "bend_demo": {"baseline_thickness_mm": 1.016, "baseline_allowance_mm_display": 3.026, "k_0_5_allowance_mm_display": 3.154, "geometric_boundary_unchanged_when_only_k_changes": true},
+  "draft_demo": {"baseline_3_degree_10_mm_horizontal_gain_display_mm": 0.524, "zero_draft_gain_display_mm": 0},
+  "gif_controls": {"all_three_play_controls_verified": true, "fe_still_control_verified": true, "initial_state": "still images"},
+  "scope": "Report interaction and presentation checks, not solver or native geometry validation"
+}
