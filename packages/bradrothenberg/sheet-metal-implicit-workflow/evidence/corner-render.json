@@ -1,0 +1,38 @@
+{
+  "image": "media/corner-miter-cli.png",
+  "image_sha256": "b0a324bc04340bafce6ebe62be08e90655b31b354d2475c0ce1225e9bf4561d9",
+  "method": "nTop Automate native local mesh export; PyVista/VTK offscreen rendering. Not an nTop viewport screenshot.",
+  "ntop_version": "6.1.0 build 42926",
+  "source_notebook_sha256": "08ecf567d0b2710e37f5ebc9ca27b8f2f9bcd0cf1620cafcfb81fa38266d8430",
+  "source_recipe_sha256": "c41dede76d6ac0e243267f9e7009c2138fc7d8d912768630ac2de586ecfc864b",
+  "original_recipe_blocks_unchanged": true,
+  "mesh_sha256": "fbb07096d77d6cf3c04a05afa0ea47844dc5830205f227034e28102ea0cbd5d3",
+  "mesh_setting_mm": 0.01,
+  "previous_image_mesh_setting_mm": 0.1,
+  "mesh_vertices": 401420,
+  "mesh_triangles": 802836,
+  "mesh_closed": true,
+  "mesh_winding_consistent": true,
+  "crop_bounds_mm": [
+    [
+      65,
+      39,
+      -2
+    ],
+    [
+      81,
+      56,
+      53
+    ]
+  ],
+  "crop_scope": "Display-only intersection outside image bounds; source notebook unmodified.",
+  "projection": "orthographic top",
+  "image_pixels": [
+    2400,
+    2000
+  ],
+  "lighting": "Interpolated normals with sharp edges split at 35 degrees; no vertex smoothing or displacement.",
+  "qualification": "Mesh resolution is an illustration setting, not a manufacturing tolerance.",
+  "recipe_semantic_sha256": "a738d3708c86ac778fa25df245db87bb9ad8d668646c781e26c643b9ca5e37f0",
+  "published_recipe_sha256": "7c7f2871b0aeb44d8a8bf8c606509061a48786da167fba03f6b0575c55b41a29"
+}

@@ -16,6 +16,8 @@ Try changing K from 0.42 to 0.50 on a copy and compare `90 degree bend allowance
 
 Nominal envelope 152.4 x 101.6 x 50.8 mm, thickness 1.016 mm, inside radius 1.5 mm, 0.5 mm normal seam gap and R0.5 relief roots. The 45-degree through-thickness edges require bevel preparation; this developed solid is not a conventional perpendicular-cut blank.
 
+The report's corner close-up uses a fresh nTop Automate export with a 0.01 mm mesh setting and an offscreen PyVista/VTK render. The display crop lies outside the image boundary. Interpolated surface normals improve lighting while split normals preserve sharp edges; no mesh vertices or source geometry are smoothed. This is not an nTop viewport screenshot. See `evidence/corner-render.json` for hashes and settings.
+
 ## 2. Corrugation: encode the repeated section once
 
 Open `models/corrugated-shield.ntop`. Highlight `Thickness`, `Inside bend radius`, `Midsurface radius`, `Slope tangent`, `Crest tangent`, `Valley tangent`, `Corrugated stock section`, and `Corrugated stock`. A line-and-arc profile supplies five waves with twenty 60-degree bends; one extrusion preserves the common section.

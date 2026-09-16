@@ -36,10 +36,10 @@
   ],
   "media": [
     {
-      "file": "corner-miter.png",
+      "file": "corner-miter-cli.png",
       "size": [
-        1000,
-        850
+        2400,
+        2000
       ],
       "frames": 1
     },
@@ -141,7 +141,7 @@
       "frames": 1
     }
   ],
-  "report_local_links_checked": 47,
+  "report_local_links_checked": 48,
   "private_path_scan_passed": true,
   "scope": "File/container audit, not new native evaluation or FE execution."
 }

@@ -47,6 +47,8 @@ Three forming cases and three settled unloading cases are summarized in the repo
 
 These are previously recorded runs, not new simulations for this publication. The archive does not contain the full FE solver environment. Public manufacturer families inspired the original study geometry; no supplier CAD or source photographs are redistributed. See [source ledger](evidence/source-ledger.json), the report's primary references, and [notebook index](evidence/notebook-index.json).
 
+The enclosure corner image was regenerated without desktop automation: nTop Automate exported a local mesh at a 0.01 mm setting, then PyVista/VTK rendered it offscreen. The source notebook is unchanged. This is a render of native exported geometry, not an nTop viewport screenshot; [capture provenance](evidence/corner-render.json) records its hashes and settings.
+
 ## License
 
 MIT for the original study files, report, figures and code in this package; see [license.txt](license.txt). Linked third-party documentation and the nTop/OpenRadioss applications retain their own licenses. No supplier endorsement or manufacturing release is implied.
