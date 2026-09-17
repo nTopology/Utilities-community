@@ -107,6 +107,10 @@ jobs:
           BRANCH="sync/community-pr-${PR_NUMBER}"
           git checkout -B "$BRANCH"
 
+          : > /tmp/sync/added.txt
+          : > /tmp/sync/updated.txt
+          : > /tmp/sync/deleted.txt
+
           # rsync each package folder community -> private. --delete handles
           # file removals inside the same package; we never touch other folders.
           # If the package folder no longer exists in community at all (the
@@ -118,9 +122,13 @@ jobs:
               if [ -d "$pkg" ]; then
                 echo "Package removed in community, deleting from private: $pkg"
                 git rm -r --ignore-unmatch --quiet "$pkg"
+                echo "$pkg" >> /tmp/sync/deleted.txt
               fi
               continue
             fi
+
+            pkg_existed=false
+            [ -d "$pkg" ] && pkg_existed=true
 
             mkdir -p "$pkg"
 
@@ -143,6 +151,14 @@ jobs:
                 && mv /tmp/_manifest.json "$pkg/manifest.json"
             fi
             git add "$pkg"
+
+            if ! git diff --cached --quiet -- "$pkg"; then
+              if [ "$pkg_existed" = true ]; then
+                echo "$pkg" >> /tmp/sync/updated.txt
+              else
+                echo "$pkg" >> /tmp/sync/added.txt
+              fi
+            fi
           done <<< "$packages"
 
           if git diff --cached --quiet; then
@@ -172,12 +188,29 @@ jobs:
             exit 0
           fi
 
+          format_list() {
+            if [ -s "$1" ]; then
+              sed 's/^/- /' "$1"
+            else
+              echo "_none_"
+            fi
+          }
+
           BODY=$(cat <<EOF
           Auto-synced from \`nTopology/Utilities-community\` PR [#${PR_NUMBER}](${PR_URL}) by @${PR_AUTHOR}.
 
           The contributor PR was reviewed on the public mirror; this follow-up PR
           carries the same files into the private source repo so the next deploy
           can publish them on community.ntop.com.
+
+          **Packages added:**
+          $(format_list /tmp/sync/added.txt)
+
+          **Packages updated:**
+          $(format_list /tmp/sync/updated.txt)
+
+          **Packages deleted:**
+          $(format_list /tmp/sync/deleted.txt)
 
           ---
 
