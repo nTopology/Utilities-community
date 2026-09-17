@@ -1,0 +1,25 @@
+{
+  "id": "sheet-metal-implicit-workflow",
+  "type": "Bundle",
+  "title": "Sheet metal with implicit geometry: models, tools and forming",
+  "summary": "Three editable notebooks, a guided HTML report, forming GIFs and bend/draft demos comparing implicit modeling with B-rep CAD. Includes clearly scoped external FE and unloading diagnostics.",
+  "author": "bradrothenberg",
+  "version": "0.1.0",
+  "ntopVersion": "6.1+",
+  "license": "MIT",
+  "domain": "Mechanical",
+  "application": "Sheet metal geometry and forming studies",
+  "complexity": "Advanced",
+  "tags": [
+    "sheet-metal",
+    "implicit-modeling",
+    "forming",
+    "springback",
+    "tooling",
+    "notebook-api"
+  ],
+  "preview": "bundle",
+  "coverImage": "cover.png",
+  "packageFile": "sheet-metal-workflow.zip",
+  "verified": false
+}

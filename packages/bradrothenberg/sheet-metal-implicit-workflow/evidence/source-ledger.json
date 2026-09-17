@@ -1,0 +1,35 @@
+{
+  "scope": "Public source families; original study geometry. No supplier CAD or source photographs are bundled.",
+  "sources": [
+    {
+      "id": "hammond",
+      "title": "Hammond 1444 Series aluminum chassis",
+      "url": "https://www.hammfg.com/electronics/small-case/chassis/1444",
+      "used": "1444-8 nominal outside envelope 6 x 4 x 2 inches and aluminum thickness 0.040 inch. Source product is spot welded. Study uses open corner reliefs and omits welded tabs; bend radius and hole layout are authored assumptions."
+    },
+    {
+      "id": "bending",
+      "title": "Protolabs sheet metal bend radius guidelines",
+      "url": "https://www.protolabs.com/resources/design-tips/the-basics-of-bend-radii-in-sheet-metal/",
+      "used": "Neutral-axis definition and dependence of K-factor on material and tooling. K=0.42 in this study is an illustrative input requiring coupon calibration, not a supplier-approved value."
+    },
+    {
+      "id": "round-relief",
+      "title": "Protolabs: How and When to Add Bend Reliefs to Sheet Metal Parts",
+      "url": "https://www.protolabs.com/resources/blog/bend-relief/",
+      "used": "Round relief roots help reduce tear and crack propagation. Revision 3 uses authored 0.5 mm root radii at 45-degree miter seams with a 0.5 mm normal gap. Revision 2 used 1.5 mm wide slots with 0.75 mm roots. This source does not certify the study dimensions or miter edge preparation."
+    },
+    {
+      "id": "mate-ribs",
+      "title": "Mate: strengthening ribs",
+      "url": "https://www.mate.com/use-strengthening-ribs-to-add-structural-rigidity/",
+      "used": "Public rib-forming examples motivate the corrugated shield family. No strength increase is quantified or established by the geometry study."
+    },
+    {
+      "id": "beckwood-drawing",
+      "title": "Beckwood: deep drawing",
+      "url": "https://beckwoodpress.com/applications/deep-drawing/",
+      "used": "The manufacturer distinguishes forming motion, blank holding and material flow, and discusses multiple draws for demanding parts. The stepped housing is a target geometry; its sequence is illustrative and unqualified."
+    }
+  ]
+}
