@@ -1,0 +1,18 @@
+{
+  "id": "fuselage-from-rails",
+  "type": "Notebook",
+  "title": "Fuselage from Rails",
+  "summary": "Create a fuselage from rails using Conic Section Sweeps. Top and Bottom tangent is set to +Y, Side tangent is set to +/- Z. All rails should have a starting point in the X=0 plane. Top and Bottom rails should be planar in XZ with the nose pointed in the -X direction. Side rail can be non-planar, but should be kept in +Y. If end points of rails do not line up in X, the minimum X value will be used to close the fuselage.",
+  "author": "matthewmuellernTop",
+  "version": "1.0.0",
+  "ntopVersion": "6.0+",
+  "license": "MIT",
+  "domain": "Aerospace",
+  "complexity": "Intermediate",
+  "tags": [
+    "Airplane",
+    "Fuselage",
+    "Sweep"
+  ],
+  "preview": "geometry"
+}
