@@ -1,0 +1,6 @@
+# Keep portable text and binary artifact hashes stable.
+* text=auto eol=lf
+*.ntop -text
+*.gif -text
+*.png -text
+*.zip -text

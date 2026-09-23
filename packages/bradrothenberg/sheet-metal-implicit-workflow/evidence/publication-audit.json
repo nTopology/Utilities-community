@@ -1,0 +1,147 @@
+{
+  "native": [
+    {
+      "file": "corrugated-shield.ntop",
+      "sha256": "4cbb207b88e956a68e2ec25ab1c37ae701f207820e991e2573fae76db28d9b5a",
+      "graph_sha256": "d93d9f06ed064d5f9a2c1f220fedf6b44f2704ebaa95a24b685aff981f2fdbb5",
+      "leaf_types": [
+        "JSON",
+        "bin",
+        "json"
+      ],
+      "roundtrip_exact": true
+    },
+    {
+      "file": "enclosure.ntop",
+      "sha256": "08ecf567d0b2710e37f5ebc9ca27b8f2f9bcd0cf1620cafcfb81fa38266d8430",
+      "graph_sha256": "f5776a08f73b1c2447bce09614aa309cf1744c71fb8e4970022ef4a780b6af95",
+      "leaf_types": [
+        "JSON",
+        "bin",
+        "json"
+      ],
+      "roundtrip_exact": true
+    },
+    {
+      "file": "stepped-housing.ntop",
+      "sha256": "81b4fdfda80c4fe8aefc32879b4ec7d796eaebddea7d2f99db89f3c28de98da6",
+      "graph_sha256": "416a92e073bea2a00598807bbaf129d9b8e7d0474c88ac15859569c05c7198e7",
+      "leaf_types": [
+        "JSON",
+        "bin",
+        "json"
+      ],
+      "roundtrip_exact": true
+    }
+  ],
+  "media": [
+    {
+      "file": "corner-miter-cli.png",
+      "size": [
+        2400,
+        2000
+      ],
+      "frames": 1
+    },
+    {
+      "file": "corrugated-fe-poster.png",
+      "size": [
+        1080,
+        860
+      ],
+      "frames": 1
+    },
+    {
+      "file": "corrugated-fe.gif",
+      "size": [
+        1080,
+        860
+      ],
+      "frames": 61,
+      "loop": 0,
+      "duration_ms": 7710,
+      "unique_frames": 61
+    },
+    {
+      "file": "corrugated-release.png",
+      "size": [
+        1080,
+        725
+      ],
+      "frames": 1
+    },
+    {
+      "file": "corrugated-shield.png",
+      "size": [
+        1400,
+        950
+      ],
+      "frames": 1
+    },
+    {
+      "file": "corrugated-tools-poster.png",
+      "size": [
+        960,
+        720
+      ],
+      "frames": 1
+    },
+    {
+      "file": "corrugated-tools.gif",
+      "size": [
+        960,
+        720
+      ],
+      "frames": 73,
+      "loop": 0,
+      "duration_ms": 7040,
+      "unique_frames": 73
+    },
+    {
+      "file": "enclosure-flat.png",
+      "size": [
+        1400,
+        950
+      ],
+      "frames": 1
+    },
+    {
+      "file": "enclosure.png",
+      "size": [
+        1400,
+        950
+      ],
+      "frames": 1
+    },
+    {
+      "file": "housing-tools-poster.png",
+      "size": [
+        960,
+        720
+      ],
+      "frames": 1
+    },
+    {
+      "file": "housing-tools.gif",
+      "size": [
+        960,
+        720
+      ],
+      "frames": 73,
+      "loop": 0,
+      "duration_ms": 7040,
+      "unique_frames": 73
+    },
+    {
+      "file": "stepped-housing.png",
+      "size": [
+        1400,
+        950
+      ],
+      "frames": 1
+    }
+  ],
+  "report_local_links_checked": 48,
+  "private_path_scan_passed": true,
+  "scope": "File/container audit, not new native evaluation or FE execution."
+}

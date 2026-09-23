@@ -1,0 +1,45 @@
+{
+  "vertices": 458275,
+  "triangles": 916590,
+  "watertight": true,
+  "winding_consistent": true,
+  "components": 1,
+  "bounds_mm": [
+    [
+      -100.0,
+      -75.05255889892578,
+      -7.656012002144053e-08
+    ],
+    [
+      100.0,
+      75.05255889892578,
+      8.596152305603027
+    ]
+  ],
+  "extents_mm": [
+    200.0,
+    150.10511779785156,
+    8.596152382163147
+  ],
+  "volume_mm3": 44425.96040613637,
+  "surface_area_mm2": 75325.17330928707,
+  "mesh_sha256": "8ec63d82722ee14ee6aedab764417f871a5a7e9e6412a5a8fdd2cff5c89e4f45",
+  "euler_number": -20,
+  "display": {
+    "triangles": 916590,
+    "watertight": true,
+    "topology_unchanged": true,
+    "max_coordinate_roundoff_mm": 2.3832274465007686e-07,
+    "method": "full native triangles, indexed and gzip compressed; centered float32 positions"
+  },
+  "cross_checks": {
+    "analytic_volume_mm3": 44525.636247533854,
+    "volume_error_percent": -0.22386168912522653,
+    "volume_passed": true,
+    "max_extent_error_mm": 4.0543483237343025e-08,
+    "extent_passed": true,
+    "expected_euler_number": -20,
+    "through_hole_topology_passed": true
+  },
+  "passed": true
+}
