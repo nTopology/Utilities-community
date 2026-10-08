@@ -25,7 +25,9 @@ DEFAULTS = {
     "wing_root_chord": 13210, "wing_span": 9000,
     "wing_inner_sweep": 68.3, "wing_inner_taper": 0.2105,
     "wing_outer_sweep": 60.8, "wing_outer_taper": 0.4,
-    "wing_break": 0.804, "wing_twist": 6, "wing_dihedral": 0, "wing_incidence": 2,
+    "wing_break": 0.804, "wing_dihedral": 0, "wing_incidence": 2,
+    # Twist at root, panel break and tip, linear in between (negative = washout)
+    "wing_root_twist": 0, "wing_break_twist": -2.412, "wing_tip_twist": -3,
     "wing_naca": "0003",
     # Canards
     "canard_x": 10780, "canard_z": 660,
@@ -37,6 +39,15 @@ DEFAULTS = {
     "hstab_x": 25280, "hstab_z": 450,
     "hstab_root_chord": 4810, "hstab_span": 4490,
     "hstab_sweep": 57.4, "hstab_taper": 0.116,
+    # Points along the notebook's Top / Side / Bottom Rail splines (comma-separated, mm),
+    # sampled by the Aero Fuselage Points count. Side rail y is the half-width.
+    # These defaults are the rails' control points, close enough for a standalone run.
+    "fuse_top_x": "0,1118.3,3361.2,6710.3,10065.5,13390.6,16761.1,20113.4,23471.2,26838.8,29086.8,30191.3",
+    "fuse_top_z": "30,104.8,206.3,559.3,824.9,1426.6,1350.7,1025.1,782.1,777.4,775.4,556.5",
+    "fuse_side_x": "0,1069.1,3329.3,6680.3,10043.1,13398.4,16761.2,20122.5,23482.9,26848.9,29078.6,30191.3",
+    "fuse_side_y": "30,367.5,316.1,422.5,557.5,583.9,568.8,576.1,573.6,576,619.5,521.7",
+    "fuse_bot_x": "0,1110.9,3353.5,6713.7,10074.7,13436.5,16796.3,20160.3,23514.4,26887.3,29096.9,30191.3",
+    "fuse_bot_z": "-30,-197.9,-210.9,-271.3,-302.5,-323.7,-299.7,-315.7,-108.5,-292.3,86.3,347.8",
     # Flight condition / mass properties
     "mach": 1.41,           # X-59 design cruise (~1.4)
     "altitude": 16760,      # m (55,000 ft)
@@ -49,13 +60,6 @@ DEFAULTS = {
 VSTAB = dict(x=23680, z=750, root_chord=5450, span=2485, inner_sweep=53.5,
              inner_taper=0.634, outer_sweep=53.5, outer_taper=0.4226, brk=0.5)
 TSTAB = dict(x=28170, z=3165, root_chord=1500, span=1390, sweep=35, taper=0.6)
-# Fuselage stations from the notebook's rail control points: x, half-width, z_top, z_bottom (mm)
-FUSELAGE = [
-    (0, 30, 30, -30), (1110, 367, 105, -198), (3350, 316, 206, -211),
-    (6700, 422, 559, -271), (10060, 557, 825, -302), (13400, 584, 1427, -324),
-    (16770, 569, 1351, -300), (20130, 576, 1025, -316), (23480, 574, 782, -108),
-    (26860, 576, 777, -292), (29090, 620, 775, 86), (30191, 522, 557, 348),
-]
 
 
 def ensure_aerosandbox():
@@ -80,6 +84,23 @@ def parse_args(argv):
     return p
 
 
+def fuselage_stations(p):
+    """Fuselage stations (x, half-width, z_top, z_bottom) in mm at the top rail's point
+    x positions, with the side and bottom rails interpolated onto them."""
+    import numpy as onp
+    rail = {}
+    for name in ("top", "side", "bot"):
+        xs = [float(v) for v in str(p[f"fuse_{name}_x"]).split(",")]
+        vs = [float(v) for v in str(p[f"fuse_{name}_{'y' if name == 'side' else 'z'}"]).split(",")]
+        if len(xs) != len(vs):
+            raise ValueError(f"fuselage {name} rail has {len(xs)} x values but {len(vs)} others")
+        rail[name] = (onp.array(xs), onp.array(vs))
+    x, z_top = rail["top"]
+    half_width = onp.interp(x, *rail["side"])
+    z_bot = onp.interp(x, *rail["bot"])
+    return list(zip(x, half_width, z_top, z_bot))
+
+
 def naca(code):
     import aerosandbox as asb
     code = str(code).strip()
@@ -87,10 +108,12 @@ def naca(code):
 
 
 def lifting_surface(asb, name, x, z, root_chord, span, panels, airfoil, incidence=0.0,
-                    twist=0.0, dihedral=0.0, symmetric=True, vertical=False, color=None):
+                    twist=0.0, dihedral=0.0, symmetric=True, vertical=False, color=None,
+                    station_twists=None):
     """Build a wing from a root LE point and a list of (span_fraction, chord, qc_sweep_deg) panels.
-    Twist is applied as washout reaching -twist/2 at the tip (matches the nTop wing block notes).
-    All inputs in mm/deg; returns an asb.Wing in metres."""
+    Twist is applied as washout reaching -twist/2 at the tip (matches the nTop wing block notes),
+    unless station_twists gives the twist at the root and at each panel end directly
+    (matches the Twisted 2 Panel Wing block). All inputs in mm/deg; returns an asb.Wing in metres."""
     import aerosandbox.numpy as np
     m = 1e-3
     half = span / 2 if symmetric else span
@@ -104,7 +127,10 @@ def lifting_surface(asb, name, x, z, root_chord, span, panels, airfoil, incidenc
         stations.append((s, chord, x_qc))
     for i, (s, chord, xq) in enumerate(stations):
         xle = x if i == 0 else xq - 0.25 * chord
-        tw = incidence - (twist / 2) * (s / half)
+        if station_twists is not None:
+            tw = incidence + station_twists[i]
+        else:
+            tw = incidence - (twist / 2) * (s / half)
         off = s * np.tand(dihedral)
         xyz = [xle * m, 0, (z + s) * m] if vertical else [xle * m, s * m, (z + off) * m]
         xsecs.append(asb.WingXSec(xyz_le=xyz, chord=chord * m, twist=tw, airfoil=airfoil))
@@ -119,7 +145,8 @@ def build_airplane(p):
         asb, "Main Wing", p["wing_x"], p["wing_z"], p["wing_root_chord"], p["wing_span"],
         [(p["wing_break"], w_brk, p["wing_inner_sweep"]),
          (1.0, w_brk * p["wing_outer_taper"], p["wing_outer_sweep"])],
-        naca(p["wing_naca"]), p["wing_incidence"], p["wing_twist"], p["wing_dihedral"])
+        naca(p["wing_naca"]), p["wing_incidence"], dihedral=p["wing_dihedral"],
+        station_twists=[p["wing_root_twist"], p["wing_break_twist"], p["wing_tip_twist"]])
     canard = lifting_surface(
         asb, "Canards", p["canard_x"], p["canard_z"], p["canard_root_chord"], p["canard_span"],
         [(1.0, p["canard_root_chord"] * p["canard_taper"], p["canard_sweep"])],
@@ -140,7 +167,7 @@ def build_airplane(p):
     fuse = asb.Fuselage(name="Fuselage", xsecs=[
         asb.FuselageXSec(xyz_c=[x * m, 0, (zt + zb) / 2 * m],
                          width=2 * hw * m, height=max(zt - zb, 1) * m, shape=2.5)
-        for x, hw, zt, zb in FUSELAGE])
+        for x, hw, zt, zb in fuselage_stations(p)])
     return asb.Airplane(name="X-59 (student variant)", xyz_ref=[p["cg_x"] * m, 0, 0],
                         wings=[wing, canard, hstab, vstab, tstab], fuselages=[fuse])
 

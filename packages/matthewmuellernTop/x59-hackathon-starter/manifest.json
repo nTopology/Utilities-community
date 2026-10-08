@@ -5,7 +5,7 @@
   "summary": "Parametric X-59 low-boom aircraft with a mass statement and a Run Command link to a Python AeroSandbox script that reports supersonic cruise L/D, drag and neutral point within seconds of any geometry change.",
   "author": "matthewmuellernTop",
   "org": "nTop",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "ntopVersion": "6.2+",
   "license": "MIT",
   "domain": "Aerospace",
