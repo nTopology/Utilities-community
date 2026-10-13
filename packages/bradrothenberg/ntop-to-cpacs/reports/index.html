@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="A verified GBI to CPACS round trip through the nTop Notebook API, with native geometry and measured section comparisons.">
+<link rel="icon" href="data:,">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/ntop-docs.css">
+<link rel="stylesheet" href="assets/report.css">
+<title>GBI to CPACS | nTop Notebook API</title>
+</head>
+<body><main class="wrap">
+<header class="mast">
+  <div class="brandbar"><div class="kicker">nTop / Engineering demo / Public</div><button class="theme" type="button" aria-label="Use dark theme" aria-pressed="false">Dark theme</button></div>
+  <h1>GBI TO CPACS<span class="subtitle">Notebook API round trip</span></h1>
+  <p class="dek">Export the GBI aircraft to CPACS, edit tip twist, and rebuild the native model through the nTop Notebook API.</p>
+  <div class="meta"><span>13 OCT 2026</span><span>GBI REV38</span><span>CPACS 3.5.1</span><span>STATUS: VERIFIED DEMO</span></div>
+</header>
+<p class="intro">The bridge connects a shared aircraft definition to an existing nTop design control. Native section measurements carry the geometry into CPACS.</p>
+<section class="bluf" aria-label="Verified result">
+  <h4>Verified result</h4>
+  <p class="verdict">The CPACS request changes native tip twist from 2° to 4°. The repaired wing/body transition builds successfully.</p>
+  <p class="src">Measured in the retained demo run. The bridge supports this GBI parameter contract; the native notebook remains the geometry authority.</p>
+  <div class="moves">
+    <div class="move"><span class="tag">01 / Export</span><div>Measure the wing/body and fin sections. Write the samples into standard CPACS geometry nodes.</div></div>
+    <div class="move"><span class="tag">02 / Edit</span><div>Set <code>ntop:tipTwistDeg</code> to 4 in the CPACS tool metadata. Validate the request before applying it.</div></div>
+    <div class="move"><span class="tag">03 / Rebuild</span><div>Set the native control through the Notebook API. Read it back, save the model, and export fresh sections.</div></div>
+  </div>
+</section>
+<div class="stats" aria-label="Measured results">
+  <div class="stat"><div class="v">2° <span class="unit">to</span> 4°</div><div class="k">Native tip-twist readback<br>(measured)</div></div>
+  <div class="stat"><div class="v">31</div><div class="k">Profiles in each CPACS export<br>(derived from the files)</div></div>
+  <div class="stat"><div class="v">49.388 <span class="unit">mm</span></div><div class="k">Largest sampled bounds change<br>(derived; Y = 1.700 m)</div></div>
+</div>
+<section aria-labelledby="geometry-heading">
+  <h2 id="geometry-heading" class="first-section"><span class="num">01 / NATIVE GEOMETRY</span>The aircraft before and after the update</h2>
+  <p>The views use the same camera, scale, and render settings. Each image shows the saved native notebook.</p>
+  <figure><div class="figlbl">Figure 1 / Native nTop views</div><div class="compare"><div class="model"><img src="baseline-native.png" alt="Native nTop GBI aircraft at 2 degrees tip twist"><div class="model-caption"><div><span class="mono">baseline</span><strong>2° tip twist</strong></div><a href="https://raw.githubusercontent.com/bradrothenberg/ntop-to-cpacs/e518a3582ecda5dd20c58507d557681f050ae263/examples/gbi/GBI-baseline.ntop" download>Download .ntop</a></div></div><div class="model"><img src="changed-native.png" alt="Native nTop GBI aircraft at 4 degrees tip twist"><div class="model-caption"><div><span class="mono">changed</span><strong>4° tip twist</strong></div><a href="../ntop-to-cpacs.ntop" download>Download .ntop</a></div></div></div>
+  <figcaption class="figure-note"><b>Original details remain native.</b> Both models retain the inlet, exhaust, and fin-root blend. The original source file remains unchanged.</figcaption></figure>
+</section>
+<section aria-labelledby="repair-heading">
+  <h2 id="repair-heading"><span class="num">02 / TWIST TRANSITION REPAIR</span>A smooth transition beside the center body</h2>
+  <p>The previous 4° model added 11.614 mm of vertical placement across the existing narrow root band. This produced the visible crease.</p>
+  <p>The updated construction retains the original 2° shape in that band. A smooth gate distributes the additional twist through the wing/body transition.</p>
+  <figure><div class="figlbl">Twist repair / Scalar construction comparison</div><img class="plot" src="twist-transition.png" alt="Previous and repaired twist laws, showing the removed abrupt root placement">
+  <figcaption class="figure-note">The added-twist gate has three continuous derivatives. It starts at construction Y = 0.3055 m and reaches the linear law at 1 m. Native coordinate maps compose with these construction coordinates.</figcaption></figure>
+  <div class="call"><span class="lbl">Measured checks</span><p>Native checks use 288 fixed points per model. The protected-band field difference is 5.3e-14 m. The outer-station field difference at Y = 1.5 m and 2 m is 0 m.</p><p>These values compare scalar fields, not surface distances. The repair addresses the reported root crease. It does not establish global surface fairness or aerodynamic performance.</p></div>
+  <div class="files"><a href="https://github.com/bradrothenberg/ntop-to-cpacs/blob/e518a3582ecda5dd20c58507d557681f050ae263/examples/gbi/twist-law-audit.json">Twist-law evidence</a><a href="https://github.com/bradrothenberg/ntop-to-cpacs/blob/e518a3582ecda5dd20c58507d557681f050ae263/examples/gbi/native-transition-verification.json">Native field checks</a><a href="previous-native.png">Previous 4° native view</a></div>
+</section>
+<section aria-labelledby="sections-heading">
+  <h2 id="sections-heading"><span class="num">03 / MEASURED SECTIONS</span>The native control changes the wing sections</h2>
+  <p>Gray shows the 2° baseline. Blue shows the 4° update. Both curves use native contour samples at the same span station.</p>
+  <figure><div class="figlbl">Figure 2 / Native contour comparison</div><img class="plot" src="section-comparison.png" alt="Four wing sections comparing the gray 2 degree baseline with the blue 4 degree CPACS update">
+  <figcaption class="figure-note"><b>Measured geometry.</b> The largest sampled bounding-coordinate change is 49.388 mm at Y = 1.700 m (derived). This metric compares section bounds; it does not measure maximum surface distance.</figcaption></figure>
+  <div class="call"><span class="lbl">Interpretation</span><p>The native tip-twist control affects the model's twist and section-placement construction. The sampled fin sections remain unchanged.</p></div>
+</section>
+<section aria-labelledby="checks-heading">
+  <h2 id="checks-heading"><span class="num">04 / VERIFICATION</span>Readback, schema, and geometry checks</h2>
+  <p>The checks below use the live API receipts, saved notebooks, and exported CPACS files.</p>
+  <div class="tw"><table><thead><tr><th scope="col">Check</th><th scope="col">Evidence</th><th scope="col">Result</th></tr></thead><tbody>
+  <tr><td>Native control</td><td>The API reads 2° before the change and 4° after it, with explicit degree units.</td><td><span class="pill p-info">Pass</span></td></tr>
+  <tr><td>Native build</td><td>The final airframe returns <code>e_OK</code> after the update.</td><td><span class="pill p-info">Pass</span></td></tr>
+  <tr><td>Saved notebook</td><td>The API reopens the final file at 4° with build state <code>e_OK</code>.</td><td><span class="pill p-info">Pass</span></td></tr>
+  <tr><td>Recipe comparison</td><td>Both recipes contain the smooth transition. Only the supported tip-twist value changes during the round trip.</td><td><span class="pill p-info">Pass</span></td></tr>
+  <tr><td>CPACS schema</td><td>Both exports validate against the official 3.5.1 schema and typed nTop extension. UID references resolve.</td><td><span class="pill p-info">Pass</span></td></tr>
+  <tr><td>Point reconstruction</td><td>Independent CPACS transform decoding gives 8.95e-16 m maximum numerical error at the exported samples (derived).</td><td><span class="pill p-info">Pass</span></td></tr>
+  <tr><td>Unsupported edits</td><td>The importer rejects geometry edits, nonfinite values, and unverified twist values.</td><td><span class="pill p-info">Pass</span></td></tr>
+  <tr><td>Source preservation</td><td>The retained Rev38 source has the expected SHA256. The completed run also verified the original source file.</td><td><span class="pill p-info">Pass</span></td></tr>
+  </tbody></table></div>
+  <div class="files"><a href="https://github.com/bradrothenberg/ntop-to-cpacs/blob/e518a3582ecda5dd20c58507d557681f050ae263/examples/gbi/verification.json">Verification evidence</a><a href="https://github.com/bradrothenberg/ntop-to-cpacs/blob/e518a3582ecda5dd20c58507d557681f050ae263/examples/gbi/apply-receipt.json">Live API receipt</a><a href="https://github.com/bradrothenberg/ntop-to-cpacs/blob/e518a3582ecda5dd20c58507d557681f050ae263/examples/gbi/request.xml">CPACS update request</a></div>
+  <p class="src">Point reconstruction tests serialization and coordinate transforms. It does not establish surface accuracy between sections.</p>
+</section>
+<section aria-labelledby="scope-heading">
+  <h2 id="scope-heading"><span class="num">05 / SUPPORTED SCOPE</span>A parameter bridge for GBI Rev38</h2>
+  <p>CPACS contains 20 wing/body sections and 11 fin sections. The mirrored wing/body and rotated fin use normalized airfoil coordinates.</p>
+  <div class="call"><span class="lbl">Geometry limits</span><p>CPACS contains sampled exterior sections. Inlet and exhaust passages, fin-root blending, and exact geometry between sections remain in the native notebook.</p><p>The 0.002 m slice setting controls sampling. It is not a measured surface-error tolerance. TiGL loft compatibility remains unverified.</p></div>
+  <p>The importer accepts 2° and 4° for the mapped native variable <code>Tip twist</code>. It rejects all other XML edits.</p>
+  <pre class="snippet paths">/cpacs/toolspecific/tool/ntop:bridge/ntop:tipTwistDeg</pre>
+  <p class="src">Namespace: <code>urn:ntop:gbi:cpacs:1</code>. Standard CPACS nodes store the measured geometry. Tool metadata stores the native control mapping.</p>
+</section>
+<section aria-labelledby="run-heading">
+  <h2 id="run-heading"><span class="num">06 / REPRODUCE</span>Run the example or inspect the saved results</h2>
+  <p>The repository includes the source model, bridge code, schemas, and this verified example. A fresh native run requires Windows and licensed nTop installations.</p>
+  <pre class="snippet">uv sync --locked
+.\run_demo.ps1 -NTopExe "C:\path\to\Notebook API build\ntop.exe"</pre>
+  <p>Use a build that exposes the Python Console Notebook API. The runner creates a dedicated session and preserves earlier runs.</p>
+  <div class="files"><a href="https://github.com/bradrothenberg/ntop-to-cpacs/blob/e518a3582ecda5dd20c58507d557681f050ae263/examples/gbi/baseline.xml" download>Baseline CPACS</a><a href="https://github.com/bradrothenberg/ntop-to-cpacs/blob/e518a3582ecda5dd20c58507d557681f050ae263/examples/gbi/changed.xml" download>Changed CPACS</a><a href="https://raw.githubusercontent.com/bradrothenberg/ntop-to-cpacs/e518a3582ecda5dd20c58507d557681f050ae263/examples/gbi/GBI-baseline.ntop" download>Baseline nTop notebook</a><a href="../ntop-to-cpacs.ntop" download>Changed nTop notebook</a><a href="https://github.com/bradrothenberg/ntop-to-cpacs">Code and instructions on GitHub</a></div>
+</section>
+<section aria-labelledby="sources-heading">
+  <h2 id="sources-heading"><span class="num">07 / SOURCES AND CONFIDENCE</span>Evidence behind this report</h2>
+  <p class="src">Geometry and measurements: GBI Rev38, retained run <code>demo-02</code>. All numerical results above are measured or derived from saved artifacts. The native model remains the geometry authority.</p>
+  <p class="src">CPACS definition: <a href="https://dlr-sl.github.io/cpacs-website/">official CPACS website</a> and <a href="https://www.cpacs.de/schema/v3_5_1/cpacs_schema.xsd">CPACS 3.5.1 schema</a>. Schema validation includes the typed nTop tool extension.</p>
+  <p class="src">Design: nTop document and web system, with blue accents requested for this report. Aeonik uses a local licensed installation; Inter is the public fallback. Font files are not distributed.</p>
+</section>
+<footer><div><img class="logo-light" src="assets/ntop-icon-black.png" alt="nTop"><img class="logo-dark" src="assets/ntop-icon-white.png" alt="nTop"></div><p class="src">GBI Rev38 / Notebook API demo<br>Native screenshots and measured contours / 13 October 2026</p></footer>
+</main>
+<script>
+const themeButton=document.querySelector('.theme');
+themeButton.addEventListener('click',()=>{
+  const dark=document.documentElement.dataset.theme!=='dark';
+  document.documentElement.dataset.theme=dark?'dark':'light';
+  themeButton.textContent=dark?'Light theme':'Dark theme';
+  themeButton.setAttribute('aria-label',dark?'Use light theme':'Use dark theme');
+  themeButton.setAttribute('aria-pressed',String(dark));
+});
+</script>
+</body></html>

@@ -1,0 +1,28 @@
+{
+  "id": "ntop-to-cpacs",
+  "type": "Connector",
+  "title": "nTop to CPACS: GBI aircraft round trip",
+  "summary": "Export GBI aircraft sections to CPACS 3.5.1, edit tip twist, and rebuild nTop through the Notebook API. Includes a smooth wing/body twist transition, native models, a report, and reproducible checks.",
+  "author": "bradrothenberg",
+  "version": "0.1.0",
+  "ntopVersion": "6.2.2",
+  "license": "MIT",
+  "domain": "Aerospace",
+  "application": "Aircraft geometry exchange",
+  "complexity": "Advanced",
+  "tags": [
+    "cpacs",
+    "aircraft",
+    "notebook-api",
+    "python",
+    "geometry-exchange",
+    "automation",
+    "ai-assisted"
+  ],
+  "preview": "geometry",
+  "coverImage": "cover.png",
+  "packageFile": "ntop-to-cpacs.ntop",
+  "distribution": "redirect",
+  "redirectUrl": "https://github.com/bradrothenberg/ntop-to-cpacs",
+  "aiModel": "GPT-6 (Codex)"
+}
