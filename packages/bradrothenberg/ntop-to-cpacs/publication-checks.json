@@ -1,0 +1,117 @@
+{
+  "source_repository": "https://github.com/bradrothenberg/ntop-to-cpacs",
+  "source_commit": "e518a3582ecda5dd20c58507d557681f050ae263",
+  "model": {
+    "source": "examples/gbi/GBI-changed.ntop",
+    "published": "ntop-to-cpacs.ntop",
+    "source_sha256": "ae28c313735eda6af136a518d8875e175ef0ef5f0d413d2baec90e5f77c63b3b",
+    "published_sha256": "ae28c313735eda6af136a518d8875e175ef0ef5f0d413d2baec90e5f77c63b3b",
+    "bytes": 2991960,
+    "transformation": "Filename only; all native bytes preserved"
+  },
+  "native_execution": "Recorded source run: final notebook reopened through the Notebook API at 4 degrees with e_OK. No new native execution during packaging.",
+  "package_changes": [
+    "Renamed primary notebook and icon assets",
+    "Rewrote report links to delivered files or source commit permalinks"
+  ],
+  "license": "MIT; exclusions in license-scope.md and third-party-notices.md",
+  "submission_status": "prepared for community PR; not a live listing",
+  "source_checks": {
+    "original_preserved": true,
+    "cpacs_profiles_per_export": 31,
+    "max_point_reconstruction_error_m": 8.95090418262362e-16
+  },
+  "files": {
+    ".gitattributes": {
+      "sha256": "ecc028956b48e388d5b0217e33bd7fe1054cb1b1e80aae37f39feffae257d75d",
+      "bytes": 61
+    },
+    "cover.png": {
+      "sha256": "c7c95de0970c28e1133e29683ba725f806ec2bc29e1a15c4357cb7b219b64aa3",
+      "bytes": 98319
+    },
+    "LICENSE": {
+      "sha256": "82e81ab30c1a1df6749ebbdd3ff27979e49e999a86eb6b508f2d36d66b3177d3",
+      "bytes": 1075
+    },
+    "license-scope.md": {
+      "sha256": "389fc8053835f37e1dbfae60125f7cf8d7fb94f428c1228af379249af3ce6f3a",
+      "bytes": 1008
+    },
+    "manifest.json": {
+      "sha256": "de740e854603cbb809c4923ab53b87023d08545c1ac8c4582850f94b4cbbae31",
+      "bytes": 908
+    },
+    "ntop-to-cpacs.ntop": {
+      "sha256": "ae28c313735eda6af136a518d8875e175ef0ef5f0d413d2baec90e5f77c63b3b",
+      "bytes": 2991960
+    },
+    "README.md": {
+      "sha256": "ef5899329065c08abdf7ef31807b1b6ae1efc586008517d95377adc3034eda5a",
+      "bytes": 6012
+    },
+    "reports/assets/ntop-docs.css": {
+      "sha256": "b192912cca7b30ce3f2c9d7224451062614644e700484bb874c506391c48ebd8",
+      "bytes": 8742
+    },
+    "reports/assets/ntop-icon-black.png": {
+      "sha256": "2f3f660199d138003ee5dc76158904aff400c5b0f91b4acea89a5b6a51620ed0",
+      "bytes": 10448
+    },
+    "reports/assets/ntop-icon-white.png": {
+      "sha256": "f23678dde4d24b18e212d9977f01866274737501cab609d09b9cdba832bb349e",
+      "bytes": 11015
+    },
+    "reports/assets/report.css": {
+      "sha256": "1aad3dc66ae7d403d2176093cf5f3a7c582bbed5ad0661a225daf3dcb996b53b",
+      "bytes": 4615
+    },
+    "reports/baseline-native.png": {
+      "sha256": "3c8c9f3a9546218874f68b6eeb20327e5757aa0db49f362ea15ae2f497959ef6",
+      "bytes": 96701
+    },
+    "reports/changed-native.png": {
+      "sha256": "c7c95de0970c28e1133e29683ba725f806ec2bc29e1a15c4357cb7b219b64aa3",
+      "bytes": 98319
+    },
+    "reports/index.html": {
+      "sha256": "1517b6a3d839381c598b4a4d9a353125df7954f513f3e982bd94c18e28923931",
+      "bytes": 13560
+    },
+    "reports/previous-native.png": {
+      "sha256": "3ae8317c03b957a555243bb12b49ba9a07e253517586e3a03f241a4d684a02ca",
+      "bytes": 102961
+    },
+    "reports/section-comparison.png": {
+      "sha256": "4cfab9971200bd7ec64d123e885cc2ce7b1ba2f476f7d1178bacd7e5daed7bad",
+      "bytes": 154369
+    },
+    "reports/twist-transition.png": {
+      "sha256": "4374a3e314fe0b4b4e46e2238b3b678e5d926a2b1560f0ee87a74d039aa485b1",
+      "bytes": 121802
+    },
+    "third-party-notices.md": {
+      "sha256": "7778f8ee33657cb2f25286cb58ff2ce017c74a1018317bb3df3e2e969c0a2696",
+      "bytes": 1226
+    }
+  },
+  "geometry_source_commit": "d1a1680f0918d39c4aaece3aba160dade7b329ea",
+  "checks": {
+    "native_container_round_trip_exact": true,
+    "native_source_bytes_preserved": true,
+    "native_external_inputs_or_execution_side_effects_found": false,
+    "relative_links_resolve": true,
+    "licensed_font_files_included": false,
+    "new_native_solve_during_packaging": false,
+    "report_browser_check": {
+      "viewport_widths_px": [
+        1280,
+        390
+      ],
+      "horizontal_page_overflow": false,
+      "all_inline_images_loaded": true,
+      "keyboard_theme_toggle_passed": true,
+      "local_package_preview": true
+    }
+  }
+}
