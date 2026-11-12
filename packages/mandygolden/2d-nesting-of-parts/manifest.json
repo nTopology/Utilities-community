@@ -1,0 +1,17 @@
+{
+    "id": "2d-nesting-of-parts",
+    "type": "Bundle",
+    "title": "2D Nesting of Parts",
+    "summary": "Nests implicit bodies onto a build plate by driving a bundled packer executable through Run Command, then applies the returned rotations and moves. Includes a demo notebook, the packer source, and third-party notices.",
+    "author": "mandygolden",
+    "version": "1.0.0",
+    "ntopVersion": "6.3.3",
+    "license": "MIT",
+    "domain": "Additive Manufacturing",
+    "complexity": "Advanced",
+    "tags": ["nesting", "packing", "additive-manufacturing", "build-plate", "run-command", "python", "ai-assisted"],
+    "preview": "bundle",
+    "packageFile": "2D Nesting of Parts.ntop",
+    "application": "Additive manufacturing part nesting",
+    "aiModel": "Claude"
+}
