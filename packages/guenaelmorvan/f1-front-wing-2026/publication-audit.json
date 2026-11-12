@@ -1,0 +1,48 @@
+{
+  "source_archive_sha256": "37bb5e7277af370e19a4ed9d957adcfe6406fb5f2b1a6b54d58d472c2926c4ce",
+  "source_notebook_sha256": "d9d60720adebd6bde670e6a2a95997c58ff6587cecd493b2931cd56ec0a67288",
+  "published_notebook_sha256": "d9d60720adebd6bde670e6a2a95997c58ff6587cecd493b2931cd56ec0a67288",
+  "notebook_bytes_unchanged": true,
+  "external_model_input_dependencies_found": 0,
+  "embedded_custom_block": "Conic nose cap",
+  "new_native_execution": false,
+  "recorded_native_build": "6.3.3",
+  "current_repository_contract_commit": "e83cdff8e1ed1fcf76e81100175164cc4638d582",
+  "files": [
+    {
+      "path": "design-report.pdf",
+      "source_sha256": "1a2c3969da33ed6f5ba888c3b3e9d8df825539d3090943a5a920674ea3be4e70",
+      "published_sha256": "639f639a31f8b34eec612e12768bb90ccdcc4b53ea0582dacc38952e14844cd6",
+      "changes": "Removed nonportable or unverified link actions only; visible technical content retained."
+    },
+    {
+      "path": "cfd-report.pdf",
+      "source_sha256": "5f2c06c1c94d7a0d53ba5675a6f3b3aad55d0706699da2d22e3a277a521a321a",
+      "published_sha256": "d907afd5e09f224abfde4235d58aa5cd64769deb7f6468b43b2170d57f648092",
+      "changes": "Removed nonportable or unverified link actions only; visible technical content retained."
+    },
+    {
+      "path": "cover.png",
+      "published_sha256": "f28e950022d6fb16df445ddaccc843e91ac9f70d95868d15f98a0179eab255cb",
+      "changes": "Existing model-derived render; no new geometry rendering."
+    }
+  ],
+  "license": "MIT",
+  "contributor": "Guenael Morvan",
+  "generic_example": true,
+  "package_scope": "Editable notebook, design report and CFD results PDF only, plus publication metadata and cover.",
+  "archive_compression": "Standard ZIP DEFLATE.",
+  "native_geometry_unchanged": true,
+  "content_audit": {
+    "excluded_brand_matches": 0,
+    "native_container_round_trip": "byte exact",
+    "pdf_visible_content": "20 pages retained; content streams and rendered pixels unchanged",
+    "new_solver_run": false
+  },
+  "omitted_CFD_material": [
+    "interactive viewer",
+    "source mesh",
+    "numerical fields",
+    "raw solver case and results"
+  ]
+}
