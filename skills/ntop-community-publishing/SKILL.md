@@ -83,7 +83,7 @@ Manifest rules to follow exactly (see [the example](assets/manifest.example.json
 - `type`, `complexity`, `preview`, tag count, and other fields follow the schema. Unknown fields are rejected.
 - Set `packageFile` to the main download when the package has several files.
 - Do not set `featured`, `verified`, or `communitySource`; those are editorial.
-- If an AI model helped build the package, set `aiModel` to its name and add the `ai-assisted` tag. Ask; do not guess.
+- Ask whether an AI model helped build the package; the answer is optional. If one did, ask which specific model (the exact name and version, for example `Claude Opus 5.5`, not just "Claude") and, optionally, the effort or reasoning level it ran at (for example `high`). Set `aiModel` to the model, with the effort in parentheses when given (`Claude Opus 5.5 (high effort)`, 60 characters max), and add the `ai-assisted` tag. If the user skips the question, omit `aiModel`. Do not guess.
 
 Simple path: this is all that is needed. Copy the file, write the manifest and README, add the license.
 
