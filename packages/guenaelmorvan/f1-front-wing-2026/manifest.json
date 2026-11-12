@@ -1,0 +1,26 @@
+{
+  "id": "f1-front-wing-2026",
+  "type": "Bundle",
+  "title": "Parametric 2026 front wing",
+  "summary": "Generic three-element front-wing example with twelve controls, a conic nose and curved endplates. Includes illustrated design and CFD results reports, recorded geometry checks and explicit study limitations.",
+  "author": "guenaelmorvan",
+  "version": "1.0.0",
+  "ntopVersion": "6.3.3",
+  "license": "MIT",
+  "domain": "Geometry",
+  "application": "Motorsport geometry",
+  "complexity": "Advanced",
+  "tags": [
+    "front-wing",
+    "motorsport",
+    "parametric",
+    "curves",
+    "sweeps",
+    "geometry",
+    "ai-assisted"
+  ],
+  "preview": "geometry",
+  "coverImage": "cover.png",
+  "packageFile": "f1-front-wing-2026.zip",
+  "aiModel": "OpenAI Codex"
+}
