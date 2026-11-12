@@ -12,6 +12,7 @@
     "tags": ["nesting", "packing", "additive-manufacturing", "build-plate", "run-command", "python", "ai-assisted"],
     "preview": "bundle",
     "packageFile": "2D Nesting of Parts.ntop",
+    "coverImage": "cover.png",
     "application": "Additive manufacturing part nesting",
     "aiModel": "Claude"
 }

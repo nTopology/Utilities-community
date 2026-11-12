@@ -3,6 +3,8 @@
 > Download this whole folder (not just one file) — `nest_pack.exe`, the demo
 > notebook and the notices below all travel together.
 
+![The 2D Nesting of Parts block in the demo notebook, with nine bodies nested on the build plate](cover.png)
+
 This package contains everything needed to use the `2D Nesting of Parts` custom block: the block,
 a demo notebook, the packer executable it calls, and a short deck that explains how it works.
 
