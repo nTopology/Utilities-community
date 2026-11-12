@@ -1,0 +1,19 @@
+{
+  "id": "blendednet-v2-structures-lbm",
+  "type": "Notebook",
+  "title": "BlendedNet V2 Structures with LBM Aero Loads",
+  "summary": "Parametric blended wing body with ribs, spars, wingbox and fuselage structure, loaded by an LBM flow analysis and solved as a static aluminum shell analysis with von Mises stress and displacement exports.",
+  "author": "matthewmuellernTop",
+  "org": "nTop",
+  "version": "1.0",
+  "ntopVersion": "6.2+",
+  "license": "MIT",
+  "domain": "Aerospace",
+  "application": "Simulation",
+  "complexity": "Advanced",
+  "tags": ["blended-wing-body", "aircraft", "wing-structure", "flow-analysis", "lbm", "fea", "aero-structural", "ai-assisted"],
+  "preview": "geometry",
+  "coverImage": "cover.png",
+  "packageFile": "blendednet-v2-structures-lbm.ntop",
+  "aiModel": "Claude"
+}
