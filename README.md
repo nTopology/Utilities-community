@@ -34,7 +34,7 @@ Every package must include a `manifest.json` at its root. Required fields:
 | Field | Description | Example |
 |-------|-------------|---------|
 | `id` | Unique kebab-case identifier, matches the folder name | `"csv-airfoil-sdf"` |
-| `type` | `"Notebook"`, `"Bundle"`, or `"Installer"` | `"Notebook"` |
+| `type` | `"Notebook"`, `"Block"`, `"Connector"`, `"Script"`, `"Bundle"`, or `"Agent Skill"` | `"Notebook"` |
 | `title` | Human-readable display title | `"CSV Airfoil SDF"` |
 | `summary` | One or two sentence description | `"Import airfoil..."` |
 | `author` | GitHub username / handle, matches the parent folder | `"jeffh1505"` |

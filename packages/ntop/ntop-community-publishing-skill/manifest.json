@@ -1,6 +1,6 @@
 {
   "id": "ntop-community-publishing-skill",
-  "type": "Bundle",
+  "type": "Agent Skill",
   "title": "nTop Community Publishing Agent Skill",
   "summary": "An agent skill that packages your nTop notebooks, blocks, and scripts, audits the exact files, and opens a contribution PR to Utilities-community for the nTop community site.",
   "author": "ntop",

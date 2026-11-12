@@ -89,7 +89,7 @@ Simple path: this is all that is needed. Copy the file, write the manifest and R
 
 Bundle path: also keep dependencies together in the folder, make sure the README says which file to open first and what else must sit beside it, and read [the package audit](references/package-audit.md) for notebooks that reference external files, reports, and images. Check for machine-specific paths and embedded private content.
 
-Skill path: put the skill in `skills/<skill-name>/SKILL.md` (with any `references/` or `assets/`), add a row to `skills/README.md`, and add a listing package at `packages/<handle>/<skill-name>-skill/` with `"distribution": "redirect"` and a `redirectUrl` pointing at the skill's folder, so there is one copy and no zip.
+Skill path: put the skill in `skills/<skill-name>/SKILL.md` (with any `references/` or `assets/`), add a row to `skills/README.md`, and add a listing package at `packages/<handle>/<skill-name>-skill/` with `"type": "Agent Skill"`, `"distribution": "redirect"` and a `redirectUrl` pointing at the skill's folder, so there is one copy and no zip.
 
 If `node` is available, `node scripts/validate-manifests.js` is a quick check of the manifest. If it is not, CI runs it on the PR.
 
