@@ -14,5 +14,5 @@ directory (for example `~/.claude/skills/`).
    any `references/`, `assets/`, or `scripts/` it needs.
 2. Add a row to the table above.
 3. Add a listing package under `packages/<author>/<skill-name>-skill/` with
-   `"distribution": "redirect"` and a `redirectUrl` pointing at the skill's folder, so the
+   `"type": "Agent Skill"`, `"distribution": "redirect"` and a `redirectUrl` pointing at the skill's folder, so the
    skill has one source of truth and no zip to keep in sync.
