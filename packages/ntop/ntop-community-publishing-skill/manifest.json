@@ -3,7 +3,7 @@
   "type": "Bundle",
   "title": "nTop Community Publishing Agent Skill",
   "summary": "An agent skill that packages your nTop notebooks, blocks, and scripts, audits the exact files, and opens a contribution PR to Utilities-community for the nTop community site.",
-  "author": "ajayprasad97",
+  "author": "ntop",
   "org": "nTop",
   "version": "1.0.0",
   "ntopVersion": "6.2+",
@@ -11,9 +11,10 @@
   "domain": "AI Tools",
   "application": "Publishing",
   "complexity": "Beginner",
-  "tags": ["agent-skill", "publishing", "community", "claude-code", "workflow", "ai-assisted"],
+  "tags": ["agent-skill", "publishing", "community", "claude-code", "ai-assisted"],
   "preview": "bundle",
   "coverImage": "cover.png",
-  "packageFile": "ntop-community-publishing-skill.zip",
+  "distribution": "redirect",
+  "redirectUrl": "https://github.com/nTopology/Utilities-community/tree/main/skills/ntop-community-publishing",
   "aiModel": "Claude"
 }

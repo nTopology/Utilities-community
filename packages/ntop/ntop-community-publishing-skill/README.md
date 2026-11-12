@@ -14,10 +14,14 @@ your notebook, block, script, or model bundle and it will:
 
 It does not merge anything or bypass the site's review process.
 
+The skill's files live in the repository's
+[`skills/ntop-community-publishing`](https://github.com/nTopology/Utilities-community/tree/main/skills/ntop-community-publishing)
+folder; the download button opens it.
+
 ## Installation and use
 
-1. Download the zip from the community site and unzip it. You get a folder named
-   `ntop-community-publishing/`.
+1. Clone [Utilities-community](https://github.com/nTopology/Utilities-community), or
+   download the `skills/ntop-community-publishing` folder from GitHub.
 2. Copy that folder into your agent's skills directory, for example
    `~/.claude/skills/` (Claude Code, all projects) or `<project>/.claude/skills/`
    (one project). Other agents: use their skills folder.
@@ -26,16 +30,6 @@ It does not merge anything or bypass the site's review process.
 4. Ask your agent, for example: *"Use ntop-community-publishing to publish
    `my-notebook.ntop` to the nTop community as a new package."* Say "prepare and audit
    only" if you do not want it to open a PR.
-
-## Contents
-
-| Path | Purpose |
-|---|---|
-| `ntop-community-publishing/SKILL.md` | The skill: scope, preparation, audit, and submission rules |
-| `ntop-community-publishing/references/publishing-workflow.md` | Repo layout, manifest rules, git/gh commands, LFS, submission states |
-| `ntop-community-publishing/references/package-audit.md` | What to check before upload: notebooks, reports, images, hashes |
-| `ntop-community-publishing/assets/` | README template, manifest example, submission receipt example |
-| `ntop-community-publishing/agents/openai.yaml` | Display metadata for agents that use it |
 
 ## Inputs and outputs
 
