@@ -87,8 +87,12 @@ jobs:
           set -euo pipefail
           # Collect unique top-level package folders from the changed-files list,
           # e.g. "packages/foo/bar/manifest.json" -> "packages/foo/bar".
+          # packages/_schema is deliberately skipped: the private repo's schema is
+          # the source of truth (it has types such as Case Study and Research Paper
+          # that this repo's copy lacks), and rsyncing this repo's copy over it
+          # breaks manifest validation and the Pages deploy.
           packages=$(grep '^packages/' /tmp/sync/changed.txt \
-            | awk -F/ '$2 == "_schema" {print $1"/"$2; next} NF >= 3 {print $1"/"$2"/"$3}' | sort -u)
+            | awk -F/ '$2 == "_schema" {next} NF >= 3 {print $1"/"$2"/"$3}' | sort -u)
           if [ -z "$packages" ]; then
             echo "No top-level package folders detected."
             exit 0
