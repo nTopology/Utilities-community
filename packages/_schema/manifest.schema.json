@@ -15,7 +15,7 @@
       "description": "Kebab-case slug. Must equal the containing folder name."
     },
     "type": {
-      "enum": ["Notebook", "Block", "Connector", "Script", "Bundle"]
+      "enum": ["Notebook", "Block", "Connector", "Script", "Bundle", "Agent Skill"]
     },
     "title": {
       "type": "string",

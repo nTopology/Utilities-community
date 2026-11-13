@@ -1,0 +1,18 @@
+{
+  "id": "example-package",
+  "type": "Bundle",
+  "title": "Example: editable assembly and report",
+  "summary": "Explore an editable native assembly, its separate part notebooks, and a report with recorded geometry checks.",
+  "author": "example-author",
+  "version": "0.1.0",
+  "ntopVersion": "6.1",
+  "license": "MIT",
+  "domain": "Geometry",
+  "application": "Geometry",
+  "complexity": "Intermediate",
+  "tags": ["assembly", "notebook-api", "ai-assisted"],
+  "preview": "geometry",
+  "coverImage": "cover.png",
+  "packageFile": "example-package.ntop",
+  "aiModel": "Claude"
+}

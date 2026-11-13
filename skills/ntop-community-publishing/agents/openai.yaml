@@ -1,0 +1,4 @@
+interface:
+  display_name: "nTop Community Publishing"
+  short_description: "Package and submit nTop community contributions"
+  default_prompt: "Use $ntop-community-publishing to prepare, audit, and submit my selected nTop models and reports to the community site."
