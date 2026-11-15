@@ -33,6 +33,16 @@ E = m.exterior
 pts = {'Exterior above the crown': (0.5 * L, 0.0, 0.12 * L), 'Exterior inside the forebody': (0.2 * L, 0.0, 0.02 * L),
        'Exterior in the inlet mouth': (0.34 * L, 0.0, -0.02 * L), 'Exterior inside the wing': (0.6 * L, 0.2 * L, 0.006 * L),
        'Exterior at the fin': (0.93 * L, 0.0, 0.14 * L), 'Exterior ahead of the nose': (-0.05 * L, 0.0, 0.0)}
+# two more points just behind the upper lip: the middle of the diverter slot (air) and the middle of the splitter plate
+# under it (solid). Their heights are found on a vertical line through the model, so they follow the inputs.
+import numpy as np
+_x, _y = 0.30 * L, 12 * 0.0254
+_z = np.arange(6.0, -12.0, -0.02) * 0.0254
+_solid = np.asarray(fl.probe(E, [(_x, _y, float(z)) for z in _z])) < 0
+_e = np.flatnonzero(np.diff(_solid.astype(int)))          # forebody | slot | plate | duct | cowl bottom
+if len(_e) >= 3 and _solid[0]:
+    pts['Exterior in the diverter slot'] = (_x, _y, round(float(0.5 * (_z[_e[0] + 1] + _z[_e[1]])), 4))
+    pts['Exterior inside the splitter plate'] = (_x, _y, round(float(0.5 * (_z[_e[1] + 1] + _z[_e[2]])), 4))
 host = {}
 for name, pt in pts.items():
     r.check(name, E, pt)

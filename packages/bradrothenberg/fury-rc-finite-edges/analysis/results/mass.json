@@ -8,9 +8,9 @@
   "wing_tip_chord": 1.64,
   "wing_sweep": 31.0,
   "wing_apex": 38.8,
-  "wing_height": 4.0,
+  "wing_height": 5.5,
   "wing_dihedral": -1.5,
-  "wing_tc_root": 6.0,
+  "wing_tc_root": 8.0,
   "wing_tc_tip": 5.0,
   "tail_type": 0.0,
   "htail_span": 12.73,
@@ -37,13 +37,13 @@
   "te_thickness": 0.25,
   "inlet_station": 29.5,
   "inlet_rake": 48.0,
-  "inlet_lip_sweep": 25.0,
-  "diverter_height": 1.8,
-  "splitter_thickness": 0.8,
-  "splitter_apex": 24.7,
-  "splitter_sweep": 36.0,
+  "inlet_lip_sweep": 7.0,
+  "lip_dihedral": 6.0,
+  "diverter_height": 1.5,
+  "splitter_thickness": 1.0,
+  "splitter_overhang": 0.0,
   "diverter_sweep": 50.0,
-  "lip_thickness": 1.34,
+  "lip_thickness": 1.0,
   "nozzle_diameter": 16.8,
   "skin_thickness": 0.12,
   "web_thickness": 0.2,
@@ -51,7 +51,15 @@
   "rear_spar": 68.0,
   "tank_clearance": 1.0,
   "panel_line_width": 0.25,
-  "panel_line_depth": 0.05
+  "panel_line_depth": 0.05,
+  "gear_down": 1.0,
+  "nose_gear_station": 35.2,
+  "main_gear_station": 59.2,
+  "gear_track": 67.5,
+  "ground_line": 47.0,
+  "main_tyre_diameter": 19.0,
+  "wing_stores": 1.0,
+  "nose_tyre_diameter": 14.5
  },
  "assumptions": {
   "skin_density": 1600.0,
@@ -60,14 +68,15 @@
   "fuel_density": 804.0,
   "usable_fuel_fraction": 0.88,
   "engine_weight_lb": 650.0,
+  "landing_gear_fraction": 0.04,
   "engine_thrust_lbf": 4000.0
  },
  "geometry": {
   "length_m": 10.2108,
   "span_m": 7.574280000000001,
-  "wetted_area_m2": 74.0804032456768,
-  "enclosed_volume_m3": 8.802679503577966,
-  "enclosed_volume_centroid_station_m": 5.80481212114724,
+  "wetted_area_m2": 77.09027872322062,
+  "enclosed_volume_m3": 8.418596015576203,
+  "enclosed_volume_centroid_station_m": 5.826528428423968,
   "reference_wing": {
    "area_m2": 13.367028749760001,
    "span_m": 7.574280000000001,
@@ -82,53 +91,53 @@
   {
    "body": "Skin",
    "group": "structure",
-   "volume_m3": 0.2257970690928229,
+   "volume_m3": 0.23497116954837644,
    "centroid_m": [
-    6.0702391141218826,
+    6.007023356594432,
     0.0,
-    0.1662885066383568
+    0.16382709646988097
    ],
    "density_kg_m3": 1600.0,
-   "mass_kg": 361.27531054851664,
+   "mass_kg": 375.9538712774023,
    "note": "wetted area x skin thickness"
   },
   {
    "body": "Fuselage frames",
    "group": "structure",
-   "volume_m3": 0.03484954109758953,
+   "volume_m3": 0.033918811249017744,
    "centroid_m": [
-    5.543678257284356,
+    5.576887721188332,
     0.0,
-    0.16362686891701594
+    0.18050053546166914
    ],
    "density_kg_m3": 2770.0,
-   "mass_kg": 96.533228840323,
+   "mass_kg": 93.95510715977915,
    "note": ""
   },
   {
    "body": "Wing spars",
    "group": "structure",
-   "volume_m3": 0.007206987542700431,
+   "volume_m3": 0.008810647066578806,
    "centroid_m": [
-    5.610345709437099,
+    5.560899627417518,
     0.0,
-    0.055901521782994935
+    0.09498318732368292
    ],
    "density_kg_m3": 2770.0,
-   "mass_kg": 19.963355493280194,
+   "mass_kg": 24.405492374423293,
    "note": ""
   },
   {
    "body": "Wing ribs",
    "group": "structure",
-   "volume_m3": 0.0040161173667714704,
+   "volume_m3": 0.004835164072120422,
    "centroid_m": [
-    5.791407788558636,
+    5.7787202760533125,
     0.0,
-    0.05617105076498325
+    0.09510980860480703
    ],
    "density_kg_m3": 2770.0,
-   "mass_kg": 11.124645105956974,
+   "mass_kg": 13.393404479773569,
    "note": ""
   },
   {
@@ -147,11 +156,11 @@
   {
    "body": "Engine",
    "group": "engine",
-   "volume_m3": 0.37877723148909614,
+   "volume_m3": 0.3824095968637392,
    "centroid_m": [
-    8.309248149446024,
+    8.30172435139452,
     0.0,
-    0.34716719003519153
+    0.34716719154619247
    ],
    "density_kg_m3": 0.0,
    "mass_kg": 294.8350405,
@@ -160,76 +169,76 @@
   {
    "body": "Jet pipe",
    "group": "engine",
-   "volume_m3": 0.004282032448434439,
+   "volume_m3": 0.004282032432221148,
    "centroid_m": [
-    9.783452338803317,
+    9.783452331384757,
     0.0,
-    0.3470007066817991
+    0.3470007075666416
    ],
    "density_kg_m3": 4430.0,
-   "mass_kg": 18.969403746564563,
+   "mass_kg": 18.969403674739684,
    "note": ""
   },
   {
    "body": "Forward fuselage fuel",
    "group": "fuel",
-   "volume_m3": 1.0282091908567215,
+   "volume_m3": 0.9310246643601872,
    "centroid_m": [
-    4.166114579541777,
+    4.156755504415914,
     0.0,
-    0.22883622940999856
+    0.28537173874764127
    ],
    "density_kg_m3": 707.52,
-   "mass_kg": 727.4785667149475,
+   "mass_kg": 658.7185705281196,
    "note": "usable fuel = cell volume x usable fraction"
   },
   {
    "body": "Centre fuselage fuel",
    "group": "fuel",
-   "volume_m3": 1.0335193316251616,
+   "volume_m3": 0.8400514758047526,
    "centroid_m": [
-    5.420532904822672,
+    5.469872898956409,
     0.0,
-    0.2056131731253761
+    0.3362109576787287
    ],
    "density_kg_m3": 707.52,
-   "mass_kg": 731.2355975114343,
+   "mass_kg": 594.3532201613785,
    "note": "usable fuel = cell volume x usable fraction"
   },
   {
    "body": "Aft fuselage fuel",
    "group": "fuel",
-   "volume_m3": 0.7106416789156721,
+   "volume_m3": 1.174943913335056,
    "centroid_m": [
-    7.024347874809321,
+    6.908553498195585,
     0.0,
-    0.24335891486107283
+    0.09286226125021871
    ],
    "density_kg_m3": 707.52,
-   "mass_kg": 502.7932006664163,
+   "mass_kg": 831.2963175628189,
    "note": "usable fuel = cell volume x usable fraction"
   },
   {
    "body": "Wing fuel",
    "group": "fuel",
-   "volume_m3": 0.38560115427762764,
+   "volume_m3": 0.275975097995807,
    "centroid_m": [
-    5.5720239987334095,
+    5.707410193911305,
     0.0,
-    0.07538701051053279
+    0.10304831203207661
    ],
    "density_kg_m3": 707.52,
-   "mass_kg": 272.8205286745071,
+   "mass_kg": 195.25790133399337,
    "note": "usable fuel = cell volume x usable fraction"
   },
   {
    "body": "Mission systems bay",
    "group": "volume only",
-   "volume_m3": 0.5492898612151859,
+   "volume_m3": 0.5475667040397326,
    "centroid_m": [
-    1.9487428280714525,
+    1.9470941316607033,
     0.0,
-    0.22469164504660447
+    0.2253588210474759
    ],
    "density_kg_m3": 0.0,
    "mass_kg": 0.0,
@@ -238,50 +247,69 @@
   {
    "body": "Inlet duct air",
    "group": "volume only",
-   "volume_m3": 1.1504403374696814,
+   "volume_m3": 1.1372847256873522,
    "centroid_m": [
-    5.371568054289303,
+    5.330940443050988,
     0.0,
-    0.06048224526810465
+    0.06943676185516864
    ],
    "density_kg_m3": 0.0,
    "mass_kg": 0.0,
    "note": "space, no weight assigned"
+  },
+  {
+   "body": "Landing gear (legs, wheels, tyres, doors)",
+   "group": "gear",
+   "volume_m3": 0.09540935097274873,
+   "centroid_m": [
+    5.399668488265192,
+    0.0,
+    -0.7811994842589793
+   ],
+   "density_kg_m3": 0.0,
+   "mass_kg": 129.53249741303662,
+   "note": "assumed 4 % of the weight with full fuel"
   }
  ],
  "totals": {
-  "structure_kg": 496.5381488485266,
+  "landing_gear_kg": 129.53249741303662,
+  "landing_gear_cg_m": [
+   5.399668488265192,
+   0.0,
+   -0.7811994842589793
+  ],
+  "structure_kg": 515.349484151828,
   "structure_cg_m": [
-   5.9928244663411885,
+   5.950359313186177,
    0.0,
-   0.16500105879065477
+   0.1677685338087317
   ],
-  "engine_kg": 313.8044442465646,
+  "engine_kg": 313.8044441747397,
   "engine_cg_m": [
-   8.398363440785948,
+   8.391294453763562,
    0.0,
-   0.34715712615622013
+   0.34715712762940576
   ],
-  "fuel_cell_volume_m3": 3.1579713556751825,
-  "usable_fuel_m3": 2.7790147929941607,
-  "usable_fuel_kg": 2234.327893567305,
+  "fuel_cell_volume_m3": 3.2219951514958027,
+  "usable_fuel_m3": 2.8353557333163066,
+  "usable_fuel_kg": 2279.6260095863104,
   "fuel_cg_m": [
-   5.391510618901033,
+   5.635415888615139,
    0.0,
-   0.2057672272678561
+   0.21280893448665184
   ],
-  "modelled_without_fuel_kg": 810.3425930950912,
+  "modelled_without_fuel_kg": 958.6864257396043,
   "modelled_without_fuel_cg_m": [
-   6.9243672822085856,
+   6.67493819377804,
    0.0,
-   0.23554083292182065
+   0.09826795720588413
   ],
-  "modelled_with_full_fuel_kg": 3044.6704866623963,
+  "modelled_with_full_fuel_kg": 3238.3124353259145,
   "modelled_with_full_fuel_cg_m": [
-   5.799482203619016,
+   5.943161340333086,
    0.0,
-   0.21369150706007506
+   0.17889964305691097
   ],
-  "thrust_over_modelled_weight_full_fuel": 0.595916532822878
+  "thrust_over_modelled_weight_full_fuel": 0.5602824051834875
  }
 }

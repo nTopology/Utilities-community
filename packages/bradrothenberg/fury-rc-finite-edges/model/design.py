@@ -6,7 +6,7 @@ it asks this module.
 
 Units: inputs are in the units an aircraft designer reads (ft, in, deg, percent). The model works
 in metres and radians, so every input is converted once, in the notebook section
-"06 Derived dimensions", and the geometry uses the converted values.
+"07 Derived dimensions", and the geometry uses the converted values.
 
 Where the numbers come from: reference/DATA.md and reference/PROPORTIONS.md (public photographs,
 measured as fractions of the fuselage length), and docs/MATCH.md for the comparison.
@@ -24,7 +24,8 @@ S_WING = '02 Inputs | Wing'
 S_TAIL = '03 Inputs | Tail'
 S_PROP = '04 Inputs | Inlet, duct and engine'
 S_STR = '05 Inputs | Structure and fuel'
-S_DIM = '06 Derived dimensions'
+S_GEAR = '06 Inputs | Landing gear and stores'
+S_DIM = '07 Derived dimensions'
 
 # key: (notebook name, value, section, what it does)
 INPUTS = {
@@ -38,9 +39,9 @@ INPUTS = {
     'wing_tip_chord': ('Wing tip chord [ft]', 1.64, S_WING, 'Chord at the tip.'),
     'wing_sweep': ('Wing leading-edge sweep [deg]', 31.0, S_WING, 'Sweep of the leading edge, positive aft.'),
     'wing_apex': ('Wing apex station [% length]', 38.8, S_WING, 'Where the leading edge would meet the centreline, as a percentage of the fuselage length.'),
-    'wing_height': ('Wing height [in]', 4.0, S_WING, 'Height of the wing chord plane above the fuselage reference line (the chine).'),
+    'wing_height': ('Wing height [in]', 5.5, S_WING, 'Height of the wing chord plane above the fuselage reference line. The chine is 4 in above that line, so the chine runs into the wing leading edge.'),
     'wing_dihedral': ('Wing dihedral [deg]', -1.5, S_WING, 'Positive tips up.'),
-    'wing_tc_root': ('Wing thickness at root [% chord]', 6.0, S_WING, 'Maximum thickness of the section on the centreline.'),
+    'wing_tc_root': ('Wing thickness at root [% chord]', 8.0, S_WING, 'Maximum thickness of the section on the centreline.'),
     'wing_tc_tip': ('Wing thickness at tip [% chord]', 5.0, S_WING, 'Maximum thickness of the section at the tip.'),
     # ---------------------------------------------------------------- tail
     'tail_type': ('Tail type (0 = conventional, 1 = V-tail)', 0.0, S_TAIL, '0 builds a fin and two horizontal tails. 1 builds two canted V-tail panels instead.'),
@@ -68,14 +69,14 @@ INPUTS = {
     'te_thickness': ('Trailing-edge thickness [in]', 0.25, S_TAIL, 'Finite thickness of every wing and tail trailing edge.'),
     # ---------------------------------------------------------------- inlet, duct, engine
     'inlet_station': ('Inlet lip station [% length]', 29.5, S_PROP, 'Station of the lower inlet lip on the centreline, percentage of the fuselage length.'),
-    'inlet_rake': ('Inlet side wall lean [deg]', 48.0, S_PROP, 'The leading edges of the inlet side walls lean forward from the lower lip up to the fuselage underside by this angle from vertical.'),
-    'inlet_lip_sweep': ('Inlet lower lip sweep [deg]', 25.0, S_PROP, 'The lower lip is a chevron: it sweeps back from the centreline to the corners by this angle.'),
-    'diverter_height': ('Diverter height [in]', 1.8, S_PROP, 'Gap between the forebody underside and the splitter plate: the slot that carries the forebody boundary layer past the inlet.'),
-    'splitter_thickness': ('Splitter plate thickness [in]', 0.8, S_PROP, 'Thickness of the splitter plate (the upper lip of the inlet). It thins to 40 % of this at the leading edge.'),
-    'splitter_apex': ('Splitter plate apex station [% length]', 24.7, S_PROP, 'Station of the point of the splitter plate on the centreline, percentage of the fuselage length.'),
-    'splitter_sweep': ('Splitter plate sweep [deg]', 36.0, S_PROP, 'Sweep of the splitter plate leading edge, back from the point to the top of the inlet side walls.'),
+    'inlet_rake': ('Inlet face lean [deg]', 48.0, S_PROP, 'The inlet face leans forward from the lower lip up to the splitter plate by this angle from vertical.'),
+    'inlet_lip_sweep': ('Inlet lip sweep [deg]', 7.0, S_PROP, 'Turns each half of the inlet face back from the centreline, so the face is two facets with a crease on the centreline. With the leaning face and the V-shaped upper lip, about 7 deg makes the upper lip straight across in plan (estimated from photograph 37).'),
+    'lip_dihedral': ('Upper lip V angle [deg]', 6.0, S_PROP, 'The upper lip (the splitter plate) is a shallow V, lowest on the centreline. This is the rise of each half from level (estimated from photograph 37).'),
+    'diverter_height': ('Diverter height [in]', 1.5, S_PROP, 'Gap between the forebody underside and the splitter plate: the slot that carries the forebody boundary layer past the inlet.'),
+    'splitter_thickness': ('Splitter plate thickness [in]', 1.0, S_PROP, 'Thickness of the splitter plate: the top wall of the cowl and the upper lip of the inlet.'),
+    'splitter_overhang': ('Splitter plate overhang [in]', 0.0, S_PROP, 'How far the splitter plate (the upper lip) stands ahead of the inlet face. 0 on the aircraft: all the lips lie in the face.'),
     'diverter_sweep': ('Diverter wedge sweep [deg]', 50.0, S_PROP, 'Sweep of the wedge that closes the diverter slot behind the inlet lip and turns the boundary layer out to the sides.'),
-    'lip_thickness': ('Inlet lip thickness [in]', 1.34, S_PROP, 'Wall between the outer cowl and the duct at the lip.'),
+    'lip_thickness': ('Inlet lip thickness [in]', 1.0, S_PROP, 'Wall between the outer cowl and the duct at the lip.'),
     'nozzle_diameter': ('Nozzle exit diameter [in]', 16.8, S_PROP, 'Inner diameter of the exhaust nozzle at the exit.'),
     # ---------------------------------------------------------------- structure and fuel
     'skin_thickness': ('Skin thickness [in]', 0.12, S_STR, 'Thickness of the outer skin. Representative, not stressed.'),
@@ -85,6 +86,15 @@ INPUTS = {
     'tank_clearance': ('Fuel tank wall clearance [in]', 1.0, S_STR, 'Gap between a fuel tank and the structure or skin around it.'),
     'panel_line_width': ('Panel line width [in]', 0.25, S_STR, 'Width of the grooves that divide the skin into panels. Drawn wider than a real gap so it shows.'),
     'panel_line_depth': ('Panel line depth [in]', 0.05, S_STR, 'Depth of the panel grooves below the outer surface. Keep it below the skin thickness.'),
+    # ---------------------------------------------------------------- landing gear
+    'gear_down': ('Landing gear (1 = down, 0 = retracted)', 1.0, S_GEAR, '1 builds the gear, opens the bays and hangs the doors. 0 removes the gear and closes the bays.'),
+    'nose_gear_station': ('Nose gear station [% length]', 35.2, S_GEAR, 'Station of the nose wheel axle.'),
+    'main_gear_station': ('Main gear station [% length]', 59.2, S_GEAR, 'Station of the main wheel axles.'),
+    'gear_track': ('Main gear track [in]', 67.5, S_GEAR, 'Distance between the centres of the two main wheels.'),
+    'ground_line': ('Ground line below the reference line [in]', 47.0, S_GEAR, 'How far the ground is below the fuselage reference line with the aircraft standing on its wheels. Sets the leg lengths.'),
+    'main_tyre_diameter': ('Main tyre diameter [in]', 19.0, S_GEAR, 'Outer diameter of a main tyre. The width follows.'),
+    'wing_stores': ('Wing stores (1 = pylons, rails and missiles, 0 = clean wing)', 1.0, S_GEAR, '1 hangs a pylon with a launch rail and a missile-sized dummy under each wing, as in most photographs. 0 leaves the wing clean.'),
+    'nose_tyre_diameter': ('Nose tyre diameter [in]', 14.5, S_GEAR, 'Outer diameter of the nose tyre. The width follows.'),
 }
 
 

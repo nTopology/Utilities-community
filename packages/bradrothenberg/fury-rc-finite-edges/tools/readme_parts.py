@@ -26,7 +26,7 @@ def parts():
         out['COUNTS'] = (f"- {pres['final_bodies']} bodies, {pres['variables']} variables in {len(pres['sections'])} sections, every section with a description, "
                          f"{'no block uses anything defined below it' if not pres['variables_used_before_they_are_defined'] else 'some blocks use variables defined below them'}.")
     out['INPUTS'] = (f"- **{n_inputs} inputs** in ft, in, deg and %: size, wing and tail planforms, inlet, diverter and splitter plate, skin and web thickness, "
-                     "spar positions, panel lines (`docs/INPUTS.md`).")
+                     "spar positions, panel lines, landing gear position and size, and switches for tail type, landing gear and wing stores (`docs/INPUTS.md`).")
     match = _load('.local/match_final/match.json')
     if match:
         rows = ['| Check | Result |', '|---|---|']
@@ -45,10 +45,11 @@ def parts():
         t, g = mass['totals'], mass['geometry']
         mac, x0 = g['reference_wing']['mean_aerodynamic_chord_m'], g['reference_wing']['mac_leading_edge_station_m']
         pct = lambda x: (x - x0) / mac * 100
-        lines.append(f"- **Weights of the modelled items:** structure {t['structure_kg'] / LB:,.0f} lb, engine and jet pipe {t['engine_kg'] / LB:,.0f} lb, usable fuel "
+        lines.append(f"- **Weights of the modelled items:** structure {t['structure_kg'] / LB:,.0f} lb, engine and jet pipe {t['engine_kg'] / LB:,.0f} lb, landing gear "
+                     f"{t['landing_gear_kg'] / LB:,.0f} lb (an assumed {mass['assumptions']['landing_gear_fraction'] * 100:.0f} % of the full weight), usable fuel "
                      f"{t['usable_fuel_m3'] / GAL:,.0f} US gal = {t['usable_fuel_kg'] / LB:,.0f} lb (packing limit of the bays). Full fuel {t['modelled_with_full_fuel_kg'] / LB:,.0f} lb with the "
                      f"centre of gravity at station {t['modelled_with_full_fuel_cg_m'][0] / FT:.2f} ft ({pct(t['modelled_with_full_fuel_cg_m'][0]):.0f} % of the mean aerodynamic chord); "
-                     f"no landing gear, systems or payload are in these numbers. Wetted area {g['wetted_area_m2'] / FT ** 2:.0f} ft2, reference wing {g['reference_wing']['area_m2'] / FT ** 2:.1f} ft2.")
+                     f"no systems, payload or stores are in these numbers. Wetted area {g['wetted_area_m2'] / FT ** 2:.0f} ft2, reference wing {g['reference_wing']['area_m2'] / FT ** 2:.1f} ft2.")
     duct = _load('analysis/results/duct.json')
     if duct:
         g = duct['geometry']
@@ -98,8 +99,9 @@ def methods_compared():
             f"the flow solution of the whole aircraft gives {f['lift_slope_per_deg']:.4f} per deg and station {np_f / FT:.2f} ft, {(np_l - np_f) / FT:.1f} ft "
             f"({(np_l - np_f) / mac * 100:.0f} % of the mean aerodynamic chord) further forward. A long, wide forebody with chines does move the neutral point forward, "
             "but the flow solution is two angles on one grid with no grid study, so neither number is settled. "
-            f"The full-fuel centre of gravity of the modelled items (station {cg / FT:.2f} ft) is at the lattice neutral point and {(cg - np_f) / mac * 100:.0f} % of the chord "
-            "behind the flow-solution one: as modelled, with every bay full and no landing gear, systems or payload, the aircraft is not shown to be statically stable. "
+            f"The full-fuel centre of gravity of the modelled items (station {cg / FT:.2f} ft) is {abs(cg - np_l) / mac * 100:.0f} % of the chord "
+            f"{'ahead of' if cg < np_l else 'behind'} the lattice neutral point and {(cg - np_f) / mac * 100:.0f} % of the chord "
+            "behind the flow-solution one: as modelled, with every bay full and no systems or payload, the aircraft is not shown to be statically stable. "
             "Treat the centre of gravity and stability as open.")
 
 
@@ -108,15 +110,14 @@ def native_check():
     ver = [_load('native/pilot/exterior_verify.json'), _load('native/pilot/exterior_tail_type1_verify.json')]
     if not all(ver):
         return ''
-    old = _load('native/pilot/exterior_verify_before_diverter.json')
-    current = bool(old) and old['triangles'] != ver[0]['triangles']
+    final = lambda v: 'lip_dihedral' in v.get('inputs', {})                                  # meshed from the final notebook?
     mil = lambda m: m / IN * 1000
     one = lambda v: (f"{v['triangles'] / 1e6:.1f} M triangles, 99 % of the vertices within {mil(v['host_abs_p99_m']):.1f} thousandths of an inch of the Python field, "
                      f"largest difference {v['host_abs_max_m'] / IN:.2f} in")
     return (f"the outer mold line was meshed in nTop at a tolerance of {ver[0]['tolerance_m'] / IN:.2f} in and the Python field evaluated at every mesh vertex. "
-            f"Conventional tail ({'the final shape with diverter and splitter plate' if current else 'before the diverter and splitter plate were added'}): {one(ver[0])}. "
-            f"V-tail (before the diverter and splitter plate were added): {one(ver[1])}. Panel grooves and paint films are not part of the outer mold line "
-            "and were not meshed in nTop.")
+            f"Conventional tail ({'the final shape' if final(ver[0]) else 'an earlier revision, before the landing gear and the reshaped inlet'}): {one(ver[0])}. "
+            f"V-tail ({'the final shape' if final(ver[1]) else 'an earlier revision, before the diverter, the landing gear and the reshaped inlet'}): {one(ver[1])}. "
+            "The gear bays, landing gear, fittings, panel grooves and paint films are not part of the outer mold line and were not meshed in nTop.")
 
 
 def fill(path, values):

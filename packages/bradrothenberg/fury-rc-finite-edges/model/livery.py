@@ -7,7 +7,7 @@ a thin layer on the outer mold line:
   Panel lines                 grooves cut into the skin, and a dark body that fills them so they show
   Paint, dark grey            the stepped dark band on the upper fuselage and the dark tail panels
   Markings, light / dark      designation, tail code, serial, service lettering, national insignia
-  Formation lights            the yellow-green strips
+  Formation lights            the yellow-green strips, and the jet inlet warning triangles in the same colour
 
 The scheme follows US Air Force photographs 04, 05, 06, 07 and 17 (reference/SOURCES.md): two greys, "YFQ-44A" on
 the dark band, tail code AI and a serial on the fin, the national insignia on the wings. Positions and sizes are
@@ -31,8 +31,6 @@ S_PAINT = '22 Paint and markings'
 FUSELAGE_BREAKS = [0.08, 0.14, 0.20, 0.345, 0.47, 0.61, T_FACE, 0.87]
 # doors and hatches: name, from station, to station, inner and outer half breadth (fractions of the length), +1 top / -1 underside
 DOORS = [('Avionics hatch', 0.105, 0.185, 0.0, 0.011, 1),
-         ('Nose gear door', 0.345, 0.425, 0.0, 0.014, -1),
-         ('Main gear door', 0.565, 0.700, 0.018, 0.050, -1),
          ('Engine bay door', 0.765, 0.905, 0.0, 0.020, -1)]
 WING_RIB_LINES = [0.40, 0.64, 0.88]
 FILM = 0.0005                # paint and markings are drawn as a layer this far above the outer mold line [m]
@@ -103,7 +101,7 @@ class Livery:
     def __init__(self, model):
         self.m, self.af, self.d = model, model.af, model.d
         af = self.af
-        self.E = model.exterior
+        self.E = model.oml                  # the outer mold line before the landing gear bays are cut
         self.w = self.d.m('panel_line_width')
         self.depth = self.d.m('panel_line_depth')
         # fuselage patterns are drawn on the reference aircraft, so they scale with the fuselage inputs
@@ -131,7 +129,11 @@ class Livery:
         for name, x0, x1, y0, y1, top in DOORS:
             box = fmax(absf(x - 0.5 * (x0 + x1) * K) - 0.5 * (x1 - x0) * K, absf(y - 0.5 * (y0 + y1) * K) - 0.5 * (y1 - y0) * K)
             doors.append(fmax(self._line(box), (0.02 * K - z) if top > 0 else (z + 0.005 * K)).named(name + ' outline', S_PANEL))
-        return fmax(fmin(rings, dorsal, ventral, *doors), self.near_fuselage).named('Fuselage panel lines', S_PANEL)
+        # landing gear doors: the outlines of the bays (model/gear.py), on the underside
+        doors.append(fmax(self._line(self.m.gear.outlines()), z + 0.005 * K).named('Landing gear door outlines', S_PANEL))
+        # panel lines belong on the outside: none on the walls of the inlet duct, which the flat patterns also pass through
+        outside_duct = (0.012 - self.af.duct_air()).named('Outside the inlet duct when < 0', S_PANEL)
+        return fmax(fmin(rings, dorsal, ventral, *doors), self.near_fuselage, outside_duct).named('Fuselage panel lines', S_PANEL)
 
     def _panel_lines(self, name, chord_fracs, span_fracs, start, tip_cap):
         """Lines along the spars (chord fractions) and along ribs (span fractions) of one lifting panel."""
@@ -196,7 +198,7 @@ class Livery:
     def light_markings(self):
         def make():
             K = LREF
-            designation = fmax(self._side_text('YFQ-44A', 0.630, 0.0385, 0.0125, 'Lettering YFQ-44A'), self.near_fuselage)
+            designation = fmax(self._side_text('YFQ-44A', 0.600, 0.0385, 0.0125, 'Lettering YFQ-44A'), self.near_fuselage)
             code = self._side_text('AI', 0.915, 0.115, 0.020, 'Tail code AI')
             serial = self._side_text('1001', 0.897, 0.083, 0.011, 'Serial 1001')
             # conventional tail: only on the fin. V-tail: the letters fall on the two canted panels
@@ -227,9 +229,45 @@ class Livery:
 
     def dark_markings(self):
         def make():
-            service = fmax(self._side_text('U.S. AIR FORCE', 0.600, -0.021, 0.0085, 'Lettering U.S. AIR FORCE'), self.near_fuselage)
-            return fmin(service, self.insignia()).named('Dark markings pattern', S_PAINT)
+            K = LREF
+            # service lettering on the slanted lower side of the fuselage behind the main gear bay, drawn in the plan view:
+            # it shows from the side and from below [photographs 01 and 16]
+            u = (self.side * (0.670 * K - self.x)).named('Lettering U.S. AIR FORCE | along the text', S_PAINT)
+            v = (self.y - 0.047 * K).named('Lettering U.S. AIR FORCE | up the text', S_PAINT)
+            window = absf(self.x - 0.670 * K) - 0.055 * K
+            service = fmax(lettering('U.S. AIR FORCE', u, v, 0.0080 * K), window, self.z + 0.012 * K, self.near_fuselage).named('Lettering U.S. AIR FORCE', S_PAINT)
+            return fmin(service, self.insignia(), self.side_details()).named('Dark markings pattern', S_PAINT)
         return self._once('darkmarks', make)
+
+    def side_details(self):
+        """Small dark details on the fuselage sides, drawn in the side view [photographs 13, 19, 23, 25]: a cooling air
+        grille and a flush scoop on the forebody, and a row of louvres above the wing root."""
+        x, z, K = self.x, self.z, LREF
+        lean = (z - 0.020 * K) * 0.55                               # the details lean back like the paint band edges
+        grille = fmax(absf(x - lean - 0.300 * K) - 0.012 * K, absf(z - 0.021 * K) - 0.0065 * K)
+        slats = absf(absf(z - 0.021 * K) - 0.0033 * K) - 0.0006 * K  # two light slats left across the grille
+        grille = fmax(grille, -slats)
+        # flush scoop: a triangle with its point forward
+        u = x - 0.222 * K
+        scoop = fmax(-u, u - 0.030 * K, absf(z - 0.0165 * K) - u * 0.16)
+        # louvres: four short slanted slots
+        louvres = fmin(*[fmax(absf(x - lean - (0.452 + 0.007 * i) * K) - 0.0011 * K, absf(z - 0.0335 * K) - 0.0035 * K) for i in range(4)])
+        return fmax(fmin(grille, scoop, louvres), self.near_fuselage).named('Grille, flush scoop and louvres', S_PAINT)
+
+    def inlet_warning(self):
+        """The jet inlet warning triangle on each side of the cowl, just behind the inlet lip [photograph 36]: an outline
+        triangle with its point down and a small solid triangle inside. Drawn in the side view. The cowl wall leans about
+        45 deg, so heights are stretched by 1.41 to give a triangle of equal sides on the wall. The wording is left out."""
+        K = LREF
+        u = (self.x - 0.337 * K).named('Inlet warning | along', S_PAINT)
+        w = ((self.z + 0.0150 * K) * 1.41).named('Inlet warning | up the cowl wall', S_PAINT)
+
+        def triangle(w, r):                                          # point down, r = radius of the inscribed circle
+            return fmax(w, 0.866 * absf(u) - 0.5 * w) - r
+        outline = absf(triangle(w, 0.0065 * K) + 0.0011 * K) - 0.00055 * K
+        mark = fmin(outline, triangle(w + 0.0030 * K, 0.0011 * K))
+        on_cowl = absf(self.af.fuselage(False)) - 0.004               # the outside of the cowl, not the duct wall behind it
+        return fmax(mark, on_cowl).named('Inlet warning triangle', S_PAINT)
 
     def lights_pattern(self):
         def make():
@@ -240,7 +278,7 @@ class Livery:
             fwd = fmax(strip(0.170, 0.212, 0.0195, 0.0225), self.near_fuselage)
             aft = fmax(strip(0.765, 0.805, 0.0530, 0.0560), self.near_fuselage)
             fin = strip(0.955, 0.988, 0.1850, 0.1880) + self.m.off_conventional
-            return fmin(fwd, aft, fin).named('Formation light pattern', S_PAINT)
+            return fmin(fwd, aft, fin, self.inlet_warning()).named('Formation light pattern', S_PAINT)
         return self._once('lights', make)
 
     def bodies(self):
@@ -256,7 +294,8 @@ class Livery:
         """RGB of the paint at surface points (N x 3, metres): base grey, dark pattern, markings, lights, panel lines."""
         import numpy as np
         rgb = np.tile(np.array(self.BASE, np.float32), (len(pts), 1))
+        on_oml = np.abs(registry.values_at(self.E, pts)) < 0.004          # not the walls of the landing gear bays
         for field, key in ((self.dark_pattern(), 'dark'), (self.light_markings(), 'light'), (self.dark_markings(), 'darkmark'), (self.lights_pattern(), 'lights')):
-            rgb[registry.values_at(field, pts) < 0] = self.COLORS[key]
-        rgb[registry.values_at(self.lines(), pts) < 0] *= self.COLORS['line']
+            rgb[on_oml & (registry.values_at(field, pts) < 0)] = self.COLORS[key]
+        rgb[on_oml & (registry.values_at(self.lines(), pts) < 0)] *= self.COLORS['line']
         return rgb

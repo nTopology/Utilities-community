@@ -1,24 +1,25 @@
 # Fury notebook: a guide for someone new to nTop
 
 Notebook: `fury-rc-finite-edges.ntop` (nTop 6.3). It is a parametric model of an Anduril YFQ-44A Fury class
-aircraft: outer mold line matched to public photographs, inlet duct, skin, frames, spars and ribs, an engine
-envelope and fuel. Read this once, then open the notebook and read it top to bottom. The sections are in the
+aircraft: outer mold line matched to public photographs, inlet duct, landing gear, skin, frames, spars and ribs,
+an engine envelope and fuel. Read this once, then open the notebook and read it top to bottom. The sections are in the
 order the aircraft is built, and no block uses anything defined below it.
 
 ## 1. What you see when it opens
 
-The outside is shown: **Skin**, **Air data boom**, **Panel lines**, the paint and the markings. Twelve more bodies are in
-section **40 Bodies**, hidden. Click the eye beside a body to show it. Hide the skin and the paint to see frames, spars,
-ribs, engine and fuel.
+The outside is shown: **Skin**, **Air data boom**, **Panel lines**, the paint and the markings, the landing gear (down)
+and the external fittings (pylons, launch rails, missile-sized dummies, antennas). The other bodies are in section
+**40 Bodies**, hidden. Click the eye beside a body to show it. Hide the skin and the paint to see frames, spars, ribs,
+engine and fuel.
 
 Every section is collapsed and starts with a description. Open them one at a time.
 
 | Section | What is in it |
 |---|---|
 | 00 Coordinates | X, Y, Z: the position of every point. X aft from the nose tip, Y to the right wing, Z up |
-| 01 to 05 Inputs | The numbers you are meant to change (ft, in, deg, %) |
-| 06 Derived dimensions | The inputs converted to metres and radians. Nothing to edit |
-| 07 Reference coordinates | X, \|Y\|, Z divided by the size inputs, so one set of curves serves every size |
+| 01 to 06 Inputs | The numbers you are meant to change (ft, in, deg, %) and three switches: tail type, landing gear, wing stores |
+| 07 Derived dimensions | The inputs converted to metres and radians. Nothing to edit |
+| 08 Reference coordinates | X, \|Y\|, Z divided by the size inputs, so one set of curves serves every size |
 | 10 Fuselage guide curves | Curves of fuselage dimensions against station: half width, crown, chine, keel, belly, duct |
 | 11 Fuselage lofts | Three lofted surfaces: upper, underside (continues aft as the duct roof), lower |
 | 12 Inlet, duct and nozzle | Lip surface, splitter plate, diverter slot, duct air, jet pipe |
@@ -28,8 +29,10 @@ Every section is collapsed and starts with a description. Open them one at a tim
 | 20 Structure | Skin shell, frames, bulkheads, spars, ribs |
 | 21 Panel lines | The panel line pattern and the grooves it cuts in the skin |
 | 22 Paint and markings | Dark band, lettering, national insignia, formation lights |
-| 30 Engine and systems, 31 Fuel | Engine envelope, jet pipe, boom, mission bay, fuel cells |
-| 40 Bodies | The 19 finished bodies |
+| 30 Engine and systems, 31 Fuel | Engine envelope with spinner, jet pipe, boom, mission bay, fuel cells |
+| 32 Landing gear | Legs, struts, wheels and tyres, the bays cut into the underside, the doors |
+| 33 External fittings | Pylons, launch rails, missile-sized dummies, flap actuator fairings, dorsal scoop, antennas, air data probes |
+| 40 Bodies | The finished bodies |
 | 99 Checks | The model evaluated at six points, to compare with the numbers computed outside nTop |
 
 ## 2. The one idea behind everything: a shape is a field
@@ -75,17 +78,25 @@ robust when you change the inputs.
 
 - The **forebody underside** loft carries on aft inside the fuselage as the **duct roof**. This is how the real
   inlet works: the forebody is the upper wall of the inlet.
-- The **lower fuselage** loft is the cowl. It is cut at the front by the **inlet lip surface**: a chevron lower lip
-  (swept back from the centreline) with side walls that lean forward up to the underside.
+- The **lower fuselage** loft is the cowl. Its section is a V-shaped hull: side walls that lean in at about 45 deg from
+  the chine down to a corner at about half the breadth. At the inlet the bottom falls from that corner to a keel on the
+  centreline (about 11 deg); further aft the keel fades into a flat belly. Seen from the front the inlet opening is a
+  wide, shallow hexagon, as in the head-on photographs.
+- The cowl is cut at the front by the **inlet lip surface**: a face that leans, so the top of the opening is well
+  ahead of the bottom lip. "Inlet lip sweep" turns each half of the face back from the centreline, so the face is two
+  flat facets with a crease on the centreline. With 7 deg the upper lip comes out straight across in plan.
 - The **duct air** is the space below the roof, above the **duct floor** loft and one lip thickness inside the cowl.
   It runs to the round engine face. Its floor heights were solved so the duct area is smallest just behind the
   lip (the throat) and grows smoothly to the engine face (`tools/tune_duct.py`).
-- The **splitter plate** is the upper lip of the inlet. It is an arrowhead plate with its point on the centreline, one
-  **diverter height** below the forebody underside. The slot between plate and forebody carries the slow boundary-layer
-  air of the forebody past the inlet instead of into the engine. Behind the lip a swept **diverter wedge** closes the
-  slot, so it opens to the sides under the chine, and the plate runs into the cowl there.
-  In the notebook: the underside loft gives the distance below the forebody; the slot is where that distance is between 0
-  and the diverter height, the plate is the next layer down, and the duct roof starts below the plate.
+- The **splitter plate** is the top wall of the cowl and the upper lip of the inlet: a blunt lip that lies in the
+  inlet face with the others. It is a shallow V ("Upper lip V angle"), lowest on the centreline, where it lies one
+  **diverter height** below the forebody underside. The forebody underside is rounder than the plate, so the slot
+  between them is taller toward the sides. The slot carries the slow boundary-layer air of the forebody past the inlet
+  instead of into the engine. Behind the lip a swept **diverter wedge** closes the slot, so it opens to the sides under
+  the chine, and the plate runs into the cowl there.
+  In the notebook: "Height above the splitter plate" is the top of the plate; the slot is the air below the forebody
+  underside and above the plate, ahead of the wedge; the duct roof starts one plate thickness below the top of the plate
+  and changes to the underside loft aft of the slot.
 - The **jet pipe** is a cone from the engine to the nozzle exit.
 
 ## 5. Wing and tail: one recipe, used four times
@@ -102,7 +113,31 @@ Each lifting panel (wing, horizontal tail, fin, V-tail) is built the same way:
 V-tail. Both tail sets are always defined. The switch adds 100 m to the field of the set that is not selected,
 which makes it positive everywhere, so it disappears from every body (skin, structure, rudder gap).
 
-## 6. Panel lines, paint and markings
+## 6. Landing gear and external fittings
+
+The landing gear (section 32) is built from four small shapes: a **rod** (the distance to a straight line between two
+points, minus a radius), a **ball**, a **disc** and a **wheel**. Every end point is a formula of the gear inputs and the
+fuselage size, so the gear follows when you move a wheel, change the track or the ground line.
+
+- **Nose gear**: one leg at the front of its bay, a one-sided fork with the wheel beside it, torque links behind the leg,
+  a drag brace aft into the bay.
+- **Main gear**: a leg from the lower fuselage that leans outboard to a single wheel, a folding strut forward into the
+  bay, a side brace to the keel, torque links, brake.
+- **Bays**: boxes with a sawtooth outline in plan, cut into the outer mold line under the inlet duct. They stop a wall
+  thickness below the duct. Fuel keeps out of them.
+- **Doors**: flat plates hanging open from their hinge lines, a pair on the nose bay, an inner and an outer door on each
+  main bay. The outer main doors carry the landing lights.
+- **The switch.** "Landing gear" = 0 adds 100 m to the gear, the doors and the bays, so they all vanish and the
+  underside closes. Only the door outlines stay as panel lines.
+
+What it is not: the gear does not fold. The legs, wheels and bays are sized and placed from photographs; whether the
+wheels fit in the bays when retracted was not worked out, and the nose bay under the duct is only a few inches deep.
+
+The external fittings (section 33) are simple shapes placed at stations read from the photographs: a pylon and launch
+rail under each wing with a plain missile-sized body (12 ft long, 7 in diameter), the flap actuator fairings, the small
+scoop on the spine, blade antennas and the two air data probes under the nose chine. "Wing stores" = 0 gives the clean wing.
+
+## 7. Panel lines, paint and markings
 
 These are **patterns**. A pattern is a field drawn in a flat view (side view, plan view, or the plane of a wing panel)
 that does not change along the third direction, so it goes straight through the aircraft like a cookie cutter.
@@ -125,7 +160,7 @@ Paint layer     = max( pattern, Outer mold line - film, -(Outer mold line + film
 The paint layers are 0.02 in thick films, drawn so they show in the viewport. To export the outside as one mesh, use
 "Outer mold line" as before.
 
-## 7. Things to try
+## 8. Things to try
 
 | You want to | Change |
 |---|---|
@@ -135,9 +170,13 @@ The paint layers are 0.02 in thick films, drawn so they show in the viewport. To
 | More sweep, span, taper | 02 Inputs: the wing planform inputs |
 | Move the wing | 02 Inputs: Wing apex station, Wing height |
 | V-tail angle | 03 Inputs: V-tail cant angle |
+| Gear up, clean wing | 06 Inputs: Landing gear = 0, Wing stores = 0 |
+| A wider track, a longer wheelbase, a taller stance | 06 Inputs: Main gear track, the two gear stations, Ground line |
 | Inlet further forward or aft | 04 Inputs: Inlet lip station |
 | A taller or shorter diverter slot | 04 Inputs: Diverter height |
-| A longer or more swept splitter plate | 04 Inputs: Splitter plate apex station, Splitter plate sweep |
+| A thicker upper lip, or one that stands ahead of the inlet face | 04 Inputs: Splitter plate thickness, Splitter plate overhang |
+| A flat inlet face (no crease), a more upright inlet face | 04 Inputs: Inlet lip sweep = 0, Inlet face lean |
+| A flatter or steeper V in the upper lip | 04 Inputs: Upper lip V angle |
 | Wider or deeper panel lines | 05 Inputs: Panel line width, Panel line depth |
 | Thicker skin or webs | 05 Inputs |
 | Reshape the fuselage itself | 10 Fuselage guide curves: edit the control values of a guide |
@@ -145,7 +184,7 @@ The paint layers are 0.02 in thick films, drawn so they show in the viewport. To
 After a change nTop recomputes every body. To check sizes use a Bounding Box or Mass Properties block on a body
 in section 40.
 
-## 8. Practical notes
+## 9. Practical notes
 
 - **Meshing.** The skin is 0.12 in thick. To export or render the outside, mesh "Outer mold line" (section 16),
   not the skin. A tolerance of 0.4 in (10 mm) is right for the whole aircraft; 0.12 in on the whole exterior
@@ -157,9 +196,11 @@ in section 40.
   look like an aircraft. The engine envelope is a fixed size and does not scale with the fuselage.
 - **Structure and fuel are a representative layout**, not a stressed design: frame stations, spar positions and
   tank limits are sensible places, chosen by eye. Fuel is the packing limit of the bays.
+- **Landing gear and fittings are for looks and layout**: placed and sized from photographs, good to a few inches.
+  No loads, no retraction.
 - **Units.** Inputs are in ft, in, deg and %. Inside, the notebook works in metres.
 
-## 9. Where the notebook comes from
+## 10. Where the notebook comes from
 
 The notebook is generated. The model is written once in Python (`model/`), which can evaluate the same fields
 directly (for previews, photo matching and analysis) and write them as an nTop notebook:
@@ -168,8 +209,10 @@ directly (for previews, photo matching and analysis) and write them as an nTop n
 model/design.py      the input table
 model/oml.py         guides, lofts, inlet, wing, tail, exterior
 model/aircraft.py    skin, structure, engine, fuel, the list of bodies
+model/gear.py        landing gear, bays, doors
+model/fittings.py    pylons, rails, dummies, fairings, scoop, antennas
 model/livery.py      panel lines, paint, markings
-tools/build_native.py   writes fury-rc-finite-edges.ntop with the installed nTop (about 4 minutes)
+tools/build_native.py   writes fury-rc-finite-edges.ntop with the installed nTop (about 10 minutes)
 ```
 
 You do not need Python to use the notebook. If you change a guide in Python, run `tools/build_native.py` to

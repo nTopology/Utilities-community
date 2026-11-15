@@ -1,6 +1,6 @@
 """Find the duct floor heights that give a chosen area distribution from the throat to the engine face.
 
-  python tools/tune_duct.py [throat/face area ratio, default 0.84]
+  python tools/tune_duct.py [throat/face area ratio, default 0.78]
 
 The duct roof, the width ratio and the engine face are kept. At each station of the floor guide the floor is
 moved until the duct area normal to the centreline equals the target: the throat area just behind the lower lip,
@@ -15,7 +15,7 @@ import fieldlab as fl
 import registry, oml
 from design import Design
 
-ratio = float(sys.argv[1]) if len(sys.argv) > 1 else 0.84
+ratio = float(sys.argv[1]) if len(sys.argv) > 1 else 0.78
 L = oml.LREF
 TS = [0.26, oml.T_LIP, 0.345, oml.T_ROOF_FREE, 0.43, 0.48, 0.54, 0.60, 0.66, 0.71, oml.T_FACE, 1.0]
 FREE = [2, 3, 4, 5, 6, 7, 8, 9]                        # indices of TS that are tuned

@@ -1,5 +1,5 @@
 {
- "variables": 390,
+ "variables": 635,
  "functions": [
   "abs<real_field>",
   "add<real,real>",
@@ -63,6 +63,16 @@
    -0.5105400000000001,
    0.0,
    0.0
+  ],
+  "CHECK Exterior in the diverter slot": [
+   3.06324,
+   0.30479999999999996,
+   -0.0312
+  ],
+  "CHECK Exterior inside the splitter plate": [
+   3.06324,
+   0.30479999999999996,
+   -0.0635
   ]
  },
  "controls": [
@@ -79,6 +89,7 @@
   "Fuselage height scale [-]",
   "Fuselage length [ft]",
   "Fuselage width scale [-]",
+  "Ground line below the reference line [in]",
   "Horizontal tail apex station [% length]",
   "Horizontal tail dihedral [deg]",
   "Horizontal tail height [in]",
@@ -86,20 +97,26 @@
   "Horizontal tail root chord [ft]",
   "Horizontal tail span [ft]",
   "Horizontal tail tip chord [ft]",
+  "Inlet face lean [deg]",
   "Inlet lip station [% length]",
+  "Inlet lip sweep [deg]",
   "Inlet lip thickness [in]",
-  "Inlet lower lip sweep [deg]",
-  "Inlet side wall lean [deg]",
+  "Landing gear (1 = down, 0 = retracted)",
+  "Main gear station [% length]",
+  "Main gear track [in]",
+  "Main tyre diameter [in]",
+  "Nose gear station [% length]",
+  "Nose tyre diameter [in]",
   "Nozzle exit diameter [in]",
   "Panel line depth [in]",
   "Panel line width [in]",
   "Skin thickness [in]",
-  "Splitter plate apex station [% length]",
-  "Splitter plate sweep [deg]",
+  "Splitter plate overhang [in]",
   "Splitter plate thickness [in]",
   "Tail thickness [% chord]",
   "Tail type (0 = conventional, 1 = V-tail)",
   "Trailing-edge thickness [in]",
+  "Upper lip V angle [deg]",
   "V-tail apex station [% length]",
   "V-tail cant angle [deg]",
   "V-tail leading-edge sweep [deg]",
@@ -115,6 +132,7 @@
   "Wing rear spar [% chord]",
   "Wing root chord [ft]",
   "Wing span [ft]",
+  "Wing stores (1 = pylons, rails and missiles, 0 = clean wing)",
   "Wing thickness at root [% chord]",
   "Wing thickness at tip [% chord]",
   "Wing tip chord [ft]"
@@ -134,11 +152,22 @@
   "Mission systems bay",
   "Air data boom",
   "Inlet duct air",
+  "Landing gear legs",
+  "Landing gear pistons",
+  "Wheels",
+  "Tyres",
+  "Landing gear doors",
+  "Landing lights",
+  "Wing pylons and launch rails",
+  "Missiles",
+  "Flap actuator fairings",
+  "Dorsal scoop",
+  "Antennas and probes",
   "Panel lines",
   "Paint, dark grey",
   "Markings, light",
   "Markings, dark",
   "Formation lights"
  ],
- "graph_nodes": 2190
+ "graph_nodes": 3759
 }

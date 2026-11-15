@@ -40,6 +40,9 @@ rights stay with the owners named in the credit column. US Air Force photographs
 | `33_infographic_usaf_csaf_f47_cca.jpg` | INFOGRAPHIC (no dimensions) | Official figures only: combat radius 700+ nmi, top speed classified, 1,000+ planned, operational 2025-2029 | Public domain (U.S. Air Force / DoD imagery); posted by CSAF Gen. David Allvin on X, 13 May 2025 | https://commons.wikimedia.org/wiki/File:USAF_F-47-CCA_infographic_(May_2025).jpg |
 | `34_scale_l29_chase_formation_twz_reader.jpg` | SCALE: YFQ-44A with Aero L-29 chase (L-29 length 10.81 m, span 10.29 m) | Weak scale cue only (aircraft are at different, unknown ranges) | TWZ Reader (via The War Zone); copyright photographer | https://www.twz.com/air/andurils-yfq-44-fury-fighter-drone-has-flown |
 | `35_engine_fj44-4a_williams.jpg` | ENGINE three-quarter | Engine envelope: fan face, bypass duct, accessory gearbox on the underside | Williams International (via TWZ) | https://www.twz.com/the-rise-of-fury |
+| `36_inlet_side_exhibition.jpg` | INLET side close-up (full-size exhibition aircraft, inlet cover fitted) | Inlet face lean, cowl side wall, splitter plate edge and diverter slot from the side | photographer not known (supplied to the project) | supplied to the project, no page |
+| `37_inlet_front_low_exhibition.jpg` | INLET low front view (full-size exhibition aircraft, inlet cover fitted) | Shape of the inlet opening and of the cowl section: flat bottom, leaning walls; shallow rounded splitter plate | photographer not known (supplied to the project) | supplied to the project, no page |
+| `38_nose_front_exhibition.jpg` | NOSE from the front (full-size exhibition aircraft) | Forebody section and chine, plate under the forebody | photographer not known (supplied to the project) | supplied to the project, no page |
 
 Other sources
 

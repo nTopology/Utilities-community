@@ -1,6 +1,6 @@
 # Inputs of the notebook
 
-Every input is a variable in sections 01 to 05 of `fury-rc-finite-edges.ntop`. Values are the Fury match.
+Every input is a variable in sections 01 to 06 of `fury-rc-finite-edges.ntop`. Values are the Fury match.
 
 
 ## 01 Inputs | Fuselage
@@ -20,9 +20,9 @@ Every input is a variable in sections 01 to 05 of `fury-rc-finite-edges.ntop`. V
 | Wing tip chord [ft] | 1.64 | Chord at the tip. |
 | Wing leading-edge sweep [deg] | 31 | Sweep of the leading edge, positive aft. |
 | Wing apex station [% length] | 38.8 | Where the leading edge would meet the centreline, as a percentage of the fuselage length. |
-| Wing height [in] | 4 | Height of the wing chord plane above the fuselage reference line (the chine). |
+| Wing height [in] | 5.5 | Height of the wing chord plane above the fuselage reference line. The chine is 4 in above that line, so the chine runs into the wing leading edge. |
 | Wing dihedral [deg] | -1.5 | Positive tips up. |
-| Wing thickness at root [% chord] | 6 | Maximum thickness of the section on the centreline. |
+| Wing thickness at root [% chord] | 8 | Maximum thickness of the section on the centreline. |
 | Wing thickness at tip [% chord] | 5 | Maximum thickness of the section at the tip. |
 
 ## 03 Inputs | Tail
@@ -58,14 +58,14 @@ Every input is a variable in sections 01 to 05 of `fury-rc-finite-edges.ntop`. V
 | Input | Value | What it does |
 |---|---:|---|
 | Inlet lip station [% length] | 29.5 | Station of the lower inlet lip on the centreline, percentage of the fuselage length. |
-| Inlet side wall lean [deg] | 48 | The leading edges of the inlet side walls lean forward from the lower lip up to the fuselage underside by this angle from vertical. |
-| Inlet lower lip sweep [deg] | 25 | The lower lip is a chevron: it sweeps back from the centreline to the corners by this angle. |
-| Diverter height [in] | 1.8 | Gap between the forebody underside and the splitter plate: the slot that carries the forebody boundary layer past the inlet. |
-| Splitter plate thickness [in] | 0.8 | Thickness of the splitter plate (the upper lip of the inlet). It thins to 40 % of this at the leading edge. |
-| Splitter plate apex station [% length] | 24.7 | Station of the point of the splitter plate on the centreline, percentage of the fuselage length. |
-| Splitter plate sweep [deg] | 36 | Sweep of the splitter plate leading edge, back from the point to the top of the inlet side walls. |
+| Inlet face lean [deg] | 48 | The inlet face leans forward from the lower lip up to the splitter plate by this angle from vertical. |
+| Inlet lip sweep [deg] | 7 | Turns each half of the inlet face back from the centreline, so the face is two facets with a crease on the centreline. With the leaning face and the V-shaped upper lip, about 7 deg makes the upper lip straight across in plan (estimated from photograph 37). |
+| Upper lip V angle [deg] | 6 | The upper lip (the splitter plate) is a shallow V, lowest on the centreline. This is the rise of each half from level (estimated from photograph 37). |
+| Diverter height [in] | 1.5 | Gap between the forebody underside and the splitter plate: the slot that carries the forebody boundary layer past the inlet. |
+| Splitter plate thickness [in] | 1 | Thickness of the splitter plate: the top wall of the cowl and the upper lip of the inlet. |
+| Splitter plate overhang [in] | 0 | How far the splitter plate (the upper lip) stands ahead of the inlet face. 0 on the aircraft: all the lips lie in the face. |
 | Diverter wedge sweep [deg] | 50 | Sweep of the wedge that closes the diverter slot behind the inlet lip and turns the boundary layer out to the sides. |
-| Inlet lip thickness [in] | 1.34 | Wall between the outer cowl and the duct at the lip. |
+| Inlet lip thickness [in] | 1 | Wall between the outer cowl and the duct at the lip. |
 | Nozzle exit diameter [in] | 16.8 | Inner diameter of the exhaust nozzle at the exit. |
 
 ## 05 Inputs | Structure and fuel
@@ -79,3 +79,16 @@ Every input is a variable in sections 01 to 05 of `fury-rc-finite-edges.ntop`. V
 | Fuel tank wall clearance [in] | 1 | Gap between a fuel tank and the structure or skin around it. |
 | Panel line width [in] | 0.25 | Width of the grooves that divide the skin into panels. Drawn wider than a real gap so it shows. |
 | Panel line depth [in] | 0.05 | Depth of the panel grooves below the outer surface. Keep it below the skin thickness. |
+
+## 06 Inputs | Landing gear and stores
+
+| Input | Value | What it does |
+|---|---:|---|
+| Landing gear (1 = down, 0 = retracted) | 1 | 1 builds the gear, opens the bays and hangs the doors. 0 removes the gear and closes the bays. |
+| Nose gear station [% length] | 35.2 | Station of the nose wheel axle. |
+| Main gear station [% length] | 59.2 | Station of the main wheel axles. |
+| Main gear track [in] | 67.5 | Distance between the centres of the two main wheels. |
+| Ground line below the reference line [in] | 47 | How far the ground is below the fuselage reference line with the aircraft standing on its wheels. Sets the leg lengths. |
+| Main tyre diameter [in] | 19 | Outer diameter of a main tyre. The width follows. |
+| Wing stores (1 = pylons, rails and missiles, 0 = clean wing) | 1 | 1 hangs a pylon with a launch rail and a missile-sized dummy under each wing, as in most photographs. 0 leaves the wing clean. |
+| Nose tyre diameter [in] | 14.5 | Outer diameter of the nose tyre. The width follows. |

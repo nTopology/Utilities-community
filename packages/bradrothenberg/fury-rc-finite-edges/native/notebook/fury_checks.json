@@ -29,15 +29,27 @@
    -0.5105400000000001,
    0.0,
    0.0
+  ],
+  "Exterior in the diverter slot": [
+   3.06324,
+   0.30479999999999996,
+   -0.0312
+  ],
+  "Exterior inside the splitter plate": [
+   3.06324,
+   0.30479999999999996,
+   -0.0635
   ]
  },
  "host_values": {
   "CHECK Exterior above the crown": 0.4390685472489937,
-  "CHECK Exterior inside the forebody": -0.2779202905292184,
-  "CHECK Exterior in the inlet mouth": 0.08068289760226428,
-  "CHECK Exterior inside the wing": -0.030136007858192138,
+  "CHECK Exterior inside the forebody": -0.277718039234103,
+  "CHECK Exterior in the inlet mouth": 0.1034367949794435,
+  "CHECK Exterior inside the wing": -0.025306605450725758,
   "CHECK Exterior at the fin": -0.025805477228100705,
-  "CHECK Exterior ahead of the nose": 0.5105400000000001
+  "CHECK Exterior ahead of the nose": 0.5105400000000001,
+  "CHECK Exterior in the diverter slot": 0.0165234894148455,
+  "CHECK Exterior inside the splitter plate": -0.015069095349656982
  },
  "inputs": {
   "length": 33.5,
@@ -48,9 +60,9 @@
   "wing_tip_chord": 1.64,
   "wing_sweep": 31.0,
   "wing_apex": 38.8,
-  "wing_height": 4.0,
+  "wing_height": 5.5,
   "wing_dihedral": -1.5,
-  "wing_tc_root": 6.0,
+  "wing_tc_root": 8.0,
   "wing_tc_tip": 5.0,
   "tail_type": 0.0,
   "htail_span": 12.73,
@@ -77,13 +89,13 @@
   "te_thickness": 0.25,
   "inlet_station": 29.5,
   "inlet_rake": 48.0,
-  "inlet_lip_sweep": 25.0,
-  "diverter_height": 1.8,
-  "splitter_thickness": 0.8,
-  "splitter_apex": 24.7,
-  "splitter_sweep": 36.0,
+  "inlet_lip_sweep": 7.0,
+  "lip_dihedral": 6.0,
+  "diverter_height": 1.5,
+  "splitter_thickness": 1.0,
+  "splitter_overhang": 0.0,
   "diverter_sweep": 50.0,
-  "lip_thickness": 1.34,
+  "lip_thickness": 1.0,
   "nozzle_diameter": 16.8,
   "skin_thickness": 0.12,
   "web_thickness": 0.2,
@@ -91,6 +103,14 @@
   "rear_spar": 68.0,
   "tank_clearance": 1.0,
   "panel_line_width": 0.25,
-  "panel_line_depth": 0.05
+  "panel_line_depth": 0.05,
+  "gear_down": 1.0,
+  "nose_gear_station": 35.2,
+  "main_gear_station": 59.2,
+  "gear_track": 67.5,
+  "ground_line": 47.0,
+  "main_tyre_diameter": 19.0,
+  "wing_stores": 1.0,
+  "nose_tyre_diameter": 14.5
  }
 }

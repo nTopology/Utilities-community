@@ -1,5 +1,8 @@
-"""Mesh every body on the host and render views. render_parts.py <tag> [scale] [key=value ...] [--shots a b c] [--cut] [--plain] [--exterior]
---cut removes the port half of the skin and the fuel so the inside shows."""
+"""Mesh every body on the host and render views.
+
+  render_parts.py <tag> [scale] [key=value ...] [--cut] [--plain] [--exterior] [--zone x0 x1 skin_scale] [--shots a b c]
+--cut removes the port half of the skin and the fuel so the inside shows.
+--zone meshes the skin only between two stations [m] at its own, finer scale: for close-ups of the inlet."""
 import sys, time
 from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
@@ -13,6 +16,7 @@ args = sys.argv[1:]
 tag = args[0]
 scale = float(args[1]) if len(args) > 1 and args[1].replace('.', '').isdigit() else 1.0
 over = {k: float(v) for k, v in (a.split('=') for a in args if '=' in a and not a.startswith('--'))}
+zone = [float(v) for v in args[args.index('--zone') + 1:args.index('--zone') + 4]] if '--zone' in args else None
 cut = '--cut' in args
 exterior_only = '--exterior' in args            # only the skin and the boom: quick pictures of the outside
 shots = args[args.index('--shots') + 1:] if '--shots' in args else (['cutaway', 'cut_side', 'cut_fwd', 'cut_aft', 'cut_under'] if cut else ['front34', 'rear34', 'top', 'side'])
@@ -23,13 +27,15 @@ t = time.time()
 for p in ac.parts:
     if p.name == 'Inlet duct air' or p.group == 'paint':
         continue
-    if exterior_only and p.group != 'skin':
+    if exterior_only and p.group not in ('skin', 'gear', 'fittings'):
         continue
     col, rough, metal = registry.MAT[p.mat]
     if p.name == 'Skin':
         # the 3 mm shell is drawn as its outer surface: starboard half, mirrored unless this is a cutaway
-        lo = [p.lo[0], 0.0, p.lo[2]]
-        m = registry.surface_mesh(ac.model.exterior, lo, p.hi, p.h * scale, 'exterior')
+        lo, hi, hs = [p.lo[0], 0.0, p.lo[2]], list(p.hi), p.h * scale
+        if zone:
+            lo[0], hi[0], hs = max(lo[0], zone[0]), min(hi[0], zone[1]), p.h * zone[2]
+        m = registry.surface_mesh(ac.model.exterior, lo, hi, hs, 'exterior')
         if not cut:
             v = m[0].copy()
             v[np.abs(v[:, 1]) < 2e-4, 1] = -3e-4          # the two halves overlap a hair, so no light shows through the seam

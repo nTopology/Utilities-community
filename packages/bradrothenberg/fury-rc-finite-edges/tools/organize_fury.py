@@ -25,13 +25,15 @@ DESCRIPTION = {
     '02 Inputs | Wing': 'Wing planform and thickness. The planform is a straight-tapered trapezoid: apex station, leading-edge sweep, root and tip chord, span.',
     '03 Inputs | Tail': 'Tail type switches between the conventional tail (0: one fin and two horizontal tails) and a V-tail (1: two canted panels). '
                         'Both tail sets have their own planform inputs; only the selected one is built into the bodies.',
-    '04 Inputs | Inlet, duct and engine': 'Where the inlet lip sits and how its edges are swept, the diverter slot and the splitter plate above the inlet, '
+    '04 Inputs | Inlet, duct and engine': 'Where the inlet lip sits, how far the inlet face leans and how its edges are swept, the diverter slot and the splitter plate above the inlet, '
                                           'the lip wall thickness and the nozzle exit size.',
     '05 Inputs | Structure and fuel': 'Thickness of the skin and of the webs, where the wing spars sit on the chord, and the gap kept around the fuel. '
                                       'The structure is a representative layout, not a stressed design.',
-    '06 Derived dimensions': 'Nothing to edit here. Every input is converted once to metres and radians (and to sines, cosines and tangents); '
+    '06 Inputs | Landing gear and stores': 'Landing gear down or retracted, where the wheels stand, the track, the ground line and the tyre sizes. '
+                                           'Wing stores switches the pylons, launch rails and missile-sized dummies on or off.',
+    '07 Derived dimensions': 'Nothing to edit here. Every input is converted once to metres and radians (and to sines, cosines and tangents); '
                              'the geometry below only uses these converted values, so you can read each dimension as a number.',
-    '07 Reference coordinates': 'The fuselage is drawn at the size of the reference aircraft. These three fields are X, |Y| and Z divided by the '
+    '08 Reference coordinates': 'The fuselage is drawn at the size of the reference aircraft. These three fields are X, |Y| and Z divided by the '
                                 'length, width and height scales, so one set of guide curves serves every size. |Y| makes the left side a mirror of the right.',
     '10 Fuselage guide curves': 'Each guide is a smooth curve of one fuselage dimension against station (metres along the reference aircraft): half width, '
                                 'crown height, chine height, underside height, belly height, duct sizes and a few shape weights. '
@@ -39,8 +41,8 @@ DESCRIPTION = {
     '11 Fuselage lofts': 'A loft is one Spline DF cross section whose control points ride on the guides. Upper loft: crown to chine. '
                          'Underside loft: chine to keel, continued aft as the duct roof. Lower loft: the inlet cowl and belly. '
                          'Section 13 puts them together.',
-    '12 Inlet, duct and nozzle': 'The inlet is the lower fuselage cut by the lip surface: a chevron lower lip and side walls that lean forward. The duct air is the space below the roof loft, above the '
-                                 'floor loft and one lip thickness inside the cowl; it runs to the round engine face. The splitter plate is the upper lip of the inlet: it sits one diverter '
+    '12 Inlet, duct and nozzle': 'The inlet is the lower fuselage cut by the lip surface: a face that leans, so the top of the opening is ahead of the bottom lip, in two facets with a crease on the centreline. The duct air is the space below the roof loft, above the '
+                                 'floor loft and one lip thickness inside the cowl; it runs to the round engine face. The splitter plate is the top wall of the cowl and the upper lip of the inlet, a blunt lip in the inlet face and a shallow V: on the centreline it sits one diverter '
                                  'height below the forebody underside, and the slot between them is closed behind the lip by a swept wedge, so the forebody boundary layer '
                                  'leaves to the sides. The jet pipe is a cone to the nozzle exit.',
     '13 Fuselage': 'The fuselage: under the upper loft and above the lower side, cut at the nose and at the nozzle, with the duct and the jet pipe hollowed out. '
@@ -52,10 +54,15 @@ DESCRIPTION = {
     '16 Exterior': 'Fuselage, wing and tail joined with smooth fillets: this is the outer mold line.',
     '20 Structure': 'The skin is the outer mold line shelled inward. Ring frames follow the inner skin and go round the inlet duct; bulkheads close the '
                     'fuel cells and carry the engine. Spars sit at chord fractions, ribs at span fractions.',
-    '30 Engine and systems': 'An engine envelope of FJ44-4 size on the duct axis, the jet pipe, the air data boom and the usable forebody volume. Representative.',
+    '30 Engine and systems': 'An engine envelope of FJ44-4 size on the duct axis with a spinner at the fan face, the jet pipe, the air data boom and the usable forebody volume. Representative.',
     '31 Fuel': 'Fuel fills the fuselage between the tank bulkheads and the wing box between the front and rear spars, a clearance away from skin, '
-               'duct and structure. The main gear bay is kept free.',
-    '40 Bodies': 'The finished bodies. Show or hide them here. The skin, panel lines, paint and markings are shown when the notebook opens; hide them to see the structure, engine and fuel.',
+               'duct and structure. The lower fuselage under the inlet duct is kept free for the landing gear.',
+    '32 Landing gear': 'A tricycle gear, drawn down. Every strut is a round rod between two points, and every point is a formula of the gear inputs and '
+                       'the fuselage size. The bays are cut into the outer mold line under the inlet duct, the doors are flat plates hanging from their hinge lines. '
+                       'The landing gear input adds a large offset that removes all of it and closes the bays. How the gear folds away is not modelled.',
+    '33 External fittings': 'Small things on the outside, placed from the photographs: a pylon, launch rail and missile-sized dummy under each wing, '
+                            'the flap actuator fairings, the scoop on the spine, blade antennas and the air data probes. Estimated positions.',
+    '40 Bodies': 'The finished bodies. Show or hide them here. The skin, panel lines, paint, markings, landing gear and external fittings are shown when the notebook opens; hide the skin and paint to see the structure, engine and fuel.',
     '99 Checks': 'The outer mold line evaluated at a few fixed points. The same numbers are computed outside nTop (native/notebook/<stem>_checks.json); '
                  'they agree when the notebook computes the intended shape.',
     '21 Panel lines': 'Panel lines are a pattern: a field that is negative on the lines, drawn in a flat view and pushed straight through the aircraft. '
@@ -63,9 +70,11 @@ DESCRIPTION = {
                       'The pattern is cut into the skin as shallow grooves, and a dark body fills the grooves so they show.',
     '22 Paint and markings': 'Paint works like the panel lines: a flat pattern meets a thin layer on the outer mold line. The dark band is drawn in the side view, '
                              'lettering is built from straight strokes, the national insignia from a disc, a star and two bars. Side lettering uses the side of '
-                             'the aircraft (+1 right, -1 left) so it reads correctly on both sides.',
+                             'the aircraft (+1 right, -1 left) so it reads correctly on both sides. The jet inlet warning triangles on the cowl sides are part of the formation light body (same colour).',
 }
-SHOWN = {'Skin', 'Air data boom', 'Panel lines', 'Paint, dark grey', 'Markings, light', 'Markings, dark', 'Formation lights'}
+SHOWN = {'Skin', 'Air data boom', 'Panel lines', 'Paint, dark grey', 'Markings, light', 'Markings, dark', 'Formation lights',
+         'Landing gear legs', 'Landing gear pistons', 'Wheels', 'Tyres', 'Landing gear doors', 'Landing lights',
+         'Wing pylons and launch rails', 'Missiles', 'Flap actuator fairings', 'Dorsal scoop', 'Antennas and probes'}
 
 
 def organize(stem='fury'):

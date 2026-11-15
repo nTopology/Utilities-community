@@ -41,7 +41,7 @@ from design import Design, S_DIM
 
 AY = absf(Y)
 
-S_COORD = '07 Reference coordinates'
+S_COORD = '08 Reference coordinates'
 S_GUIDE = '10 Fuselage guide curves'
 S_FUS = '11 Fuselage lofts'
 S_DUCT = '12 Inlet, duct and nozzle'
@@ -89,8 +89,10 @@ UPPER_ROUND = _g('Upper section roundness', [0.0, 0.50, 0.62, 0.74, 0.86, 0.95, 
 
 # -- underside of the forebody, continued aft as the roof of the inlet duct ---------------------------
 _TU = [0.0, 0.05, 0.10, 0.15, 0.20, 0.25, 0.30, 0.345, T_ROOF_FREE, 0.43, 0.48, 0.54, 0.60, 0.66, 0.71, T_FACE, 1.0]
+# from station 0.27 the keel is hidden behind the cowl in every side view: there its height is set so the inlet opening
+# is as tall for its width as in photograph 37
 ROOF = _g('Underside and duct roof height', _TU,                             # [SIDE] keel, then S-duct roof
-          [-0.0004, -0.0070, -0.0085, -0.0085, -0.0072, -0.0062, -0.0058, -0.0056, -0.0045, -0.0010, 0.0080,
+          [-0.0004, -0.0070, -0.0085, -0.0085, -0.0072, -0.0054, -0.0038, -0.0036, -0.0030, -0.0010, 0.0080,
            0.0240, 0.0410, 0.0540, 0.0605, Z_ENGINE + R_FACE, Z_ENGINE + R_FACE])
 _ER = Z_ENGINE * LREF - CHINE.value(T_FACE * LREF)             # the duct edge ends on the engine axis
 EDGE_RISE = _g('Duct edge rise above the chine', [0.0, T_ROOF_FREE, 0.43, 0.50, 0.58, 0.66, 0.71, T_FACE, 1.0],
@@ -100,10 +102,10 @@ ROOF_WIDTH = _g('Duct width ratio', [0.0, T_ROOF_FREE, 0.43, 0.48, 0.54, 0.60, 0
                 [1.0, 1.0, 0.86, 0.74, 0.62, 0.52, 0.44, 0.39, _RW, _RW], scale=1.0)
 DUCT_ROUND = _g('Duct section roundness', [0.0, T_ROOF_FREE, 0.45, 0.55, 0.65, 0.71, T_FACE, 1.0],
                 [0.0, 0.0, 0.18, 0.55, 0.88, 1.0, 1.0, 1.0], scale=1.0)
-# floor heights found by tools/tune_duct.py: throat area = 0.84 x engine face area just behind the lower lip,
+# floor heights found by tools/tune_duct.py 0.78: throat area = 0.78 x engine face area just behind the lower lip,
 # growing smoothly to the engine face area (a gentle diffuser)
 FLOOR = _g('Duct floor height', [0.26, T_LIP, 0.345, T_ROOF_FREE, 0.43, 0.48, 0.54, 0.60, 0.66, 0.71, T_FACE, 1.0],
-           [-0.0323, -0.0365, -0.0335, -0.0317, -0.0300, -0.0217, -0.0093, 0.0009, 0.0055, 0.0059,
+           [-0.0323, -0.0365, -0.0297, -0.0288, -0.0275, -0.0192, -0.0075, 0.0020, 0.0059, 0.0059,
             Z_ENGINE - R_FACE, Z_ENGINE - R_FACE])
 
 # -- lower fuselage: the inlet cowl, the belly and the tail cone [SIDE] --------------------------------
@@ -111,6 +113,10 @@ BELLY = _g('Lower fuselage height', [0.26, T_LIP, 0.345, 0.40, 0.50, 0.58, 0.66,
            [-0.0320, -0.0360, -0.0390, -0.0420, -0.0450, -0.0455, -0.0430, -0.0390, -0.0365, -0.0335, -0.0285,
             -0.0220, -0.0140, -0.0035, 0.0080])
 LOWER_ROUND = _g('Lower section roundness', [0.26, 0.55, 0.66, 0.78, 0.90, 1.0], [0.0, 0.0, 0.15, 0.55, 1.0, 1.0], scale=1.0)
+# the cowl has a keel at the inlet (photograph 37: the lower lip is a shallow V); it fades into the flat belly
+COWL_KEEL = _g('Cowl keel', [0.26, 0.31, 0.40, 1.0], [1.0, 1.0, 0.0, 0.0], scale=1.0)
+KEEL_ROUNDING = 0.03         # the V of the upper lip is rounded over this half breadth on the centreline [m, reference size]
+T_PLATE = (T_ROOF_FREE, 0.45)   # between these stations (aft of the diverter slot) the duct roof changes from the V of the splitter plate to the underside loft
 
 # -- jet pipe: a straight cone on the engine axis from the engine to the nozzle exit -----------------
 R_PIPE = 0.170 / LREF       # jet pipe radius at the engine / length (the engine exhaust radius, 0.170 m)
@@ -140,7 +146,7 @@ ARCH_NET = _net_out(1.75, straight_end=True)        # forebody: an arch that mee
 DOME_NET = _net_out(2.3)                            # aft body: round shoulders, vertical sides
 
 
-def _net_in(pts, n=10, vertical_start=False):
+def _net_in(pts, n=12, vertical_start=False):
     """Unit lower half section from the edge (1, 0) in to the centre (0, 1) (v is the depth fraction)."""
     c = interp_ctrl(np.asarray(pts, float), n)
     c[0], c[-1] = [1.0, 0.0], [0.0, 1.0]
@@ -154,14 +160,19 @@ _e = np.linspace(1, 0, 200)
 LENS_NET = _net_in(np.c_[_e, 1 - _e ** 2])                                   # shallow keel of the forebody
 _th = np.linspace(0, math.pi / 2, 200)
 ROUND_NET = _net_in(np.c_[np.cos(_th), np.sin(_th)], vertical_start=True)    # quarter circle
-# inlet cowl [FRONT]: a short ledge under the chine (the forebody overhangs the cowl), slanted side wall,
-# rounded corner, nearly flat bottom
-_ledge = np.c_[np.linspace(1.0, 0.87, 20), np.linspace(0.0, 0.05, 20)]
-_wall = np.c_[np.linspace(0.87, 0.62, 60)[1:], np.linspace(0.05, 0.82, 60)[1:]]
-_a = np.linspace(0, 1, 30)[1:]
-_corner = np.c_[0.62 - 0.14 * _a, 0.82 + 0.12 * np.sin(_a * math.pi / 2)]
-_bottom = np.c_[np.linspace(0.48, 0.0, 60)[1:], 0.94 + 0.06 * (1 - np.linspace(1, 0, 60)[1:] ** 2)]
-TRAPEZOID_NET = _net_in(np.vstack([_ledge, _wall, _corner, _bottom]))
+# inlet cowl [FRONT, photograph 13 and the exhibition photographs]: a V-shaped hull. A straight side wall leans in
+# from the chine at about 45 degrees to a tight corner at half the chine breadth, and the bottom is nearly flat
+_wall = np.c_[np.linspace(1.0, 0.575, 80), np.linspace(0.0, 0.86, 80)]
+_a = np.linspace(0, 1, 24)[1:]
+_corner = np.c_[0.575 - 0.085 * _a, 0.86 + 0.095 * np.sin(_a * math.pi / 2)]
+_bottom = np.c_[np.linspace(0.49, 0.0, 60)[1:], 0.955 + 0.045 * (1 - np.linspace(1, 0, 60)[1:] ** 2)]
+TRAPEZOID_NET = _net_in(np.vstack([_wall, _corner, _bottom]))
+# the same hull with a keel [photograph 37]: the wall ends a little higher, and from the corner the bottom falls in a
+# straight line to a crisp keel on the centreline (about 11 degrees). The control points are set by hand: the first
+# seven are the wall of the net above, the last five lie on the straight bottom
+KEEL_NET = TRAPEZOID_NET.copy()
+KEEL_NET[1:7, 1] *= 0.83 / 0.86
+KEEL_NET[7:] = [[0.545, 0.835], [0.346, 0.895], [0.180, 0.945], [0.056, 0.983], [0.0, 1.0]]
 
 
 def thickness_coefficients(a0, um, te_slope=-0.9):
@@ -204,6 +215,7 @@ def _foil_net(n=9):
 
 
 FOIL_NET = _foil_net()
+SHOULDER_RADIUS = 0.055      # rounding of the cowl edges along the diverter slot: the shoulder of the cowl [m, reference size]
 BIG = 100.0                  # offset that removes the tail set that is not selected
 
 
@@ -230,15 +242,18 @@ class Airframe:
         return self._memo[key]
 
     # ------------------------------------------------------------------ fuselage lofts
-    def _section(self, label, net, half, z_edge, z_centre, net2=None, weight=None):
+    def _section(self, label, net, half, z_edge, z_centre, net2=None, weight=None, net3=None, weight3=None):
         """Spline DF in the cross-section plane. A control point is (half * eta, z_edge + (z_centre - z_edge) * v);
-        with a second net and a weight the shape changes along the loft."""
+        with a second (and third) net and a weight the shape changes along the loft."""
         cps = []
         for i in range(len(net)):
             e, v = float(net[i][0]), float(net[i][1])
             if net2 is not None:
                 e = weight * float(net2[i][0] - net[i][0]) + e
                 v = weight * float(net2[i][1] - net[i][1]) + v
+            if net3 is not None:
+                e = weight3 * float(net3[i][0] - net[i][0]) + e
+                v = weight3 * float(net3[i][1] - net[i][1]) + v
             cps.append((half * e, z_edge + (z_centre - z_edge) * v))
         return spline2d(cps, self.yr, self.zr, label=label)
 
@@ -270,7 +285,8 @@ class Airframe:
         """Solid above: inlet cowl, belly and tail cone."""
         def make():
             x = self.xr
-            f = self._section('Lower fuselage section', TRAPEZOID_NET, HALF_WIDTH(x), CHINE(x), BELLY(x), ROUND_NET, LOWER_ROUND(x))
+            f = self._section('Lower fuselage section', TRAPEZOID_NET, HALF_WIDTH(x), CHINE(x), BELLY(x), ROUND_NET, LOWER_ROUND(x),
+                              KEEL_NET, COWL_KEEL(x))
             return f.named('Lower fuselage loft', S_FUS)
         return self._once('belly', make)
 
@@ -279,14 +295,16 @@ class Airframe:
         def make():
             x = self.xr
             f = self._section('Duct floor section', TRAPEZOID_NET, self.duct_half_width(), self.duct_edge(), FLOOR(x),
-                              ROUND_NET, DUCT_ROUND(x))
+                              ROUND_NET, DUCT_ROUND(x), KEEL_NET, COWL_KEEL(x))
             return f.named('Duct floor loft', S_DUCT)
         return self._once('floor', make)
 
     # ------------------------------------------------------------------ inlet
     def lip_plane(self):
-        """Positive ahead of the inlet lip surface (reference coordinates). The lower lip is a chevron swept back from
-        the centreline, and the side walls lean forward going up to the forebody underside [SIDE, photographs 07 and 18]."""
+        """Positive ahead of the inlet lip surface (reference coordinates): a face that leans forward going up from the
+        lower lip to the splitter plate [SIDE, photographs 07 and 18, and the exhibition photographs 36 and 37]. The
+        lip sweep turns each half back from the centreline, so the face is two flat facets with a crease on the
+        centreline [photograph 37]. All the lips lie in this face."""
         def make():
             d = self.d
             x_lip = (d.raw('inlet_station') * (0.01 * LREF)).named('Inlet lip reference station', S_DIM)
@@ -294,6 +312,16 @@ class Airframe:
             f = (x_lip + self.yr * d.tan('inlet_lip_sweep') - (self.zr - z_lip) * d.tan('inlet_rake') - self.xr) * d.cos('inlet_rake')
             return f.named('Inlet lip surface', S_DUCT)
         return self._once('lip', make)
+
+    def inlet_face(self):
+        """Positive ahead of the front of the cowl: the lip surface, moved forward by the overhang at the height of the
+        splitter plate, so the upper lip stands a little ahead of the other three [photograph 36]."""
+        def make():
+            below = -self.plate_top()                             # distance below the top of the splitter plate
+            at_plate = 1.0 - fl.smoothstep(self.splitter_thickness(), self.splitter_thickness() * 2.5, below)
+            overhang = (self.d.m('splitter_overhang') / self.scale).named('Reference splitter plate overhang', S_DIM)
+            return (self.lip_plane() - overhang * at_plate).named('Front of the cowl', S_DUCT)
+        return self._once('face', make)
 
     def lip_thickness(self):
         return (self.d.m('lip_thickness') / self.scale).named('Reference lip thickness', S_DIM)
@@ -305,6 +333,16 @@ class Airframe:
     def splitter_thickness(self):
         return (self.d.m('splitter_thickness') / self.scale).named('Reference splitter plate thickness', S_DIM)
 
+    def plate_top(self):
+        """Height above the top of the splitter plate (reference coordinates). The plate is a shallow V, lowest on the
+        centreline, where it lies one diverter height below the forebody underside [photograph 37]. The forebody
+        underside is rounder than the plate, so the diverter slot is taller toward the sides [photograph 36]."""
+        def make():
+            r = KEEL_ROUNDING
+            rise = (fl.sqrt(self.yr * self.yr + r * r) - r) * self.d.tan('lip_dihedral')
+            return (self.zr - (ROOF(self.xr) - self.diverter_height() + rise)).named('Height above the splitter plate', S_DUCT)
+        return self._once('plate_top', make)
+
     def roof_drop(self):
         """How far the duct roof sits below the forebody underside: diverter height plus plate thickness at the inlet,
         fading to nothing further aft, where the duct roof is the underside loft itself."""
@@ -313,39 +351,27 @@ class Airframe:
             return ((self.diverter_height() + self.splitter_thickness()) * fade).named('Duct roof drop below the underside loft', S_DUCT)
         return self._once('drop', make)
 
-    def splitter_edge(self):
-        """Positive ahead of the splitter plate leading edge: an arrowhead with its point on the centreline."""
-        d = self.d
-        x_apex = (d.raw('splitter_apex') * (0.01 * LREF)).named('Splitter plate apex reference station', S_DIM)
-        return (x_apex + self.yr * d.tan('splitter_sweep') - self.xr).named('Splitter plate leading edge', S_DUCT)
-
-    def splitter(self):
-        """The splitter plate: the upper lip of the inlet. It lies one diverter height below the forebody underside,
-        thins toward its leading edge, and ends at the sides in the cowl [photographs 07, 18, 19]."""
-        def make():
-            below = self.roof()                                   # distance below the forebody underside
-            thick = clamp(-self.splitter_edge() * 0.18, self.splitter_thickness() * 0.4, self.splitter_thickness())
-            top = self.diverter_height() + self.splitter_thickness() - thick
-            f = fmax(top - below, below - self.diverter_height() - self.splitter_thickness(), self.splitter_edge(), self.belly(), self.xr - T_DROP[0] * LREF)
-            return f.named('Splitter plate', S_DUCT)
-        return self._once('splitter', make)
-
     def diverter_slot(self):
-        """The diverter slot: the gap between the forebody underside and the splitter plate. Behind the inlet lip a swept
-        wedge closes it, so the slot opens to the sides under the chine."""
+        """The diverter slot: the gap between the forebody underside and the top of the cowl. The top wall of the cowl,
+        between this slot and the duct, is the splitter plate. Behind the inlet lip a swept wedge closes the slot, so it
+        opens to the sides under the chine."""
         def make():
             d = self.d
             x_wedge = ((d.raw('inlet_station') + 0.5) * (0.01 * LREF)).named('Diverter wedge apex reference station', S_DIM)
             wedge = self.xr - x_wedge - self.yr * d.tan('diverter_sweep')
-            f = fmax(-self.roof(), self.roof() - self.diverter_height(), wedge)
+            f = fmax(-self.roof(), -self.plate_top(), wedge)
             return f.named('Diverter slot', S_DUCT)
         return self._once('slot', make)
 
     def duct_core(self):
         """Inlet duct air, not yet limited by the lip surface: below the roof, above the floor, inside the cowl skin,
-        between the duct side edges. At the inlet the roof is the underside of the splitter plate."""
+        between the duct side edges. At the inlet the roof is the underside of the splitter plate (a shallow V);
+        further aft it is the underside loft."""
         def make():
-            f = fmax(self.roof_drop() - self.roof(), self.floor(), self.belly() + self.lip_thickness(), self.yr - self.duct_half_width(), self.xr - T_FACE * LREF)
+            hand_over = fl.smoothstep(T_PLATE[0] * LREF, T_PLATE[1] * LREF, self.xr) * 0.08      # lifts the V off the duct aft of the inlet
+            plate_underside = self.plate_top() + self.splitter_thickness() - hand_over
+            f = fmax(self.roof_drop() - self.roof(), plate_underside, self.floor(), self.belly() + self.lip_thickness(),
+                     self.yr - self.duct_half_width(), self.xr - T_FACE * LREF)
             return f.named('Inlet duct air (uncut)', S_DUCT)
         return self._once('duct_core', make)
 
@@ -353,11 +379,13 @@ class Airframe:
         """Solid above: forebody underside plus the lower fuselage aft of the lip plane (with or without the duct)."""
         def make():
             lip_radius = self.lip_thickness() * 1.2
-            cowl = fmax(self.belly(), -self.duct_core()) if opened else self.belly()
-            # the lip plane cuts the cowl only below the forebody underside; above it the body carries on
-            cowl = smax_field(cowl, fmin(self.lip_plane(), self.roof()), lip_radius)
-            # the splitter plate carries on ahead of the lip; the diverter slot separates it from the forebody
-            cowl = fmax(fmin(cowl, self.splitter()), -self.diverter_slot())
+            # the diverter slot separates the cowl from the forebody; the outer edge of the cowl along it is rounded (its
+            # shoulder). The duct is hollowed out afterwards, so the rounding does not thin the splitter plate.
+            cowl = smax_field(self.belly(), -self.diverter_slot(), SHOULDER_RADIUS)
+            if opened:
+                cowl = fmax(cowl, -self.duct_core())
+            # the front of the cowl cuts it below the forebody underside, with rounded lips; above, the body carries on
+            cowl = smax_field(cowl, fmin(self.inlet_face(), self.roof()), lip_radius)
             fore = fmax(self.roof(), self.xr - T_ROOF_FREE * LREF)
             return fmin(fore, cowl).named('Fuselage lower side' if opened else 'Fuselage lower side, inlet closed', S_ASM)
         return self._once(('lower', opened), make)
@@ -467,10 +495,16 @@ class Airframe:
             d = self.d
             wing = self.wing()
             x_le = d.station('wing_apex') + clamp(AY, 0.0, d.m('wing_span') * 0.5) * d.tan('wing_sweep')
-            fade = fl.smoothstep(0.05, 0.60, X - x_le)
-            fillet = fmax(fade * 0.10, 0.006).named('Wing root fillet size', S_EXT)
+            # the fillet is small at the leading edge (a rounded root, photographs 05 and 21) and grows over the wing
+            fade = fl.smoothstep(0.0, 0.55, X - x_le)
+            fillet = (fade * 0.085 + 0.035).named('Wing root fillet size', S_EXT)
             body = sminq(self.fuselage(opened), wing, fillet)
             body = sminq(body, self.tails(), 0.035)
+            if opened:
+                # the wing and the tail are continued to the centreline inside the body: keep them out of the inlet duct
+                # and the jet pipe, which were cut from the fuselage before the wing and tail were joined to it
+                air = fmin(self.duct_air(), self.jet_pipe() * self.scale).named('Duct and jet pipe air', S_EXT)
+                body = fmax(body, -air)
             return body.named('Outer mold line' if opened else 'Flow body (inlet and nozzle closed)', S_EXT)
         return self._once(('ext', opened), make)
 

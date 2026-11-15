@@ -195,7 +195,7 @@ def main():
         md.append(f"| {r['mach']:.1f} | {name[r['tail']]} | {r['cl_alpha_per_deg']:.4f} | {r['neutral_point_station_m'] / FT:.2f} | {r['neutral_point_percent_mac']:.0f} | "
                   f"{r['cn_beta_per_rad']:+.3f} | {r['cy_beta_per_rad']:+.3f} |")
     if cg:
-        md += ['', 'Centre of gravity of the modelled items (structure, engine, fuel; no landing gear, systems or stores) from analysis/results/mass.md:',
+        md += ['', 'Centre of gravity of the modelled items (structure, engine, landing gear, fuel; no systems or stores) from analysis/results/mass.md:',
                f"full fuel at station {cg['modelled_items_full_fuel_station_m'] / FT:.2f} ft, no fuel at station {cg['modelled_items_no_fuel_station_m'] / FT:.2f} ft."]
         for r in runs:
             if r['mach'] == 0.0 and r['tail'] != 'none':

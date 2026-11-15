@@ -8,6 +8,8 @@
   Fuel                     three fuselage cells between the bulkheads and one cell in each wing box
   Mission systems bay      the usable volume of the forebody
   Air data boom, inlet duct air
+  Landing gear, doors and bays                     model/gear.py
+  Pylons, launch rails, antennas, probes, scoop    model/fittings.py
   Panel lines, paint, markings, formation lights   model/livery.py
 
 The structure is a representative layout: sensible members in sensible places, sized by the inputs in
@@ -25,6 +27,8 @@ from oml import Airframe, AY, LREF, T_FACE, T_ENGINE_REAR, Z_ENGINE
 from design import Design, S_DIM
 import registry
 from livery import Livery
+from gear import Gear
+from fittings import Fittings
 
 S_STR = '20 Structure'
 S_SYS = '30 Engine and systems'
@@ -35,7 +39,8 @@ S_BODY = '40 Bodies'
 BULKHEADS = [0.08, 0.345, 0.47, 0.61, T_FACE]            # solid: radome, tank ends, engine firewall
 RING_FRAMES = [0.14, 0.20, 0.265, 0.405, 0.54, 0.675, 0.81, 0.87, 0.93]
 TANK_CELLS = [('Forward fuselage fuel', 0.345, 0.47), ('Centre fuselage fuel', 0.47, 0.61), ('Aft fuselage fuel', 0.61, T_FACE)]
-GEAR_BAY = (0.565, 0.70, 0.004)                           # main gear bay kept free of fuel: from, to, below this height / length
+GEAR_ZONE = (0.325, 0.615, -0.0075)                       # no fuel here: from, to, below this height / length (landing gear bays under the duct)
+SPINNER = (0.085, 0.24)                                   # engine spinner: radius at the fan face, length ahead of it [m]
 WING_RIBS = [0.28, 0.40, 0.52, 0.64, 0.76, 0.88, 0.975]   # fractions of the wing panel length
 WING_TANK_END = 0.64
 TAIL_RIBS = [0.45, 0.63, 0.81, 0.97]
@@ -54,7 +59,12 @@ class Model:
         self.skin_t = d.m('skin_thickness')
         self.web = d.m('web_thickness')
         self.clear = d.m('tank_clearance')
-        self.exterior = af.exterior(True)
+        self.gear = Gear(self)
+        af.wing()
+        self.fittings = Fittings(self)
+        self.oml = af.exterior(True)
+        # the landing gear bays are cut into the outer mold line (only with the gear down)
+        self.exterior = fmax(self.oml, -self.gear.bays()).named('Exterior with the landing gear bays', S_STR)
         self.inner = (self.exterior + self.skin_t).named('Inner skin surface', S_STR)
         self.fus_inner = (af.fuselage(True) + self.skin_t).named('Fuselage inner surface', S_STR)
         self.off_conventional, self.off_vee = af.tail_switch()
@@ -87,7 +97,7 @@ class Model:
         ring_depth = (self.L * 0.0075).named('Ring frame depth [m]', S_DIM)
         rings = fmax(self._stations(RING_FRAMES) - self.web * 0.5, -(self.fus_inner + ring_depth)).named('Ring frames (uncut)', S_STR)
         solid = (self._stations(BULKHEADS) - self.web * 0.5).named('Bulkhead planes', S_STR)
-        return fmax(fmin(rings, solid), self.fus_inner).named('Fuselage frames and bulkheads', S_STR)
+        return fmax(fmin(rings, solid), self.fus_inner, self.inner).named('Fuselage frames and bulkheads', S_STR)
 
     # ------------------------------------------------------------------ lifting-surface structure
     def _panel_structure(self, name, spar_fracs, rib_fracs, start, section=S_STR):
@@ -124,7 +134,15 @@ class Model:
     def engine(self):
         u = (X - self.L * T_FACE).named('Distance aft of the engine face', S_STR)
         r = fl.length2(Y, Z - self.engine_axis_height())
-        return fmax(r - ENGINE_RADIUS(u), -u, u - ENGINE_LENGTH).named('Engine envelope', S_SYS)
+        case = fmax(r - ENGINE_RADIUS(u), -u, u - ENGINE_LENGTH)
+        return fmin(case, self.spinner()).named('Engine envelope', S_SYS)
+
+    def spinner(self):
+        """The fan spinner: a rounded cone that stands ahead of the fan face, in the end of the inlet duct."""
+        r0, length = SPINNER
+        u = X - self.L * T_FACE
+        r = fl.length2(Y, Z - self.engine_axis_height())
+        return fmax((fl.length2(r / r0, fmin(u, 0.0) / length) - 1.0) * r0, u - 0.02).named('Engine spinner', S_SYS)
 
     def jet_pipe(self):
         air = self.af.jet_air()
@@ -133,12 +151,12 @@ class Model:
     # ------------------------------------------------------------------ fuel
     def fuselage_fuel(self):
         """Fuel fills the fuselage between the tank bulkheads, a clearance inside the inner skin and the duct wall,
-        outside the frames and the main gear bay."""
+        outside the frames. The lower fuselage under the inlet duct is kept free for the landing gear."""
         base = self.fus_inner + self.clear
         frames = self.frames() - self.clear * 0.25
-        x0, x1, ztop = GEAR_BAY
-        gear_bay = fmax(self.L * x0 - X, X - self.L * x1, Z - self.af.scale * self.d.raw('height_scale') * (ztop * LREF)).named('Main gear bay (kept free)', S_FUEL)
-        free = fmax(base, -frames, -(gear_bay - self.clear)).named('Fuselage fuel space', S_FUEL)
+        x0, x1, ztop = GEAR_ZONE
+        gear_zone = fmax(self.L * x0 - X, X - self.L * x1, Z - self.af.scale * self.d.raw('height_scale') * (ztop * LREF)).named('Landing gear zone (kept free of fuel)', S_FUEL)
+        free = fmax(base, -frames, -(gear_zone - self.clear), -(self.gear.bay_space() - self.clear)).named('Fuselage fuel space', S_FUEL)
         cells = []
         for name, a, b in TANK_CELLS:
             cells.append((name, fmax(free, self.L * a + self.clear - X, X - self.L * b + self.clear).named(name + ' cell', S_FUEL)))
@@ -152,7 +170,9 @@ class Model:
         spars, ribs = self.wing_structure()
         box = fmax(p['field'] + self.skin_t + self.clear * 0.5, p['x_le'] + p['chord'] * fs + self.clear * 0.5 - X,
                    X - p['x_le'] - p['chord'] * rs + self.clear * 0.5, eta - WING_TANK_END)
-        side = (self.fus_inner + self.clear)                    # the wing cell starts where the fuselage cells end
+        # the wing cell starts a clearance outside the fuselage. The fuselage is taken with the inlet closed:
+        # the wing box is continued to the centreline, and there it would otherwise fill the inlet duct
+        side = (self.af.fuselage(False) - self.clear).named('Fuselage side of the wing fuel cell', S_FUEL)
         return fmax(box, -side, -(fmin(spars, ribs) - self.clear * 0.25)).named('Wing fuel cell', S_FUEL)
 
     # ------------------------------------------------------------------ systems
@@ -183,8 +203,10 @@ class Model:
             fuselage=([-0.02, -half_w, bottom], [L + 0.02, half_w, top]),
             wing=([wing_x0 - 0.05, -wing_half - 0.03, d.value('wing_height') * 0.0254 - droop], [wing_x1 + 0.05, wing_half + 0.03, d.value('wing_height') * 0.0254 + droop]),
             tail=([0.76 * L, lo[1], -0.02 * L], [hi[0], hi[1], hi[2]]),
-            engine=([T_FACE * L - 0.02, -0.36, Z_ENGINE * L * hs - 0.36], [L + 0.02, 0.36, Z_ENGINE * L * hs + 0.36]),
+            engine=([T_FACE * L - 0.30, -0.36, Z_ENGINE * L * hs - 0.36], [L + 0.02, 0.36, Z_ENGINE * L * hs + 0.36]),
             boom=([-0.13 * L, -0.05, -0.05], [0.04 * L, 0.05, 0.10]),
+            gear=self.gear.box(),
+            stores=self.fittings.stores_box(),
         )
 
     def build(self):
@@ -207,12 +229,18 @@ class Model:
         add('Wing fuel', self.wing_fuel(), 'fuel', 'wing', 0.005, 'fuel')
         add('Mission systems bay', self.mission_bay(), 'avionics', 'fuselage', 0.007, 'systems')
         add('Air data boom', self.boom(), 'skin_dark', 'boom', 0.002, 'skin')
-        add('Inlet duct air', self.af.duct_air(), 'duct', 'fuselage', 0.006, 'air')
+        add('Inlet duct air', fmax(self.af.duct_air(), -self.spinner()), 'duct', 'fuselage', 0.006, 'air')
+        for name, field, mat, h in self.gear.bodies():
+            add(name, field, mat, 'gear', h, 'gear')
+        for name, field, mat, box, h in self.fittings.bodies():
+            add(name, field, mat, box, h, 'fittings')
+        open_bays = (self.gear.bays() - 0.002).named('Open landing gear bays (no paint here)', S_BODY)
         for name, field, mat in self.livery.bodies():
-            add(name, field, mat, 'skin', 0.002, 'paint')
+            add(name, fmax(field, -open_bays), mat, 'skin', 0.002, 'paint')
         return ac
 
 
+registry.MAT['gear_paint'] = ((0.80, 0.81, 0.80), 0.45, 0.0)
 registry.MAT['fuel'] = ((0.85, 0.55, 0.12), 0.45, 0.0)
 registry.MAT['skin'] = (Livery.BASE, 0.55, 0.0)
 registry.MAT['panel_line'] = ((0.16, 0.17, 0.18), 0.7, 0.0)

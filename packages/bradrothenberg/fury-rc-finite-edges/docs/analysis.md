@@ -7,42 +7,45 @@ All numbers are estimates made on the model, in US customary units. Scripts are 
 Bodies of the model with assumed densities. The structure is a representative layout, not a stressed design: read these as
 first estimates. Stations are measured aft of the nose tip.
 
-- Length 33.5 ft, span 24.85 ft, wetted area 797 ft2, enclosed volume 311 ft3
+- Length 33.5 ft, span 24.85 ft, wetted area 830 ft2, enclosed volume 297 ft3
 - Reference wing (input trapezoid to the centreline): area 143.9 ft2, aspect ratio 4.29, taper 0.165, mean aerodynamic chord 6.78 ft with its leading edge at station 15.84 ft
 
 | Body | Volume [ft3] | Weight [lb] | Station of centroid [ft] | Height [in] | Basis |
 |---|---:|---:|---:|---:|---|
-| Skin | 7.97 | 796 | 19.92 | 6.5 | wetted area x skin thickness |
-| Fuselage frames | 1.23 | 213 | 18.19 | 6.4 | 173 lb/ft3 |
-| Wing spars | 0.25 | 44 | 18.41 | 2.2 | 173 lb/ft3 |
-| Wing ribs | 0.14 | 25 | 19.00 | 2.2 | 173 lb/ft3 |
+| Skin | 8.30 | 829 | 19.71 | 6.4 | wetted area x skin thickness |
+| Fuselage frames | 1.20 | 207 | 18.30 | 7.1 | 173 lb/ft3 |
+| Wing spars | 0.31 | 54 | 18.24 | 3.7 | 173 lb/ft3 |
+| Wing ribs | 0.17 | 30 | 18.96 | 3.7 | 173 lb/ft3 |
 | Tail structure | 0.10 | 17 | 30.51 | 22.2 | 173 lb/ft3 |
-| Engine | 13.38 | 650 | 27.26 | 13.7 | published dry weight, placed at the centroid of the envelope |
+| Engine | 13.50 | 650 | 27.24 | 13.7 | published dry weight, placed at the centroid of the envelope |
 | Jet pipe | 0.15 | 42 | 32.10 | 13.7 | 277 lb/ft3 |
-| Forward fuselage fuel | 36.31 | 1604 | 13.67 | 9.0 | usable fuel = cell volume x usable fraction |
-| Centre fuselage fuel | 36.50 | 1612 | 17.78 | 8.1 | usable fuel = cell volume x usable fraction |
-| Aft fuselage fuel | 25.10 | 1108 | 23.05 | 9.6 | usable fuel = cell volume x usable fraction |
-| Wing fuel | 13.62 | 601 | 18.28 | 3.0 | usable fuel = cell volume x usable fraction |
-| Mission systems bay | 19.40 | 0 | 6.39 | 8.8 | space, no weight assigned |
-| Inlet duct air | 40.63 | 0 | 17.62 | 2.4 | space, no weight assigned |
+| Forward fuselage fuel | 32.88 | 1452 | 13.64 | 11.2 | usable fuel = cell volume x usable fraction |
+| Centre fuselage fuel | 29.67 | 1310 | 17.95 | 13.2 | usable fuel = cell volume x usable fraction |
+| Aft fuselage fuel | 41.49 | 1833 | 22.67 | 3.7 | usable fuel = cell volume x usable fraction |
+| Wing fuel | 9.75 | 430 | 18.73 | 4.1 | usable fuel = cell volume x usable fraction |
+| Mission systems bay | 19.34 | 0 | 6.39 | 8.9 | space, no weight assigned |
+| Inlet duct air | 40.16 | 0 | 17.49 | 2.7 | space, no weight assigned |
+| Landing gear (legs, wheels, tyres, doors) | 3.37 | 286 | 17.72 | -30.8 | assumed 4 % of the weight with full fuel |
 
 | Total | Weight [lb] | Centre of gravity station [ft] | % of mean aerodynamic chord |
 |---|---:|---:|---:|
-| Structure (skin, frames, spars, ribs) | 1095 | 19.66 | 56 |
-| Engine and jet pipe | 692 | 27.55 | 173 |
-| Usable fuel (734 US gal) | 4926 | 17.69 | 27 |
-| Modelled items, no fuel | 1786 | 22.72 | 101 |
-| Modelled items, full fuel | 6712 | 19.03 | 47 |
+| Structure (skin, frames, spars, ribs) | 1136 | 19.52 | 54 |
+| Engine and jet pipe | 692 | 27.53 | 172 |
+| Landing gear (assumed 4 % of full weight) | 286 | 17.72 | 28 |
+| Usable fuel (749 US gal) | 5026 | 18.49 | 39 |
+| Modelled items, no fuel | 2114 | 21.90 | 89 |
+| Modelled items, full fuel | 7139 | 19.50 | 54 |
 
-Fuel cells hold 834 US gal geometric volume; 88 % is counted usable: 4926 lb of JP-8.
-This is the packing limit of the model: every fuselage bay between the tank bulkheads is filled, and so is the wing box. A real aircraft gives part of that
-space to landing gear, weapons and systems, so its fuel load is lower.
-Landing gear, systems, mission equipment and stores are not modelled, so the centre of gravity above is of the modelled items only.
-With the reported 4000 lbf engine, thrust / weight of the modelled items at full fuel is 0.60.
+Fuel cells hold 851 US gal geometric volume; 88 % is counted usable: 5026 lb of JP-8.
+This is the packing limit of the model: every fuselage bay between the tank bulkheads is filled except the landing gear bays, and so is the wing box.
+A real aircraft gives more of that space to systems and weapons, so its fuel load is lower.
+The landing gear is not weighed from its bodies: it is an assumed 4 % of the weight with full fuel, placed at the centroid of the gear bodies.
+Systems, mission equipment, pylons and stores are not weighed, so the centre of gravity above is of the modelled items only.
+With the reported 4000 lbf engine, thrust / weight of the modelled items at full fuel is 0.56.
 The 5,000 lb maximum take-off weight often quoted for the Fury goes with the 20 ft by 17 ft size quoted for the earlier design; it is not used here
 because the photographs give a 33.5 ft aircraft (docs/proportions.md).
 
-Assumptions: skin_density = 1600.0, structure_density = 2770.0, jet_pipe_density = 4430.0, fuel_density = 804.0, usable_fuel_fraction = 0.88, engine_weight_lb = 650.0, engine_thrust_lbf = 4000.0.
+Assumptions: skin_density = 1600.0, structure_density = 2770.0, jet_pipe_density = 4430.0, fuel_density = 804.0, usable_fuel_fraction = 0.88, engine_weight_lb = 650.0, landing_gear_fraction = 0.04, engine_thrust_lbf = 4000.0.
 
 ## Inlet duct (estimate)
 
@@ -52,29 +55,29 @@ Mach number at the engine face; no losses, boundary layer or distortion.
 | Quantity | Value |
 |---|---:|
 | Lower lip station | 9.78 ft |
-| Throat station | 10.28 ft |
+| Throat station | 12.13 ft |
 | Engine face station | 24.96 ft |
-| Capture area (largest section at the lip, seen from the front) | 330 in2 |
-| Throat area | 330 in2 (43.1 in wide, 12.0 in high) |
+| Capture area (largest section at the lip, seen from the front) | 359 in2 |
+| Throat area | 322 in2 (50.4 in wide, 10.2 in high) |
 | Engine face area | 418 in2 (23.1 in diameter) |
-| Capture area / throat area | 1.00 |
-| Engine face area / throat area | 1.27 |
-| Length, throat to engine face | 14.67 ft = 7.6 face diameters |
-| Centreline rise, throat to engine face | 21.9 in = 0.12 of the length |
+| Capture area / throat area | 1.12 |
+| Engine face area / throat area | 1.30 |
+| Length, throat to engine face | 12.83 ft = 6.7 face diameters |
+| Centreline rise, throat to engine face | 20.2 in = 0.13 of the length |
 | Steepest centreline slope | 14 deg |
 | Engine face seen straight through the inlet | 0 % |
 
 | Condition | Engine face Mach (assumed) | Air flow [lb/s] | Throat Mach | Stream tube / capture area |
 |---|---:|---:|---:|---:|
-| Sea level, static | 0.35 | 81 | 0.47 | static |
-| Sea level, static | 0.45 | 99 | 0.64 | static |
+| Sea level, static | 0.35 | 81 | 0.48 | static |
+| Sea level, static | 0.45 | 99 | 0.67 | static |
 | Sea level, static | 0.55 | 114 | choked | static |
-| Sea level, Mach 0.3 | 0.35 | 85 | 0.47 | 1.45 |
-| Sea level, Mach 0.3 | 0.45 | 104 | 0.64 | 1.78 |
-| Sea level, Mach 0.3 | 0.55 | 121 | choked | 2.05 |
-| 35,000 ft, Mach 0.85 | 0.35 | 33 | 0.47 | 0.73 |
-| 35,000 ft, Mach 0.85 | 0.45 | 40 | 0.64 | 0.89 |
-| 35,000 ft, Mach 0.85 | 0.55 | 46 | choked | 1.03 |
+| Sea level, Mach 0.3 | 0.35 | 85 | 0.48 | 1.33 |
+| Sea level, Mach 0.3 | 0.45 | 104 | 0.67 | 1.64 |
+| Sea level, Mach 0.3 | 0.55 | 121 | choked | 1.89 |
+| 35,000 ft, Mach 0.85 | 0.35 | 33 | 0.48 | 0.67 |
+| 35,000 ft, Mach 0.85 | 0.45 | 40 | 0.67 | 0.82 |
+| 35,000 ft, Mach 0.85 | 0.55 | 46 | choked | 0.95 |
 
 ![duct](img/duct.png)
 
@@ -94,16 +97,16 @@ Reference: wing area 143.9 ft2, span 24.85 ft, mean aerodynamic chord 6.78 ft, i
 | Mach | Configuration | Lift slope [per deg] | Neutral point station [ft] | Neutral point [% MAC] | Cn beta of the lifting surfaces [per rad] | CY beta [per rad] |
 |---:|---|---:|---:|---:|---:|---:|
 | 0.0 | Wing alone | 0.0662 | 17.77 | 28 | -0.000 | -0.001 |
-| 0.0 | Conventional tail | 0.0747 | 19.02 | 47 | -0.120 | -0.236 |
-| 0.0 | V-tail | 0.0730 | 18.84 | 44 | -0.176 | -0.340 |
+| 0.0 | Conventional tail | 0.0745 | 18.99 | 47 | -0.120 | -0.236 |
+| 0.0 | V-tail | 0.0730 | 18.83 | 44 | -0.176 | -0.340 |
 | 0.6 | Wing alone | 0.0930 | 17.80 | 29 | -0.000 | -0.002 |
-| 0.6 | Conventional tail | 0.1032 | 18.91 | 45 | -0.157 | -0.311 |
-| 0.6 | V-tail | 0.1018 | 18.82 | 44 | -0.231 | -0.447 |
+| 0.6 | Conventional tail | 0.1029 | 18.88 | 45 | -0.157 | -0.311 |
+| 0.6 | V-tail | 0.1017 | 18.81 | 44 | -0.231 | -0.447 |
 
-Centre of gravity of the modelled items (structure, engine, fuel; no landing gear, systems or stores) from analysis/results/mass.md:
-full fuel at station 19.03 ft, no fuel at station 22.72 ft.
-- Conventional tail: lattice neutral point is -0 % MAC aft of the full-fuel point and -55 % MAC aft of the no-fuel point (positive = stable, before the fuselage effect).
-- V-tail: lattice neutral point is -3 % MAC aft of the full-fuel point and -57 % MAC aft of the no-fuel point (positive = stable, before the fuselage effect).
+Centre of gravity of the modelled items (structure, engine, landing gear, fuel; no systems or stores) from analysis/results/mass.md:
+full fuel at station 19.50 ft, no fuel at station 21.90 ft.
+- Conventional tail: lattice neutral point is -7 % MAC aft of the full-fuel point and -43 % MAC aft of the no-fuel point (positive = stable, before the fuselage effect).
+- V-tail: lattice neutral point is -10 % MAC aft of the full-fuel point and -45 % MAC aft of the no-fuel point (positive = stable, before the fuselage effect).
 
 ## Flow solution of the closed flow body (estimate)
 
@@ -119,12 +122,12 @@ on wing area 143.9 ft2 and mean aerodynamic chord 6.78 ft, moments about its qua
 From the first and last angle: lift slope 0.0533 per deg, zero-lift angle -2.22 deg, dCm/dCL +0.132, neutral point at station 16.64 ft (12 % of the mean aerodynamic chord).
 Drag from this solver on this grid is a rough number; lift and moment are the useful part.
 
-Geometry revision: the flow body of these runs was made before the diverter slot and the splitter plate were added to the model. The inlet is faired over in the flow body, so the change is local to the inlet; the runs were not repeated on the final shape.
+Geometry revision: the flow body of these runs is an earlier revision of the model: before the diverter slot and splitter plate, with the wing lower on the fuselage and a thinner root, and with the earlier rounder cowl section. The landing gear and wing stores are not in the flow body. The runs were not repeated on the final shape, so read them as an indication only.
 
 ## The two aerodynamic estimates side by side
 
-the vortex lattice (wing and tail only, no fuselage) gives a lift slope of 0.0747 per deg and a neutral point at station 19.02 ft; the flow solution of the whole aircraft gives 0.0533 per deg and station 16.64 ft, 2.4 ft (35 % of the mean aerodynamic chord) further forward. A long, wide forebody with chines does move the neutral point forward, but the flow solution is two angles on one grid with no grid study, so neither number is settled. The full-fuel centre of gravity of the modelled items (station 19.03 ft) is at the lattice neutral point and 35 % of the chord behind the flow-solution one: as modelled, with every bay full and no landing gear, systems or payload, the aircraft is not shown to be statically stable. Treat the centre of gravity and stability as open.
+the vortex lattice (wing and tail only, no fuselage) gives a lift slope of 0.0745 per deg and a neutral point at station 18.99 ft; the flow solution of the whole aircraft gives 0.0533 per deg and station 16.64 ft, 2.4 ft (35 % of the mean aerodynamic chord) further forward. A long, wide forebody with chines does move the neutral point forward, but the flow solution is two angles on one grid with no grid study, so neither number is settled. The full-fuel centre of gravity of the modelled items (station 19.50 ft) is 7 % of the chord behind the lattice neutral point and 42 % of the chord behind the flow-solution one: as modelled, with every bay full and no systems or payload, the aircraft is not shown to be statically stable. Treat the centre of gravity and stability as open.
 
 ## Notebook against the Python model
 
-The outer mold line was meshed in nTop at a tolerance of 0.47 in and the Python field evaluated at every mesh vertex. Conventional tail (the final shape with diverter and splitter plate): 5.1 M triangles, 99 % of the vertices within 1.9 thousandths of an inch of the Python field, largest difference 0.09 in. V-tail (before the diverter and splitter plate were added): 5.0 M triangles, 99 % of the vertices within 1.9 thousandths of an inch of the Python field, largest difference 0.09 in. Panel grooves and paint films are not part of the outer mold line and were not meshed in nTop.
+The outer mold line was meshed in nTop at a tolerance of 0.47 in and the Python field evaluated at every mesh vertex. Conventional tail (an earlier revision, before the landing gear and the reshaped inlet): 5.1 M triangles, 99 % of the vertices within 1.9 thousandths of an inch of the Python field, largest difference 0.09 in. V-tail (an earlier revision, before the diverter, the landing gear and the reshaped inlet): 5.0 M triangles, 99 % of the vertices within 1.9 thousandths of an inch of the Python field, largest difference 0.09 in. The gear bays, landing gear, fittings, panel grooves and paint films are not part of the outer mold line and were not meshed in nTop.

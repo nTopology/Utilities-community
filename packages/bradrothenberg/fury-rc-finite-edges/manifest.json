@@ -2,7 +2,7 @@
   "id": "fury-rc-finite-edges",
   "type": "Bundle",
   "title": "Fury YFQ-44A: parametric aircraft, structure, fuel, livery",
-  "summary": "Parametric Spline DF model of a Fury-class aircraft matched to public photographs: conventional or V tail, inlet with diverter, structure, fuel, panel lines and markings, with a guide for new nTop users.",
+  "summary": "Parametric Spline DF model of a Fury-class aircraft matched to public photographs: conventional or V tail, inlet with diverter, landing gear, structure, fuel, panel lines and markings, with a guide for new nTop users.",
   "author": "bradrothenberg",
   "org": "nTop",
   "version": "1.0.0",

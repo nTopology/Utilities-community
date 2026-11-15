@@ -32,7 +32,7 @@ lines += ['', 'Other sources', '',
 (ROOT / 'reference' / 'SOURCES.md').write_text('\n'.join(lines), encoding='utf-8')
 
 # ------------------------------------------------------------------ inputs
-lines = ['# Inputs of the notebook', '', 'Every input is a variable in sections 01 to 05 of `native/notebook/fury.ntop`. Values are the Fury match.', '']
+lines = ['# Inputs of the notebook', '', 'Every input is a variable in sections 01 to 06 of `native/notebook/fury.ntop`. Values are the Fury match.', '']
 section = None
 for name, value, sec, text in design.table():
     if sec != section:
@@ -62,12 +62,19 @@ if mj.exists():
               'The plan photograph is an oblique view, so the near fuselage side and the fin show beside the planform; that is most of the',
               'difference in the plan numbers.', '',
               '## Checked by eye, not scored', '',
-              '- Front view (photographs 12 to 14): arch upper section, chine overhanging the cowl, wide shallow inlet, 1.5 deg anhedral.',
-              '- Inlet (photographs 07, 18, 19): lower lip station, chevron lower lip, side walls leaning forward, the pointed splitter plate under the',
-              '  forebody and the diverter slot above it. The slot height and the plate thickness are estimates.',
+              '- Front view (photographs 12 to 14): arch upper section, chine overhanging the cowl, wide hexagonal inlet opening (cowl walls leaning',
+              '  in at about 45 deg), 1.5 deg anhedral.',
+              '- Inlet (photographs 07, 13, 18, 19 and three photographs of the full-size exhibition aircraft): lower lip station, leaning inlet',
+              '  face in two facets creased on the centreline, the blunt V-shaped upper lip (splitter plate) under the forebody, the keel of the',
+              '  cowl, the diverter slot and the rounded shoulder of the cowl. The slot height and the plate thickness are estimates.',
+              '- Wing root (photographs 01, 04, 13): the chine runs into the wing leading edge; the wing sits at the chine height.',
+              '- Landing gear (photographs 06, 12, 13, 23): nose leg with a one-sided fork, main legs leaning outboard from the lower fuselage, single',
+              '  wheels, sawtooth doors, landing lights on the outer main doors. Sizes and positions are measured from the photographs, good to a few inches.',
+              '- External fittings (photographs 01, 06 to 08, 12, 23): pylon, launch rail and missile-sized dummy under each wing, flap actuator fairings,',
+              '  dorsal scoop, blade antennas, air data probes, grille and louvre markings.',
               '- Paint and markings (photographs 04, 05, 06, 07, 17): two greys, designation, tail code, serial, insignia. Positions from the photographs;',
               '  the lettering is a plain stroke font, panel lines are a representative layout at the frames, spars and doors.',
-              '- Not modelled: landing gear (door outlines only), pylons, antennas, the dorsal sensor fairing.',
+              '- Not modelled: gear retraction and stowage, wing-tip navigation lights, small access panels, the manufacturer lettering.',
               '', 'Measured proportions and how the scale was found: `reference/PROPORTIONS.md`.']
     (DOCS / 'MATCH.md').write_text('\n'.join(lines), encoding='utf-8')
 
@@ -83,8 +90,9 @@ for stem in ('mass', 'duct', 'vlm', 'cfd'):
             shutil.copy2(RES / 'duct.png', IMG / 'duct.png')
             parts += ['![duct](img/duct.png)', '']
         if stem == 'cfd':
-            parts += ['Geometry revision: the flow body of these runs was made before the diverter slot and the splitter plate were added to the model. '
-                      'The inlet is faired over in the flow body, so the change is local to the inlet; the runs were not repeated on the final shape.', '']
+            parts += ['Geometry revision: the flow body of these runs is an earlier revision of the model: before the diverter slot and splitter plate, with the wing '
+                      'lower on the fuselage and a thinner root, and with the earlier rounder cowl section. The landing gear and wing stores are not in '
+                      'the flow body. The runs were not repeated on the final shape, so read them as an indication only.', '']
 sys.path.insert(0, str(ROOT / 'tools'))
 import readme_parts
 compare = readme_parts.methods_compared()
