@@ -129,9 +129,10 @@ def solve(d, tail, mach=0.0):
         tot = dict(force=(F.sum(0) / q_s).tolist(), moment=mom.sum(0).tolist())
         by = {parts[k][0]: dict(force=(F[owner == k].sum(0) / q_s).tolist(), moment=mom[owner == k].sum(0).tolist()) for k in range(len(parts))}
         res[name] = dict(total=tot, parts=by)
-    # with the stretching the forces on the stretched wing equal beta times the compressible ones per unit of physical alpha:
-    # C(compressible) = C(stretched solution) / beta (Goethert rule for a thin surface)
-    k = 1.0 / beta
+    # Goethert rule for a thin surface: C(compressible) = C(stretched surface at the same angle, on its own area) / beta. The forces
+    # above come from the true bound vectors and are divided by the true area, which is the stretched area times beta, so the
+    # factor 1 / beta is already in them. (An earlier version multiplied by 1 / beta once more: Mach 0.6 slopes 25 % too high.)
+    k = 1.0
     cla = res['alpha']['total']['force'][2] * k
     cma = res['alpha']['total']['moment'][1] / (0.5 * ref['S'] * ref['mac']) * k
     cyb = res['beta']['total']['force'][1] * k
