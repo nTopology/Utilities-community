@@ -116,17 +116,19 @@ on wing area 143.9 ft2 and mean aerodynamic chord 6.78 ft, moments about its qua
 
 | Angle of attack [deg] | CL | CD | Cm | Lift at this dynamic pressure [lbf] | L/D | Cells | Run time [min] |
 |---:|---:|---:|---:|---:|---:|---:|---:|
-| 0 | 0.1181 | 0.0361 | -0.0040 | 3551 | 3.3 | 20.7 M | 42 |
-| 4 | 0.3311 | 0.0544 | +0.0241 | 9957 | 6.1 | 20.8 M | 42 |
+| 0 | -0.0190 | 0.0099 | +0.0434 | -572 | -1.9 | 20.5 M | 25 |
+| 4 | 0.2236 | 0.0197 | +0.0508 | 6725 | 11.4 | 20.2 M | 24 |
+| 8 | 0.4770 | 0.0540 | +0.0398 | 14343 | 8.8 | 19.9 M | 23 |
+| 12 | 0.7166 | 0.1135 | +0.0236 | 21549 | 6.3 | 19.8 M | 26 |
 
-From the first and last angle: lift slope 0.0533 per deg, zero-lift angle -2.22 deg, dCm/dCL +0.132, neutral point at station 16.64 ft (12 % of the mean aerodynamic chord).
+From the first and last angle: lift slope 0.0613 per deg, zero-lift angle +0.31 deg, dCm/dCL -0.027, neutral point at station 17.72 ft (28 % of the mean aerodynamic chord).
 Drag from this solver on this grid is a rough number; lift and moment are the useful part.
 
-Geometry revision: the flow body of these runs is an earlier revision of the model: before the diverter slot and splitter plate, with the wing lower on the fuselage and a thinner root, and with the earlier rounder cowl section. The landing gear and wing stores are not in the flow body. The runs were not repeated on the final shape, so read them as an indication only.
+The flow body is the final shape with the conventional tail; the landing gear and wing stores are not in it. One grid, no grid study. These runs replace the ones published before 15 November 2026, which were void: the body mesh had a few thousand triangles turned the wrong way along the sharp wing and tail edges (the mesh was still closed), and the solver took blocks of air behind the wing trailing edge for solid. `registry.orient_faces` now makes the orientation consistent before a body is written for a flow solver.
 
 ## The two aerodynamic estimates side by side
 
-the vortex lattice (wing and tail only, no fuselage) gives a lift slope of 0.0745 per deg and a neutral point at station 18.99 ft; the flow solution of the whole aircraft gives 0.0533 per deg and station 16.64 ft, 2.4 ft (35 % of the mean aerodynamic chord) further forward. A long, wide forebody with chines does move the neutral point forward, but the flow solution is two angles on one grid with no grid study, so neither number is settled. The full-fuel centre of gravity of the modelled items (station 19.50 ft) is 7 % of the chord behind the lattice neutral point and 42 % of the chord behind the flow-solution one: as modelled, with every bay full and no systems or payload, the aircraft is not shown to be statically stable. Treat the centre of gravity and stability as open.
+the vortex lattice (wing and tail only, no fuselage) gives a lift slope of 0.0745 per deg and a neutral point at station 18.99 ft; the flow solution of the whole aircraft gives 0.0613 per deg and station 17.72 ft, 1.3 ft (19 % of the mean aerodynamic chord) further forward. A long, wide forebody with chines does move the neutral point forward, and the flow solution has the fuselage where the lattice has none; it is one grid with no grid study, so neither number is settled. (Flow numbers published before 15 November 2026 were void: the body mesh had wrongly turned triangles along the sharp edges, which made the solver treat air behind the wing trailing edge as solid.) The full-fuel centre of gravity of the modelled items (station 19.50 ft) is 7 % of the chord behind the lattice neutral point and 26 % of the chord behind the flow-solution one: as modelled, with every bay full and no systems or payload, the aircraft is not shown to be statically stable. Treat the centre of gravity and stability as open.
 
 ## Notebook against the Python model
 

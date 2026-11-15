@@ -90,9 +90,10 @@ for stem in ('mass', 'duct', 'vlm', 'cfd'):
             shutil.copy2(RES / 'duct.png', IMG / 'duct.png')
             parts += ['![duct](img/duct.png)', '']
         if stem == 'cfd':
-            parts += ['Geometry revision: the flow body of these runs is an earlier revision of the model: before the diverter slot and splitter plate, with the wing '
-                      'lower on the fuselage and a thinner root, and with the earlier rounder cowl section. The landing gear and wing stores are not in '
-                      'the flow body. The runs were not repeated on the final shape, so read them as an indication only.', '']
+            parts += ['The flow body is the final shape with the conventional tail; the landing gear and wing stores are not in it. One grid, no grid study. '
+                      'These runs replace the ones published before 15 November 2026, which were void: the body mesh had a few thousand triangles turned '
+                      'the wrong way along the sharp wing and tail edges (the mesh was still closed), and the solver took blocks of air behind the wing '
+                      'trailing edge for solid. `registry.orient_faces` now makes the orientation consistent before a body is written for a flow solver.', '']
 sys.path.insert(0, str(ROOT / 'tools'))
 import readme_parts
 compare = readme_parts.methods_compared()

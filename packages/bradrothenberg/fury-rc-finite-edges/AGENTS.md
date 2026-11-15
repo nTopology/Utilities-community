@@ -108,8 +108,11 @@ can be wrong inside.
 - **Photograph match** (`tools/match.py`, `docs/match.md`) and the generated documents (`tools/write_docs.py`) need the
   reference photographs, which are third-party and not included. `docs/sources.md` lists the page of each. Without
   them, update the numbers in the documents by hand and say the match was not rerun.
-- **The flow solution** in `docs/analysis.md` used a solver that is not public, on an earlier revision of the shape. Do
-  not carry its numbers over to a changed shape.
+- **The flow solution** in `docs/analysis.md` used a solver that is not public. Do not carry its numbers over to a
+  changed shape. If you run a flow solver of your own on a mesh from `registry.surface_mesh`, pass the faces through
+  `registry.orient_faces` first: the mesher leaves some triangles along sharp edges turned the wrong way. The mesh is
+  still closed, so a closedness check passes, but a solver that takes inside and outside from the normals will mark
+  air behind the trailing edges as solid. The first published flow numbers were wrong for that reason.
 - **The published pictures** in `docs/img/` were made with `tools/render_parts.py` and assembled by a script that is not
   included. Rerender the ones your change affects.
 

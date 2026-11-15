@@ -204,3 +204,48 @@ def mirror_mesh(v, f, n):
 
 def join_meshes(a, b):
     return np.r_[a[0], b[0]], np.r_[a[1], b[1] + len(a[0])].astype(np.int32), np.r_[a[2], b[2]]
+
+
+def orient_faces(F):
+    """Turn triangles so that every pair of neighbours runs along its shared edge in opposite directions.
+
+    The surface mesher leaves a few thousand triangles along the sharp wing and tail edges turned the wrong way. The mesh is
+    still closed, but the flow solver takes the inside / outside sign from the triangle normals: with those triangles in it, it
+    marked blocks of open air behind the trailing edges as solid (found 2026-11-15 in the saved flow field), which spoiled every
+    flow run made before that. Returns the faces, how many were turned and how many edges still clash (0 for an orientable surface).
+    """
+    from scipy.sparse import coo_matrix
+    from scipy.sparse.csgraph import breadth_first_order
+    n = len(F)
+    e = np.r_[F[:, [0, 1]], F[:, [1, 2]], F[:, [2, 0]]]
+    tri = np.tile(np.arange(n), 3)
+    fwd = e[:, 0] < e[:, 1]
+    key = np.minimum(e[:, 0], e[:, 1]).astype(np.int64) * (int(F.max()) + 1) + np.maximum(e[:, 0], e[:, 1])
+    order = np.argsort(key, kind='stable')
+    key, tri, fwd = key[order], tri[order], fwd[order]
+    pair = np.nonzero(key[1:] == key[:-1])[0]
+    ta, tb = tri[pair], tri[pair + 1]
+    same = fwd[pair] == fwd[pair + 1]                      # both run the same way along the edge: one of the two must be turned
+    g = coo_matrix((np.ones(len(ta)), (ta, tb)), shape=(n, n)).tocsr()
+    g = g + g.T
+    flip = np.zeros(n, bool)
+    seen = np.zeros(n, bool)
+    par = {}
+    for a_, b_, s_ in zip(ta[same], tb[same], same[same]):
+        par[(min(a_, b_), max(a_, b_))] = True
+    for seed in range(n):
+        if seen[seed]:
+            continue
+        nodes, pred = breadth_first_order(g, seed, directed=False)
+        seen[nodes] = True
+        for k in nodes[1:]:
+            q = pred[k]
+            flip[k] = flip[q] ^ ((min(k, q), max(k, q)) in par)
+        if seed == 0 and seen.all():
+            break
+    clash = int(np.sum((flip[ta] ^ flip[tb]) != same))
+    if flip.sum() > n / 2:
+        flip = ~flip
+    out = F.copy()
+    out[flip] = out[flip][:, ::-1]
+    return out, int(flip.sum()), clash
