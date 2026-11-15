@@ -26,6 +26,7 @@ print('nodes', fl.node_count([field]), 'device', fl.DEV, flush=True)
 v, f, n = fl.mesh_field(field, lo, hi, h, pin_y0=True)
 print(f'meshed {len(f)} tris in {time.time() - t:.0f}s  bbox {v.min(0).round(3)} {v.max(0).round(3)}', flush=True)
 m = join_meshes((v, f, n), mirror_mesh(v, f, n))
+(ROOT / '.local').mkdir(exist_ok=True)
 np.savez(ROOT / '.local' / f'{tag}.npz', v=m[0], f=m[1], n=m[2], L=fl.num(af.L))
 part = dict(v=m[0], f=m[1], n=m[2], color=(0.62, 0.64, 0.66), roughness=0.55)
 for s in shots:

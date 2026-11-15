@@ -96,9 +96,10 @@ Details and assumptions: [docs/analysis.md](docs/analysis.md).
 ## Files
 
 - [fury-rc-finite-edges.ntop](fury-rc-finite-edges.ntop): the notebook
+- [AGENTS.md](AGENTS.md): instructions for an AI coding agent making a variant of this model
 - [docs/guide.md](docs/guide.md): guide for someone new to nTop
 - [docs/inputs.md](docs/inputs.md), [docs/match.md](docs/match.md), [docs/analysis.md](docs/analysis.md), [docs/sources.md](docs/sources.md), [docs/proportions.md](docs/proportions.md)
-- `model/`, `tools/`, `analysis/`: the Python source the notebook is generated from (`python tools/build_native.py`; needs numpy, torch, pyvista, pillow and an nTop 6.3 installation for the conversion). You do not need it to use the notebook. `tools/match.py` and `tools/write_docs.py` also need the reference photographs, which are not included.
+- `model/`, `tools/`, `analysis/`: the Python source the notebook is generated from (`python tools/build_native.py`; needs numpy, torch, scipy, matplotlib, pyvista, pillow and an nTop 6.3 installation for the conversion). You do not need it to use the notebook. `tools/match.py` and `tools/write_docs.py` also need the reference photographs, which are not included.
 - `native/notebook/`: the recipe the notebook was converted from, the section layout and the check values
 - [publication-checks.json](publication-checks.json): notebook hash, section counts, native meshing comparison
 
