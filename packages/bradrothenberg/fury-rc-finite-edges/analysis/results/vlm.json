@@ -1,0 +1,187 @@
+{
+ "inputs": {
+  "length": 33.5,
+  "width_scale": 1.0,
+  "height_scale": 1.0,
+  "wing_span": 24.85,
+  "wing_root_chord": 9.94,
+  "wing_tip_chord": 1.64,
+  "wing_sweep": 31.0,
+  "wing_apex": 38.8,
+  "wing_height": 4.0,
+  "wing_dihedral": -1.5,
+  "wing_tc_root": 6.0,
+  "wing_tc_tip": 5.0,
+  "tail_type": 0.0,
+  "htail_span": 12.73,
+  "htail_root_chord": 6.2,
+  "htail_tip_chord": 1.47,
+  "htail_sweep": 34.0,
+  "htail_apex": 80.7,
+  "htail_height": 8.9,
+  "htail_dihedral": 0.0,
+  "fin_height": 4.87,
+  "fin_root_chord": 4.97,
+  "fin_tip_chord": 2.12,
+  "fin_sweep": 45.0,
+  "fin_apex": 80.5,
+  "fin_root_height": 21.2,
+  "vtail_cant": 47.0,
+  "vtail_length": 6.59,
+  "vtail_root_chord": 5.81,
+  "vtail_tip_chord": 1.62,
+  "vtail_sweep": 38.0,
+  "vtail_apex": 80.5,
+  "vtail_root_height": 10.1,
+  "tail_tc": 5.0,
+  "te_thickness": 0.25,
+  "inlet_station": 29.5,
+  "inlet_rake": 48.0,
+  "inlet_lip_sweep": 25.0,
+  "diverter_height": 1.8,
+  "splitter_thickness": 0.8,
+  "splitter_apex": 24.7,
+  "splitter_sweep": 36.0,
+  "diverter_sweep": 50.0,
+  "lip_thickness": 1.34,
+  "nozzle_diameter": 16.8,
+  "skin_thickness": 0.12,
+  "web_thickness": 0.2,
+  "front_spar": 18.0,
+  "rear_spar": 68.0,
+  "tank_clearance": 1.0,
+  "panel_line_width": 0.25,
+  "panel_line_depth": 0.05
+ },
+ "method": "flat-plate vortex lattice of the planform inputs (estimate; no fuselage, thickness or camber)",
+ "geometry": {
+  "reference_area_m2": 13.367028749760001,
+  "span_m": 7.574280000000001,
+  "mean_aerodynamic_chord_m": 2.067003744386874,
+  "mac_leading_edge_station_m": 4.82772828786172,
+  "horizontal_tail": {
+   "area_m2": 4.535484606432001,
+   "arm_m": 3.7447014154875022,
+   "volume_coefficient": 0.6147021705544887
+  },
+  "fin": {
+   "area_m2": 1.6038920180160001,
+   "arm_m": 3.8026343359851458,
+   "volume_coefficient": 0.06023979060181972
+  },
+  "v_tail": {
+   "area_m2": 4.548876579648001,
+   "arm_m": 3.825466505085978,
+   "horizontal_volume_coefficient": 0.2929402667144617,
+   "vertical_volume_coefficient": 0.09193211406353514
+  }
+ },
+ "results": [
+  {
+   "tail": "none",
+   "mach": 0.0,
+   "cl_alpha_per_rad": 3.794363207733151,
+   "cl_alpha_per_deg": 0.06622413099147705,
+   "cm_alpha_per_rad_about_quarter_mac": -0.13021233081607392,
+   "neutral_point_station_m": 5.4154132280658,
+   "neutral_point_percent_mac": 28.43173079874621,
+   "cy_beta_per_rad": -0.0014800362249052248,
+   "cn_beta_per_rad": -3.055153704618565e-05,
+   "cl_beta_per_rad": -0.014329644663307627,
+   "lift_share": {
+    "wing": 1.0
+   },
+   "panels": 384
+  },
+  {
+   "tail": "conventional",
+   "mach": 0.0,
+   "cl_alpha_per_rad": 4.2804100119408375,
+   "cl_alpha_per_deg": 0.07470724804369741,
+   "cm_alpha_per_rad_about_quarter_mac": -0.9355809275638378,
+   "neutral_point_station_m": 5.796269887716498,
+   "neutral_point_percent_mac": 46.857273601218004,
+   "cy_beta_per_rad": -0.2363018205363207,
+   "cn_beta_per_rad": -0.11973198096904164,
+   "cl_beta_per_rad": 0.018743826164563042,
+   "lift_share": {
+    "wing": 0.8984035413820889,
+    "horizontal tail": 0.10159645861791235,
+    "fin": 0.0
+   },
+   "panels": 960
+  },
+  {
+   "tail": "vee",
+   "mach": 0.0,
+   "cl_alpha_per_rad": 4.18486522162835,
+   "cl_alpha_per_deg": 0.07303967686961692,
+   "cm_alpha_per_rad_about_quarter_mac": -0.8059787325263236,
+   "neutral_point_station_m": 5.742571150412372,
+   "neutral_point_percent_mac": 44.259371326006864,
+   "cy_beta_per_rad": -0.3399385466051062,
+   "cn_beta_per_rad": -0.1756991578647773,
+   "cl_beta_per_rad": 0.06052065370101305,
+   "lift_share": {
+    "wing": 0.9151344141141656,
+    "V-tail": 0.08486558588583562
+   },
+   "panels": 768
+  },
+  {
+   "tail": "none",
+   "mach": 0.6,
+   "cl_alpha_per_rad": 5.3258927768622915,
+   "cl_alpha_per_deg": 0.09295436456443065,
+   "cm_alpha_per_rad_about_quarter_mac": -0.2067129609962599,
+   "neutral_point_station_m": 5.424705485036922,
+   "neutral_point_percent_mac": 28.881282813170756,
+   "cy_beta_per_rad": -0.0019797978202176054,
+   "cn_beta_per_rad": -4.1890629656808844e-05,
+   "cl_beta_per_rad": -0.019360900662308604,
+   "lift_share": {
+    "wing": 1.0
+   },
+   "panels": 384
+  },
+  {
+   "tail": "conventional",
+   "mach": 0.6,
+   "cl_alpha_per_rad": 5.910765727716623,
+   "cl_alpha_per_deg": 0.10316232326269371,
+   "cm_alpha_per_rad_about_quarter_mac": -1.1981497319630798,
+   "neutral_point_station_m": 5.763474003381127,
+   "neutral_point_percent_mac": 45.27063475625068,
+   "cy_beta_per_rad": -0.3106433318478172,
+   "cn_beta_per_rad": -0.15744530773362908,
+   "cl_beta_per_rad": 0.023743996960479095,
+   "lift_share": {
+    "wing": 0.9094005232664202,
+    "horizontal tail": 0.09059947673358014,
+    "fin": 0.0
+   },
+   "panels": 960
+  },
+  {
+   "tail": "vee",
+   "mach": 0.6,
+   "cl_alpha_per_rad": 5.833994696042834,
+   "cl_alpha_per_deg": 0.10182241598983324,
+   "cm_alpha_per_rad_about_quarter_mac": -1.1039808821427648,
+   "neutral_point_station_m": 5.735623326072285,
+   "neutral_point_percent_mac": 43.92324110084619,
+   "cy_beta_per_rad": -0.446809415579609,
+   "cn_beta_per_rad": -0.2309681797835617,
+   "cl_beta_per_rad": 0.07970265335162433,
+   "lift_share": {
+    "wing": 0.9193668882912419,
+    "V-tail": 0.08063311170875878
+   },
+   "panels": 768
+  }
+ ],
+ "centre_of_gravity": {
+  "modelled_items_full_fuel_station_m": 5.799482203619016,
+  "modelled_items_no_fuel_station_m": 6.9243672822085856
+ }
+}

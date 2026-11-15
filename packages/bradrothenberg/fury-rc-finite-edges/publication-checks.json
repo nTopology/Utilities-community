@@ -1,62 +1,80 @@
 {
-  "scope": "Offline publication preparation; no new native execution",
-  "models": [
-    {
-      "file": "fury-rc-finite-edges.ntop",
-      "source_sha256": "0eb08baf8489622bdacc96d76690b2905ba3e64adacf95811869be555f2f2713",
-      "published_sha256": "e64394104adc30cce58a01adcdc88eb8caec4f58c9cdffcf57ef6c98c120a800",
-      "bytes": 1927774,
-      "changed_chunks": [
-        "index"
-      ],
-      "relative_export_filenames": [
-        "raw-mm.stl",
-        "sharpened-mm.stl"
-      ],
-      "source_unchanged": true,
-      "geometry_graph_and_binary_payloads_unchanged": true,
-      "new_native_execution": false
-    },
-    {
-      "file": "earlier-appearance.ntop",
-      "source_sha256": "0dbdebdb7051f48fc9d3b497caad8638dbfeb0fb51b5cc92809bd65215ee5829",
-      "published_sha256": "ecf90e2b02da8d9de250a7ed7fd925e8bbe200c8eb40dba22a50ab23230d7ea6",
-      "bytes": 2404939,
-      "changed_chunks": [
-        "sections"
-      ],
-      "relative_export_filenames": [],
-      "source_unchanged": true,
-      "geometry_graph_and_binary_payloads_unchanged": true,
-      "new_native_execution": false
-    },
-    {
-      "file": "earlier-internal-layout.ntop",
-      "source_sha256": "85fe066cdc5be3533f03241efbe6f1b6d6ddc0dce54ddd572e7f80b325979a62",
-      "published_sha256": "f474b9364311913266c9dd616c4ba38404207f5172853dbbf4ab8a50869d9495",
-      "bytes": 2404328,
-      "changed_chunks": [
-        "sections"
-      ],
-      "relative_export_filenames": [],
-      "source_unchanged": true,
-      "geometry_graph_and_binary_payloads_unchanged": true,
-      "new_native_execution": false
-    },
-    {
-      "file": "earlier-gear-illustration.ntop",
-      "source_sha256": "be442ddfb3b72aa26e07bb4b170153eeff673829c9c6a48bb500ba84b3773a05",
-      "published_sha256": "d8554020a159ff6fd0a0210aaec40ad3b9829cbfb1e1df2a2893535c05bf7225",
-      "bytes": 2404089,
-      "changed_chunks": [
-        "sections"
-      ],
-      "relative_export_filenames": [],
-      "source_unchanged": true,
-      "geometry_graph_and_binary_payloads_unchanged": true,
-      "new_native_execution": false
-    }
-  ],
-  "cover_sha256": "73cf4c3a4241b8bb803ec86d50be9c6543a3a0807b0c044b3802d3fcc8be1f2d",
-  "source_commit": "92f13bc0a873aacba62526ee43e9e6895ef051f8"
+ "scope": "Notebook written by `ntopcl convert` (nTop 6.3) from the recipe in native/notebook/fury.json, then given sections, descriptions and colours by tools/organize_fury.py, which compares the computation before and after.",
+ "notebook": {
+  "file": "fury-rc-finite-edges.ntop",
+  "sha256": "908bfac2243a7d365de510e6de5b466bdd2aab9ebe2219ff55021652bca266d0",
+  "bytes": 2719419,
+  "variables": 390,
+  "sections": {
+   "00 Coordinates": 7,
+   "01 Inputs | Fuselage": 3,
+   "02 Inputs | Wing": 9,
+   "03 Inputs | Tail": 23,
+   "04 Inputs | Inlet, duct and engine": 10,
+   "05 Inputs | Structure and fuel": 7,
+   "06 Derived dimensions": 70,
+   "07 Reference coordinates": 3,
+   "10 Fuselage guide curves": 33,
+   "11 Fuselage lofts": 16,
+   "12 Inlet, duct and nozzle": 13,
+   "13 Fuselage": 4,
+   "14 Wing": 8,
+   "15 Tail": 28,
+   "16 Exterior": 6,
+   "20 Structure": 41,
+   "21 Panel lines": 1,
+   "22 Paint and markings": 71,
+   "30 Engine and systems": 7,
+   "31 Fuel": 5,
+   "40 Bodies": 19,
+   "99 Checks": 6
+  },
+  "final_bodies": 19,
+  "variables_used_before_they_are_defined": [],
+  "computation_unchanged_by_the_display_pass": true
+ },
+ "native_meshing": {
+  "note": "Outer mold line meshed in nTop and compared with the Python model at every mesh vertex. See docs/analysis.md for which geometry revision was meshed.",
+  "results": {
+   "exterior_verify.json": {
+    "what": "exterior",
+    "triangles": 5100804,
+    "tolerance_m": 0.012,
+    "host_abs_mean_m": 7.011578873061808e-06,
+    "host_abs_p99_m": 4.897828694083728e-05,
+    "host_abs_max_m": 0.002278417581692338,
+    "bounds_min": [
+     -0.0,
+     -3.7875,
+     -0.4651
+    ],
+    "bounds_max": [
+     10.3502,
+     3.7875,
+     2.0229
+    ],
+    "seconds": 1421
+   },
+   "exterior_tail_type1_verify.json": {
+    "what": "exterior_tail_type1",
+    "triangles": 5020828,
+    "tolerance_m": 0.012,
+    "host_abs_mean_m": 6.962814040889498e-06,
+    "host_abs_p99_m": 4.9048569053411484e-05,
+    "host_abs_max_m": 0.002278417581692338,
+    "bounds_min": [
+     -0.0,
+     -3.7875,
+     -0.4651
+    ],
+    "bounds_max": [
+     10.283,
+     3.7875,
+     1.7349
+    ],
+    "seconds": 1366
+   }
+  }
+ },
+ "cover_sha256": "14a3265ecb8162a95507320a0ffa4ca3a0537a0d2c5321198a0ddaf5419e4010"
 }

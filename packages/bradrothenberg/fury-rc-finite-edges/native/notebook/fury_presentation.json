@@ -1,0 +1,42 @@
+{
+ "notebook": "fury.ntop",
+ "variables": 390,
+ "sections": {
+  "00 Coordinates": 7,
+  "01 Inputs | Fuselage": 3,
+  "02 Inputs | Wing": 9,
+  "03 Inputs | Tail": 23,
+  "04 Inputs | Inlet, duct and engine": 10,
+  "05 Inputs | Structure and fuel": 7,
+  "06 Derived dimensions": 70,
+  "07 Reference coordinates": 3,
+  "10 Fuselage guide curves": 33,
+  "11 Fuselage lofts": 16,
+  "12 Inlet, duct and nozzle": 13,
+  "13 Fuselage": 4,
+  "14 Wing": 8,
+  "15 Tail": 28,
+  "16 Exterior": 6,
+  "20 Structure": 41,
+  "21 Panel lines": 1,
+  "22 Paint and markings": 71,
+  "30 Engine and systems": 7,
+  "31 Fuel": 5,
+  "40 Bodies": 19,
+  "99 Checks": 6
+ },
+ "final_bodies": 19,
+ "bodies_shown": [
+  "Air data boom",
+  "Formation lights",
+  "Markings, dark",
+  "Markings, light",
+  "Paint, dark grey",
+  "Panel lines",
+  "Skin"
+ ],
+ "variables_used_before_they_are_defined": [],
+ "computation_unchanged": true,
+ "source_sha256": "f2b1cf165885fb5fe76bac339ffb340aa225632c21349cde64ad18275c2c6199",
+ "output_sha256": "908bfac2243a7d365de510e6de5b466bdd2aab9ebe2219ff55021652bca266d0"
+}

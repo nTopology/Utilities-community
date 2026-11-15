@@ -1,0 +1,96 @@
+{
+ "points": {
+  "Exterior above the crown": [
+   5.1054,
+   0.0,
+   1.225296
+  ],
+  "Exterior inside the forebody": [
+   2.0421600000000004,
+   0.0,
+   0.204216
+  ],
+  "Exterior in the inlet mouth": [
+   3.4716720000000003,
+   0.0,
+   -0.204216
+  ],
+  "Exterior inside the wing": [
+   6.12648,
+   2.0421600000000004,
+   0.06126480000000001
+  ],
+  "Exterior at the fin": [
+   9.496044000000001,
+   0.0,
+   1.4295120000000003
+  ],
+  "Exterior ahead of the nose": [
+   -0.5105400000000001,
+   0.0,
+   0.0
+  ]
+ },
+ "host_values": {
+  "CHECK Exterior above the crown": 0.4390685472489937,
+  "CHECK Exterior inside the forebody": -0.2779202905292184,
+  "CHECK Exterior in the inlet mouth": 0.08068289760226428,
+  "CHECK Exterior inside the wing": -0.030136007858192138,
+  "CHECK Exterior at the fin": -0.025805477228100705,
+  "CHECK Exterior ahead of the nose": 0.5105400000000001
+ },
+ "inputs": {
+  "length": 33.5,
+  "width_scale": 1.0,
+  "height_scale": 1.0,
+  "wing_span": 24.85,
+  "wing_root_chord": 9.94,
+  "wing_tip_chord": 1.64,
+  "wing_sweep": 31.0,
+  "wing_apex": 38.8,
+  "wing_height": 4.0,
+  "wing_dihedral": -1.5,
+  "wing_tc_root": 6.0,
+  "wing_tc_tip": 5.0,
+  "tail_type": 0.0,
+  "htail_span": 12.73,
+  "htail_root_chord": 6.2,
+  "htail_tip_chord": 1.47,
+  "htail_sweep": 34.0,
+  "htail_apex": 80.7,
+  "htail_height": 8.9,
+  "htail_dihedral": 0.0,
+  "fin_height": 4.87,
+  "fin_root_chord": 4.97,
+  "fin_tip_chord": 2.12,
+  "fin_sweep": 45.0,
+  "fin_apex": 80.5,
+  "fin_root_height": 21.2,
+  "vtail_cant": 47.0,
+  "vtail_length": 6.59,
+  "vtail_root_chord": 5.81,
+  "vtail_tip_chord": 1.62,
+  "vtail_sweep": 38.0,
+  "vtail_apex": 80.5,
+  "vtail_root_height": 10.1,
+  "tail_tc": 5.0,
+  "te_thickness": 0.25,
+  "inlet_station": 29.5,
+  "inlet_rake": 48.0,
+  "inlet_lip_sweep": 25.0,
+  "diverter_height": 1.8,
+  "splitter_thickness": 0.8,
+  "splitter_apex": 24.7,
+  "splitter_sweep": 36.0,
+  "diverter_sweep": 50.0,
+  "lip_thickness": 1.34,
+  "nozzle_diameter": 16.8,
+  "skin_thickness": 0.12,
+  "web_thickness": 0.2,
+  "front_spar": 18.0,
+  "rear_spar": 68.0,
+  "tank_clearance": 1.0,
+  "panel_line_width": 0.25,
+  "panel_line_depth": 0.05
+ }
+}
