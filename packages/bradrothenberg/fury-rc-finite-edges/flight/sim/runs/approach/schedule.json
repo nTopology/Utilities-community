@@ -1,0 +1,49 @@
+{
+ "description": "landing approach: base turn, gear and flap down, 3 deg final, flare to touchdown",
+ "condition": {
+  "case": "landing",
+  "altitude_ft": 1200.0,
+  "speed_kt": 160.0
+ },
+ "duration_s": 175.3,
+ "commands": [
+  {
+   "t": 2.0,
+   "gear": "down",
+   "note": "gear down on the base leg"
+  },
+  {
+   "t": 4.0,
+   "heading_change_deg": 90.0,
+   "bank_limit_deg": 30.0,
+   "note": "base turn to final"
+  },
+  {
+   "t": 6.0,
+   "flap_deg": 30.0,
+   "ramp_s": 8.0,
+   "note": "flap down"
+  },
+  {
+   "t": 6.0,
+   "speed_kt": 110.0,
+   "ramp_s": 25.0,
+   "note": "slow to the approach speed"
+  },
+  {
+   "t": 45.0,
+   "altitude_ft": 0.0,
+   "ramp_s": 123.49940882098818,
+   "climb_rate_fpm": 1500.0,
+   "note": "final: 3 deg path"
+  },
+  {
+   "t": 167.3,
+   "altitude_ft": -30.0,
+   "climb_rate_fpm": 150.0,
+   "throttle": 0.0,
+   "ramp_s": 0.5,
+   "note": "flare: sink rate cut, throttle to idle"
+  }
+ ]
+}

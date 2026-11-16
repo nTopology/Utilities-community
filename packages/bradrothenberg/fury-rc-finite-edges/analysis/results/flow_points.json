@@ -1,0 +1,51 @@
+{
+ "what": "Flow solution of the closed flow body, half model, conventional tail, no control deflection (estimate)",
+ "mach_of_the_solution": 0.0,
+ "reynolds_number_of": {
+  "mach": 0.5,
+  "altitude_ft": 15000.0
+ },
+ "reference": {
+  "area_m2": 13.367028749760001,
+  "chord_m": 2.067003744386874,
+  "moment_point_m": [
+   5.344479223958438,
+   0.0,
+   0.0
+  ]
+ },
+ "points": [
+  {
+   "alpha_deg": 0.0,
+   "cl": -0.0190257459,
+   "cd": 0.00988547458,
+   "cm_quarter_chord": 0.0434264602,
+   "converged": true,
+   "cells": 20547072
+  },
+  {
+   "alpha_deg": 4.0,
+   "cl": 0.223627621,
+   "cd": 0.0196749063,
+   "cm_quarter_chord": 0.0508312845,
+   "converged": true,
+   "cells": 20191232
+  },
+  {
+   "alpha_deg": 8.0,
+   "cl": 0.476989468,
+   "cd": 0.0539690523,
+   "cm_quarter_chord": 0.0398253134,
+   "converged": true,
+   "cells": 19866112
+  },
+  {
+   "alpha_deg": 12.0,
+   "cl": 0.716596513,
+   "cd": 0.113494968,
+   "cm_quarter_chord": 0.0235698085,
+   "converged": true,
+   "cells": 19783168
+  }
+ ]
+}

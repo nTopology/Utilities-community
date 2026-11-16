@@ -1,0 +1,99 @@
+{
+ "what": "landing approach: base turn, gear and flap down, 3 deg final, flare to touchdown",
+ "weight_lb": 4970.244381233968,
+ "start": {
+  "speed_kt": 159.99999437008657,
+  "altitude_ft": 1200.0,
+  "alpha_deg": 5.532108127793712,
+  "throttle": 0.13456330214716325
+ },
+ "gear": {
+  "commanded_at_s": 2.0,
+  "down_at_s": 9.733333333333333,
+  "drag_coefficient": 0.022240524320360704,
+  "drag_at_approach_speed_lbf": 130.97435413609153
+ },
+ "base_turn": {
+  "peak_bank_deg": 38.683496056813134,
+  "peak_load_factor_g": 1.1911138640611656,
+  "peak_roll_rate_deg_s": 39.7174772949903
+ },
+ "final": {
+  "from_s": 75.0,
+  "to_s": 167.3,
+  "speed_kt": 110.02566841151973,
+  "speed_calibrated_kt": 109.95243743557766,
+  "speed_range_kt": [
+   109.54741438823444,
+   110.13860467915626
+  ],
+  "path_deg": -3.0003230577093594,
+  "sink_rate_fpm": 583.1978154881173,
+  "alpha_deg": 6.891063091063777,
+  "pitch_deg": 3.8907400333544166,
+  "stabilator_deg": -1.1328797718040302,
+  "flap_deg": 30.000000000000004,
+  "throttle": 0.16985714337406652,
+  "thrust_lbf": 524.7054164810795,
+  "lift_coefficient": 0.8432527703264854,
+  "drag_coefficient": 0.13417260604369163,
+  "lift_to_drag": 6.285007065076819,
+  "alpha_limiter_deg": 15.86847821671216,
+  "margin_to_limiter_deg": 8.739352223341537
+ },
+ "flare": {
+  "start_s": 167.3,
+  "wheel_height_at_start_ft": 44.26837558479356,
+  "duration_s": 7.9375
+ },
+ "touchdown": {
+  "at_s": 175.2375,
+  "reached": true,
+  "speed_kt": 96.32908955446263,
+  "sink_rate_ft_s": 3.4191447346739947,
+  "alpha_deg": 10.290515452035502,
+  "pitch_deg": 9.085504039412184,
+  "bank_deg": -5.3556605411535575e-12,
+  "stabilator_deg": -1.3521878250352233,
+  "throttle": 0.05,
+  "distance_from_flare_start_ft": 1399.1787142439537,
+  "nose_wheel_clear_ft": 1.2566321256716062
+ },
+ "geometry": {
+  "main_wheel_from_cg_body_m": [
+   -0.5762751578233196,
+   1.372699643056911
+  ],
+  "note": "wheel contact from the design inputs (main gear station, ground line 47 in below the reference line); the height datum of the run is the runway; the model has no ground: the run ends when the main wheels reach the datum"
+ },
+ "limits": "no ground effect, no ground contact, no wind or turbulence; flap is both flaperons 30 deg down (the notebook geometry has no moving flap)",
+ "warnings": [],
+ "checks": {
+  "samples": 42073,
+  "expected_samples": 42073,
+  "time_end": 175.3,
+  "time_coverage": true,
+  "time_monotonic": true,
+  "aligned": true,
+  "finite": true,
+  "quat_norm_max_error": 3.77553543984277e-12,
+  "segments": 127,
+  "segments_structural": true,
+  "structural_pass": true
+ },
+ "python_reference": {
+  "worst": {
+   "value": 3.7018998977345063e-13,
+   "signal": "cm"
+  },
+  "passed": true,
+  "tolerance_relative_to_scale": 1e-06
+ },
+ "t_flare": 167.3,
+ "k_touchdown": 42057,
+ "wheel": {
+  "x": -0.5762751578233196,
+  "z": 1.372699643056911,
+  "x_nose": 1.8743168421766807
+ }
+}

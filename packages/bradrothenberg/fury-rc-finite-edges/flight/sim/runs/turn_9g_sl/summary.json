@@ -1,0 +1,1093 @@
+{
+ "name": "Fury model, conventional tail, 50 % fuel, two missiles",
+ "case": "combat",
+ "maneuver": "9 g turn through 180 deg from Mach 0.70, 1,000 ft, speed let go, then roll out and accelerate back",
+ "start": {
+  "mach": 0.7,
+  "altitude_ft": 1000,
+  "speed_kt": 461.4,
+  "weight_lb": 6729
+ },
+ "duration_s": 45.0,
+ "units": "US customary: ft, kt (true airspeed), lbf, g, deg; converted from the stored SI trace",
+ "every_5_s": [
+  {
+   "t_s": 0.0,
+   "track_deg": 0.0,
+   "altitude_ft": 1000,
+   "speed_kt": 461.4,
+   "mach": 0.7,
+   "load_factor_g": 1.0,
+   "bank_deg": 0.0,
+   "alpha_deg": 0.77,
+   "pitch_deg": 0.77,
+   "climb_rate_fpm": 0,
+   "throttle": 0.619,
+   "thrust_lbf": 1978,
+   "stabilator_deg": 0.99,
+   "flap_deg": 0.0,
+   "gear": 0.0,
+   "north_ft": 0,
+   "east_ft": 0
+  },
+  {
+   "t_s": 5.0,
+   "track_deg": 4.9,
+   "altitude_ft": 994,
+   "speed_kt": 463.2,
+   "mach": 0.703,
+   "load_factor_g": 3.54,
+   "bank_deg": 78.3,
+   "alpha_deg": 2.84,
+   "pitch_deg": -0.06,
+   "climb_rate_fpm": -725,
+   "throttle": 1.0,
+   "thrust_lbf": 2729,
+   "stabilator_deg": 0.49,
+   "flap_deg": 0.0,
+   "gear": 0.0,
+   "north_ft": 3895,
+   "east_ft": 34
+  },
+  {
+   "t_s": 10.0,
+   "track_deg": 102.3,
+   "altitude_ft": 969,
+   "speed_kt": 434.2,
+   "mach": 0.659,
+   "load_factor_g": 8.46,
+   "bank_deg": 83.0,
+   "alpha_deg": 7.76,
+   "pitch_deg": 1.3,
+   "climb_rate_fpm": 130,
+   "throttle": 1.0,
+   "thrust_lbf": 3165,
+   "stabilator_deg": -0.04,
+   "flap_deg": 0.0,
+   "gear": 0.0,
+   "north_ft": 6070,
+   "east_ft": 2559
+  },
+  {
+   "t_s": 15.0,
+   "track_deg": 180.3,
+   "altitude_ft": 1026,
+   "speed_kt": 414.3,
+   "mach": 0.629,
+   "load_factor_g": 0.26,
+   "bank_deg": -16.7,
+   "alpha_deg": 0.23,
+   "pitch_deg": 2.84,
+   "climb_rate_fpm": 1964,
+   "throttle": 1.0,
+   "thrust_lbf": 3168,
+   "stabilator_deg": 1.04,
+   "flap_deg": 0.0,
+   "gear": 0.0,
+   "north_ft": 3276,
+   "east_ft": 4078
+  },
+  {
+   "t_s": 20.0,
+   "track_deg": 180.1,
+   "altitude_ft": 1037,
+   "speed_kt": 435.2,
+   "mach": 0.66,
+   "load_factor_g": 0.99,
+   "bank_deg": -0.5,
+   "alpha_deg": 0.87,
+   "pitch_deg": 0.23,
+   "climb_rate_fpm": -494,
+   "throttle": 1.0,
+   "thrust_lbf": 3177,
+   "stabilator_deg": 0.95,
+   "flap_deg": 0.0,
+   "gear": 0.0,
+   "north_ft": -306,
+   "east_ft": 4067
+  },
+  {
+   "t_s": 25.0,
+   "track_deg": 180.0,
+   "altitude_ft": 1005,
+   "speed_kt": 455.0,
+   "mach": 0.69,
+   "load_factor_g": 1.04,
+   "bank_deg": -0.2,
+   "alpha_deg": 0.83,
+   "pitch_deg": 0.59,
+   "climb_rate_fpm": -191,
+   "throttle": 1.0,
+   "thrust_lbf": 3190,
+   "stabilator_deg": 0.96,
+   "flap_deg": 0.0,
+   "gear": 0.0,
+   "north_ft": -4065,
+   "east_ft": 4061
+  },
+  {
+   "t_s": 30.0,
+   "track_deg": 180.0,
+   "altitude_ft": 1010,
+   "speed_kt": 464.6,
+   "mach": 0.705,
+   "load_factor_g": 1.02,
+   "bank_deg": -0.1,
+   "alpha_deg": 0.77,
+   "pitch_deg": 1.29,
+   "climb_rate_fpm": 424,
+   "throttle": 0.423,
+   "thrust_lbf": 1660,
+   "stabilator_deg": 1.0,
+   "flap_deg": 0.0,
+   "gear": 0.0,
+   "north_ft": -7965,
+   "east_ft": 4059
+  },
+  {
+   "t_s": 35.0,
+   "track_deg": 180.0,
+   "altitude_ft": 1018,
+   "speed_kt": 458.8,
+   "mach": 0.696,
+   "load_factor_g": 0.96,
+   "bank_deg": -0.0,
+   "alpha_deg": 0.74,
+   "pitch_deg": 0.42,
+   "climb_rate_fpm": -264,
+   "throttle": 0.582,
+   "thrust_lbf": 1731,
+   "stabilator_deg": 1.0,
+   "flap_deg": 0.0,
+   "gear": 0.0,
+   "north_ft": -11859,
+   "east_ft": 4058
+  },
+  {
+   "t_s": 40.0,
+   "track_deg": 180.0,
+   "altitude_ft": 996,
+   "speed_kt": 458.6,
+   "mach": 0.696,
+   "load_factor_g": 1.03,
+   "bank_deg": -0.0,
+   "alpha_deg": 0.81,
+   "pitch_deg": 0.63,
+   "climb_rate_fpm": -141,
+   "throttle": 0.643,
+   "thrust_lbf": 2013,
+   "stabilator_deg": 0.99,
+   "flap_deg": 0.0,
+   "gear": 0.0,
+   "north_ft": -15727,
+   "east_ft": 4058
+  },
+  {
+   "t_s": 45.0,
+   "track_deg": 180.0,
+   "altitude_ft": 995,
+   "speed_kt": 459.9,
+   "mach": 0.698,
+   "load_factor_g": 1.01,
+   "bank_deg": -0.0,
+   "alpha_deg": 0.78,
+   "pitch_deg": 0.86,
+   "climb_rate_fpm": 66,
+   "throttle": 0.645,
+   "thrust_lbf": 2060,
+   "stabilator_deg": 0.99,
+   "flap_deg": 0.0,
+   "gear": 0.0,
+   "north_ft": -19603,
+   "east_ft": 4058
+  }
+ ],
+ "extremes": {
+  "altitude_ft": [
+   968.0,
+   1053.0
+  ],
+  "speed_kt": [
+   410.1,
+   465.4
+  ],
+  "mach": [
+   0.622,
+   0.706
+  ],
+  "load_factor_g": [
+   0.23,
+   8.85
+  ],
+  "bank_deg": [
+   -16.7,
+   83.9
+  ],
+  "alpha_deg": [
+   0.2,
+   8.5
+  ],
+  "sideslip_deg": [
+   -1.49,
+   0.31
+  ],
+  "roll_rate_deg_s": [
+   -82.2,
+   68.5
+  ],
+  "climb_rate_fpm": [
+   -813.0,
+   2497.0
+  ],
+  "thrust_lbf": [
+   1512.0,
+   3194.0
+  ],
+  "stabilator_deg": [
+   -0.15,
+   1.04
+  ],
+  "flaperon_deg": [
+   -3.04,
+   3.04
+  ],
+  "rudder_deg": [
+   -1.18,
+   1.71
+  ]
+ },
+ "limits": {
+  "load_factor_g": [
+   -3.0,
+   9.0
+  ],
+  "alpha_limiter_deg": [
+   -6.0,
+   13.790055629782126
+  ],
+  "alpha_of_lift_maximum_deg": 14.790055629782126,
+  "roll_rate_command_deg_s": 119.99999999999999
+ },
+ "limiters": {
+  "alpha_limiter_s": 0.0,
+  "load_factor_command_at_structural_limit_s": 0.04583333333333333,
+  "throttle_full_s": 23.004166666666666,
+  "throttle_idle_s": 0.0
+ },
+ "saturation_s": {
+  "stabilator_position": 0.0,
+  "stabilator_rate": 0.0,
+  "flaperon_position": 0.0,
+  "flaperon_rate": 0.0,
+  "rudder_position": 0.0,
+  "rudder_rate": 0.0
+ },
+ "warnings": [],
+ "segments": [
+  {
+   "start": 0.0,
+   "stop": 5.0,
+   "samples": 1201,
+   "engine_wall_s": 0.26326109998626634,
+   "structural_pass": true,
+   "breakpoints": 5
+  },
+  {
+   "start": 5.0,
+   "stop": 5.5,
+   "samples": 121,
+   "engine_wall_s": 0.10633470001630485,
+   "structural_pass": true,
+   "breakpoints": 3
+  },
+  {
+   "start": 5.5,
+   "stop": 6.0,
+   "samples": 121,
+   "engine_wall_s": 0.09706120000919327,
+   "structural_pass": true,
+   "breakpoints": 3
+  },
+  {
+   "start": 6.0,
+   "stop": 6.5,
+   "samples": 121,
+   "engine_wall_s": 0.10727630002656952,
+   "structural_pass": true,
+   "breakpoints": 3
+  },
+  {
+   "start": 6.5,
+   "stop": 7.0,
+   "samples": 121,
+   "engine_wall_s": 0.09848200000124052,
+   "structural_pass": true,
+   "breakpoints": 3
+  },
+  {
+   "start": 7.0,
+   "stop": 7.5,
+   "samples": 121,
+   "engine_wall_s": 0.11055870004929602,
+   "structural_pass": true,
+   "breakpoints": 3
+  },
+  {
+   "start": 7.5,
+   "stop": 8.0,
+   "samples": 121,
+   "engine_wall_s": 0.1080223000026308,
+   "structural_pass": true,
+   "breakpoints": 3
+  },
+  {
+   "start": 8.0,
+   "stop": 8.5,
+   "samples": 121,
+   "engine_wall_s": 0.11129480000818148,
+   "structural_pass": true,
+   "breakpoints": 3
+  },
+  {
+   "start": 8.5,
+   "stop": 9.0,
+   "samples": 121,
+   "engine_wall_s": 0.11697139998432249,
+   "structural_pass": true,
+   "breakpoints": 3
+  },
+  {
+   "start": 9.0,
+   "stop": 9.5,
+   "samples": 121,
+   "engine_wall_s": 0.1074703999911435,
+   "structural_pass": true,
+   "breakpoints": 3
+  },
+  {
+   "start": 9.5,
+   "stop": 10.0,
+   "samples": 121,
+   "engine_wall_s": 0.12191589997382835,
+   "structural_pass": true,
+   "breakpoints": 3
+  },
+  {
+   "start": 10.0,
+   "stop": 10.5,
+   "samples": 121,
+   "engine_wall_s": 0.11654600000474602,
+   "structural_pass": true,
+   "breakpoints": 3
+  },
+  {
+   "start": 10.5,
+   "stop": 11.0,
+   "samples": 121,
+   "engine_wall_s": 0.10605539998505265,
+   "structural_pass": true,
+   "breakpoints": 3
+  },
+  {
+   "start": 11.0,
+   "stop": 11.5,
+   "samples": 121,
+   "engine_wall_s": 0.11132520000683144,
+   "structural_pass": true,
+   "breakpoints": 3
+  },
+  {
+   "start": 11.5,
+   "stop": 12.0,
+   "samples": 121,
+   "engine_wall_s": 0.10030629998072982,
+   "structural_pass": true,
+   "breakpoints": 3
+  },
+  {
+   "start": 12.0,
+   "stop": 12.5,
+   "samples": 121,
+   "engine_wall_s": 0.1066947000217624,
+   "structural_pass": true,
+   "breakpoints": 3
+  },
+  {
+   "start": 12.5,
+   "stop": 13.0,
+   "samples": 121,
+   "engine_wall_s": 0.11231460003182292,
+   "structural_pass": true,
+   "breakpoints": 3
+  },
+  {
+   "start": 13.0,
+   "stop": 13.5,
+   "samples": 121,
+   "engine_wall_s": 0.1187756999861449,
+   "structural_pass": true,
+   "breakpoints": 3
+  },
+  {
+   "start": 13.5,
+   "stop": 14.0,
+   "samples": 121,
+   "engine_wall_s": 0.11030990001745522,
+   "structural_pass": true,
+   "breakpoints": 3
+  },
+  {
+   "start": 14.0,
+   "stop": 14.5,
+   "samples": 121,
+   "engine_wall_s": 0.1179081000154838,
+   "structural_pass": true,
+   "breakpoints": 3
+  },
+  {
+   "start": 14.5,
+   "stop": 15.0,
+   "samples": 121,
+   "engine_wall_s": 0.10933490004390478,
+   "structural_pass": true,
+   "breakpoints": 3
+  },
+  {
+   "start": 15.0,
+   "stop": 15.5,
+   "samples": 121,
+   "engine_wall_s": 0.10644319996936247,
+   "structural_pass": true,
+   "breakpoints": 3
+  },
+  {
+   "start": 15.5,
+   "stop": 16.0,
+   "samples": 121,
+   "engine_wall_s": 0.11725660000229254,
+   "structural_pass": true,
+   "breakpoints": 3
+  },
+  {
+   "start": 16.0,
+   "stop": 16.5,
+   "samples": 121,
+   "engine_wall_s": 0.11664530000416562,
+   "structural_pass": true,
+   "breakpoints": 3
+  },
+  {
+   "start": 16.5,
+   "stop": 17.0,
+   "samples": 121,
+   "engine_wall_s": 0.11962089996086434,
+   "structural_pass": true,
+   "breakpoints": 3
+  },
+  {
+   "start": 17.0,
+   "stop": 17.5,
+   "samples": 121,
+   "engine_wall_s": 0.11623980000149459,
+   "structural_pass": true,
+   "breakpoints": 3
+  },
+  {
+   "start": 17.5,
+   "stop": 18.0,
+   "samples": 121,
+   "engine_wall_s": 0.11365889996523038,
+   "structural_pass": true,
+   "breakpoints": 3
+  },
+  {
+   "start": 18.0,
+   "stop": 18.5,
+   "samples": 121,
+   "engine_wall_s": 0.09965499996906146,
+   "structural_pass": true,
+   "breakpoints": 3
+  },
+  {
+   "start": 18.5,
+   "stop": 19.0,
+   "samples": 121,
+   "engine_wall_s": 0.11424079997232184,
+   "structural_pass": true,
+   "breakpoints": 3
+  },
+  {
+   "start": 19.0,
+   "stop": 19.5,
+   "samples": 121,
+   "engine_wall_s": 0.11975379998330027,
+   "structural_pass": true,
+   "breakpoints": 3
+  },
+  {
+   "start": 19.5,
+   "stop": 20.0,
+   "samples": 121,
+   "engine_wall_s": 0.11867609998444095,
+   "structural_pass": true,
+   "breakpoints": 3
+  },
+  {
+   "start": 20.0,
+   "stop": 20.5,
+   "samples": 121,
+   "engine_wall_s": 0.11667659995146096,
+   "structural_pass": true,
+   "breakpoints": 3
+  },
+  {
+   "start": 20.5,
+   "stop": 21.0,
+   "samples": 121,
+   "engine_wall_s": 0.10988149995682761,
+   "structural_pass": true,
+   "breakpoints": 3
+  },
+  {
+   "start": 21.0,
+   "stop": 21.5,
+   "samples": 121,
+   "engine_wall_s": 0.11722270003519952,
+   "structural_pass": true,
+   "breakpoints": 3
+  },
+  {
+   "start": 21.5,
+   "stop": 22.0,
+   "samples": 121,
+   "engine_wall_s": 0.11894159996882081,
+   "structural_pass": true,
+   "breakpoints": 3
+  },
+  {
+   "start": 22.0,
+   "stop": 22.5,
+   "samples": 121,
+   "engine_wall_s": 0.11161379999248311,
+   "structural_pass": true,
+   "breakpoints": 3
+  },
+  {
+   "start": 22.5,
+   "stop": 23.0,
+   "samples": 121,
+   "engine_wall_s": 0.11856229999102652,
+   "structural_pass": true,
+   "breakpoints": 3
+  },
+  {
+   "start": 23.0,
+   "stop": 23.5,
+   "samples": 121,
+   "engine_wall_s": 0.11581539997132495,
+   "structural_pass": true,
+   "breakpoints": 3
+  },
+  {
+   "start": 23.5,
+   "stop": 24.0,
+   "samples": 121,
+   "engine_wall_s": 0.10564060002798215,
+   "structural_pass": true,
+   "breakpoints": 3
+  },
+  {
+   "start": 24.0,
+   "stop": 24.5,
+   "samples": 121,
+   "engine_wall_s": 0.11729769996600226,
+   "structural_pass": true,
+   "breakpoints": 3
+  },
+  {
+   "start": 24.5,
+   "stop": 25.0,
+   "samples": 121,
+   "engine_wall_s": 0.14761440001893789,
+   "structural_pass": true,
+   "breakpoints": 3
+  },
+  {
+   "start": 25.0,
+   "stop": 25.5,
+   "samples": 121,
+   "engine_wall_s": 0.166289999964647,
+   "structural_pass": true,
+   "breakpoints": 3
+  },
+  {
+   "start": 25.5,
+   "stop": 26.0,
+   "samples": 121,
+   "engine_wall_s": 0.14388180000241846,
+   "structural_pass": true,
+   "breakpoints": 3
+  },
+  {
+   "start": 26.0,
+   "stop": 26.5,
+   "samples": 121,
+   "engine_wall_s": 0.15079919999698177,
+   "structural_pass": true,
+   "breakpoints": 3
+  },
+  {
+   "start": 26.5,
+   "stop": 27.0,
+   "samples": 121,
+   "engine_wall_s": 0.14346570003544912,
+   "structural_pass": true,
+   "breakpoints": 3
+  },
+  {
+   "start": 27.0,
+   "stop": 45.0,
+   "samples": 4321,
+   "engine_wall_s": 0.7749724999885075,
+   "structural_pass": true,
+   "breakpoints": 4
+  }
+ ],
+ "schedule_log": [
+  {
+   "t": 3.0,
+   "said": [
+    "track target 180.0 deg (+180.0 deg)",
+    "turn limit 9.00 g",
+    "throttle 1.00"
+   ],
+   "row": {
+    "t": 3.0,
+    "heading_change_deg": 180,
+    "turn_g": 9.0,
+    "throttle": 1.0
+   }
+  },
+  {
+   "t": 27.0,
+   "said": [
+    "Mach target 0.700"
+   ],
+   "row": {
+    "t": 27.0,
+    "mach": 0.7,
+    "ramp_s": 0.5
+   }
+  }
+ ],
+ "checks": {
+  "samples": 10801,
+  "expected_samples": 10801,
+  "time_end": 45.0,
+  "time_coverage": true,
+  "time_monotonic": true,
+  "aligned": true,
+  "finite": true,
+  "quat_norm_max_error": 8.816614105455756e-12,
+  "segments": 46,
+  "segments_structural": true,
+  "structural_pass": true
+ },
+ "reference": {
+  "what": "the same flight in the independent Python implementation (verify/ref6dof.py), classical RK4 at the same step, one piece from start to end with the complete command tables",
+  "worst": {
+   "value": 2.1373125491663814e-14,
+   "signal": "moment_n"
+  },
+  "tolerance_relative_to_scale": 1e-06,
+  "passed": true,
+  "wall_s": 26.144514799118042,
+  "signals": {
+   "pn": {
+    "unit": "m",
+    "max_abs": 3.865352482534945e-12,
+    "at_t": 27.804166666666667,
+    "relative_to_scale": 3.865352482534945e-15,
+    "scale": 1000.0
+   },
+   "pe": {
+    "unit": "m",
+    "max_abs": 9.549694368615746e-12,
+    "at_t": 44.795833333333334,
+    "relative_to_scale": 9.549694368615747e-15,
+    "scale": 1000.0
+   },
+   "pd": {
+    "unit": "m",
+    "max_abs": 2.8421709430404007e-13,
+    "at_t": 32.69166666666666,
+    "relative_to_scale": 2.842170943040401e-15,
+    "scale": 100.0
+   },
+   "u": {
+    "unit": "m/s",
+    "max_abs": 1.9895196601282805e-13,
+    "at_t": 12.854166666666666,
+    "relative_to_scale": 1.9895196601282807e-15,
+    "scale": 100.0
+   },
+   "v": {
+    "unit": "m/s",
+    "max_abs": 5.684341886080802e-14,
+    "at_t": 13.424999999999999,
+    "relative_to_scale": 5.684341886080802e-15,
+    "scale": 10.0
+   },
+   "w": {
+    "unit": "m/s",
+    "max_abs": 1.1013412404281553e-13,
+    "at_t": 12.6875,
+    "relative_to_scale": 1.1013412404281553e-14,
+    "scale": 10.0
+   },
+   "p": {
+    "unit": "rad/s",
+    "max_abs": 6.439293542825908e-15,
+    "at_t": 13.4125,
+    "relative_to_scale": 6.439293542825908e-15,
+    "scale": 1.0
+   },
+   "q": {
+    "unit": "rad/s",
+    "max_abs": 1.6653345369377348e-15,
+    "at_t": 12.633333333333333,
+    "relative_to_scale": 8.326672684688674e-15,
+    "scale": 0.2
+   },
+   "r": {
+    "unit": "rad/s",
+    "max_abs": 9.71445146547012e-16,
+    "at_t": 13.695833333333333,
+    "relative_to_scale": 9.71445146547012e-15,
+    "scale": 0.1
+   },
+   "e0": {
+    "unit": "-",
+    "max_abs": 7.8236028766554e-16,
+    "at_t": 13.241666666666667,
+    "relative_to_scale": 7.8236028766554e-16,
+    "scale": 1.0
+   },
+   "e1": {
+    "unit": "-",
+    "max_abs": 6.808789643208968e-16,
+    "at_t": 13.220833333333333,
+    "relative_to_scale": 6.808789643208968e-16,
+    "scale": 1.0
+   },
+   "e2": {
+    "unit": "-",
+    "max_abs": 2.248201624865942e-15,
+    "at_t": 13.987499999999999,
+    "relative_to_scale": 2.248201624865942e-15,
+    "scale": 1.0
+   },
+   "e3": {
+    "unit": "-",
+    "max_abs": 8.881784197001252e-16,
+    "at_t": 13.541666666666666,
+    "relative_to_scale": 8.881784197001252e-16,
+    "scale": 1.0
+   },
+   "phi": {
+    "unit": "rad",
+    "max_abs": 4.773959005888173e-15,
+    "at_t": 13.895833333333334,
+    "relative_to_scale": 4.773959005888173e-15,
+    "scale": 1.0
+   },
+   "theta": {
+    "unit": "rad",
+    "max_abs": 4.180683577104105e-16,
+    "at_t": 37.454166666666666,
+    "relative_to_scale": 4.180683577104105e-15,
+    "scale": 0.1
+   },
+   "alpha": {
+    "unit": "rad",
+    "max_abs": 6.661338147750939e-16,
+    "at_t": 12.870833333333334,
+    "relative_to_scale": 3.3306690738754696e-15,
+    "scale": 0.2
+   },
+   "beta": {
+    "unit": "rad",
+    "max_abs": 2.914335439641036e-16,
+    "at_t": 13.433333333333334,
+    "relative_to_scale": 5.828670879282072e-15,
+    "scale": 0.05
+   },
+   "mach": {
+    "unit": "-",
+    "max_abs": 7.771561172376096e-16,
+    "at_t": 14.133333333333333,
+    "relative_to_scale": 1.5543122344752192e-15,
+    "scale": 0.5
+   },
+   "nz": {
+    "unit": "g",
+    "max_abs": 3.019806626980426e-14,
+    "at_t": 12.583333333333334,
+    "relative_to_scale": 7.549516567451064e-15,
+    "scale": 4.0
+   },
+   "track_unwrapped": {
+    "unit": "rad",
+    "max_abs": 1.3322676295501878e-15,
+    "at_t": 12.9,
+    "relative_to_scale": 4.440892098500626e-16,
+    "scale": 3.0
+   },
+   "stabilator": {
+    "unit": "rad",
+    "max_abs": 9.367506770274758e-17,
+    "at_t": 12.629166666666666,
+    "relative_to_scale": 4.683753385137379e-16,
+    "scale": 0.2
+   },
+   "flaperon_left": {
+    "unit": "rad",
+    "max_abs": 3.677613769070831e-16,
+    "at_t": 13.366666666666667,
+    "relative_to_scale": 1.8388068845354155e-15,
+    "scale": 0.2
+   },
+   "flaperon_right": {
+    "unit": "rad",
+    "max_abs": 3.677613769070831e-16,
+    "at_t": 13.366666666666667,
+    "relative_to_scale": 1.8388068845354155e-15,
+    "scale": 0.2
+   },
+   "rudder": {
+    "unit": "rad",
+    "max_abs": 3.712308238590367e-16,
+    "at_t": 13.283333333333333,
+    "relative_to_scale": 3.712308238590367e-15,
+    "scale": 0.1
+   },
+   "gear": {
+    "unit": "-",
+    "max_abs": 0.0,
+    "at_t": 0.0,
+    "relative_to_scale": 0.0,
+    "scale": 1.0
+   },
+   "throttle": {
+    "unit": "-",
+    "max_abs": 1.5154544286133387e-14,
+    "at_t": 30.104166666666668,
+    "relative_to_scale": 1.5154544286133387e-14,
+    "scale": 1.0
+   },
+   "thrust": {
+    "unit": "N",
+    "max_abs": 1.355147105641663e-10,
+    "at_t": 30.162499999999998,
+    "relative_to_scale": 9.034314037611088e-15,
+    "scale": 15000.0
+   },
+   "spool": {
+    "unit": "-",
+    "max_abs": 9.381384558082573e-15,
+    "at_t": 30.354166666666668,
+    "relative_to_scale": 9.381384558082573e-15,
+    "scale": 1.0
+   },
+   "pitch_integrator": {
+    "unit": "rad",
+    "max_abs": 3.642919299551295e-17,
+    "at_t": 12.583333333333334,
+    "relative_to_scale": 1.8214596497756474e-16,
+    "scale": 0.2
+   },
+   "throttle_integrator": {
+    "unit": "-",
+    "max_abs": 1.071365218763276e-14,
+    "at_t": 14.333333333333334,
+    "relative_to_scale": 1.071365218763276e-14,
+    "scale": 1.0
+   },
+   "lift": {
+    "unit": "N",
+    "max_abs": 9.022187441587448e-10,
+    "at_t": 12.975,
+    "relative_to_scale": 9.022187441587448e-15,
+    "scale": 100000.0
+   },
+   "drag": {
+    "unit": "N",
+    "max_abs": 1.673470251262188e-10,
+    "at_t": 12.583333333333334,
+    "relative_to_scale": 8.36735125631094e-15,
+    "scale": 20000.0
+   },
+   "moment_l": {
+    "unit": "N m",
+    "max_abs": 5.5933924159035087e-11,
+    "at_t": 14.0625,
+    "relative_to_scale": 5.593392415903509e-15,
+    "scale": 10000.0
+   },
+   "moment_m": {
+    "unit": "N m",
+    "max_abs": 9.413270163349807e-11,
+    "at_t": 13.104166666666666,
+    "relative_to_scale": 9.413270163349807e-15,
+    "scale": 10000.0
+   },
+   "moment_n": {
+    "unit": "N m",
+    "max_abs": 4.274625098332763e-11,
+    "at_t": 13.295833333333333,
+    "relative_to_scale": 2.1373125491663814e-14,
+    "scale": 2000.0
+   },
+   "nz_cmd": {
+    "unit": "g",
+    "max_abs": 2.842170943040401e-14,
+    "at_t": 12.445833333333333,
+    "relative_to_scale": 7.105427357601002e-15,
+    "scale": 4.0
+   },
+   "bank_cmd": {
+    "unit": "rad",
+    "max_abs": 5.329070518200751e-15,
+    "at_t": 12.9,
+    "relative_to_scale": 5.329070518200751e-15,
+    "scale": 1.0
+   },
+   "sustained_nz_integrator": {
+    "unit": "g",
+    "max_abs": 4.263256414560601e-14,
+    "at_t": 13.129166666666666,
+    "relative_to_scale": 1.0658141036401503e-14,
+    "scale": 4.0
+   },
+   "nz_thrust_feedforward": {
+    "unit": "g",
+    "max_abs": 6.217248937900877e-15,
+    "at_t": 13.508333333333333,
+    "relative_to_scale": 1.5543122344752192e-15,
+    "scale": 4.0
+   },
+   "nz_speed_hold": {
+    "unit": "g",
+    "max_abs": 0.0,
+    "at_t": 0.0,
+    "relative_to_scale": 0.0,
+    "scale": 4.0
+   },
+   "nz_available": {
+    "unit": "g",
+    "max_abs": 0.0,
+    "at_t": 0.0,
+    "relative_to_scale": 0.0,
+    "scale": 4.0
+   },
+   "thrust_flag": {
+    "unit": "-",
+    "max_abs": 0.0,
+    "at_t": 0.0,
+    "relative_to_scale": 0.0,
+    "scale": 1.0
+   },
+   "aero_fz": {
+    "unit": "N",
+    "max_abs": 9.313225746154785e-10,
+    "at_t": 12.975,
+    "relative_to_scale": 9.313225746154786e-15,
+    "scale": 100000.0
+   },
+   "force_x": {
+    "unit": "N",
+    "max_abs": 1.5734258340671659e-10,
+    "at_t": 30.333333333333332,
+    "relative_to_scale": 7.867129170335829e-15,
+    "scale": 20000.0
+   },
+   "cl": {
+    "unit": "-",
+    "max_abs": 3.3306690738754696e-15,
+    "at_t": 12.9375,
+    "relative_to_scale": 6.661338147750939e-15,
+    "scale": 0.5
+   },
+   "cd": {
+    "unit": "-",
+    "max_abs": 5.828670879282072e-16,
+    "at_t": 12.9375,
+    "relative_to_scale": 5.828670879282072e-15,
+    "scale": 0.1
+   },
+   "cm": {
+    "unit": "-",
+    "max_abs": 3.191891195797325e-16,
+    "at_t": 13.104166666666666,
+    "relative_to_scale": 1.5959455978986625e-14,
+    "scale": 0.02
+   },
+   "u_dot": {
+    "unit": "m/s2",
+    "max_abs": 6.128431095930864e-14,
+    "at_t": 12.708333333333334,
+    "relative_to_scale": 1.2256862191861729e-14,
+    "scale": 5.0
+   },
+   "w_dot": {
+    "unit": "m/s2",
+    "max_abs": 3.410605131648481e-13,
+    "at_t": 13.333333333333334,
+    "relative_to_scale": 1.7053025658242404e-14,
+    "scale": 20.0
+   },
+   "q_dot": {
+    "unit": "rad/s2",
+    "max_abs": 8.354428260304303e-15,
+    "at_t": 13.104166666666666,
+    "relative_to_scale": 1.6708856520608606e-14,
+    "scale": 0.5
+   },
+   "p_dot": {
+    "unit": "rad/s2",
+    "max_abs": 2.4424906541753444e-14,
+    "at_t": 14.0625,
+    "relative_to_scale": 1.2212453270876722e-14,
+    "scale": 2.0
+   },
+   "r_dot": {
+    "unit": "rad/s2",
+    "max_abs": 2.3314683517128287e-15,
+    "at_t": 13.424999999999999,
+    "relative_to_scale": 1.1657341758564144e-14,
+    "scale": 0.2
+   },
+   "climb_rate_cmd": {
+    "unit": "m/s",
+    "max_abs": 7.127631818093505e-14,
+    "at_t": 32.7375,
+    "relative_to_scale": 7.127631818093505e-15,
+    "scale": 10.0
+   },
+   "roll_rate_cmd": {
+    "unit": "rad/s",
+    "max_abs": 1.021405182655144e-14,
+    "at_t": 12.9,
+    "relative_to_scale": 1.021405182655144e-14,
+    "scale": 1.0
+   },
+   "airspeed_cmd": {
+    "unit": "m/s",
+    "max_abs": 5.684341886080802e-14,
+    "at_t": 10.25,
+    "relative_to_scale": 5.684341886080802e-16,
+    "scale": 100.0
+   }
+  }
+ }
+}

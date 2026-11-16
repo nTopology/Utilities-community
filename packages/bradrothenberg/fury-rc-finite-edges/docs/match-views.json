@@ -1,0 +1,26 @@
+{
+ "plan_01": {
+  "kind": "plan",
+  "file": "01_plan_underside_flight_gearup_anduril.jpg",
+  "note": "Underside in flight, gear up. Oblique view, treated as an affine picture of the planform: nose, tail and both wing tips fix the map. semi_span is the wing semi-span over the fuselage length (0.371), found from the same picture with the fin tip as the out-of-plane point.",
+  "nose": [2865, 1142],
+  "tail": [510, 1125],
+  "tip_a": [1647, 283],
+  "tip_b": [1120, 1950],
+  "semi_span": 0.371,
+  "window": [-0.16, -0.45, 1.08, 0.45],
+  "score_window": [0.0, -0.45, 1.02, 0.45],
+  "sky": 34
+ },
+ "side_07": {
+  "kind": "side",
+  "file": "07_side_flight_gear_down_aim120_1001_usaf.jpg",
+  "note": "Long-lens side view in flight, gear down, missile on the wing station. Nose tip and the centre of the nozzle exit fix the map.",
+  "nose": [6910, 2020],
+  "tail": [1718, 2620],
+  "tail_z": 0.0335,
+  "window": [-0.20, -0.16, 1.10, 0.26],
+  "score_window": [0.0, -0.02, 1.03, 0.26],
+  "sky": 30
+ }
+}

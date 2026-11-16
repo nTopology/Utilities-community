@@ -1,0 +1,22 @@
+{
+ "description": "9 g turn through 180 deg from Mach 0.70, 1,000 ft, speed let go, then roll out and accelerate back",
+ "condition": {
+  "case": "combat",
+  "mach": 0.7,
+  "altitude_ft": 1000
+ },
+ "duration_s": 45.0,
+ "commands": [
+  {
+   "t": 3.0,
+   "heading_change_deg": 180,
+   "turn_g": 9.0,
+   "throttle": 1.0
+  },
+  {
+   "t": 27.0,
+   "mach": 0.7,
+   "ramp_s": 0.5
+  }
+ ]
+}

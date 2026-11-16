@@ -1,0 +1,554 @@
+{
+ "turns": {
+  "turn_5g_sl": {
+   "what": "5 g turn through 360 deg at Mach 0.60, 1,000 ft, speed held with thrust",
+   "entry": {
+    "speed_kt": 395.52038779989226,
+    "mach": 0.5999999999999999,
+    "altitude_ft": 1000.0
+   },
+   "load_factor_asked_g": 5.0,
+   "peak_load_factor_g": 5.1326248192461685,
+   "mean_load_factor_in_hard_part_g": 4.998951464013665,
+   "time_to_turn_s": 28.004166666666666,
+   "track_change_deg": 360,
+   "mean_turn_rate_deg_s": 12.855229876506472,
+   "peak_turn_rate_deg_s": 14.077225056634365,
+   "mean_turn_rate_in_hard_part_deg_s": 13.497060834757159,
+   "tightest_radius_ft": 2708.1458709437657,
+   "mean_radius_in_hard_part_ft": 2850.862034924535,
+   "ground_track_width_ft": 5709.6766575983465,
+   "ground_track_length_ft": 5740.720451037189,
+   "speed_at_end_of_turn_kt": 396.3327540852768,
+   "lowest_speed_kt": 391.6543749791084,
+   "speed_lost_kt": 3.8660128207838875,
+   "speed_change_in_hard_part_kt_per_s": 0.026443261041965378,
+   "excess_power_in_hard_part_ft_s": 1.1877525830960214,
+   "throttle_in_hard_part": 0.8848860930773589,
+   "hard_part_s": [
+    5.1625,
+    30.441666666666666
+   ],
+   "load_factor_above_limit_s": 0.0,
+   "peak_alpha_deg": 5.704065113364119,
+   "alpha_limiter_deg": 13.790055629782126,
+   "height_change_ft": [
+    -36.95785742733348,
+    55.53088668218958
+   ],
+   "wings_level_at_s": 41.604166666666664,
+   "speed_at_wings_level_kt": 409.86146931762994,
+   "roll_out_window_s": [
+    41.604166666666664,
+    42.0
+   ],
+   "excess_power_after_roll_out_ft_s": 159.08269606430142,
+   "throttle_after_roll_out": 1.0,
+   "acceleration_after_roll_out_kt_per_s": 4.534723666765343,
+   "time_to_regain_entry_speed_s": 0.0,
+   "peak_roll_rate_deg_s": 70.11050623972886,
+   "peak_sideslip_deg": 0.6987418023752598,
+   "stabilator_range_deg": [
+    0.2511379546894987,
+    1.0180249583140508
+   ],
+   "table_mach": 0.6,
+   "warnings": [],
+   "checks": {
+    "samples": 10801,
+    "expected_samples": 10801,
+    "time_end": 45.0,
+    "time_coverage": true,
+    "time_monotonic": true,
+    "aligned": true,
+    "finite": true,
+    "quat_norm_max_error": 9.512945986500654e-12,
+    "segments": 76,
+    "segments_structural": true,
+    "structural_pass": true
+   },
+   "python_reference": {
+    "worst": {
+     "value": 2.398081733190338e-13,
+     "signal": "thrust_flag"
+    },
+    "passed": true,
+    "tolerance_relative_to_scale": 1e-06
+   }
+  },
+  "turn_7g_sl": {
+   "what": "7 g turn through 180 deg from Mach 0.70, 1,000 ft, speed let go, then roll out and accelerate back",
+   "entry": {
+    "speed_kt": 461.4404524332077,
+    "mach": 0.7,
+    "altitude_ft": 1000.0
+   },
+   "load_factor_asked_g": 7.0,
+   "peak_load_factor_g": 7.109654934530269,
+   "mean_load_factor_in_hard_part_g": 6.953516809038433,
+   "time_to_turn_s": 12.4875,
+   "track_change_deg": 180,
+   "mean_turn_rate_deg_s": 14.414414414414413,
+   "peak_turn_rate_deg_s": 17.064772675288342,
+   "mean_turn_rate_in_hard_part_deg_s": 16.643774804846963,
+   "tightest_radius_ft": 2508.799022221225,
+   "mean_radius_in_hard_part_ft": 2631.064324831686,
+   "ground_track_width_ft": 5298.154796433881,
+   "ground_track_length_ft": 4179.535815085872,
+   "speed_at_end_of_turn_kt": 441.52309596575515,
+   "lowest_speed_kt": 441.41694713778594,
+   "speed_lost_kt": 20.02350529542175,
+   "speed_change_in_hard_part_kt_per_s": -2.3041296395288944,
+   "excess_power_in_hard_part_ft_s": -91.37585697211212,
+   "throttle_in_hard_part": 1.0,
+   "hard_part_s": [
+    5.666666666666667,
+    15.129166666666666
+   ],
+   "load_factor_above_limit_s": 0.0,
+   "peak_alpha_deg": 6.139679438937351,
+   "alpha_limiter_deg": 13.790055629782126,
+   "height_change_ft": [
+    -30.838572586048492,
+    24.650954860466346
+   ],
+   "wings_level_at_s": 16.316666666666666,
+   "speed_at_wings_level_kt": 443.53735690275903,
+   "roll_out_window_s": [
+    16.316666666666666,
+    22.5
+   ],
+   "excess_power_after_roll_out_ft_s": 141.54297166559772,
+   "throttle_after_roll_out": 1.0,
+   "acceleration_after_roll_out_kt_per_s": 3.69007642714036,
+   "time_to_regain_entry_speed_s": 4.620833333333334,
+   "peak_roll_rate_deg_s": 68.53689456722101,
+   "peak_sideslip_deg": 0.8591989995594105,
+   "stabilator_range_deg": [
+    0.1740103127679572,
+    1.0314094287423528
+   ],
+   "table_mach": 0.6,
+   "warnings": [],
+   "checks": {
+    "samples": 10801,
+    "expected_samples": 10801,
+    "time_end": 45.0,
+    "time_coverage": true,
+    "time_monotonic": true,
+    "aligned": true,
+    "finite": true,
+    "quat_norm_max_error": 8.816614105455756e-12,
+    "segments": 37,
+    "segments_structural": true,
+    "structural_pass": true
+   },
+   "python_reference": {
+    "worst": {
+     "value": 4.2177816794719547e-14,
+     "signal": "moment_n"
+    },
+    "passed": true,
+    "tolerance_relative_to_scale": 1e-06
+   }
+  },
+  "turn_9g_sl": {
+   "what": "9 g turn through 180 deg from Mach 0.70, 1,000 ft, speed let go, then roll out and accelerate back",
+   "entry": {
+    "speed_kt": 461.4404524332077,
+    "mach": 0.7,
+    "altitude_ft": 1000.0
+   },
+   "load_factor_asked_g": 9.0,
+   "peak_load_factor_g": 8.850921051567642,
+   "mean_load_factor_in_hard_part_g": 8.525846294609229,
+   "time_to_turn_s": 10.433333333333334,
+   "track_change_deg": 180,
+   "mean_turn_rate_deg_s": 17.252396166134186,
+   "peak_turn_rate_deg_s": 22.17072671891911,
+   "mean_turn_rate_in_hard_part_deg_s": 21.21691992214956,
+   "tightest_radius_ft": 1806.9256337434228,
+   "mean_radius_in_hard_part_ft": 1995.408292201375,
+   "ground_track_width_ft": 4071.234733741445,
+   "ground_track_length_ft": 3779.577664044145,
+   "speed_at_end_of_turn_kt": 410.24994266837626,
+   "lowest_speed_kt": 410.0931771782899,
+   "speed_lost_kt": 51.347275254917754,
+   "speed_change_in_hard_part_kt_per_s": -7.170367497018777,
+   "excess_power_in_hard_part_ft_s": -278.3265284960151,
+   "throttle_in_hard_part": 1.0,
+   "hard_part_s": [
+    6.1625,
+    13.0625
+   ],
+   "load_factor_above_limit_s": 0.0,
+   "peak_alpha_deg": 8.495775103933456,
+   "alpha_limiter_deg": 13.790055629782126,
+   "height_change_ft": [
+    -31.76932392204748,
+    0.2621595812878763
+   ],
+   "wings_level_at_s": 14.325,
+   "speed_at_wings_level_kt": 412.01853264583957,
+   "roll_out_window_s": [
+    14.325,
+    20.475
+   ],
+   "excess_power_after_roll_out_ft_s": 157.3403129604591,
+   "throttle_after_roll_out": 1.0,
+   "acceleration_after_roll_out_kt_per_s": 4.242618062651828,
+   "time_to_regain_entry_speed_s": 11.8125,
+   "peak_roll_rate_deg_s": 82.24433031601059,
+   "peak_sideslip_deg": 1.486403267800447,
+   "stabilator_range_deg": [
+    -0.15230519580044174,
+    1.0362980524774343
+   ],
+   "table_mach": 0.6,
+   "warnings": [],
+   "checks": {
+    "samples": 10801,
+    "expected_samples": 10801,
+    "time_end": 45.0,
+    "time_coverage": true,
+    "time_monotonic": true,
+    "aligned": true,
+    "finite": true,
+    "quat_norm_max_error": 8.816614105455756e-12,
+    "segments": 46,
+    "segments_structural": true,
+    "structural_pass": true
+   },
+   "python_reference": {
+    "worst": {
+     "value": 2.1373125491663814e-14,
+     "signal": "moment_n"
+    },
+    "passed": true,
+    "tolerance_relative_to_scale": 1e-06
+   }
+  },
+  "turn_9g_360_sl": {
+   "what": "9 g turn through 360 deg from Mach 0.70, 1,000 ft, speed let go: the turn ends on the lift limit",
+   "entry": {
+    "speed_kt": 461.4404524332078,
+    "mach": 0.7000000000000001,
+    "altitude_ft": 1000.0
+   },
+   "load_factor_asked_g": 9.0,
+   "peak_load_factor_g": 9.013176417889925,
+   "mean_load_factor_in_hard_part_g": 8.442862572608217,
+   "time_to_turn_s": 17.645833333333332,
+   "track_change_deg": 360,
+   "mean_turn_rate_deg_s": 20.40141676505313,
+   "peak_turn_rate_deg_s": 26.828947465294227,
+   "mean_turn_rate_in_hard_part_deg_s": 22.797594875781314,
+   "tightest_radius_ft": 1205.8570997851568,
+   "mean_radius_in_hard_part_ft": 1743.1323567247784,
+   "ground_track_width_ft": 4041.8581974465956,
+   "ground_track_length_ft": 3687.7909689488156,
+   "speed_at_end_of_turn_kt": 328.2226626866358,
+   "lowest_speed_kt": 326.9058804700842,
+   "speed_lost_kt": 134.53457196312357,
+   "speed_change_in_hard_part_kt_per_s": -9.004964450460216,
+   "excess_power_in_hard_part_ft_s": -317.3663646178867,
+   "throttle_in_hard_part": 1.0,
+   "hard_part_s": [
+    5.941666666666666,
+    20.258333333333333
+   ],
+   "load_factor_above_limit_s": 0.2125,
+   "peak_alpha_deg": 13.35013249720215,
+   "alpha_limiter_deg": 15.05665805622685,
+   "height_change_ft": [
+    -30.10572095625942,
+    4.590392083844324
+   ],
+   "wings_level_at_s": 23.329166666666666,
+   "speed_at_wings_level_kt": 339.7373144521317,
+   "roll_out_window_s": [
+    23.329166666666666,
+    26.325
+   ],
+   "excess_power_after_roll_out_ft_s": 176.92058136945317,
+   "throttle_after_roll_out": 1.0,
+   "acceleration_after_roll_out_kt_per_s": 5.817301340340891,
+   "time_to_regain_entry_speed_s": 25.5,
+   "peak_roll_rate_deg_s": 98.83539589133062,
+   "peak_sideslip_deg": 3.1356031879338326,
+   "stabilator_range_deg": [
+    -0.8527877062389789,
+    1.0869243689172352
+   ],
+   "table_mach": 0.5,
+   "warnings": [],
+   "checks": {
+    "samples": 14401,
+    "expected_samples": 14401,
+    "time_end": 60.0,
+    "time_coverage": true,
+    "time_monotonic": true,
+    "aligned": true,
+    "finite": true,
+    "quat_norm_max_error": 9.087952612674144e-12,
+    "segments": 91,
+    "segments_structural": true,
+    "structural_pass": true
+   },
+   "python_reference": {
+    "worst": {
+     "value": 1.4165379980113357e-13,
+     "signal": "moment_n"
+    },
+    "passed": true,
+    "tolerance_relative_to_scale": 1e-06
+   }
+  },
+  "turn_9g_15k": {
+   "what": "9 g turn through 180 deg from Mach 0.80, 15,000 ft, speed let go, then roll out and accelerate back",
+   "entry": {
+    "speed_kt": 501.15216931445383,
+    "mach": 0.8,
+    "altitude_ft": 15000.0
+   },
+   "load_factor_asked_g": 9.0,
+   "peak_load_factor_g": 9.559219833726443,
+   "mean_load_factor_in_hard_part_g": 9.072788277477049,
+   "time_to_turn_s": 10.729166666666666,
+   "track_change_deg": 180,
+   "mean_turn_rate_deg_s": 16.776699029126213,
+   "peak_turn_rate_deg_s": 21.17675899322734,
+   "mean_turn_rate_in_hard_part_deg_s": 20.657493756285348,
+   "tightest_radius_ft": 2142.178655446208,
+   "mean_radius_in_hard_part_ft": 2229.4544376877243,
+   "ground_track_width_ft": 4285.377489225263,
+   "ground_track_length_ft": 3829.52913770335,
+   "speed_at_end_of_turn_kt": 378.6438999967545,
+   "lowest_speed_kt": 378.323425771962,
+   "speed_lost_kt": 122.82874354249186,
+   "speed_change_in_hard_part_kt_per_s": -15.898693142105511,
+   "excess_power_in_hard_part_ft_s": -676.4607025084096,
+   "throttle_in_hard_part": 1.0,
+   "hard_part_s": [
+    5.504166666666666,
+    8.2625
+   ],
+   "load_factor_above_limit_s": 1.4458333333333333,
+   "peak_alpha_deg": 12.073258363414768,
+   "alpha_limiter_deg": 12.462491994409051,
+   "height_change_ft": [
+    -27.124210326201375,
+    7.207626558881638
+   ],
+   "wings_level_at_s": 15.958333333333334,
+   "speed_at_wings_level_kt": 383.71826906303505,
+   "roll_out_window_s": [
+    15.958333333333334,
+    19.7375
+   ],
+   "excess_power_after_roll_out_ft_s": 97.4633357715593,
+   "throttle_after_roll_out": 1.0,
+   "acceleration_after_roll_out_kt_per_s": 2.9243139511762237,
+   "time_to_regain_entry_speed_s": 47.599999999999994,
+   "peak_roll_rate_deg_s": 73.82286003885213,
+   "peak_sideslip_deg": 2.2785456423612276,
+   "stabilator_range_deg": [
+    -0.48311280900829856,
+    0.9923523121210596
+   ],
+   "table_mach": 0.7,
+   "warnings": [
+    "the load factor left the limits (0.20 to 9.56 g)"
+   ],
+   "checks": {
+    "samples": 21601,
+    "expected_samples": 21601,
+    "time_end": 90.0,
+    "time_coverage": true,
+    "time_monotonic": true,
+    "aligned": true,
+    "finite": true,
+    "quat_norm_max_error": 1.0041190101617303e-11,
+    "segments": 121,
+    "segments_structural": true,
+    "structural_pass": true
+   },
+   "python_reference": {
+    "worst": {
+     "value": 8.344613888766616e-14,
+     "signal": "moment_n"
+    },
+    "passed": true,
+    "tolerance_relative_to_scale": 1e-06
+   }
+  },
+  "turn_5g_15k": {
+   "what": "5 g turn through 180 deg from Mach 0.80, 15,000 ft, speed let go, then roll out and accelerate back",
+   "entry": {
+    "speed_kt": 501.15216931445383,
+    "mach": 0.8,
+    "altitude_ft": 15000.0
+   },
+   "load_factor_asked_g": 5.0,
+   "peak_load_factor_g": 5.34965777006582,
+   "mean_load_factor_in_hard_part_g": 5.01225829999365,
+   "time_to_turn_s": 19.866666666666667,
+   "track_change_deg": 180,
+   "mean_turn_rate_deg_s": 9.060402684563758,
+   "peak_turn_rate_deg_s": 11.567302370730655,
+   "mean_turn_rate_in_hard_part_deg_s": 11.047689912363476,
+   "tightest_radius_ft": 4009.8702849763285,
+   "mean_radius_in_hard_part_ft": 4258.798016411621,
+   "ground_track_width_ft": 8740.024165542689,
+   "ground_track_length_ft": 5751.892387601582,
+   "speed_at_end_of_turn_kt": 475.664058402408,
+   "lowest_speed_kt": 470.27949092600505,
+   "speed_lost_kt": 30.8726783884488,
+   "speed_change_in_hard_part_kt_per_s": -2.1150389172407893,
+   "excess_power_in_hard_part_ft_s": -90.4714862850014,
+   "throttle_in_hard_part": 1.0,
+   "hard_part_s": [
+    5.129166666666666,
+    19.641666666666666
+   ],
+   "load_factor_above_limit_s": 0.0,
+   "peak_alpha_deg": 5.747483871187226,
+   "alpha_limiter_deg": 12.462491994409051,
+   "height_change_ft": [
+    -33.81226376986971,
+    23.686971527635002
+   ],
+   "wings_level_at_s": 27.170833333333334,
+   "speed_at_wings_level_kt": 485.119775202089,
+   "roll_out_window_s": [
+    27.170833333333334,
+    30.166666666666668
+   ],
+   "excess_power_after_roll_out_ft_s": 88.43240152792085,
+   "throttle_after_roll_out": 1.0,
+   "acceleration_after_roll_out_kt_per_s": 2.0808014220580495,
+   "time_to_regain_entry_speed_s": 6.658333333333331,
+   "peak_roll_rate_deg_s": 70.95714586503762,
+   "peak_sideslip_deg": 0.5797770710712163,
+   "stabilator_range_deg": [
+    0.3335294550408857,
+    0.9442112462416916
+   ],
+   "table_mach": 0.7,
+   "warnings": [],
+   "checks": {
+    "samples": 21601,
+    "expected_samples": 21601,
+    "time_end": 90.0,
+    "time_coverage": true,
+    "time_monotonic": true,
+    "aligned": true,
+    "finite": true,
+    "quat_norm_max_error": 1.0041412146222228e-11,
+    "segments": 62,
+    "segments_structural": true,
+    "structural_pass": true
+   },
+   "python_reference": {
+    "worst": {
+     "value": 3.2741809263825414e-14,
+     "signal": "moment_n"
+    },
+    "passed": true,
+    "tolerance_relative_to_scale": 1e-06
+   }
+  }
+ },
+ "approach": {
+  "what": "landing approach: base turn, gear and flap down, 3 deg final, flare to touchdown",
+  "weight_lb": 4970.244381233968,
+  "start": {
+   "speed_kt": 159.99999437008657,
+   "altitude_ft": 1200.0,
+   "alpha_deg": 5.532108127793712,
+   "throttle": 0.13456330214716325
+  },
+  "gear": {
+   "commanded_at_s": 2.0,
+   "down_at_s": 9.733333333333333,
+   "drag_coefficient": 0.022240524320360704,
+   "drag_at_approach_speed_lbf": 130.97435413609153
+  },
+  "base_turn": {
+   "peak_bank_deg": 38.683496056813134,
+   "peak_load_factor_g": 1.1911138640611656,
+   "peak_roll_rate_deg_s": 39.7174772949903
+  },
+  "final": {
+   "from_s": 75.0,
+   "to_s": 167.3,
+   "speed_kt": 110.02566841151973,
+   "speed_calibrated_kt": 109.95243743557766,
+   "speed_range_kt": [
+    109.54741438823444,
+    110.13860467915626
+   ],
+   "path_deg": -3.0003230577093594,
+   "sink_rate_fpm": 583.1978154881173,
+   "alpha_deg": 6.891063091063777,
+   "pitch_deg": 3.8907400333544166,
+   "stabilator_deg": -1.1328797718040302,
+   "flap_deg": 30.000000000000004,
+   "throttle": 0.16985714337406652,
+   "thrust_lbf": 524.7054164810795,
+   "lift_coefficient": 0.8432527703264854,
+   "drag_coefficient": 0.13417260604369163,
+   "lift_to_drag": 6.285007065076819,
+   "alpha_limiter_deg": 15.86847821671216,
+   "margin_to_limiter_deg": 8.739352223341537
+  },
+  "flare": {
+   "start_s": 167.3,
+   "wheel_height_at_start_ft": 44.26837558479356,
+   "duration_s": 7.9375
+  },
+  "touchdown": {
+   "at_s": 175.2375,
+   "reached": true,
+   "speed_kt": 96.32908955446263,
+   "sink_rate_ft_s": 3.4191447346739947,
+   "alpha_deg": 10.290515452035502,
+   "pitch_deg": 9.085504039412184,
+   "bank_deg": -5.3556605411535575e-12,
+   "stabilator_deg": -1.3521878250352233,
+   "throttle": 0.05,
+   "distance_from_flare_start_ft": 1399.1787142439537,
+   "nose_wheel_clear_ft": 1.2566321256716062
+  },
+  "geometry": {
+   "main_wheel_from_cg_body_m": [
+    -0.5762751578233196,
+    1.372699643056911
+   ],
+   "note": "wheel contact from the design inputs (main gear station, ground line 47 in below the reference line); the height datum of the run is the runway; the model has no ground: the run ends when the main wheels reach the datum"
+  },
+  "limits": "no ground effect, no ground contact, no wind or turbulence; flap is both flaperons 30 deg down (the notebook geometry has no moving flap)",
+  "warnings": [],
+  "checks": {
+   "samples": 42073,
+   "expected_samples": 42073,
+   "time_end": 175.3,
+   "time_coverage": true,
+   "time_monotonic": true,
+   "aligned": true,
+   "finite": true,
+   "quat_norm_max_error": 3.77553543984277e-12,
+   "segments": 127,
+   "segments_structural": true,
+   "structural_pass": true
+  },
+  "python_reference": {
+   "worst": {
+    "value": 3.7018998977345063e-13,
+    "signal": "cm"
+   },
+   "passed": true,
+   "tolerance_relative_to_scale": 1e-06
+  }
+ }
+}

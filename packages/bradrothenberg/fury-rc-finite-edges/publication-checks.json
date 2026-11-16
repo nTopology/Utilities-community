@@ -1,62 +1,271 @@
 {
-  "scope": "Offline publication preparation; no new native execution",
-  "models": [
-    {
-      "file": "fury-rc-finite-edges.ntop",
-      "source_sha256": "0eb08baf8489622bdacc96d76690b2905ba3e64adacf95811869be555f2f2713",
-      "published_sha256": "e64394104adc30cce58a01adcdc88eb8caec4f58c9cdffcf57ef6c98c120a800",
-      "bytes": 1927774,
-      "changed_chunks": [
-        "index"
-      ],
-      "relative_export_filenames": [
-        "raw-mm.stl",
-        "sharpened-mm.stl"
-      ],
-      "source_unchanged": true,
-      "geometry_graph_and_binary_payloads_unchanged": true,
-      "new_native_execution": false
+ "scope": "Notebook written by `ntopcl convert` (nTop 6.3) from the recipe in native/notebook/fury.json, then given sections, descriptions and colours by tools/organize_fury.py, which compares the computation before and after.",
+ "notebook": {
+  "file": "fury-rc-finite-edges.ntop",
+  "sha256": "9197d3819471ecf41847f30859c09eaa91739be64fc52c845a508c1ea24e8153",
+  "bytes": 4590099,
+  "variables": 635,
+  "sections": {
+   "00 Coordinates": 7,
+   "01 Inputs | Fuselage": 3,
+   "02 Inputs | Wing": 9,
+   "03 Inputs | Tail": 23,
+   "04 Inputs | Inlet, duct and engine": 10,
+   "05 Inputs | Structure and fuel": 7,
+   "06 Inputs | Landing gear and stores": 8,
+   "07 Derived dimensions": 79,
+   "08 Reference coordinates": 4,
+   "10 Fuselage guide curves": 36,
+   "11 Fuselage lofts": 17,
+   "12 Inlet, duct and nozzle": 15,
+   "13 Fuselage": 9,
+   "14 Wing": 8,
+   "15 Tail": 28,
+   "16 Exterior": 8,
+   "20 Structure": 55,
+   "22 Paint and markings": 72,
+   "30 Engine and systems": 9,
+   "31 Fuel": 6,
+   "32 Landing gear": 151,
+   "33 External fittings": 32,
+   "40 Bodies": 31,
+   "99 Checks": 8
+  },
+  "final_bodies": 30,
+  "variables_used_before_they_are_defined": [],
+  "computation_unchanged_by_the_display_pass": true
+ },
+ "native_meshing": {
+  "note": "Outer mold line meshed in nTop and compared with the Python model at every mesh vertex. See docs/analysis.md for which geometry revision was meshed.",
+  "results": {
+   "exterior_verify.json": {
+    "what": "exterior",
+    "inputs": {
+     "length": 33.5,
+     "width_scale": 1.0,
+     "height_scale": 1.0,
+     "wing_span": 24.85,
+     "wing_root_chord": 9.94,
+     "wing_tip_chord": 1.64,
+     "wing_sweep": 31.0,
+     "wing_apex": 38.8,
+     "wing_height": 5.5,
+     "wing_dihedral": -1.5,
+     "wing_tc_root": 8.0,
+     "wing_tc_tip": 5.0,
+     "tail_type": 0.0,
+     "htail_span": 12.73,
+     "htail_root_chord": 6.2,
+     "htail_tip_chord": 1.47,
+     "htail_sweep": 34.0,
+     "htail_apex": 80.7,
+     "htail_height": 8.9,
+     "htail_dihedral": 0.0,
+     "fin_height": 4.87,
+     "fin_root_chord": 4.97,
+     "fin_tip_chord": 2.12,
+     "fin_sweep": 45.0,
+     "fin_apex": 80.5,
+     "fin_root_height": 21.2,
+     "vtail_cant": 47.0,
+     "vtail_length": 6.59,
+     "vtail_root_chord": 5.81,
+     "vtail_tip_chord": 1.62,
+     "vtail_sweep": 38.0,
+     "vtail_apex": 80.5,
+     "vtail_root_height": 10.1,
+     "tail_tc": 5.0,
+     "te_thickness": 0.25,
+     "inlet_station": 29.5,
+     "inlet_rake": 48.0,
+     "inlet_lip_sweep": 7.0,
+     "lip_dihedral": 6.0,
+     "diverter_height": 1.5,
+     "splitter_thickness": 1.0,
+     "splitter_overhang": 0.0,
+     "diverter_sweep": 50.0,
+     "lip_thickness": 1.0,
+     "nozzle_diameter": 16.8,
+     "skin_thickness": 0.12,
+     "web_thickness": 0.2,
+     "front_spar": 18.0,
+     "rear_spar": 68.0,
+     "tank_clearance": 1.0,
+     "panel_line_width": 0.25,
+     "panel_line_depth": 0.05,
+     "gear_down": 1.0,
+     "nose_gear_station": 35.2,
+     "main_gear_station": 59.2,
+     "gear_track": 67.5,
+     "ground_line": 47.0,
+     "main_tyre_diameter": 19.0,
+     "wing_stores": 1.0,
+     "nose_tyre_diameter": 14.5
     },
-    {
-      "file": "earlier-appearance.ntop",
-      "source_sha256": "0dbdebdb7051f48fc9d3b497caad8638dbfeb0fb51b5cc92809bd65215ee5829",
-      "published_sha256": "ecf90e2b02da8d9de250a7ed7fd925e8bbe200c8eb40dba22a50ab23230d7ea6",
-      "bytes": 2404939,
-      "changed_chunks": [
-        "sections"
-      ],
-      "relative_export_filenames": [],
-      "source_unchanged": true,
-      "geometry_graph_and_binary_payloads_unchanged": true,
-      "new_native_execution": false
+    "triangles": 5180406,
+    "tolerance_m": 0.012,
+    "host_abs_mean_m": 6.77038724461454e-06,
+    "host_abs_p99_m": 4.760275987791829e-05,
+    "host_abs_max_m": 0.0030768828000873327,
+    "bounds_min": [
+     -0.0,
+     -3.7875,
+     -0.4655
+    ],
+    "bounds_max": [
+     10.3502,
+     3.7875,
+     2.023
+    ],
+    "seconds": 1423
+   },
+   "exterior_tail_type1_verify.json": {
+    "what": "exterior_tail_type1",
+    "inputs": {
+     "length": 33.5,
+     "width_scale": 1.0,
+     "height_scale": 1.0,
+     "wing_span": 24.85,
+     "wing_root_chord": 9.94,
+     "wing_tip_chord": 1.64,
+     "wing_sweep": 31.0,
+     "wing_apex": 38.8,
+     "wing_height": 5.5,
+     "wing_dihedral": -1.5,
+     "wing_tc_root": 8.0,
+     "wing_tc_tip": 5.0,
+     "tail_type": 1.0,
+     "htail_span": 12.73,
+     "htail_root_chord": 6.2,
+     "htail_tip_chord": 1.47,
+     "htail_sweep": 34.0,
+     "htail_apex": 80.7,
+     "htail_height": 8.9,
+     "htail_dihedral": 0.0,
+     "fin_height": 4.87,
+     "fin_root_chord": 4.97,
+     "fin_tip_chord": 2.12,
+     "fin_sweep": 45.0,
+     "fin_apex": 80.5,
+     "fin_root_height": 21.2,
+     "vtail_cant": 47.0,
+     "vtail_length": 6.59,
+     "vtail_root_chord": 5.81,
+     "vtail_tip_chord": 1.62,
+     "vtail_sweep": 38.0,
+     "vtail_apex": 80.5,
+     "vtail_root_height": 10.1,
+     "tail_tc": 5.0,
+     "te_thickness": 0.25,
+     "inlet_station": 29.5,
+     "inlet_rake": 48.0,
+     "inlet_lip_sweep": 7.0,
+     "lip_dihedral": 6.0,
+     "diverter_height": 1.5,
+     "splitter_thickness": 1.0,
+     "splitter_overhang": 0.0,
+     "diverter_sweep": 50.0,
+     "lip_thickness": 1.0,
+     "nozzle_diameter": 16.8,
+     "skin_thickness": 0.12,
+     "web_thickness": 0.2,
+     "front_spar": 18.0,
+     "rear_spar": 68.0,
+     "tank_clearance": 1.0,
+     "panel_line_width": 0.25,
+     "panel_line_depth": 0.05,
+     "gear_down": 1.0,
+     "nose_gear_station": 35.2,
+     "main_gear_station": 59.2,
+     "gear_track": 67.5,
+     "ground_line": 47.0,
+     "main_tyre_diameter": 19.0,
+     "wing_stores": 1.0,
+     "nose_tyre_diameter": 14.5
     },
-    {
-      "file": "earlier-internal-layout.ntop",
-      "source_sha256": "85fe066cdc5be3533f03241efbe6f1b6d6ddc0dce54ddd572e7f80b325979a62",
-      "published_sha256": "f474b9364311913266c9dd616c4ba38404207f5172853dbbf4ab8a50869d9495",
-      "bytes": 2404328,
-      "changed_chunks": [
-        "sections"
-      ],
-      "relative_export_filenames": [],
-      "source_unchanged": true,
-      "geometry_graph_and_binary_payloads_unchanged": true,
-      "new_native_execution": false
-    },
-    {
-      "file": "earlier-gear-illustration.ntop",
-      "source_sha256": "be442ddfb3b72aa26e07bb4b170153eeff673829c9c6a48bb500ba84b3773a05",
-      "published_sha256": "d8554020a159ff6fd0a0210aaec40ad3b9829cbfb1e1df2a2893535c05bf7225",
-      "bytes": 2404089,
-      "changed_chunks": [
-        "sections"
-      ],
-      "relative_export_filenames": [],
-      "source_unchanged": true,
-      "geometry_graph_and_binary_payloads_unchanged": true,
-      "new_native_execution": false
-    }
-  ],
-  "cover_sha256": "73cf4c3a4241b8bb803ec86d50be9c6543a3a0807b0c044b3802d3fcc8be1f2d",
-  "source_commit": "92f13bc0a873aacba62526ee43e9e6895ef051f8"
+    "triangles": 5173662,
+    "tolerance_m": 0.012,
+    "host_abs_mean_m": 6.585707524209283e-06,
+    "host_abs_p99_m": 4.427277235663496e-05,
+    "host_abs_max_m": 0.0030210705008357763,
+    "bounds_min": [
+     -0.0,
+     -3.7875,
+     -0.4655
+    ],
+    "bounds_max": [
+     10.2852,
+     3.7875,
+     1.7349
+    ],
+    "seconds": 1418
+   }
+  }
+ },
+ "flight_study": {
+  "note": "6-DOF block graph flown in the Unlinked command-line program (see flight/README.md); each flight repeated in the independent Python model flight/sim/verify/ref6dof.py with the same step. The package carries every signal at 30 Hz, not the full trace.",
+  "model": {
+   "file": "flight/sim/model/fury_6dof.mdl",
+   "sha256": "e4e778374905d12a88bf0b81229f8f87da5df53bada1209fea7854354f66a849"
+  },
+  "flights": {
+   "approach": {
+    "samples_flown": 42073,
+    "samples_in_the_package": 5260,
+    "signals": 122,
+    "python_reference_passed": true,
+    "largest_difference_relative_to_signal_scale": 3.7018998977345063e-13,
+    "on_signal": "cm"
+   },
+   "turn_5g_sl": {
+    "samples_flown": 10801,
+    "samples_in_the_package": 1351,
+    "signals": 122,
+    "python_reference_passed": true,
+    "largest_difference_relative_to_signal_scale": 2.398081733190338e-13,
+    "on_signal": "thrust_flag"
+   },
+   "turn_7g_sl": {
+    "samples_flown": 10801,
+    "samples_in_the_package": 1351,
+    "signals": 122,
+    "python_reference_passed": true,
+    "largest_difference_relative_to_signal_scale": 4.2177816794719547e-14,
+    "on_signal": "moment_n"
+   },
+   "turn_9g_sl": {
+    "samples_flown": 10801,
+    "samples_in_the_package": 1351,
+    "signals": 122,
+    "python_reference_passed": true,
+    "largest_difference_relative_to_signal_scale": 2.1373125491663814e-14,
+    "on_signal": "moment_n"
+   },
+   "turn_9g_360_sl": {
+    "samples_flown": 14401,
+    "samples_in_the_package": 1801,
+    "signals": 122,
+    "python_reference_passed": true,
+    "largest_difference_relative_to_signal_scale": 1.4165379980113357e-13,
+    "on_signal": "moment_n"
+   },
+   "turn_9g_15k": {
+    "samples_flown": 21601,
+    "samples_in_the_package": 2701,
+    "signals": 122,
+    "python_reference_passed": true,
+    "largest_difference_relative_to_signal_scale": 8.344613888766616e-14,
+    "on_signal": "moment_n"
+   },
+   "turn_5g_15k": {
+    "samples_flown": 21601,
+    "samples_in_the_package": 2701,
+    "signals": 122,
+    "python_reference_passed": true,
+    "largest_difference_relative_to_signal_scale": 3.2741809263825414e-14,
+    "on_signal": "moment_n"
+   }
+  }
+ },
+ "cover_sha256": "6b18696e8d0c01c0eb5b6cc89d203e6d29f7637648c2af56f543da062889912d"
 }
