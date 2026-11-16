@@ -93,6 +93,30 @@ stowage (the nose bay under the duct is only a few inches deep), wing-tip lights
 
 Details and assumptions: [docs/analysis.md](docs/analysis.md).
 
+## Flight study (estimates)
+
+A 6-DOF model of the aircraft (1,203 blocks, 24 states) flown in the open-source
+[Unlinked](https://github.com/CosmicFrontierLabs/unlinked) engine, and level-turn performance against an F-16C reference
+built from public data. Weights, thrust, lift and drag are all estimated on this model; nothing is manufacturer data.
+
+- **Turns at sea level, 6,730 lb (half fuel, two missiles):** the tightest 9 g turn is at 342 kt: radius 1,160 ft,
+  29 deg/s, losing 19 kt/s; the model sustains 5.9 g at most. The tightest 5 g turn: 1,160 ft at 254 kt, sustained from
+  324 kt (1,900 ft). F-16C reference in afterburner: 9 g at 419 kt, 1,740 ft, sustained from 480 kt.
+- **Power coming out of the turn:** about +170 ft/s of excess power at 1 g after the 9 g turn, against about
+  +800 ft/s for the F-16C reference.
+- **9 g turn through 180 deg in the 6-DOF model, from Mach 0.70 at 1,000 ft:** 10.4 s, radius 2,000 ft, speed 461 to
+  410 kt, 12 s to regain the entry speed.
+- **Landing approach, 4,970 lb, gear and flap down:** 3 deg final at 110 kt, 583 ft/min, angle of attack 6.9 deg;
+  touchdown at 96 kt, 3.4 ft/s.
+
+![The last 14 s to touchdown, from the 6-DOF trace](docs/img/flight-approach.gif)
+
+![Turn rate against speed, Fury model and F-16C reference](docs/img/flight-turn-rate.png)
+
+![9 g turn through 360 deg: traces of the 6-DOF flight](docs/img/flight-turn-9g-360-sl.png)
+
+Tables, more pictures, method, checks and limits: [flight/README.md](flight/README.md).
+
 ## Files
 
 - [fury-rc-finite-edges.ntop](fury-rc-finite-edges.ntop): the notebook
@@ -100,6 +124,8 @@ Details and assumptions: [docs/analysis.md](docs/analysis.md).
 - [docs/guide.md](docs/guide.md): guide for someone new to nTop
 - [docs/inputs.md](docs/inputs.md), [docs/match.md](docs/match.md), [docs/analysis.md](docs/analysis.md), [docs/sources.md](docs/sources.md), [docs/proportions.md](docs/proportions.md)
 - `model/`, `tools/`, `analysis/`: the Python source the notebook is generated from (`python tools/build_native.py`; needs numpy, torch, scipy, matplotlib, pyvista, pillow and an nTop 6.3 installation for the conversion). You do not need it to use the notebook. `tools/match.py` and `tools/write_docs.py` also need the reference photographs, which are not included.
+- [flight/README.md](flight/README.md), `flight/`: the flight study: aircraft as numbers, turn performance, the 6-DOF block graph
+  `flight/sim/model/fury_6dof.mdl` for Unlinked, the flights and their results
 - `native/notebook/`: the recipe the notebook was converted from, the section layout and the check values
 - [publication-checks.json](publication-checks.json): notebook hash, section counts, native meshing comparison
 

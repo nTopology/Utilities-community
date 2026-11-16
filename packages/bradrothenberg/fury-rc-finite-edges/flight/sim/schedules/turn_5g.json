@@ -1,0 +1,6 @@
+{"description": "5 g turn through 360 degrees at Mach 0.60 near sea level holding speed, then roll out",
+ "condition": {"case": "combat", "mach": 0.60, "altitude_ft": 1000, "hold_speed": 1, "table_mach": 0.6},
+ "duration_s": 40,
+ "commands": [
+  {"t": 3, "heading_change_deg": 360, "turn_g": 5}
+ ]}

@@ -23,6 +23,7 @@ notebook should read [README.md](README.md) and [docs/guide.md](docs/guide.md) i
 | `model/fieldlab.py`, `shapes.py`, `regions.py`, `registry.py`, `preview.py` | The field library (graph, evaluation, meshing, recipe writer), shape helpers, mesh cache, cameras and renderer |
 | `tools/` | Quick looks, renders, sections, notebook build, nTop mesh check (section 4) |
 | `analysis/` | Weights, duct areas, vortex lattice; results in `analysis/results/` |
+| `flight/` | Flight study: the aircraft as numbers (`aircraft.py`), turn performance against an F-16C reference (`turn.py`), the 6-DOF block graph and its flights (`sim/`), charts and approach pictures. Start at `flight/README.md` |
 | `native/notebook/` | The recipe (`fury.json`), which section each variable belongs to (`fury_layout.json`), check values (`fury_checks.json`), counts (`fury_presentation.json`) |
 | `docs/` | Guide, input table, photograph match, proportions and where each came from, analysis notes, photograph sources |
 | `publication-checks.json` | Notebook hash and the nTop mesh comparison of the published build |
@@ -113,6 +114,14 @@ can be wrong inside.
   `registry.orient_faces` first: the mesher leaves some triangles along sharp edges turned the wrong way. The mesh is
   still closed, so a closedness check passes, but a solver that takes inside and outside from the normals will mark
   air behind the trailing edges as solid. The first published flow numbers were wrong for that reason.
+- **The 6-DOF flights** (`flight/sim/maneuvers.py`, `flight/sim/fly.py`) need the Unlinked command-line program built
+  with the small patch in `flight/sim/` (`flight/README.md`, "The engine"). Without it `flight/aircraft.py`,
+  `flight/turn.py`, `flight/sim/model/build_model.py`, `flight/sim/params.py` and `flight/charts.py` still run. After a
+  change of shape or weight: rerun `analysis/mass.py` and `analysis/vlm.py`, delete `flight/out/lattice.json` (a cache)
+  and `analysis/results/flow_points.json` (flow-solution points of the published shape; without the file the flight
+  model takes lift and moment at zero angle of attack as zero), then run `flight/aircraft.py` and `flight/turn.py`.
+  If you cannot run the engine, say that the flights in `flight/README.md` are those of the published shape. Every
+  number in `flight/` is an estimate; keep the labels.
 - **The published pictures** in `docs/img/` were made with `tools/render_parts.py` and assembled by a script that is not
   included. Rerender the ones your change affects.
 

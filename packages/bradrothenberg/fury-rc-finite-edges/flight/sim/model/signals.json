@@ -1,0 +1,821 @@
+{
+ "pn": {
+  "id": "1206/11",
+  "unit": "m",
+  "block": "position north",
+  "subsystem": "Attitude and position"
+ },
+ "pe": {
+  "id": "1206/12",
+  "unit": "m",
+  "block": "position east",
+  "subsystem": "Attitude and position"
+ },
+ "pd": {
+  "id": "1206/13",
+  "unit": "m",
+  "block": "position down",
+  "subsystem": "Attitude and position"
+ },
+ "height": {
+  "id": "1206/104",
+  "unit": "m",
+  "block": "height",
+  "subsystem": "Attitude and position"
+ },
+ "e0": {
+  "id": "1206/7",
+  "unit": "-",
+  "block": "quaternion e0",
+  "subsystem": "Attitude and position"
+ },
+ "e1": {
+  "id": "1206/8",
+  "unit": "-",
+  "block": "quaternion e1",
+  "subsystem": "Attitude and position"
+ },
+ "e2": {
+  "id": "1206/9",
+  "unit": "-",
+  "block": "quaternion e2",
+  "subsystem": "Attitude and position"
+ },
+ "e3": {
+  "id": "1206/10",
+  "unit": "-",
+  "block": "quaternion e3",
+  "subsystem": "Attitude and position"
+ },
+ "phi": {
+  "id": "1206/98",
+  "unit": "rad",
+  "block": "bank angle",
+  "subsystem": "Attitude and position"
+ },
+ "theta": {
+  "id": "1206/102",
+  "unit": "rad",
+  "block": "pitch angle",
+  "subsystem": "Attitude and position"
+ },
+ "psi": {
+  "id": "1206/103",
+  "unit": "rad",
+  "block": "heading",
+  "subsystem": "Attitude and position"
+ },
+ "track_unwrapped": {
+  "id": "1206/14",
+  "unit": "rad",
+  "block": "track angle unwrapped",
+  "subsystem": "Attitude and position"
+ },
+ "u": {
+  "id": "1204/1",
+  "unit": "m/s",
+  "block": "u body velocity forward",
+  "subsystem": "Translation"
+ },
+ "v": {
+  "id": "1204/2",
+  "unit": "m/s",
+  "block": "v body velocity right",
+  "subsystem": "Translation"
+ },
+ "w": {
+  "id": "1204/3",
+  "unit": "m/s",
+  "block": "w body velocity down",
+  "subsystem": "Translation"
+ },
+ "p": {
+  "id": "1205/4",
+  "unit": "rad/s",
+  "block": "p roll rate",
+  "subsystem": "Rotation"
+ },
+ "q": {
+  "id": "1205/5",
+  "unit": "rad/s",
+  "block": "q pitch rate",
+  "subsystem": "Rotation"
+ },
+ "r": {
+  "id": "1205/6",
+  "unit": "rad/s",
+  "block": "r yaw rate",
+  "subsystem": "Rotation"
+ },
+ "u_dot": {
+  "id": "1204/601",
+  "unit": "m/s2",
+  "block": "du/dt",
+  "subsystem": "Translation"
+ },
+ "v_dot": {
+  "id": "1204/606",
+  "unit": "m/s2",
+  "block": "dv/dt",
+  "subsystem": "Translation"
+ },
+ "w_dot": {
+  "id": "1204/611",
+  "unit": "m/s2",
+  "block": "dw/dt",
+  "subsystem": "Translation"
+ },
+ "p_dot": {
+  "id": "1205/641",
+  "unit": "rad/s2",
+  "block": "dp/dt",
+  "subsystem": "Rotation"
+ },
+ "q_dot": {
+  "id": "1205/642",
+  "unit": "rad/s2",
+  "block": "dq/dt",
+  "subsystem": "Rotation"
+ },
+ "r_dot": {
+  "id": "1205/646",
+  "unit": "rad/s2",
+  "block": "dr/dt",
+  "subsystem": "Rotation"
+ },
+ "vn": {
+  "id": "1206/87",
+  "unit": "m/s",
+  "block": "velocity north",
+  "subsystem": "Attitude and position"
+ },
+ "ve": {
+  "id": "1206/92",
+  "unit": "m/s",
+  "block": "velocity east",
+  "subsystem": "Attitude and position"
+ },
+ "vd": {
+  "id": "1206/97",
+  "unit": "m/s",
+  "block": "velocity down",
+  "subsystem": "Attitude and position"
+ },
+ "alpha": {
+  "id": "1213/137",
+  "unit": "rad",
+  "block": "angle of attack",
+  "subsystem": "Air data",
+  "part": "air_data_probe"
+ },
+ "beta": {
+  "id": "1213/140",
+  "unit": "rad",
+  "block": "sideslip angle",
+  "subsystem": "Air data",
+  "part": "air_data_probe"
+ },
+ "mach": {
+  "id": "1213/144",
+  "unit": "-",
+  "block": "Mach number",
+  "subsystem": "Air data",
+  "part": "air_data_probe"
+ },
+ "tas": {
+  "id": "1213/136",
+  "unit": "m/s",
+  "block": "true airspeed",
+  "subsystem": "Air data",
+  "part": "air_data_probe"
+ },
+ "qbar": {
+  "id": "1213/143",
+  "unit": "Pa",
+  "block": "dynamic pressure",
+  "subsystem": "Air data",
+  "part": "air_data_probe"
+ },
+ "rho": {
+  "id": "1213/125",
+  "unit": "kg/m3",
+  "block": "air density",
+  "subsystem": "Air data"
+ },
+ "speed_of_sound": {
+  "id": "1213/128",
+  "unit": "m/s",
+  "block": "speed of sound",
+  "subsystem": "Air data"
+ },
+ "nz": {
+  "id": "1216/571",
+  "unit": "g",
+  "block": "load factor nz",
+  "subsystem": "Forces and moments",
+  "part": "cg"
+ },
+ "ny": {
+  "id": "1216/572",
+  "unit": "g",
+  "block": "load factor ny",
+  "subsystem": "Forces and moments",
+  "part": "cg"
+ },
+ "nx": {
+  "id": "1216/574",
+  "unit": "g",
+  "block": "load factor nx",
+  "subsystem": "Forces and moments",
+  "part": "cg"
+ },
+ "stabilator": {
+  "id": "1208/16",
+  "unit": "rad",
+  "block": "stabilator deflection (both panels)",
+  "subsystem": "Mixer and actuators",
+  "part": "stabilator"
+ },
+ "stabilator_cmd": {
+  "id": "1208/1128",
+  "unit": "rad",
+  "block": "stabilator command",
+  "subsystem": "Mixer and actuators",
+  "part": "stabilator"
+ },
+ "stabilator_rate": {
+  "id": "1208/1132",
+  "unit": "rad/s",
+  "block": "stabilator rate",
+  "subsystem": "Mixer and actuators",
+  "part": "stabilator"
+ },
+ "flaperon_left": {
+  "id": "1208/17",
+  "unit": "rad",
+  "block": "left flaperon deflection",
+  "subsystem": "Mixer and actuators",
+  "part": "flaperon_left"
+ },
+ "flaperon_left_cmd": {
+  "id": "1208/1145",
+  "unit": "rad",
+  "block": "left flaperon command",
+  "subsystem": "Mixer and actuators",
+  "part": "flaperon_left"
+ },
+ "flaperon_left_rate": {
+  "id": "1208/1148",
+  "unit": "rad/s",
+  "block": "left flaperon rate",
+  "subsystem": "Mixer and actuators",
+  "part": "flaperon_left"
+ },
+ "flaperon_right": {
+  "id": "1208/18",
+  "unit": "rad",
+  "block": "right flaperon deflection",
+  "subsystem": "Mixer and actuators",
+  "part": "flaperon_right"
+ },
+ "flaperon_right_cmd": {
+  "id": "1208/1150",
+  "unit": "rad",
+  "block": "right flaperon command",
+  "subsystem": "Mixer and actuators",
+  "part": "flaperon_right"
+ },
+ "flaperon_right_rate": {
+  "id": "1208/1153",
+  "unit": "rad/s",
+  "block": "right flaperon rate",
+  "subsystem": "Mixer and actuators",
+  "part": "flaperon_right"
+ },
+ "flap": {
+  "id": "1208/1164",
+  "unit": "rad",
+  "block": "flap position (mean flaperon)",
+  "subsystem": "Mixer and actuators",
+  "part": "controls"
+ },
+ "aileron": {
+  "id": "1208/1166",
+  "unit": "rad",
+  "block": "aileron position (half the flaperon difference)",
+  "subsystem": "Mixer and actuators",
+  "part": "controls"
+ },
+ "flap_cmd": {
+  "id": "1208/1133",
+  "unit": "rad",
+  "block": "flap command",
+  "subsystem": "Mixer and actuators",
+  "part": "controls"
+ },
+ "gear": {
+  "id": "1208/20",
+  "unit": "-",
+  "block": "landing gear travel (0 up, 1 down)",
+  "subsystem": "Mixer and actuators",
+  "part": "landing_gear"
+ },
+ "gear_rate": {
+  "id": "1208/1161",
+  "unit": "1/s",
+  "block": "landing gear travel rate",
+  "subsystem": "Mixer and actuators",
+  "part": "landing_gear"
+ },
+ "cd_induced_controls": {
+  "id": "1214/395",
+  "unit": "-",
+  "block": "CD induced by stabilator and flap",
+  "subsystem": "Aerodynamics",
+  "part": "wing_reference_point"
+ },
+ "cd_profile_controls": {
+  "id": "1214/403",
+  "unit": "-",
+  "block": "CD profile of deflected surfaces",
+  "subsystem": "Aerodynamics",
+  "part": "wing_reference_point"
+ },
+ "cd_gear": {
+  "id": "1214/405",
+  "unit": "-",
+  "block": "CD landing gear",
+  "subsystem": "Aerodynamics",
+  "part": "landing_gear"
+ },
+ "rudder": {
+  "id": "1208/19",
+  "unit": "rad",
+  "block": "rudder deflection",
+  "subsystem": "Mixer and actuators",
+  "part": "rudder"
+ },
+ "rudder_cmd": {
+  "id": "1211/1115",
+  "unit": "rad",
+  "block": "rudder command",
+  "subsystem": "Roll and yaw laws",
+  "part": "rudder"
+ },
+ "rudder_cmd_unsat": {
+  "id": "1211/1114",
+  "unit": "rad",
+  "block": "rudder command before limit",
+  "subsystem": "Roll and yaw laws",
+  "part": "rudder"
+ },
+ "rudder_rate": {
+  "id": "1208/1156",
+  "unit": "rad/s",
+  "block": "rudder rate",
+  "subsystem": "Mixer and actuators",
+  "part": "rudder"
+ },
+ "elevator_cmd_unsat": {
+  "id": "1209/1024",
+  "unit": "rad",
+  "block": "stabilator command before limit",
+  "subsystem": "Pitch law"
+ },
+ "elevator_cmd": {
+  "id": "1209/1025",
+  "unit": "rad",
+  "block": "stabilator command (linear demand)",
+  "subsystem": "Pitch law"
+ },
+ "aileron_cmd_unsat": {
+  "id": "1211/1073",
+  "unit": "rad",
+  "block": "aileron command before limit",
+  "subsystem": "Roll and yaw laws"
+ },
+ "aileron_cmd": {
+  "id": "1211/1074",
+  "unit": "rad",
+  "block": "aileron command (linear demand)",
+  "subsystem": "Roll and yaw laws"
+ },
+ "throttle": {
+  "id": "1210/949",
+  "unit": "-",
+  "block": "throttle command",
+  "subsystem": "Guidance",
+  "part": "engine"
+ },
+ "spool": {
+  "id": "1207/15",
+  "unit": "-",
+  "block": "spool state (thrust fraction)",
+  "subsystem": "Propulsion",
+  "part": "engine"
+ },
+ "thrust": {
+  "id": "1207/545",
+  "unit": "N",
+  "block": "thrust",
+  "subsystem": "Propulsion",
+  "part": "engine"
+ },
+ "thrust_available": {
+  "id": "1207/544",
+  "unit": "N",
+  "block": "thrust available",
+  "subsystem": "Propulsion",
+  "part": "engine"
+ },
+ "cl": {
+  "id": "1214/376",
+  "unit": "-",
+  "block": "CL",
+  "subsystem": "Aerodynamics",
+  "part": "wing_reference_point"
+ },
+ "cl_table": {
+  "id": "1214/277",
+  "unit": "-",
+  "block": "CL table",
+  "subsystem": "Aerodynamics",
+  "part": "wing_reference_point"
+ },
+ "cd": {
+  "id": "1214/408",
+  "unit": "-",
+  "block": "CD",
+  "subsystem": "Aerodynamics",
+  "part": "wing_reference_point"
+ },
+ "cm": {
+  "id": "1214/420",
+  "unit": "-",
+  "block": "Cm",
+  "subsystem": "Aerodynamics",
+  "part": "wing_reference_point"
+ },
+ "cy": {
+  "id": "1214/434",
+  "unit": "-",
+  "block": "CY",
+  "subsystem": "Aerodynamics",
+  "part": "wing_reference_point"
+ },
+ "cl_roll": {
+  "id": "1214/454",
+  "unit": "-",
+  "block": "Cl roll",
+  "subsystem": "Aerodynamics",
+  "part": "wing_reference_point"
+ },
+ "cn": {
+  "id": "1214/477",
+  "unit": "-",
+  "block": "Cn yaw",
+  "subsystem": "Aerodynamics",
+  "part": "wing_reference_point"
+ },
+ "lift": {
+  "id": "1214/482",
+  "unit": "N",
+  "block": "lift",
+  "subsystem": "Aerodynamics",
+  "part": "wing_reference_point"
+ },
+ "drag": {
+  "id": "1214/483",
+  "unit": "N",
+  "block": "drag",
+  "subsystem": "Aerodynamics",
+  "part": "wing_reference_point"
+ },
+ "aero_fx": {
+  "id": "1214/486",
+  "unit": "N",
+  "block": "aero force X",
+  "subsystem": "Aerodynamics",
+  "part": "wing_reference_point"
+ },
+ "aero_fy": {
+  "id": "1214/487",
+  "unit": "N",
+  "block": "aero force Y",
+  "subsystem": "Aerodynamics",
+  "part": "wing_reference_point"
+ },
+ "aero_fz": {
+  "id": "1214/491",
+  "unit": "N",
+  "block": "aero force Z",
+  "subsystem": "Aerodynamics",
+  "part": "wing_reference_point"
+ },
+ "aero_l_ref": {
+  "id": "1214/493",
+  "unit": "N m",
+  "block": "rolling moment at reference point",
+  "subsystem": "Aerodynamics",
+  "part": "wing_reference_point"
+ },
+ "aero_m_ref": {
+  "id": "1214/495",
+  "unit": "N m",
+  "block": "pitching moment at reference point",
+  "subsystem": "Aerodynamics",
+  "part": "wing_reference_point"
+ },
+ "aero_n_ref": {
+  "id": "1214/497",
+  "unit": "N m",
+  "block": "yawing moment at reference point",
+  "subsystem": "Aerodynamics",
+  "part": "wing_reference_point"
+ },
+ "weight_x": {
+  "id": "1215/549",
+  "unit": "N",
+  "block": "weight X",
+  "subsystem": "Gravity",
+  "part": "cg"
+ },
+ "weight_y": {
+  "id": "1215/550",
+  "unit": "N",
+  "block": "weight Y",
+  "subsystem": "Gravity",
+  "part": "cg"
+ },
+ "weight_z": {
+  "id": "1215/551",
+  "unit": "N",
+  "block": "weight Z",
+  "subsystem": "Gravity",
+  "part": "cg"
+ },
+ "force_x": {
+  "id": "1216/553",
+  "unit": "N",
+  "block": "force X",
+  "subsystem": "Forces and moments",
+  "part": "cg"
+ },
+ "force_y": {
+  "id": "1216/554",
+  "unit": "N",
+  "block": "force Y",
+  "subsystem": "Forces and moments",
+  "part": "cg"
+ },
+ "force_z": {
+  "id": "1216/555",
+  "unit": "N",
+  "block": "force Z",
+  "subsystem": "Forces and moments",
+  "part": "cg"
+ },
+ "moment_l": {
+  "id": "1216/558",
+  "unit": "N m",
+  "block": "rolling moment L",
+  "subsystem": "Forces and moments",
+  "part": "cg"
+ },
+ "moment_m": {
+  "id": "1216/566",
+  "unit": "N m",
+  "block": "pitching moment M",
+  "subsystem": "Forces and moments",
+  "part": "cg"
+ },
+ "moment_n": {
+  "id": "1216/568",
+  "unit": "N m",
+  "block": "yawing moment N",
+  "subsystem": "Forces and moments",
+  "part": "cg"
+ },
+ "track_cmd": {
+  "id": "1212/43",
+  "unit": "rad",
+  "block": "track angle command",
+  "subsystem": "Commands",
+  "part": "flight_control_computer"
+ },
+ "track_error": {
+  "id": "1210/669",
+  "unit": "rad",
+  "block": "track angle error",
+  "subsystem": "Guidance",
+  "part": "flight_control_computer"
+ },
+ "bank_cmd": {
+  "id": "1210/872",
+  "unit": "rad",
+  "block": "bank command",
+  "subsystem": "Guidance",
+  "part": "flight_control_computer"
+ },
+ "nz_cmd": {
+  "id": "1210/902",
+  "unit": "g",
+  "block": "load factor command",
+  "subsystem": "Guidance",
+  "part": "flight_control_computer"
+ },
+ "nz_available": {
+  "id": "1210/718",
+  "unit": "g",
+  "block": "available load factor",
+  "subsystem": "Guidance",
+  "part": "flight_control_computer"
+ },
+ "nz_speed_hold": {
+  "id": "1210/715",
+  "unit": "g",
+  "block": "load factor allowed by the speed hold",
+  "subsystem": "Guidance",
+  "part": "flight_control_computer"
+ },
+ "nz_alpha_limit": {
+  "id": "1210/676",
+  "unit": "g",
+  "block": "load factor at the angle-of-attack limit",
+  "subsystem": "Guidance",
+  "part": "flight_control_computer"
+ },
+ "nz_cap": {
+  "id": "1210/681",
+  "unit": "g",
+  "block": "load factor limit other than thrust",
+  "subsystem": "Guidance",
+  "part": "flight_control_computer"
+ },
+ "sustained_nz_integrator": {
+  "id": "1210/23",
+  "unit": "g",
+  "block": "sustained load factor integrator",
+  "subsystem": "Guidance",
+  "part": "flight_control_computer"
+ },
+ "nz_thrust_feedforward": {
+  "id": "1210/691",
+  "unit": "g",
+  "block": "load factor full thrust sustains (onboard polar)",
+  "subsystem": "Guidance",
+  "part": "flight_control_computer"
+ },
+ "nv_demand": {
+  "id": "1210/737",
+  "unit": "g",
+  "block": "vertical load factor demand",
+  "subsystem": "Guidance",
+  "part": "flight_control_computer"
+ },
+ "pull_flag": {
+  "id": "1210/884",
+  "unit": "-",
+  "block": "pull flag (bank command on its limit)",
+  "subsystem": "Guidance",
+  "part": "flight_control_computer"
+ },
+ "thrust_flag": {
+  "id": "1210/723",
+  "unit": "-",
+  "block": "thrust flag (thrust is what limits the turn)",
+  "subsystem": "Guidance",
+  "part": "flight_control_computer"
+ },
+ "nz_error": {
+  "id": "1209/1005",
+  "unit": "g",
+  "block": "load factor error",
+  "subsystem": "Pitch law",
+  "part": "flight_control_computer"
+ },
+ "alpha_margin_g": {
+  "id": "1209/1008",
+  "unit": "g",
+  "block": "angle-of-attack margin as load factor",
+  "subsystem": "Pitch law",
+  "part": "flight_control_computer"
+ },
+ "alpha_low_margin_g": {
+  "id": "1209/1011",
+  "unit": "g",
+  "block": "margin to the lower angle-of-attack limit as load factor",
+  "subsystem": "Pitch law",
+  "part": "flight_control_computer"
+ },
+ "pitch_integrator": {
+  "id": "1209/21",
+  "unit": "rad",
+  "block": "pitch integrator (stabilator trim)",
+  "subsystem": "Pitch law",
+  "part": "flight_control_computer"
+ },
+ "throttle_integrator": {
+  "id": "1210/22",
+  "unit": "-",
+  "block": "throttle integrator",
+  "subsystem": "Guidance",
+  "part": "flight_control_computer"
+ },
+ "roll_rate_cmd": {
+  "id": "1211/1055",
+  "unit": "rad/s",
+  "block": "roll rate command",
+  "subsystem": "Roll and yaw laws",
+  "part": "flight_control_computer"
+ },
+ "turn_flag": {
+  "id": "1210/700",
+  "unit": "-",
+  "block": "turn flag",
+  "subsystem": "Guidance",
+  "part": "flight_control_computer"
+ },
+ "roll_rate_limit": {
+  "id": "1210/849",
+  "unit": "rad/s",
+  "block": "roll rate limit",
+  "subsystem": "Guidance",
+  "part": "flight_control_computer"
+ },
+ "bank_reference": {
+  "id": "1211/24",
+  "unit": "rad",
+  "block": "bank reference of the roll stick",
+  "subsystem": "Roll and yaw laws",
+  "part": "flight_control_computer"
+ },
+ "airspeed_cmd": {
+  "id": "1210/693",
+  "unit": "m/s",
+  "block": "airspeed command",
+  "subsystem": "Guidance",
+  "part": "flight_control_computer"
+ },
+ "height_cmd": {
+  "id": "1212/31",
+  "unit": "m",
+  "block": "table: height target",
+  "subsystem": "Commands",
+  "part": "flight_control_computer"
+ },
+ "climb_rate_cmd": {
+  "id": "1210/732",
+  "unit": "m/s",
+  "block": "climb rate command",
+  "subsystem": "Guidance",
+  "part": "flight_control_computer"
+ },
+ "sideslip_cmd": {
+  "id": "1212/39",
+  "unit": "rad",
+  "block": "table: sideslip target (pedal)",
+  "subsystem": "Commands",
+  "part": "flight_control_computer"
+ },
+ "mode_bank": {
+  "id": "1212/28",
+  "unit": "-",
+  "block": "table: 1: lateral axis follows the bank target",
+  "subsystem": "Commands",
+  "part": "flight_control_computer"
+ },
+ "mode_roll_rate": {
+  "id": "1212/29",
+  "unit": "-",
+  "block": "table: 1: lateral axis follows the roll rate command",
+  "subsystem": "Commands",
+  "part": "flight_control_computer"
+ },
+ "mode_load_factor": {
+  "id": "1212/34",
+  "unit": "-",
+  "block": "table: 1: pitch axis follows the load factor command",
+  "subsystem": "Commands",
+  "part": "flight_control_computer"
+ },
+ "mode_throttle": {
+  "id": "1212/38",
+  "unit": "-",
+  "block": "table: 1: throttle follows the throttle command",
+  "subsystem": "Commands",
+  "part": "flight_control_computer"
+ },
+ "quat_norm2": {
+  "id": "1206/108",
+  "unit": "-",
+  "block": "quaternion norm squared",
+  "subsystem": "Attitude and position"
+ },
+ "climb_rate": {
+  "id": "1206/105",
+  "unit": "m/s",
+  "block": "climb rate",
+  "subsystem": "Attitude and position"
+ }
+}

@@ -1,0 +1,88 @@
+Change to the command-line program of Unlinked (https://github.com/CosmicFrontierLabs/unlinked, Apache-2.0),
+against commit cbae79996ff651d11a9189ffb197e172e539fbb3: the option --signal of `unlinked sim`, which keeps only
+the listed signals in the output (without it every block output is recorded). Integration is unchanged.
+Apply in a checkout of that commit with: git apply unlinked_signal_option.patch
+
+diff --git a/crates/unlinked-cli/src/main.rs b/crates/unlinked-cli/src/main.rs
+index 5cf57b7..fa3e497 100644
+--- a/crates/unlinked-cli/src/main.rs
++++ b/crates/unlinked-cli/src/main.rs
+@@ -74,6 +74,9 @@ enum Action {
+         /// Bind a root Inport by stable block ID to a constant scalar/array expression.
+         #[arg(long = "input-value", value_name = "BLOCK_ID=EXPR")]
+         inputs: Vec<String>,
++        /// Stable output signal ID to retain; repeatable.
++        #[arg(long = "signal")]
++        signals: Vec<String>,
+         /// JSON or CSV; defaults to CSV for .csv output paths, otherwise JSON.
+         #[arg(long, value_enum)]
+         format: Option<TraceFormat>,
+@@ -343,6 +346,7 @@ fn run(args: Args) -> Result<()> {
+             max_internal_steps,
+             variables,
+             inputs,
++            signals,
+             format,
+             output,
+         } => {
+@@ -357,6 +361,7 @@ fn run(args: Args) -> Result<()> {
+                 relative_tolerance: rtol,
+                 absolute_tolerance: atol,
+                 max_internal_steps,
++                output_signals: signals,
+             };
+             eprintln!(
+                 "Simulating {}: {:?}, start={start}, stop={stop}, step={step}; these explicit settings override imported solver settings",
+diff --git a/crates/unlinked-sim/src/lib.rs b/crates/unlinked-sim/src/lib.rs
+index 7640d27..019842a 100644
+--- a/crates/unlinked-sim/src/lib.rs
++++ b/crates/unlinked-sim/src/lib.rs
+@@ -44,6 +44,8 @@ pub struct Options {
+     pub absolute_tolerance: f64,
+     /// Total accepted and rejected Rk45 attempts across the complete run.
+     pub max_internal_steps: usize,
++    /// Stable IDs to retain; empty records every signal. Integration is unchanged.
++    pub output_signals: Vec<String>,
+ }
+ impl Default for Options {
+     fn default() -> Self {
+@@ -56,6 +58,7 @@ impl Default for Options {
+             relative_tolerance: 1e-6,
+             absolute_tolerance: 1e-9,
+             max_internal_steps: 100_000,
++            output_signals: Vec::new(),
+         }
+     }
+ }
+@@ -1329,7 +1332,13 @@ pub fn simulate_with_observer_and_budget(
+             ));
+         }
+     }
+-    if graph.nodes.len().saturating_mul(count) > 10_000_000 {
++    for id in &o.output_signals {
++        if !graph.nodes.iter().any(|n| &n.id == id) {
++            return Err(Error::Options(format!("unknown output signal {id}")));
++        }
++    }
++    let record_count = if o.output_signals.is_empty() { graph.nodes.len() } else { o.output_signals.len() };
++    if record_count.saturating_mul(count) > 10_000_000 {
+         return Err(Error::Options(
+             "signal output budget exceeded (10 million values)".into(),
+         ));
+@@ -1370,6 +1379,7 @@ pub fn simulate_with_observer_and_budget(
+         signals: graph
+             .nodes
+             .iter()
++            .filter(|n| o.output_signals.is_empty() || o.output_signals.contains(&n.id))
+             .map(|n| (n.id.clone(), Vec::with_capacity(count)))
+             .collect(),
+         solver: o.solver,
+@@ -1451,7 +1461,7 @@ pub fn simulate_with_observer_and_budget(
+         }
+         trace.time.push(t);
+         for (i, node) in graph.nodes.iter().enumerate() {
+-            trace.signals.get_mut(&node.id).unwrap().push(values[i]);
++            if let Some(record) = trace.signals.get_mut(&node.id) { record.push(values[i]); }
+         }
+         if sample + 1 == count {
+             break;

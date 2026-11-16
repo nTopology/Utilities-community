@@ -202,5 +202,70 @@
    }
   }
  },
+ "flight_study": {
+  "note": "6-DOF block graph flown in the Unlinked command-line program (see flight/README.md); each flight repeated in the independent Python model flight/sim/verify/ref6dof.py with the same step. The package carries every signal at 30 Hz, not the full trace.",
+  "model": {
+   "file": "flight/sim/model/fury_6dof.mdl",
+   "sha256": "e4e778374905d12a88bf0b81229f8f87da5df53bada1209fea7854354f66a849"
+  },
+  "flights": {
+   "approach": {
+    "samples_flown": 42073,
+    "samples_in_the_package": 5260,
+    "signals": 122,
+    "python_reference_passed": true,
+    "largest_difference_relative_to_signal_scale": 3.7018998977345063e-13,
+    "on_signal": "cm"
+   },
+   "turn_5g_sl": {
+    "samples_flown": 10801,
+    "samples_in_the_package": 1351,
+    "signals": 122,
+    "python_reference_passed": true,
+    "largest_difference_relative_to_signal_scale": 2.398081733190338e-13,
+    "on_signal": "thrust_flag"
+   },
+   "turn_7g_sl": {
+    "samples_flown": 10801,
+    "samples_in_the_package": 1351,
+    "signals": 122,
+    "python_reference_passed": true,
+    "largest_difference_relative_to_signal_scale": 4.2177816794719547e-14,
+    "on_signal": "moment_n"
+   },
+   "turn_9g_sl": {
+    "samples_flown": 10801,
+    "samples_in_the_package": 1351,
+    "signals": 122,
+    "python_reference_passed": true,
+    "largest_difference_relative_to_signal_scale": 2.1373125491663814e-14,
+    "on_signal": "moment_n"
+   },
+   "turn_9g_360_sl": {
+    "samples_flown": 14401,
+    "samples_in_the_package": 1801,
+    "signals": 122,
+    "python_reference_passed": true,
+    "largest_difference_relative_to_signal_scale": 1.4165379980113357e-13,
+    "on_signal": "moment_n"
+   },
+   "turn_9g_15k": {
+    "samples_flown": 21601,
+    "samples_in_the_package": 2701,
+    "signals": 122,
+    "python_reference_passed": true,
+    "largest_difference_relative_to_signal_scale": 8.344613888766616e-14,
+    "on_signal": "moment_n"
+   },
+   "turn_5g_15k": {
+    "samples_flown": 21601,
+    "samples_in_the_package": 2701,
+    "signals": 122,
+    "python_reference_passed": true,
+    "largest_difference_relative_to_signal_scale": 3.2741809263825414e-14,
+    "on_signal": "moment_n"
+   }
+  }
+ },
  "cover_sha256": "6b18696e8d0c01c0eb5b6cc89d203e6d29f7637648c2af56f543da062889912d"
 }

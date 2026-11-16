@@ -1,0 +1,2307 @@
+{
+ "name": "Fury model, conventional tail, 15 % fuel, two missiles",
+ "case": "landing",
+ "maneuver": "landing approach: base turn, gear and flap down, 3 deg final, flare to touchdown",
+ "start": {
+  "mach": 0.24288641312543038,
+  "altitude_ft": 1200,
+  "speed_kt": 160.0,
+  "weight_lb": 4970
+ },
+ "duration_s": 175.3,
+ "units": "US customary: ft, kt (true airspeed), lbf, g, deg; converted from the stored SI trace",
+ "every_5_s": [
+  {
+   "t_s": 0.0,
+   "track_deg": 0.0,
+   "altitude_ft": 1200,
+   "speed_kt": 160.0,
+   "mach": 0.243,
+   "load_factor_g": 1.0,
+   "bank_deg": 0.0,
+   "alpha_deg": 5.53,
+   "pitch_deg": 5.53,
+   "climb_rate_fpm": 0,
+   "throttle": 0.135,
+   "thrust_lbf": 402,
+   "stabilator_deg": 0.59,
+   "flap_deg": 0.0,
+   "gear": 0.0,
+   "north_ft": 0,
+   "east_ft": 0
+  },
+  {
+   "t_s": 5.0,
+   "track_deg": 1.2,
+   "altitude_ft": 1200,
+   "speed_kt": 159.3,
+   "mach": 0.242,
+   "load_factor_g": 1.09,
+   "bank_deg": 28.4,
+   "alpha_deg": 6.13,
+   "pitch_deg": 6.48,
+   "climb_rate_fpm": 24,
+   "throttle": 0.172,
+   "thrust_lbf": 441,
+   "stabilator_deg": 0.16,
+   "flap_deg": 0.0,
+   "gear": 0.5,
+   "north_ft": 1349,
+   "east_ft": 1
+  },
+  {
+   "t_s": 10.0,
+   "track_deg": 20.6,
+   "altitude_ft": 1191,
+   "speed_kt": 155.6,
+   "mach": 0.236,
+   "load_factor_g": 1.12,
+   "bank_deg": 26.4,
+   "alpha_deg": 3.82,
+   "pitch_deg": 3.01,
+   "climb_rate_fpm": -150,
+   "throttle": 0.083,
+   "thrust_lbf": 339,
+   "stabilator_deg": -0.32,
+   "flap_deg": 14.8,
+   "gear": 1.0,
+   "north_ft": 2648,
+   "east_ft": 265
+  },
+  {
+   "t_s": 15.0,
+   "track_deg": 38.0,
+   "altitude_ft": 1186,
+   "speed_kt": 144.8,
+   "mach": 0.22,
+   "load_factor_g": 1.13,
+   "bank_deg": 26.4,
+   "alpha_deg": 3.04,
+   "pitch_deg": 2.89,
+   "climb_rate_fpm": 6,
+   "throttle": 0.097,
+   "thrust_lbf": 275,
+   "stabilator_deg": -0.78,
+   "flap_deg": 30.0,
+   "gear": 1.0,
+   "north_ft": 3756,
+   "east_ft": 880
+  },
+  {
+   "t_s": 20.0,
+   "track_deg": 59.2,
+   "altitude_ft": 1192,
+   "speed_kt": 132.7,
+   "mach": 0.202,
+   "load_factor_g": 1.15,
+   "bank_deg": 30.4,
+   "alpha_deg": 4.67,
+   "pitch_deg": 4.62,
+   "climb_rate_fpm": 95,
+   "throttle": 0.127,
+   "thrust_lbf": 356,
+   "stabilator_deg": -1.0,
+   "flap_deg": 30.0,
+   "gear": 1.0,
+   "north_ft": 4535,
+   "east_ft": 1744
+  },
+  {
+   "t_s": 25.0,
+   "track_deg": 84.0,
+   "altitude_ft": 1196,
+   "speed_kt": 122.7,
+   "mach": 0.186,
+   "load_factor_g": 1.15,
+   "bank_deg": 30.2,
+   "alpha_deg": 6.27,
+   "pitch_deg": 5.62,
+   "climb_rate_fpm": 7,
+   "throttle": 0.129,
+   "thrust_lbf": 391,
+   "stabilator_deg": -1.25,
+   "flap_deg": 30.0,
+   "gear": 1.0,
+   "north_ft": 4878,
+   "east_ft": 2756
+  },
+  {
+   "t_s": 30.0,
+   "track_deg": 89.7,
+   "altitude_ft": 1197,
+   "speed_kt": 112.7,
+   "mach": 0.171,
+   "load_factor_g": 1.01,
+   "bank_deg": -2.2,
+   "alpha_deg": 6.65,
+   "pitch_deg": 6.61,
+   "climb_rate_fpm": -5,
+   "throttle": 0.062,
+   "thrust_lbf": 199,
+   "stabilator_deg": -1.01,
+   "flap_deg": 30.0,
+   "gear": 1.0,
+   "north_ft": 4881,
+   "east_ft": 3750
+  },
+  {
+   "t_s": 35.0,
+   "track_deg": 90.0,
+   "altitude_ft": 1198,
+   "speed_kt": 103.3,
+   "mach": 0.157,
+   "load_factor_g": 1.0,
+   "bank_deg": -0.7,
+   "alpha_deg": 8.78,
+   "pitch_deg": 8.93,
+   "climb_rate_fpm": 27,
+   "throttle": 0.258,
+   "thrust_lbf": 587,
+   "stabilator_deg": -1.37,
+   "flap_deg": 30.0,
+   "gear": 1.0,
+   "north_ft": 4882,
+   "east_ft": 4657
+  },
+  {
+   "t_s": 40.0,
+   "track_deg": 90.0,
+   "altitude_ft": 1202,
+   "speed_kt": 102.9,
+   "mach": 0.156,
+   "load_factor_g": 0.98,
+   "bank_deg": -0.1,
+   "alpha_deg": 8.62,
+   "pitch_deg": 9.02,
+   "climb_rate_fpm": 73,
+   "throttle": 0.366,
+   "thrust_lbf": 1039,
+   "stabilator_deg": -1.54,
+   "flap_deg": 30.0,
+   "gear": 1.0,
+   "north_ft": 4883,
+   "east_ft": 5521
+  },
+  {
+   "t_s": 45.0,
+   "track_deg": 90.0,
+   "altitude_ft": 1206,
+   "speed_kt": 107.6,
+   "mach": 0.163,
+   "load_factor_g": 0.98,
+   "bank_deg": 0.0,
+   "alpha_deg": 7.48,
+   "pitch_deg": 7.54,
+   "climb_rate_fpm": 12,
+   "throttle": 0.33,
+   "thrust_lbf": 1040,
+   "stabilator_deg": -1.41,
+   "flap_deg": 30.0,
+   "gear": 1.0,
+   "north_ft": 4883,
+   "east_ft": 6408
+  },
+  {
+   "t_s": 50.0,
+   "track_deg": 90.0,
+   "altitude_ft": 1193,
+   "speed_kt": 112.5,
+   "mach": 0.171,
+   "load_factor_g": 0.95,
+   "bank_deg": 0.0,
+   "alpha_deg": 6.11,
+   "pitch_deg": 4.09,
+   "climb_rate_fpm": -403,
+   "throttle": 0.224,
+   "thrust_lbf": 779,
+   "stabilator_deg": -1.14,
+   "flap_deg": 30.0,
+   "gear": 1.0,
+   "north_ft": 4883,
+   "east_ft": 7337
+  },
+  {
+   "t_s": 55.0,
+   "track_deg": 90.0,
+   "altitude_ft": 1146,
+   "speed_kt": 114.3,
+   "mach": 0.174,
+   "load_factor_g": 0.99,
+   "bank_deg": 0.0,
+   "alpha_deg": 6.18,
+   "pitch_deg": 2.97,
+   "climb_rate_fpm": -649,
+   "throttle": 0.132,
+   "thrust_lbf": 465,
+   "stabilator_deg": -1.04,
+   "flap_deg": 30.0,
+   "gear": 1.0,
+   "north_ft": 4883,
+   "east_ft": 8296
+  },
+  {
+   "t_s": 60.0,
+   "track_deg": 90.0,
+   "altitude_ft": 1092,
+   "speed_kt": 112.5,
+   "mach": 0.171,
+   "load_factor_g": 1.01,
+   "bank_deg": -0.0,
+   "alpha_deg": 6.66,
+   "pitch_deg": 3.47,
+   "climb_rate_fpm": -632,
+   "throttle": 0.126,
+   "thrust_lbf": 374,
+   "stabilator_deg": -1.06,
+   "flap_deg": 30.0,
+   "gear": 1.0,
+   "north_ft": 4883,
+   "east_ft": 9254
+  },
+  {
+   "t_s": 65.0,
+   "track_deg": 90.0,
+   "altitude_ft": 1042,
+   "speed_kt": 110.3,
+   "mach": 0.167,
+   "load_factor_g": 1.0,
+   "bank_deg": -0.0,
+   "alpha_deg": 7.06,
+   "pitch_deg": 4.07,
+   "climb_rate_fpm": -584,
+   "throttle": 0.155,
+   "thrust_lbf": 443,
+   "stabilator_deg": -1.12,
+   "flap_deg": 30.0,
+   "gear": 1.0,
+   "north_ft": 4883,
+   "east_ft": 10191
+  },
+  {
+   "t_s": 70.0,
+   "track_deg": 90.0,
+   "altitude_ft": 994,
+   "speed_kt": 109.3,
+   "mach": 0.166,
+   "load_factor_g": 1.0,
+   "bank_deg": -0.0,
+   "alpha_deg": 7.2,
+   "pitch_deg": 4.25,
+   "climb_rate_fpm": -571,
+   "throttle": 0.179,
+   "thrust_lbf": 524,
+   "stabilator_deg": -1.16,
+   "flap_deg": 30.0,
+   "gear": 1.0,
+   "north_ft": 4883,
+   "east_ft": 11116
+  },
+  {
+   "t_s": 75.0,
+   "track_deg": 90.0,
+   "altitude_ft": 946,
+   "speed_kt": 109.5,
+   "mach": 0.166,
+   "load_factor_g": 1.0,
+   "bank_deg": 0.0,
+   "alpha_deg": 7.13,
+   "pitch_deg": 4.15,
+   "climb_rate_fpm": -577,
+   "throttle": 0.182,
+   "thrust_lbf": 553,
+   "stabilator_deg": -1.17,
+   "flap_deg": 30.0,
+   "gear": 1.0,
+   "north_ft": 4883,
+   "east_ft": 12038
+  },
+  {
+   "t_s": 80.0,
+   "track_deg": 90.0,
+   "altitude_ft": 898,
+   "speed_kt": 110.0,
+   "mach": 0.167,
+   "load_factor_g": 1.0,
+   "bank_deg": 0.0,
+   "alpha_deg": 7.03,
+   "pitch_deg": 4.03,
+   "climb_rate_fpm": -584,
+   "throttle": 0.177,
+   "thrust_lbf": 542,
+   "stabilator_deg": -1.15,
+   "flap_deg": 30.0,
+   "gear": 1.0,
+   "north_ft": 4883,
+   "east_ft": 12963
+  },
+  {
+   "t_s": 85.0,
+   "track_deg": 90.0,
+   "altitude_ft": 849,
+   "speed_kt": 110.1,
+   "mach": 0.167,
+   "load_factor_g": 1.0,
+   "bank_deg": -0.0,
+   "alpha_deg": 6.99,
+   "pitch_deg": 3.98,
+   "climb_rate_fpm": -585,
+   "throttle": 0.172,
+   "thrust_lbf": 527,
+   "stabilator_deg": -1.14,
+   "flap_deg": 30.0,
+   "gear": 1.0,
+   "north_ft": 4883,
+   "east_ft": 13890
+  },
+  {
+   "t_s": 90.0,
+   "track_deg": 90.0,
+   "altitude_ft": 800,
+   "speed_kt": 110.1,
+   "mach": 0.167,
+   "load_factor_g": 1.0,
+   "bank_deg": -0.0,
+   "alpha_deg": 6.98,
+   "pitch_deg": 3.97,
+   "climb_rate_fpm": -584,
+   "throttle": 0.171,
+   "thrust_lbf": 522,
+   "stabilator_deg": -1.14,
+   "flap_deg": 30.0,
+   "gear": 1.0,
+   "north_ft": 4883,
+   "east_ft": 14818
+  },
+  {
+   "t_s": 95.0,
+   "track_deg": 90.0,
+   "altitude_ft": 752,
+   "speed_kt": 110.0,
+   "mach": 0.167,
+   "load_factor_g": 1.0,
+   "bank_deg": -0.0,
+   "alpha_deg": 6.97,
+   "pitch_deg": 3.97,
+   "climb_rate_fpm": -583,
+   "throttle": 0.171,
+   "thrust_lbf": 523,
+   "stabilator_deg": -1.14,
+   "flap_deg": 30.0,
+   "gear": 1.0,
+   "north_ft": 4883,
+   "east_ft": 15746
+  },
+  {
+   "t_s": 100.0,
+   "track_deg": 90.0,
+   "altitude_ft": 703,
+   "speed_kt": 110.0,
+   "mach": 0.167,
+   "load_factor_g": 1.0,
+   "bank_deg": 0.0,
+   "alpha_deg": 6.96,
+   "pitch_deg": 3.96,
+   "climb_rate_fpm": -583,
+   "throttle": 0.171,
+   "thrust_lbf": 525,
+   "stabilator_deg": -1.14,
+   "flap_deg": 30.0,
+   "gear": 1.0,
+   "north_ft": 4883,
+   "east_ft": 16673
+  },
+  {
+   "t_s": 105.0,
+   "track_deg": 90.0,
+   "altitude_ft": 654,
+   "speed_kt": 110.0,
+   "mach": 0.167,
+   "load_factor_g": 1.0,
+   "bank_deg": 0.0,
+   "alpha_deg": 6.94,
+   "pitch_deg": 3.94,
+   "climb_rate_fpm": -583,
+   "throttle": 0.171,
+   "thrust_lbf": 525,
+   "stabilator_deg": -1.14,
+   "flap_deg": 30.0,
+   "gear": 1.0,
+   "north_ft": 4883,
+   "east_ft": 17601
+  },
+  {
+   "t_s": 110.0,
+   "track_deg": 90.0,
+   "altitude_ft": 606,
+   "speed_kt": 110.0,
+   "mach": 0.167,
+   "load_factor_g": 1.0,
+   "bank_deg": -0.0,
+   "alpha_deg": 6.93,
+   "pitch_deg": 3.93,
+   "climb_rate_fpm": -583,
+   "throttle": 0.171,
+   "thrust_lbf": 525,
+   "stabilator_deg": -1.14,
+   "flap_deg": 30.0,
+   "gear": 1.0,
+   "north_ft": 4883,
+   "east_ft": 18528
+  },
+  {
+   "t_s": 115.0,
+   "track_deg": 90.0,
+   "altitude_ft": 557,
+   "speed_kt": 110.0,
+   "mach": 0.167,
+   "load_factor_g": 1.0,
+   "bank_deg": -0.0,
+   "alpha_deg": 6.91,
+   "pitch_deg": 3.91,
+   "climb_rate_fpm": -583,
+   "throttle": 0.17,
+   "thrust_lbf": 524,
+   "stabilator_deg": -1.13,
+   "flap_deg": 30.0,
+   "gear": 1.0,
+   "north_ft": 4883,
+   "east_ft": 19455
+  },
+  {
+   "t_s": 120.0,
+   "track_deg": 90.0,
+   "altitude_ft": 509,
+   "speed_kt": 110.0,
+   "mach": 0.167,
+   "load_factor_g": 1.0,
+   "bank_deg": -0.0,
+   "alpha_deg": 6.89,
+   "pitch_deg": 3.89,
+   "climb_rate_fpm": -583,
+   "throttle": 0.17,
+   "thrust_lbf": 523,
+   "stabilator_deg": -1.13,
+   "flap_deg": 30.0,
+   "gear": 1.0,
+   "north_ft": 4883,
+   "east_ft": 20382
+  },
+  {
+   "t_s": 125.0,
+   "track_deg": 90.0,
+   "altitude_ft": 460,
+   "speed_kt": 110.0,
+   "mach": 0.167,
+   "load_factor_g": 1.0,
+   "bank_deg": -0.0,
+   "alpha_deg": 6.88,
+   "pitch_deg": 3.88,
+   "climb_rate_fpm": -583,
+   "throttle": 0.169,
+   "thrust_lbf": 523,
+   "stabilator_deg": -1.13,
+   "flap_deg": 30.0,
+   "gear": 1.0,
+   "north_ft": 4883,
+   "east_ft": 21310
+  },
+  {
+   "t_s": 130.0,
+   "track_deg": 90.0,
+   "altitude_ft": 411,
+   "speed_kt": 110.0,
+   "mach": 0.167,
+   "load_factor_g": 1.0,
+   "bank_deg": -0.0,
+   "alpha_deg": 6.86,
+   "pitch_deg": 3.86,
+   "climb_rate_fpm": -583,
+   "throttle": 0.169,
+   "thrust_lbf": 523,
+   "stabilator_deg": -1.13,
+   "flap_deg": 30.0,
+   "gear": 1.0,
+   "north_ft": 4883,
+   "east_ft": 22237
+  },
+  {
+   "t_s": 135.0,
+   "track_deg": 90.0,
+   "altitude_ft": 363,
+   "speed_kt": 110.0,
+   "mach": 0.167,
+   "load_factor_g": 1.0,
+   "bank_deg": -0.0,
+   "alpha_deg": 6.85,
+   "pitch_deg": 3.85,
+   "climb_rate_fpm": -583,
+   "throttle": 0.168,
+   "thrust_lbf": 522,
+   "stabilator_deg": -1.13,
+   "flap_deg": 30.0,
+   "gear": 1.0,
+   "north_ft": 4883,
+   "east_ft": 23164
+  },
+  {
+   "t_s": 140.0,
+   "track_deg": 90.0,
+   "altitude_ft": 314,
+   "speed_kt": 110.0,
+   "mach": 0.167,
+   "load_factor_g": 1.0,
+   "bank_deg": -0.0,
+   "alpha_deg": 6.83,
+   "pitch_deg": 3.83,
+   "climb_rate_fpm": -583,
+   "throttle": 0.168,
+   "thrust_lbf": 522,
+   "stabilator_deg": -1.13,
+   "flap_deg": 30.0,
+   "gear": 1.0,
+   "north_ft": 4883,
+   "east_ft": 24092
+  },
+  {
+   "t_s": 145.0,
+   "track_deg": 90.0,
+   "altitude_ft": 266,
+   "speed_kt": 110.0,
+   "mach": 0.166,
+   "load_factor_g": 1.0,
+   "bank_deg": -0.0,
+   "alpha_deg": 6.81,
+   "pitch_deg": 3.81,
+   "climb_rate_fpm": -583,
+   "throttle": 0.168,
+   "thrust_lbf": 522,
+   "stabilator_deg": -1.12,
+   "flap_deg": 30.0,
+   "gear": 1.0,
+   "north_ft": 4883,
+   "east_ft": 25019
+  },
+  {
+   "t_s": 150.0,
+   "track_deg": 90.0,
+   "altitude_ft": 217,
+   "speed_kt": 110.0,
+   "mach": 0.166,
+   "load_factor_g": 1.0,
+   "bank_deg": -0.0,
+   "alpha_deg": 6.8,
+   "pitch_deg": 3.8,
+   "climb_rate_fpm": -583,
+   "throttle": 0.167,
+   "thrust_lbf": 521,
+   "stabilator_deg": -1.12,
+   "flap_deg": 30.0,
+   "gear": 1.0,
+   "north_ft": 4883,
+   "east_ft": 25946
+  },
+  {
+   "t_s": 155.0,
+   "track_deg": 90.0,
+   "altitude_ft": 168,
+   "speed_kt": 110.0,
+   "mach": 0.166,
+   "load_factor_g": 1.0,
+   "bank_deg": -0.0,
+   "alpha_deg": 6.78,
+   "pitch_deg": 3.78,
+   "climb_rate_fpm": -583,
+   "throttle": 0.167,
+   "thrust_lbf": 521,
+   "stabilator_deg": -1.12,
+   "flap_deg": 30.0,
+   "gear": 1.0,
+   "north_ft": 4883,
+   "east_ft": 26873
+  },
+  {
+   "t_s": 160.0,
+   "track_deg": 90.0,
+   "altitude_ft": 120,
+   "speed_kt": 110.0,
+   "mach": 0.166,
+   "load_factor_g": 1.0,
+   "bank_deg": -0.0,
+   "alpha_deg": 6.77,
+   "pitch_deg": 3.77,
+   "climb_rate_fpm": -583,
+   "throttle": 0.166,
+   "thrust_lbf": 521,
+   "stabilator_deg": -1.12,
+   "flap_deg": 30.0,
+   "gear": 1.0,
+   "north_ft": 4883,
+   "east_ft": 27801
+  },
+  {
+   "t_s": 165.0,
+   "track_deg": 90.0,
+   "altitude_ft": 71,
+   "speed_kt": 110.0,
+   "mach": 0.166,
+   "load_factor_g": 1.0,
+   "bank_deg": -0.0,
+   "alpha_deg": 6.75,
+   "pitch_deg": 3.75,
+   "climb_rate_fpm": -583,
+   "throttle": 0.166,
+   "thrust_lbf": 520,
+   "stabilator_deg": -1.12,
+   "flap_deg": 30.0,
+   "gear": 1.0,
+   "north_ft": 4883,
+   "east_ft": 28728
+  },
+  {
+   "t_s": 170.0,
+   "track_deg": 90.0,
+   "altitude_ft": 27,
+   "speed_kt": 107.3,
+   "mach": 0.162,
+   "load_factor_g": 1.04,
+   "bank_deg": -0.0,
+   "alpha_deg": 7.73,
+   "pitch_deg": 5.93,
+   "climb_rate_fpm": -341,
+   "throttle": 0.05,
+   "thrust_lbf": 229,
+   "stabilator_deg": -1.13,
+   "flap_deg": 30.0,
+   "gear": 1.0,
+   "north_ft": 4883,
+   "east_ft": 29651
+  },
+  {
+   "t_s": 175.0,
+   "track_deg": 90.0,
+   "altitude_ft": 6,
+   "speed_kt": 96.9,
+   "mach": 0.146,
+   "load_factor_g": 1.01,
+   "bank_deg": -0.0,
+   "alpha_deg": 10.12,
+   "pitch_deg": 8.91,
+   "climb_rate_fpm": -208,
+   "throttle": 0.05,
+   "thrust_lbf": 160,
+   "stabilator_deg": -1.34,
+   "flap_deg": 30.0,
+   "gear": 1.0,
+   "north_ft": 4883,
+   "east_ft": 30515
+  },
+  {
+   "t_s": 175.3,
+   "track_deg": 90.0,
+   "altitude_ft": 5,
+   "speed_kt": 96.2,
+   "mach": 0.145,
+   "load_factor_g": 1.01,
+   "bank_deg": -0.0,
+   "alpha_deg": 10.34,
+   "pitch_deg": 9.13,
+   "climb_rate_fpm": -204,
+   "throttle": 0.05,
+   "thrust_lbf": 160,
+   "stabilator_deg": -1.36,
+   "flap_deg": 30.0,
+   "gear": 1.0,
+   "north_ft": 4883,
+   "east_ft": 30564
+  }
+ ],
+ "extremes": {
+  "altitude_ft": [
+   5.0,
+   1207.0
+  ],
+  "speed_kt": [
+   96.2,
+   160.0
+  ],
+  "mach": [
+   0.145,
+   0.243
+  ],
+  "load_factor_g": [
+   0.93,
+   1.19
+  ],
+  "bank_deg": [
+   -6.4,
+   38.7
+  ],
+  "alpha_deg": [
+   2.78,
+   10.34
+  ],
+  "sideslip_deg": [
+   -0.63,
+   2.21
+  ],
+  "roll_rate_deg_s": [
+   -16.5,
+   39.7
+  ],
+  "climb_rate_fpm": [
+   -658.0,
+   106.0
+  ],
+  "thrust_lbf": [
+   160.0,
+   1086.0
+  ],
+  "stabilator_deg": [
+   -3.08,
+   0.59
+  ],
+  "flaperon_deg": [
+   -4.94,
+   34.24
+  ],
+  "rudder_deg": [
+   -5.61,
+   3.14
+  ]
+ },
+ "limits": {
+  "load_factor_g": [
+   -3.0,
+   9.0
+  ],
+  "alpha_limiter_deg": [
+   -6.0,
+   15.86847821671216
+  ],
+  "alpha_of_lift_maximum_deg": 16.868478216712163,
+  "roll_rate_command_deg_s": 119.99999999999999
+ },
+ "limiters": {
+  "alpha_limiter_s": 0.0,
+  "load_factor_command_at_structural_limit_s": 0.0,
+  "throttle_full_s": 0.0,
+  "throttle_idle_s": 7.591666666666667
+ },
+ "saturation_s": {
+  "stabilator_position": 0.0,
+  "stabilator_rate": 0.0,
+  "flaperon_position": 0.0,
+  "flaperon_rate": 0.0,
+  "rudder_position": 0.0,
+  "rudder_rate": 0.0
+ },
+ "warnings": [],
+ "segments": [
+  {
+   "start": 0.0,
+   "stop": 143.8,
+   "samples": 34513,
+   "engine_wall_s": 13.18229089997476,
+   "structural_pass": true,
+   "breakpoints": 13
+  },
+  {
+   "start": 143.8,
+   "stop": 144.05,
+   "samples": 61,
+   "engine_wall_s": 0.5621921999845654,
+   "structural_pass": true,
+   "breakpoints": 3
+  },
+  {
+   "start": 144.05,
+   "stop": 144.3,
+   "samples": 61,
+   "engine_wall_s": 0.36567359999753535,
+   "structural_pass": true,
+   "breakpoints": 3
+  },
+  {
+   "start": 144.3,
+   "stop": 144.55,
+   "samples": 61,
+   "engine_wall_s": 0.3942707999958657,
+   "structural_pass": true,
+   "breakpoints": 3
+  },
+  {
+   "start": 144.55,
+   "stop": 144.8,
+   "samples": 61,
+   "engine_wall_s": 1.2700338000431657,
+   "structural_pass": true,
+   "breakpoints": 3
+  },
+  {
+   "start": 144.8,
+   "stop": 145.05,
+   "samples": 61,
+   "engine_wall_s": 0.8748761999886483,
+   "structural_pass": true,
+   "breakpoints": 3
+  },
+  {
+   "start": 145.05,
+   "stop": 145.3,
+   "samples": 61,
+   "engine_wall_s": 0.7508842999814078,
+   "structural_pass": true,
+   "breakpoints": 3
+  },
+  {
+   "start": 145.3,
+   "stop": 145.55,
+   "samples": 61,
+   "engine_wall_s": 0.9485101000173017,
+   "structural_pass": true,
+   "breakpoints": 3
+  },
+  {
+   "start": 145.55,
+   "stop": 145.8,
+   "samples": 61,
+   "engine_wall_s": 0.33484409999800846,
+   "structural_pass": true,
+   "breakpoints": 3
+  },
+  {
+   "start": 145.8,
+   "stop": 146.05,
+   "samples": 61,
+   "engine_wall_s": 0.7409673000220209,
+   "structural_pass": true,
+   "breakpoints": 3
+  },
+  {
+   "start": 146.05,
+   "stop": 146.3,
+   "samples": 61,
+   "engine_wall_s": 0.49044929997762665,
+   "structural_pass": true,
+   "breakpoints": 3
+  },
+  {
+   "start": 146.3,
+   "stop": 146.55,
+   "samples": 61,
+   "engine_wall_s": 0.9035803000442684,
+   "structural_pass": true,
+   "breakpoints": 3
+  },
+  {
+   "start": 146.55,
+   "stop": 146.8,
+   "samples": 61,
+   "engine_wall_s": 0.6873164999997243,
+   "structural_pass": true,
+   "breakpoints": 3
+  },
+  {
+   "start": 146.8,
+   "stop": 147.05,
+   "samples": 61,
+   "engine_wall_s": 0.7704738000174984,
+   "structural_pass": true,
+   "breakpoints": 3
+  },
+  {
+   "start": 147.05,
+   "stop": 147.3,
+   "samples": 61,
+   "engine_wall_s": 0.567016799992416,
+   "structural_pass": true,
+   "breakpoints": 3
+  },
+  {
+   "start": 147.3,
+   "stop": 147.55,
+   "samples": 61,
+   "engine_wall_s": 0.6738330000080168,
+   "structural_pass": true,
+   "breakpoints": 3
+  },
+  {
+   "start": 147.55,
+   "stop": 147.8,
+   "samples": 61,
+   "engine_wall_s": 0.9575515000033192,
+   "structural_pass": true,
+   "breakpoints": 3
+  },
+  {
+   "start": 147.8,
+   "stop": 148.05,
+   "samples": 61,
+   "engine_wall_s": 0.6798582000192255,
+   "structural_pass": true,
+   "breakpoints": 3
+  },
+  {
+   "start": 148.05,
+   "stop": 148.3,
+   "samples": 61,
+   "engine_wall_s": 0.4511494000325911,
+   "structural_pass": true,
+   "breakpoints": 3
+  },
+  {
+   "start": 148.3,
+   "stop": 148.55,
+   "samples": 61,
+   "engine_wall_s": 0.39861189998919144,
+   "structural_pass": true,
+   "breakpoints": 3
+  },
+  {
+   "start": 148.55,
+   "stop": 148.8,
+   "samples": 61,
+   "engine_wall_s": 0.41030380001757294,
+   "structural_pass": true,
+   "breakpoints": 3
+  },
+  {
+   "start": 148.8,
+   "stop": 149.05,
+   "samples": 61,
+   "engine_wall_s": 0.6972381999948993,
+   "structural_pass": true,
+   "breakpoints": 3
+  },
+  {
+   "start": 149.05,
+   "stop": 149.3,
+   "samples": 61,
+   "engine_wall_s": 0.7394339999882504,
+   "structural_pass": true,
+   "breakpoints": 3
+  },
+  {
+   "start": 149.3,
+   "stop": 149.55,
+   "samples": 61,
+   "engine_wall_s": 0.63791879999917,
+   "structural_pass": true,
+   "breakpoints": 3
+  },
+  {
+   "start": 149.55,
+   "stop": 149.8,
+   "samples": 61,
+   "engine_wall_s": 0.534085099992808,
+   "structural_pass": true,
+   "breakpoints": 3
+  },
+  {
+   "start": 149.8,
+   "stop": 150.05,
+   "samples": 61,
+   "engine_wall_s": 0.4152190000168048,
+   "structural_pass": true,
+   "breakpoints": 3
+  },
+  {
+   "start": 150.05,
+   "stop": 150.3,
+   "samples": 61,
+   "engine_wall_s": 0.41154639999149367,
+   "structural_pass": true,
+   "breakpoints": 3
+  },
+  {
+   "start": 150.3,
+   "stop": 150.55,
+   "samples": 61,
+   "engine_wall_s": 0.5542307000141591,
+   "structural_pass": true,
+   "breakpoints": 3
+  },
+  {
+   "start": 150.55,
+   "stop": 150.8,
+   "samples": 61,
+   "engine_wall_s": 0.5310890999971889,
+   "structural_pass": true,
+   "breakpoints": 3
+  },
+  {
+   "start": 150.8,
+   "stop": 151.05,
+   "samples": 61,
+   "engine_wall_s": 0.5318239000043832,
+   "structural_pass": true,
+   "breakpoints": 3
+  },
+  {
+   "start": 151.05,
+   "stop": 151.3,
+   "samples": 61,
+   "engine_wall_s": 0.5495816000038758,
+   "structural_pass": true,
+   "breakpoints": 3
+  },
+  {
+   "start": 151.3,
+   "stop": 151.55,
+   "samples": 61,
+   "engine_wall_s": 0.48916040000040084,
+   "structural_pass": true,
+   "breakpoints": 3
+  },
+  {
+   "start": 151.55,
+   "stop": 151.8,
+   "samples": 61,
+   "engine_wall_s": 0.7573420000262558,
+   "structural_pass": true,
+   "breakpoints": 3
+  },
+  {
+   "start": 151.8,
+   "stop": 152.05,
+   "samples": 61,
+   "engine_wall_s": 0.6174131999723613,
+   "structural_pass": true,
+   "breakpoints": 3
+  },
+  {
+   "start": 152.05,
+   "stop": 152.3,
+   "samples": 61,
+   "engine_wall_s": 0.915934799995739,
+   "structural_pass": true,
+   "breakpoints": 3
+  },
+  {
+   "start": 152.3,
+   "stop": 152.55,
+   "samples": 61,
+   "engine_wall_s": 0.5297017000266351,
+   "structural_pass": true,
+   "breakpoints": 3
+  },
+  {
+   "start": 152.55,
+   "stop": 152.8,
+   "samples": 61,
+   "engine_wall_s": 0.8303444000193849,
+   "structural_pass": true,
+   "breakpoints": 3
+  },
+  {
+   "start": 152.8,
+   "stop": 153.05,
+   "samples": 61,
+   "engine_wall_s": 0.5737522999988869,
+   "structural_pass": true,
+   "breakpoints": 3
+  },
+  {
+   "start": 153.05,
+   "stop": 153.3,
+   "samples": 61,
+   "engine_wall_s": 0.898336999991443,
+   "structural_pass": true,
+   "breakpoints": 3
+  },
+  {
+   "start": 153.3,
+   "stop": 153.55,
+   "samples": 61,
+   "engine_wall_s": 0.4956658000010066,
+   "structural_pass": true,
+   "breakpoints": 3
+  },
+  {
+   "start": 153.55,
+   "stop": 153.8,
+   "samples": 61,
+   "engine_wall_s": 0.4768556000199169,
+   "structural_pass": true,
+   "breakpoints": 3
+  },
+  {
+   "start": 153.8,
+   "stop": 154.05,
+   "samples": 61,
+   "engine_wall_s": 0.3089363999897614,
+   "structural_pass": true,
+   "breakpoints": 3
+  },
+  {
+   "start": 154.05,
+   "stop": 154.3,
+   "samples": 61,
+   "engine_wall_s": 0.38490589999128133,
+   "structural_pass": true,
+   "breakpoints": 3
+  },
+  {
+   "start": 154.3,
+   "stop": 154.55,
+   "samples": 61,
+   "engine_wall_s": 0.4051630000467412,
+   "structural_pass": true,
+   "breakpoints": 3
+  },
+  {
+   "start": 154.55,
+   "stop": 154.8,
+   "samples": 61,
+   "engine_wall_s": 0.37642099999357015,
+   "structural_pass": true,
+   "breakpoints": 3
+  },
+  {
+   "start": 154.8,
+   "stop": 155.05,
+   "samples": 61,
+   "engine_wall_s": 0.31892460002563894,
+   "structural_pass": true,
+   "breakpoints": 3
+  },
+  {
+   "start": 155.05,
+   "stop": 155.3,
+   "samples": 61,
+   "engine_wall_s": 0.27705700002843514,
+   "structural_pass": true,
+   "breakpoints": 3
+  },
+  {
+   "start": 155.3,
+   "stop": 155.55,
+   "samples": 61,
+   "engine_wall_s": 0.3744859999860637,
+   "structural_pass": true,
+   "breakpoints": 3
+  },
+  {
+   "start": 155.55,
+   "stop": 155.8,
+   "samples": 61,
+   "engine_wall_s": 0.25383249996230006,
+   "structural_pass": true,
+   "breakpoints": 3
+  },
+  {
+   "start": 155.8,
+   "stop": 156.05,
+   "samples": 61,
+   "engine_wall_s": 0.383734299975913,
+   "structural_pass": true,
+   "breakpoints": 3
+  },
+  {
+   "start": 156.05,
+   "stop": 156.3,
+   "samples": 61,
+   "engine_wall_s": 0.5001386000076309,
+   "structural_pass": true,
+   "breakpoints": 3
+  },
+  {
+   "start": 156.3,
+   "stop": 156.55,
+   "samples": 61,
+   "engine_wall_s": 0.5508625999791548,
+   "structural_pass": true,
+   "breakpoints": 3
+  },
+  {
+   "start": 156.55,
+   "stop": 156.8,
+   "samples": 61,
+   "engine_wall_s": 0.4738039000076242,
+   "structural_pass": true,
+   "breakpoints": 3
+  },
+  {
+   "start": 156.8,
+   "stop": 157.05,
+   "samples": 61,
+   "engine_wall_s": 0.6376375000108965,
+   "structural_pass": true,
+   "breakpoints": 3
+  },
+  {
+   "start": 157.05,
+   "stop": 157.3,
+   "samples": 61,
+   "engine_wall_s": 0.6756314999656752,
+   "structural_pass": true,
+   "breakpoints": 3
+  },
+  {
+   "start": 157.3,
+   "stop": 157.55,
+   "samples": 61,
+   "engine_wall_s": 0.46672009996837005,
+   "structural_pass": true,
+   "breakpoints": 3
+  },
+  {
+   "start": 157.55,
+   "stop": 157.8,
+   "samples": 61,
+   "engine_wall_s": 0.7736973999999464,
+   "structural_pass": true,
+   "breakpoints": 3
+  },
+  {
+   "start": 157.8,
+   "stop": 158.05,
+   "samples": 61,
+   "engine_wall_s": 0.4586623999639414,
+   "structural_pass": true,
+   "breakpoints": 3
+  },
+  {
+   "start": 158.05,
+   "stop": 158.3,
+   "samples": 61,
+   "engine_wall_s": 0.36728210002183914,
+   "structural_pass": true,
+   "breakpoints": 3
+  },
+  {
+   "start": 158.3,
+   "stop": 158.55,
+   "samples": 61,
+   "engine_wall_s": 0.6139490999630652,
+   "structural_pass": true,
+   "breakpoints": 3
+  },
+  {
+   "start": 158.55,
+   "stop": 158.8,
+   "samples": 61,
+   "engine_wall_s": 0.4459910999867134,
+   "structural_pass": true,
+   "breakpoints": 3
+  },
+  {
+   "start": 158.8,
+   "stop": 159.05,
+   "samples": 61,
+   "engine_wall_s": 0.4548149999463931,
+   "structural_pass": true,
+   "breakpoints": 3
+  },
+  {
+   "start": 159.05,
+   "stop": 159.3,
+   "samples": 61,
+   "engine_wall_s": 0.5156913999817334,
+   "structural_pass": true,
+   "breakpoints": 3
+  },
+  {
+   "start": 159.3,
+   "stop": 159.55,
+   "samples": 61,
+   "engine_wall_s": 0.3780069000204094,
+   "structural_pass": true,
+   "breakpoints": 3
+  },
+  {
+   "start": 159.55,
+   "stop": 159.8,
+   "samples": 61,
+   "engine_wall_s": 0.2893282999866642,
+   "structural_pass": true,
+   "breakpoints": 3
+  },
+  {
+   "start": 159.8,
+   "stop": 160.05,
+   "samples": 61,
+   "engine_wall_s": 0.5097991999937221,
+   "structural_pass": true,
+   "breakpoints": 3
+  },
+  {
+   "start": 160.05,
+   "stop": 160.3,
+   "samples": 61,
+   "engine_wall_s": 0.3284657000331208,
+   "structural_pass": true,
+   "breakpoints": 3
+  },
+  {
+   "start": 160.3,
+   "stop": 160.55,
+   "samples": 61,
+   "engine_wall_s": 0.4436100000166334,
+   "structural_pass": true,
+   "breakpoints": 3
+  },
+  {
+   "start": 160.55,
+   "stop": 160.8,
+   "samples": 61,
+   "engine_wall_s": 0.6000901999650523,
+   "structural_pass": true,
+   "breakpoints": 3
+  },
+  {
+   "start": 160.8,
+   "stop": 161.05,
+   "samples": 61,
+   "engine_wall_s": 0.3921242000069469,
+   "structural_pass": true,
+   "breakpoints": 3
+  },
+  {
+   "start": 161.05,
+   "stop": 161.3,
+   "samples": 61,
+   "engine_wall_s": 0.5345922000124119,
+   "structural_pass": true,
+   "breakpoints": 3
+  },
+  {
+   "start": 161.3,
+   "stop": 161.55,
+   "samples": 61,
+   "engine_wall_s": 0.7217086000018753,
+   "structural_pass": true,
+   "breakpoints": 3
+  },
+  {
+   "start": 161.55,
+   "stop": 161.8,
+   "samples": 61,
+   "engine_wall_s": 0.9132405000273138,
+   "structural_pass": true,
+   "breakpoints": 3
+  },
+  {
+   "start": 161.8,
+   "stop": 162.05,
+   "samples": 61,
+   "engine_wall_s": 1.0399950999999419,
+   "structural_pass": true,
+   "breakpoints": 3
+  },
+  {
+   "start": 162.05,
+   "stop": 162.3,
+   "samples": 61,
+   "engine_wall_s": 0.5215620999806561,
+   "structural_pass": true,
+   "breakpoints": 3
+  },
+  {
+   "start": 162.3,
+   "stop": 162.55,
+   "samples": 61,
+   "engine_wall_s": 0.6806388999684714,
+   "structural_pass": true,
+   "breakpoints": 3
+  },
+  {
+   "start": 162.55,
+   "stop": 162.8,
+   "samples": 61,
+   "engine_wall_s": 0.5521528000244871,
+   "structural_pass": true,
+   "breakpoints": 3
+  },
+  {
+   "start": 162.8,
+   "stop": 163.05,
+   "samples": 61,
+   "engine_wall_s": 0.41647210001247004,
+   "structural_pass": true,
+   "breakpoints": 3
+  },
+  {
+   "start": 163.05,
+   "stop": 163.3,
+   "samples": 61,
+   "engine_wall_s": 0.7150250999839045,
+   "structural_pass": true,
+   "breakpoints": 3
+  },
+  {
+   "start": 163.3,
+   "stop": 163.55,
+   "samples": 61,
+   "engine_wall_s": 0.8056300999596715,
+   "structural_pass": true,
+   "breakpoints": 3
+  },
+  {
+   "start": 163.55,
+   "stop": 163.8,
+   "samples": 61,
+   "engine_wall_s": 0.4858628999791108,
+   "structural_pass": true,
+   "breakpoints": 3
+  },
+  {
+   "start": 163.8,
+   "stop": 164.05,
+   "samples": 61,
+   "engine_wall_s": 0.3735346000175923,
+   "structural_pass": true,
+   "breakpoints": 3
+  },
+  {
+   "start": 164.05,
+   "stop": 164.3,
+   "samples": 61,
+   "engine_wall_s": 0.6292077000252903,
+   "structural_pass": true,
+   "breakpoints": 3
+  },
+  {
+   "start": 164.3,
+   "stop": 164.55,
+   "samples": 61,
+   "engine_wall_s": 0.4217804999789223,
+   "structural_pass": true,
+   "breakpoints": 3
+  },
+  {
+   "start": 164.55,
+   "stop": 164.8,
+   "samples": 61,
+   "engine_wall_s": 0.6055149000021629,
+   "structural_pass": true,
+   "breakpoints": 3
+  },
+  {
+   "start": 164.8,
+   "stop": 165.05,
+   "samples": 61,
+   "engine_wall_s": 0.38534599996637553,
+   "structural_pass": true,
+   "breakpoints": 3
+  },
+  {
+   "start": 165.05,
+   "stop": 165.3,
+   "samples": 61,
+   "engine_wall_s": 0.31568440003320575,
+   "structural_pass": true,
+   "breakpoints": 3
+  },
+  {
+   "start": 165.3,
+   "stop": 165.55,
+   "samples": 61,
+   "engine_wall_s": 0.438712699979078,
+   "structural_pass": true,
+   "breakpoints": 3
+  },
+  {
+   "start": 165.55,
+   "stop": 165.8,
+   "samples": 61,
+   "engine_wall_s": 0.5381361999898218,
+   "structural_pass": true,
+   "breakpoints": 3
+  },
+  {
+   "start": 165.8,
+   "stop": 166.05,
+   "samples": 61,
+   "engine_wall_s": 0.5450083000469021,
+   "structural_pass": true,
+   "breakpoints": 3
+  },
+  {
+   "start": 166.05,
+   "stop": 166.3,
+   "samples": 61,
+   "engine_wall_s": 0.5103048000019044,
+   "structural_pass": true,
+   "breakpoints": 3
+  },
+  {
+   "start": 166.3,
+   "stop": 166.55,
+   "samples": 61,
+   "engine_wall_s": 0.42218430002685636,
+   "structural_pass": true,
+   "breakpoints": 3
+  },
+  {
+   "start": 166.55,
+   "stop": 166.8,
+   "samples": 61,
+   "engine_wall_s": 0.6337102000252344,
+   "structural_pass": true,
+   "breakpoints": 3
+  },
+  {
+   "start": 166.8,
+   "stop": 167.05,
+   "samples": 61,
+   "engine_wall_s": 0.342481899948325,
+   "structural_pass": true,
+   "breakpoints": 3
+  },
+  {
+   "start": 167.05,
+   "stop": 167.3,
+   "samples": 61,
+   "engine_wall_s": 0.6030804000329226,
+   "structural_pass": true,
+   "breakpoints": 3
+  },
+  {
+   "start": 167.3,
+   "stop": 167.55,
+   "samples": 61,
+   "engine_wall_s": 0.545693600026425,
+   "structural_pass": true,
+   "breakpoints": 3
+  },
+  {
+   "start": 167.55,
+   "stop": 167.8,
+   "samples": 61,
+   "engine_wall_s": 0.8773170000058599,
+   "structural_pass": true,
+   "breakpoints": 3
+  },
+  {
+   "start": 167.8,
+   "stop": 168.05,
+   "samples": 61,
+   "engine_wall_s": 1.1129614999517798,
+   "structural_pass": true,
+   "breakpoints": 3
+  },
+  {
+   "start": 168.05,
+   "stop": 168.3,
+   "samples": 61,
+   "engine_wall_s": 0.7376143999863416,
+   "structural_pass": true,
+   "breakpoints": 3
+  },
+  {
+   "start": 168.3,
+   "stop": 168.55,
+   "samples": 61,
+   "engine_wall_s": 0.40503580000950024,
+   "structural_pass": true,
+   "breakpoints": 3
+  },
+  {
+   "start": 168.55,
+   "stop": 168.8,
+   "samples": 61,
+   "engine_wall_s": 0.6523349999915808,
+   "structural_pass": true,
+   "breakpoints": 3
+  },
+  {
+   "start": 168.8,
+   "stop": 169.05,
+   "samples": 61,
+   "engine_wall_s": 0.5789970000041649,
+   "structural_pass": true,
+   "breakpoints": 3
+  },
+  {
+   "start": 169.05,
+   "stop": 169.3,
+   "samples": 61,
+   "engine_wall_s": 0.4629014999954961,
+   "structural_pass": true,
+   "breakpoints": 3
+  },
+  {
+   "start": 169.3,
+   "stop": 169.55,
+   "samples": 61,
+   "engine_wall_s": 0.7076293000136502,
+   "structural_pass": true,
+   "breakpoints": 3
+  },
+  {
+   "start": 169.55,
+   "stop": 169.8,
+   "samples": 61,
+   "engine_wall_s": 0.5165170999825932,
+   "structural_pass": true,
+   "breakpoints": 3
+  },
+  {
+   "start": 169.8,
+   "stop": 170.05,
+   "samples": 61,
+   "engine_wall_s": 0.6268542999750935,
+   "structural_pass": true,
+   "breakpoints": 3
+  },
+  {
+   "start": 170.05,
+   "stop": 170.3,
+   "samples": 61,
+   "engine_wall_s": 0.2860761000192724,
+   "structural_pass": true,
+   "breakpoints": 3
+  },
+  {
+   "start": 170.3,
+   "stop": 170.55,
+   "samples": 61,
+   "engine_wall_s": 0.5342987999902107,
+   "structural_pass": true,
+   "breakpoints": 3
+  },
+  {
+   "start": 170.55,
+   "stop": 170.8,
+   "samples": 61,
+   "engine_wall_s": 0.6570646000327542,
+   "structural_pass": true,
+   "breakpoints": 3
+  },
+  {
+   "start": 170.8,
+   "stop": 171.05,
+   "samples": 61,
+   "engine_wall_s": 0.6009084000252187,
+   "structural_pass": true,
+   "breakpoints": 3
+  },
+  {
+   "start": 171.05,
+   "stop": 171.3,
+   "samples": 61,
+   "engine_wall_s": 0.7472752000321634,
+   "structural_pass": true,
+   "breakpoints": 3
+  },
+  {
+   "start": 171.3,
+   "stop": 171.55,
+   "samples": 61,
+   "engine_wall_s": 0.8150503999786451,
+   "structural_pass": true,
+   "breakpoints": 3
+  },
+  {
+   "start": 171.55,
+   "stop": 171.8,
+   "samples": 61,
+   "engine_wall_s": 0.8372966999886557,
+   "structural_pass": true,
+   "breakpoints": 3
+  },
+  {
+   "start": 171.8,
+   "stop": 172.05,
+   "samples": 61,
+   "engine_wall_s": 0.5345535000087693,
+   "structural_pass": true,
+   "breakpoints": 3
+  },
+  {
+   "start": 172.05,
+   "stop": 172.3,
+   "samples": 61,
+   "engine_wall_s": 0.7376240000012331,
+   "structural_pass": true,
+   "breakpoints": 3
+  },
+  {
+   "start": 172.3,
+   "stop": 172.55,
+   "samples": 61,
+   "engine_wall_s": 0.5489881999674253,
+   "structural_pass": true,
+   "breakpoints": 3
+  },
+  {
+   "start": 172.55,
+   "stop": 172.8,
+   "samples": 61,
+   "engine_wall_s": 0.8830672000185587,
+   "structural_pass": true,
+   "breakpoints": 3
+  },
+  {
+   "start": 172.8,
+   "stop": 173.05,
+   "samples": 61,
+   "engine_wall_s": 0.5620672000222839,
+   "structural_pass": true,
+   "breakpoints": 3
+  },
+  {
+   "start": 173.05,
+   "stop": 173.3,
+   "samples": 61,
+   "engine_wall_s": 0.7696714999619871,
+   "structural_pass": true,
+   "breakpoints": 3
+  },
+  {
+   "start": 173.3,
+   "stop": 173.55,
+   "samples": 61,
+   "engine_wall_s": 0.978833900007885,
+   "structural_pass": true,
+   "breakpoints": 3
+  },
+  {
+   "start": 173.55,
+   "stop": 173.8,
+   "samples": 61,
+   "engine_wall_s": 1.0978134999750182,
+   "structural_pass": true,
+   "breakpoints": 3
+  },
+  {
+   "start": 173.8,
+   "stop": 174.05,
+   "samples": 61,
+   "engine_wall_s": 0.5717677000211552,
+   "structural_pass": true,
+   "breakpoints": 3
+  },
+  {
+   "start": 174.05,
+   "stop": 174.3,
+   "samples": 61,
+   "engine_wall_s": 0.571548200037796,
+   "structural_pass": true,
+   "breakpoints": 3
+  },
+  {
+   "start": 174.3,
+   "stop": 174.55,
+   "samples": 61,
+   "engine_wall_s": 0.24158689996693283,
+   "structural_pass": true,
+   "breakpoints": 3
+  },
+  {
+   "start": 174.55,
+   "stop": 174.8,
+   "samples": 61,
+   "engine_wall_s": 0.2588806000421755,
+   "structural_pass": true,
+   "breakpoints": 3
+  },
+  {
+   "start": 174.8,
+   "stop": 175.05,
+   "samples": 61,
+   "engine_wall_s": 0.219326899969019,
+   "structural_pass": true,
+   "breakpoints": 3
+  },
+  {
+   "start": 175.05,
+   "stop": 175.3,
+   "samples": 61,
+   "engine_wall_s": 0.20687140000518411,
+   "structural_pass": true,
+   "breakpoints": 3
+  }
+ ],
+ "schedule_log": [
+  {
+   "t": 2.0,
+   "said": [
+    "landing gear down"
+   ],
+   "row": {
+    "t": 2.0,
+    "gear": "down",
+    "note": "gear down on the base leg"
+   }
+  },
+  {
+   "t": 4.0,
+   "said": [
+    "track target 90.0 deg (+90.0 deg)",
+    "turn limit 30 deg of bank"
+   ],
+   "row": {
+    "t": 4.0,
+    "heading_change_deg": 90.0,
+    "bank_limit_deg": 30.0,
+    "note": "base turn to final"
+   }
+  },
+  {
+   "t": 6.0,
+   "said": [
+    "flap 30 deg"
+   ],
+   "row": {
+    "t": 6.0,
+    "flap_deg": 30.0,
+    "ramp_s": 8.0,
+    "note": "flap down"
+   }
+  },
+  {
+   "t": 6.0,
+   "said": [
+    "airspeed target 110 kt true"
+   ],
+   "row": {
+    "t": 6.0,
+    "speed_kt": 110.0,
+    "ramp_s": 25.0,
+    "note": "slow to the approach speed"
+   }
+  },
+  {
+   "t": 45.0,
+   "said": [
+    "height target 0 ft",
+    "climb rate limit 1,500 ft/min"
+   ],
+   "row": {
+    "t": 45.0,
+    "altitude_ft": 0.0,
+    "ramp_s": 123.49940882098818,
+    "climb_rate_fpm": 1500.0,
+    "note": "final: 3 deg path"
+   }
+  },
+  {
+   "t": 167.3,
+   "said": [
+    "height target -30 ft",
+    "climb rate limit 150 ft/min",
+    "throttle 0.00"
+   ],
+   "row": {
+    "t": 167.3,
+    "altitude_ft": -30.0,
+    "climb_rate_fpm": 150.0,
+    "throttle": 0.0,
+    "ramp_s": 0.5,
+    "note": "flare: sink rate cut, throttle to idle"
+   }
+  }
+ ],
+ "checks": {
+  "samples": 42073,
+  "expected_samples": 42073,
+  "time_end": 175.3,
+  "time_coverage": true,
+  "time_monotonic": true,
+  "aligned": true,
+  "finite": true,
+  "quat_norm_max_error": 3.77553543984277e-12,
+  "segments": 127,
+  "segments_structural": true,
+  "structural_pass": true
+ },
+ "reference": {
+  "what": "the same flight in the independent Python implementation (verify/ref6dof.py), classical RK4 at the same step, one piece from start to end with the complete command tables",
+  "worst": {
+   "value": 3.7018998977345063e-13,
+   "signal": "cm"
+  },
+  "tolerance_relative_to_scale": 1e-06,
+  "passed": true,
+  "wall_s": 109.80049538612366,
+  "signals": {
+   "pn": {
+    "unit": "m",
+    "max_abs": 2.091837814077735e-11,
+    "at_t": 137.96666666666667,
+    "relative_to_scale": 2.091837814077735e-14,
+    "scale": 1000.0
+   },
+   "pe": {
+    "unit": "m",
+    "max_abs": 3.456079866737127e-11,
+    "at_t": 175.3,
+    "relative_to_scale": 3.456079866737127e-14,
+    "scale": 1000.0
+   },
+   "pd": {
+    "unit": "m",
+    "max_abs": 1.8918200339612667e-13,
+    "at_t": 175.3,
+    "relative_to_scale": 1.8918200339612667e-15,
+    "scale": 100.0
+   },
+   "u": {
+    "unit": "m/s",
+    "max_abs": 1.5631940186722204e-13,
+    "at_t": 175.05,
+    "relative_to_scale": 1.5631940186722204e-15,
+    "scale": 100.0
+   },
+   "v": {
+    "unit": "m/s",
+    "max_abs": 9.01362318117549e-15,
+    "at_t": 36.6125,
+    "relative_to_scale": 9.01362318117549e-16,
+    "scale": 10.0
+   },
+   "w": {
+    "unit": "m/s",
+    "max_abs": 5.1514348342607263e-14,
+    "at_t": 175.3,
+    "relative_to_scale": 5.151434834260726e-15,
+    "scale": 10.0
+   },
+   "p": {
+    "unit": "rad/s",
+    "max_abs": 1.8041124150158794e-15,
+    "at_t": 29.879166666666666,
+    "relative_to_scale": 1.8041124150158794e-15,
+    "scale": 1.0
+   },
+   "q": {
+    "unit": "rad/s",
+    "max_abs": 5.8130583679982806e-15,
+    "at_t": 167.79583333333332,
+    "relative_to_scale": 2.90652918399914e-14,
+    "scale": 0.2
+   },
+   "r": {
+    "unit": "rad/s",
+    "max_abs": 5.113097445441639e-16,
+    "at_t": 37.358333333333334,
+    "relative_to_scale": 5.113097445441639e-15,
+    "scale": 0.1
+   },
+   "e0": {
+    "unit": "-",
+    "max_abs": 1.3322676295501878e-15,
+    "at_t": 171.20416666666665,
+    "relative_to_scale": 1.3322676295501878e-15,
+    "scale": 1.0
+   },
+   "e1": {
+    "unit": "-",
+    "max_abs": 9.992007221626409e-16,
+    "at_t": 18.766666666666666,
+    "relative_to_scale": 9.992007221626409e-16,
+    "scale": 1.0
+   },
+   "e2": {
+    "unit": "-",
+    "max_abs": 6.661338147750939e-16,
+    "at_t": 18.758333333333333,
+    "relative_to_scale": 6.661338147750939e-16,
+    "scale": 1.0
+   },
+   "e3": {
+    "unit": "-",
+    "max_abs": 1.3322676295501878e-15,
+    "at_t": 173.2625,
+    "relative_to_scale": 1.3322676295501878e-15,
+    "scale": 1.0
+   },
+   "phi": {
+    "unit": "rad",
+    "max_abs": 2.6645352591003757e-15,
+    "at_t": 18.854166666666668,
+    "relative_to_scale": 2.6645352591003757e-15,
+    "scale": 1.0
+   },
+   "theta": {
+    "unit": "rad",
+    "max_abs": 1.6930901125533637e-15,
+    "at_t": 175.3,
+    "relative_to_scale": 1.6930901125533637e-14,
+    "scale": 0.1
+   },
+   "alpha": {
+    "unit": "rad",
+    "max_abs": 1.582067810090848e-15,
+    "at_t": 175.3,
+    "relative_to_scale": 7.91033905045424e-15,
+    "scale": 0.2
+   },
+   "beta": {
+    "unit": "rad",
+    "max_abs": 1.715207836872068e-16,
+    "at_t": 36.625,
+    "relative_to_scale": 3.430415673744136e-15,
+    "scale": 0.05
+   },
+   "mach": {
+    "unit": "-",
+    "max_abs": 4.718447854656915e-16,
+    "at_t": 175.06666666666666,
+    "relative_to_scale": 9.43689570931383e-16,
+    "scale": 0.5
+   },
+   "nz": {
+    "unit": "g",
+    "max_abs": 7.882583474838611e-15,
+    "at_t": 167.95,
+    "relative_to_scale": 1.970645868709653e-15,
+    "scale": 4.0
+   },
+   "track_unwrapped": {
+    "unit": "rad",
+    "max_abs": 7.771561172376096e-16,
+    "at_t": 15.291666666666666,
+    "relative_to_scale": 2.590520390792032e-16,
+    "scale": 3.0
+   },
+   "stabilator": {
+    "unit": "rad",
+    "max_abs": 3.774758283725532e-15,
+    "at_t": 167.64583333333334,
+    "relative_to_scale": 1.887379141862766e-14,
+    "scale": 0.2
+   },
+   "flaperon_left": {
+    "unit": "rad",
+    "max_abs": 6.661338147750939e-16,
+    "at_t": 35.354166666666664,
+    "relative_to_scale": 3.3306690738754696e-15,
+    "scale": 0.2
+   },
+   "flaperon_right": {
+    "unit": "rad",
+    "max_abs": 6.661338147750939e-16,
+    "at_t": 35.354166666666664,
+    "relative_to_scale": 3.3306690738754696e-15,
+    "scale": 0.2
+   },
+   "rudder": {
+    "unit": "rad",
+    "max_abs": 1.0044048925905713e-15,
+    "at_t": 35.90833333333333,
+    "relative_to_scale": 1.0044048925905713e-14,
+    "scale": 0.1
+   },
+   "gear": {
+    "unit": "-",
+    "max_abs": 6.776263578034403e-21,
+    "at_t": 2.0041666666666664,
+    "relative_to_scale": 6.776263578034403e-21,
+    "scale": 1.0
+   },
+   "throttle": {
+    "unit": "-",
+    "max_abs": 1.4432899320127035e-14,
+    "at_t": 167.70416666666665,
+    "relative_to_scale": 1.4432899320127035e-14,
+    "scale": 1.0
+   },
+   "thrust": {
+    "unit": "N",
+    "max_abs": 3.3651303965598345e-11,
+    "at_t": 167.68333333333334,
+    "relative_to_scale": 2.243420264373223e-15,
+    "scale": 15000.0
+   },
+   "spool": {
+    "unit": "-",
+    "max_abs": 2.3314683517128287e-15,
+    "at_t": 167.70833333333334,
+    "relative_to_scale": 2.3314683517128287e-15,
+    "scale": 1.0
+   },
+   "pitch_integrator": {
+    "unit": "rad",
+    "max_abs": 6.487865800153259e-16,
+    "at_t": 167.79583333333332,
+    "relative_to_scale": 3.2439329000766293e-15,
+    "scale": 0.2
+   },
+   "throttle_integrator": {
+    "unit": "-",
+    "max_abs": 5.051514762044462e-15,
+    "at_t": 175.3,
+    "relative_to_scale": 5.051514762044462e-15,
+    "scale": 1.0
+   },
+   "lift": {
+    "unit": "N",
+    "max_abs": 1.673470251262188e-10,
+    "at_t": 167.95,
+    "relative_to_scale": 1.673470251262188e-15,
+    "scale": 100000.0
+   },
+   "drag": {
+    "unit": "N",
+    "max_abs": 2.3646862246096134e-11,
+    "at_t": 167.9875,
+    "relative_to_scale": 1.1823431123048067e-15,
+    "scale": 20000.0
+   },
+   "moment_l": {
+    "unit": "N m",
+    "max_abs": 9.771738973540778e-12,
+    "at_t": 35.354166666666664,
+    "relative_to_scale": 9.771738973540778e-16,
+    "scale": 10000.0
+   },
+   "moment_m": {
+    "unit": "N m",
+    "max_abs": 3.859668140648864e-10,
+    "at_t": 167.64583333333334,
+    "relative_to_scale": 3.8596681406488645e-14,
+    "scale": 10000.0
+   },
+   "moment_n": {
+    "unit": "N m",
+    "max_abs": 8.057554623519536e-12,
+    "at_t": 35.90416666666667,
+    "relative_to_scale": 4.028777311759768e-15,
+    "scale": 2000.0
+   },
+   "nz_cmd": {
+    "unit": "g",
+    "max_abs": 1.709743457922741e-14,
+    "at_t": 167.69166666666666,
+    "relative_to_scale": 4.274358644806853e-15,
+    "scale": 4.0
+   },
+   "bank_cmd": {
+    "unit": "rad",
+    "max_abs": 3.6637359812630166e-15,
+    "at_t": 18.375,
+    "relative_to_scale": 3.6637359812630166e-15,
+    "scale": 1.0
+   },
+   "sustained_nz_integrator": {
+    "unit": "g",
+    "max_abs": 2.6645352591003757e-14,
+    "at_t": 25.045833333333334,
+    "relative_to_scale": 6.661338147750939e-15,
+    "scale": 4.0
+   },
+   "nz_thrust_feedforward": {
+    "unit": "g",
+    "max_abs": 6.661338147750939e-15,
+    "at_t": 175.07916666666665,
+    "relative_to_scale": 1.6653345369377348e-15,
+    "scale": 4.0
+   },
+   "nz_speed_hold": {
+    "unit": "g",
+    "max_abs": 3.019806626980426e-14,
+    "at_t": 24.879166666666666,
+    "relative_to_scale": 7.549516567451064e-15,
+    "scale": 4.0
+   },
+   "nz_available": {
+    "unit": "g",
+    "max_abs": 1.9539925233402755e-14,
+    "at_t": 172.5625,
+    "relative_to_scale": 4.884981308350689e-15,
+    "scale": 4.0
+   },
+   "thrust_flag": {
+    "unit": "-",
+    "max_abs": 1.5765166949677223e-13,
+    "at_t": 172.38333333333333,
+    "relative_to_scale": 1.5765166949677223e-13,
+    "scale": 1.0
+   },
+   "aero_fz": {
+    "unit": "N",
+    "max_abs": 1.7462298274040222e-10,
+    "at_t": 167.95,
+    "relative_to_scale": 1.7462298274040223e-15,
+    "scale": 100000.0
+   },
+   "force_x": {
+    "unit": "N",
+    "max_abs": 2.660272002685815e-11,
+    "at_t": 167.70833333333334,
+    "relative_to_scale": 1.3301360013429076e-15,
+    "scale": 20000.0
+   },
+   "cl": {
+    "unit": "-",
+    "max_abs": 7.105427357601002e-15,
+    "at_t": 175.24583333333334,
+    "relative_to_scale": 1.4210854715202004e-14,
+    "scale": 0.5
+   },
+   "cd": {
+    "unit": "-",
+    "max_abs": 1.915134717478395e-15,
+    "at_t": 175.24583333333334,
+    "relative_to_scale": 1.915134717478395e-14,
+    "scale": 0.1
+   },
+   "cm": {
+    "unit": "-",
+    "max_abs": 7.403799795469013e-15,
+    "at_t": 167.64583333333334,
+    "relative_to_scale": 3.7018998977345063e-13,
+    "scale": 0.02
+   },
+   "u_dot": {
+    "unit": "m/s2",
+    "max_abs": 4.8627768478581856e-14,
+    "at_t": 167.79583333333332,
+    "relative_to_scale": 9.72555369571637e-15,
+    "scale": 5.0
+   },
+   "w_dot": {
+    "unit": "m/s2",
+    "max_abs": 3.1941116418465754e-13,
+    "at_t": 167.775,
+    "relative_to_scale": 1.5970558209232876e-14,
+    "scale": 20.0
+   },
+   "q_dot": {
+    "unit": "rad/s2",
+    "max_abs": 4.548444954011188e-14,
+    "at_t": 167.64583333333334,
+    "relative_to_scale": 9.096889908022376e-14,
+    "scale": 0.5
+   },
+   "p_dot": {
+    "unit": "rad/s2",
+    "max_abs": 5.721985385509498e-15,
+    "at_t": 35.354166666666664,
+    "relative_to_scale": 2.860992692754749e-15,
+    "scale": 2.0
+   },
+   "r_dot": {
+    "unit": "rad/s2",
+    "max_abs": 6.691695808580533e-16,
+    "at_t": 35.90416666666667,
+    "relative_to_scale": 3.3458479042902667e-15,
+    "scale": 0.2
+   },
+   "climb_rate_cmd": {
+    "unit": "m/s",
+    "max_abs": 3.89910326248355e-13,
+    "at_t": 167.57083333333333,
+    "relative_to_scale": 3.8991032624835496e-14,
+    "scale": 10.0
+   },
+   "roll_rate_cmd": {
+    "unit": "rad/s",
+    "max_abs": 5.329070518200751e-15,
+    "at_t": 19.6375,
+    "relative_to_scale": 5.329070518200751e-15,
+    "scale": 1.0
+   },
+   "airspeed_cmd": {
+    "unit": "m/s",
+    "max_abs": 2.842170943040401e-14,
+    "at_t": 7.9375,
+    "relative_to_scale": 2.842170943040401e-16,
+    "scale": 100.0
+   }
+  }
+ }
+}

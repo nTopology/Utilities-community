@@ -1,0 +1,26 @@
+{
+ "description": "5 g turn through 360 deg at Mach 0.60, 1,000 ft, speed held with thrust",
+ "condition": {
+  "case": "combat",
+  "mach": 0.6,
+  "altitude_ft": 1000
+ },
+ "duration_s": 45.0,
+ "commands": [
+  {
+   "t": 3.0,
+   "heading_change_deg": 360,
+   "turn_g": 5.0
+  },
+  {
+   "t": 36.0,
+   "throttle": 1.0,
+   "ramp_s": 0.5
+  },
+  {
+   "t": 42.0,
+   "mach": 0.6,
+   "ramp_s": 0.5
+  }
+ ]
+}

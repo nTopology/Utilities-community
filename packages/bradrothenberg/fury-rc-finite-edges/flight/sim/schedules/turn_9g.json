@@ -1,0 +1,7 @@
+{"description": "9 g limit turn through 180 degrees from Mach 0.70 near sea level, speed let go, then roll out and accelerate back",
+ "condition": {"case": "combat", "mach": 0.70, "altitude_ft": 1000, "hold_speed": 0, "table_mach": 0.6},
+ "duration_s": 45,
+ "commands": [
+  {"t": 3, "heading_change_deg": 180, "turn_g": 9, "throttle": 1.0},
+  {"t": 25, "mach": 0.70}
+ ]}
