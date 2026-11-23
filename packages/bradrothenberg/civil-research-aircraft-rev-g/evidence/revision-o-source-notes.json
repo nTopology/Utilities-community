@@ -1,0 +1,13 @@
+{
+  "revision": "O",
+  "skin_revision": "N",
+  "panels": 77,
+  "source_overview": "tail_alignment/OVERVIEW.md",
+  "source_overview_sha256": "1b47136b4552f1fd52d5a05cbf6938b54b727acfd24d2cff052bd1d011a3cc98",
+  "source_tail_guide_sha256": "3482bfcced0e6077f9d411b52f6dd0bffa365893a0c30103f597465da2f34f60",
+  "image_source_sha256": "d005cda5a72390cb083fc5d2069b72695f052609a211fd6a91ebc8cfa55ec57d",
+  "image_source": "tail_alignment/views/Aircraft-skin-installed-O-quality/Aircraft-skin-installed-O-quality_GPU_res3_noAo_cam0_ortho.png",
+  "recorded_probe_count": 2164,
+  "probe_count_basis": "Recorded Revision O source SPEC and overview report, not a new solve",
+  "skin_limit": "Exterior panels are display surfaces with no physical sheet gauge. Historical L sample attachments do not detail every current panel."
+}

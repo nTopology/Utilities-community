@@ -1,171 +1,61 @@
-# Civil research aircraft: Revision G and design studies
+# Civil research aircraft: Revision O and 77 skin panels
 
 **Built with Astra.**
 
-An editable civilian research-aircraft structure with Revision G as the primary delivery. The bundle contains 74 native notebooks and eight engineering reports. It includes the complete saved assemblies, separate station parts, hat longerons, forked spars, cover splices, and nominal pin hardware.
+Start with the complete Revision O aircraft in installed-skin or exploded-skin views. Both notebooks include the current structural definitions and the retained 77-panel Revision N exterior. Version 0.2.0 adds this compact current download while preserving the earlier Revision G files and reports.
 
-![Revision G native structure](cover.png)
+![Revision O installed skins and native structure](cover.png)
 
 ## Start here
 
-1. Download the complete package folder. Keep `reports/assets/`, `references/`, and `evidence/` with the notebooks.
-2. Open [the report catalogue](reports/index.html), then read [the Revision G review](reports/revision-g-lug-attachments.html).
-3. Open [civil-research-aircraft-rev-g.ntop](civil-research-aircraft-rev-g.ntop) in licensed nTop **6.1.0-rc build 42926**. Save a working copy before editing.
-4. Expand the relevant structural section to inspect or edit a part. Use the separate joint and frame notebooks for alternate presentations.
-5. Rebuild and verify both mating parts after a joint change. Save a separate assembly revision and check its embedded part definitions.
+1. Download and extract **civil-research-aircraft-rev-o-skins.zip**. Keep its folders together.
+2. Read [the current overview](reports/revision-o-overview.html).
+3. Run `Open-current.ps1` in PowerShell, or open `rev-o-installed-skins.ntop` from a working copy of the extracted folder.
+4. Use `rev-o-exploded-skins.ntop` for the exploded arrangement. Use `rev-n-skin-layout.ntop` for the separate 77-panel layout.
+5. Keep `references/` beside the notebooks. If nTop asks for an input, select its matching local file under `references/` or `references/panels/`.
 
-The minimum-version field cannot specify this custom build. Compatibility with a public nTop release has not been re-tested. The application is not included.
+The native source used **nTop 6.1.0-rc build 42926**. The same build passed new extended readback of the relocated 77-panel layout. Full installed/exploded publication copies preserve all non-index native payloads, but were not rerun in nTop during this update. Public-release compatibility has not been established.
 
-The saved aircraft reference includes two airfoil file inputs. Their workstation paths now point to the supplied `references/` files. If nTop requests a file after relocation, select the matching local DAT file. The matching CSV tables are also supplied. The earlier source helper can generate the CSV beside its DAT input; keep a writable working copy. Opening these public copies has not been re-tested in nTop.
+## What changed after G
 
-## Revision G
+- Revision N widened wing bays, reduced ordinary wing ribs to 16 across both sides, and reduced the exterior layout to 77 panels.
+- Revision O aligned ten tail ribs to the local tail span and added lands and support ribs around the four spar-root forks.
+- The installed and exploded models preserve the complete Revision O structure. Their panel layout comes from Revision N.
+- The current download bundles 77 panel mesh inputs and two airfoil references. The panel schedule identifies every panel and its current limitations.
 
-The assembly uses upper and lower integral bulkhead eyes, forked spar roots, eight nominal pins, and a separate cover-splice load path. The 14 changed structural part notebooks and the pin family are included. Assembly, forward-joint, aft-joint, and frame-only presentations preserve their saved visibility states.
+## Current files
 
-The recorded source checks report 1,997 geometry probes passed, 174 embedded assembly definitions, and 128 GUI variables with `e_OK` states. These establish the stated geometry and graph checks. They do not establish structural capacity. The local fork stress screens fail, and the complete Revision G aircraft analysis remains open. No new Revision G STEP is claimed.
+| File | Purpose |
+|---|---|
+| [rev-o-installed-skins.ntop](rev-o-installed-skins.ntop) | Complete current structure with installed exterior panels |
+| [rev-o-exploded-skins.ntop](rev-o-exploded-skins.ntop) | Complete current structure with rigid display translations of the panels |
+| [rev-n-skin-layout.ntop](rev-n-skin-layout.ntop) | Separate current 77-panel layout |
+| [Panel schedule](references/panel-schedule-rev-n.csv) | Panel identities, extents, region and status |
+| [Publication evidence](evidence/revision-o-publication.json) | Exact source/published hashes, relocated imports and native pilot receipt |
+| [Agent guide](AGENTS.md) | Current entry points, dependencies and editing limits |
 
-## Inputs and outputs
+The compact download does not duplicate every source-only intermediate or separate presentation. Both complete skin notebooks embed the structural definitions. Prior native revisions remain in this repository.
 
-| Item | Editable data | Result and limit |
-|---|---|---|
-| Revision G assembly | Embedded part definitions, placements, and visibility groups | Complete saved structural assembly with the aircraft reference |
-| Revision G primaries and spars | Native variables within each complete part expression | Finished bulkhead eyes and matching forked roots; joint interfaces are nominal |
-| Pin family | Pin diameter input | Nominal pin body; changing it alone does not resize mating bores |
-| Earlier D/E/F assemblies | Frame thickness, primary thickness, and residual-web controls | Earlier geometry revisions with their own recorded checks |
-| Section studies | I, flat, and hat section dimensions | Native section coupons for the earlier buckling comparison |
+## Inputs, outputs and limits
 
-Parts already use aircraft world coordinates. Do not apply a second placement. Imported custom blocks are embedded snapshots. Saving a standalone part does not update its assembly. A changed interface requires coordinated edits and an explicit assembly refresh.
+| Item | Meaning |
+|---|---|
+| Exterior panel meshes | 77 supplied STL surfaces; no physical sheet gauge or structural credit |
+| Airfoil references | Two supplied DAT files and matching CSV tables |
+| Embedded structural parts | Editable saved definitions in the aircraft coordinate frame |
+| Installed / exploded state | Display organization; exploded translation is not a removal sequence or tool-clearance proof |
+| Revision O checks | 2,164 recorded native feature probes; finite geometric checks, not strength, buckling or fatigue qualification |
 
-## Reports
+Parts use aircraft world coordinates. Do not apply another placement. Saving a standalone part does not update its embedded assembly definition. Interface changes require coordinated edits, explicit refresh and new verification.
 
-- [Revision G: local lug attachments](reports/revision-g-lug-attachments.html): Primary review. Integral bulkhead eyes, forked spar roots, nominal pins, native checks, and failed local fork stress screens.
-- [Revision F: pad-to-flange ribs](reports/revision-f-design.html): Earlier installed structure with pad support ties, native geometry checks, and independent STEP mass results.
-- [Revision E: hat longerons](reports/revision-e-design.html): Earlier hat longerons, conformal station parts, and revised primary passages.
-- [Revision D: modular fitted structure](reports/revision-d-design.html): Earlier modular assembly, pocket corrections, part input contracts, and fit checks.
-- [Edge-aligned comparison: sizing audit](reports/edge-aligned-sizing-audit.html): Measured spar directions, corrected coupling-mass accounting, and unresolved sizing assumptions.
-- [Wing-root trade](reports/wing-root-trade.html): Recorded layout, station, gauge, mass, and sensitivity comparisons. Failed primary stress screens remain visible.
-- [Cranked-wing review](reports/cranked-wing-review.html): Earlier spar route comparisons and their local load-path implications.
-- [Buckling and thin sections](reports/buckling-review.html): Earlier assumed-load study with editable I, flat, and hat section coupons.
+Revision L's detailed removable-skin samples are historical examples. They do not detail the attachment of every current panel. Skin/stringer stability, tail loads, pin bearing, fatigue, production segmentation, tolerances and hardware qualification remain open. This is not a manufacturing or flight release.
 
-## Native model catalogue
+## Earlier work
 
-The filenames identify each revision. Candidate C and the edge-aligned model are separate comparison assemblies. Earlier D/E/F assemblies remain separate from Revision G.
+[The report catalogue](reports/index.html) and the original Revision G notebook remain available. The G package contains the earlier D/E/F/G structure and design studies. Its failed structural screens remain relevant historical evidence, not acceptance of the current aircraft.
 
-### Revision G assembly
+Source-workspace notes for [Revision N](notes/revision-n-source-guide.md) and [Revision O](notes/revision-o-tail.md) explain the later changes and reproduction order. Their source-relative paths refer to the original workspace.
 
-- [civil-research-aircraft-rev-g.ntop](civil-research-aircraft-rev-g.ntop)
+## License and attribution
 
-### Revision G parts and presentations
-
-- [rev-g-aft-lug-joint.ntop](rev-g-aft-lug-joint.ntop)
-- [rev-g-c-aft.ntop](rev-g-c-aft.ntop)
-- [rev-g-c-fwd.ntop](rev-g-c-fwd.ntop)
-- [rev-g-forward-lug-joint.ntop](rev-g-forward-lug-joint.ntop)
-- [rev-g-frames-g.ntop](rev-g-frames-g.ntop)
-- [rev-g-p-front-spar.ntop](rev-g-p-front-spar.ntop)
-- [rev-g-p-lower-inner-splice.ntop](rev-g-p-lower-inner-splice.ntop)
-- [rev-g-p-lower-outer-splice.ntop](rev-g-p-lower-outer-splice.ntop)
-- [rev-g-p-rear-spar.ntop](rev-g-p-rear-spar.ntop)
-- [rev-g-p-upper-inner-splice.ntop](rev-g-p-upper-inner-splice.ntop)
-- [rev-g-p-upper-outer-splice.ntop](rev-g-p-upper-outer-splice.ntop)
-- [rev-g-s-front-spar.ntop](rev-g-s-front-spar.ntop)
-- [rev-g-s-lower-inner-splice.ntop](rev-g-s-lower-inner-splice.ntop)
-- [rev-g-s-lower-outer-splice.ntop](rev-g-s-lower-outer-splice.ntop)
-- [rev-g-s-rear-spar.ntop](rev-g-s-rear-spar.ntop)
-- [rev-g-s-upper-inner-splice.ntop](rev-g-s-upper-inner-splice.ntop)
-- [rev-g-s-upper-outer-splice.ntop](rev-g-s-upper-outer-splice.ntop)
-- [rev-g-root-pin.ntop](rev-g-root-pin.ntop)
-
-### Revision F
-
-- [rev-f-aircraft-structure.ntop](rev-f-aircraft-structure.ntop)
-- [rev-f-forward-primary-bulkhead.ntop](rev-f-forward-primary-bulkhead.ntop)
-- [rev-f-aft-primary-bulkhead.ntop](rev-f-aft-primary-bulkhead.ntop)
-- [rev-f-f01-frame.ntop](rev-f-f01-frame.ntop)
-- [rev-f-f02-frame.ntop](rev-f-f02-frame.ntop)
-- [rev-f-f03-frame.ntop](rev-f-f03-frame.ntop)
-- [rev-f-f04-frame.ntop](rev-f-f04-frame.ntop)
-- [rev-f-f05-frame.ntop](rev-f-f05-frame.ntop)
-- [rev-f-f07-frame.ntop](rev-f-f07-frame.ntop)
-- [rev-f-f09-frame.ntop](rev-f-f09-frame.ntop)
-- [rev-f-f10-frame.ntop](rev-f-f10-frame.ntop)
-- [rev-f-f11-frame.ntop](rev-f-f11-frame.ntop)
-- [rev-f-f12-frame.ntop](rev-f-f12-frame.ntop)
-
-### Revision E
-
-- [rev-e-aircraft-structure.ntop](rev-e-aircraft-structure.ntop)
-- [rev-e-forward-primary-bulkhead.ntop](rev-e-forward-primary-bulkhead.ntop)
-- [rev-e-aft-primary-bulkhead.ntop](rev-e-aft-primary-bulkhead.ntop)
-- [rev-e-f01-frame.ntop](rev-e-f01-frame.ntop)
-- [rev-e-f02-frame.ntop](rev-e-f02-frame.ntop)
-- [rev-e-f03-frame.ntop](rev-e-f03-frame.ntop)
-- [rev-e-f04-frame.ntop](rev-e-f04-frame.ntop)
-- [rev-e-f05-frame.ntop](rev-e-f05-frame.ntop)
-- [rev-e-f07-frame.ntop](rev-e-f07-frame.ntop)
-- [rev-e-f09-frame.ntop](rev-e-f09-frame.ntop)
-- [rev-e-f10-frame.ntop](rev-e-f10-frame.ntop)
-- [rev-e-f11-frame.ntop](rev-e-f11-frame.ntop)
-- [rev-e-f12-frame.ntop](rev-e-f12-frame.ntop)
-
-### Revision D
-
-- [rev-d-aircraft-structure.ntop](rev-d-aircraft-structure.ntop)
-- [rev-d-forward-primary-bulkhead.ntop](rev-d-forward-primary-bulkhead.ntop)
-- [rev-d-aft-primary-bulkhead.ntop](rev-d-aft-primary-bulkhead.ntop)
-- [rev-d-f01-frame.ntop](rev-d-f01-frame.ntop)
-- [rev-d-f02-frame.ntop](rev-d-f02-frame.ntop)
-- [rev-d-f03-frame.ntop](rev-d-f03-frame.ntop)
-- [rev-d-f04-frame.ntop](rev-d-f04-frame.ntop)
-- [rev-d-f05-frame.ntop](rev-d-f05-frame.ntop)
-- [rev-d-f07-frame.ntop](rev-d-f07-frame.ntop)
-- [rev-d-f09-frame.ntop](rev-d-f09-frame.ntop)
-- [rev-d-f10-frame.ntop](rev-d-f10-frame.ntop)
-- [rev-d-f11-frame.ntop](rev-d-f11-frame.ntop)
-- [rev-d-f12-frame.ntop](rev-d-f12-frame.ntop)
-
-### Edge-aligned comparison
-
-- [edge-aligned-aircraft-c.ntop](edge-aligned-aircraft-c.ntop)
-- [edge-aligned-c-fwd.ntop](edge-aligned-c-fwd.ntop)
-- [edge-aligned-c-aft.ntop](edge-aligned-c-aft.ntop)
-
-### Candidate C comparison
-
-- [candidate-c-aircraft-c.ntop](candidate-c-aircraft-c.ntop)
-
-### Hat longerons
-
-- [hat-longerons-l01-longeron-path.ntop](hat-longerons-l01-longeron-path.ntop)
-- [hat-longerons-l02-longeron-path.ntop](hat-longerons-l02-longeron-path.ntop)
-- [hat-longerons-l03-longeron-path.ntop](hat-longerons-l03-longeron-path.ntop)
-- [hat-longerons-l04-longeron-path.ntop](hat-longerons-l04-longeron-path.ntop)
-- [hat-longerons-l05-longeron-path.ntop](hat-longerons-l05-longeron-path.ntop)
-- [hat-longerons-l06-longeron-path.ntop](hat-longerons-l06-longeron-path.ntop)
-- [hat-longerons-l07-longeron-path.ntop](hat-longerons-l07-longeron-path.ntop)
-- [hat-longerons-l08-longeron-path.ntop](hat-longerons-l08-longeron-path.ntop)
-
-### Buckling section studies
-
-- [buckling-thin-sections-study.ntop](buckling-thin-sections-study.ntop)
-- [buckling-i-section-generator.ntop](buckling-i-section-generator.ntop)
-- [buckling-flat-section-generator.ntop](buckling-flat-section-generator.ntop)
-- [buckling-hat-section-generator.ntop](buckling-hat-section-generator.ntop)
-
-## Scope of this package
-
-This is a native-model and report handoff. It includes recorded numerical summaries and source workflow notes. It does not include the original execution harness, rebuild scripts, STEP exports, raw meshes, solver work directories, or reference photographs and sketches. Report links to omitted scripts or STEP files lead here. The original reports identify those operations and their original revision scope.
-
-The HTML reports use the adjacent asset folder and work offline. They retain the recorded calculations, native views, engineering limits, and failed studies. Source reference images and screenshots containing workstation paths are omitted. Native family colors are retained; report highlights use nTop blue.
-
-## Publication checks
-
-See [publication-checks.json](publication-checks.json) for source and published hashes, exact native function preservation, portable airfoil paths, and report-image provenance. The final [source validation record](evidence/rev-g-final-validation.json) describes the original native run. Its hashes refer to the source files before publication changes. Other evidence files also retain their original revision and sample scope.
-
-New checks are offline packaging checks. No new native execution, geometry certification, load validation, or weight optimization is claimed. Earlier structural failures remain part of the review.
-
-## License and credits
-
-MIT for Brad Rothenberg's original model and report work. See [LICENSE](LICENSE). Built with Astra.
-
-The aircraft source retains its embedded custom-block attribution, including the bounded triangular-prism method credited to [Inigo Quilez](https://iquilezles.org/articles/distfunctions/). The NACA 64A010 and PW1211 coordinate tables retain their profile names. See the [UIUC Airfoil Coordinates Database](https://m-selig.ae.illinois.edu/ads/coord_database.html) for airfoil reference data. The package license does not replace third-party rights or attribution.
+MIT, as in the existing package. Preserve the included LICENSE and earlier third-party credits. Original aircraft work: Built with Astra. This update organizes and checks the existing work; it does not claim a new aircraft design or structural solve.

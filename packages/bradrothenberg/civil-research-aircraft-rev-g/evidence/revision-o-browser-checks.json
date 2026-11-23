@@ -1,0 +1,33 @@
+{
+  "results": [
+    {
+      "name": "desktop",
+      "title": "Revision O with 77 skin panels",
+      "images": [
+        {
+          "loaded": true,
+          "width": 3840,
+          "height": 2400
+        }
+      ],
+      "panelRows": 77,
+      "pageWidth": 1440,
+      "viewport": 1440
+    },
+    {
+      "name": "phone",
+      "title": "Revision O with 77 skin panels",
+      "images": [
+        {
+          "loaded": true,
+          "width": 3840,
+          "height": 2400
+        }
+      ],
+      "panelRows": 77,
+      "pageWidth": 390,
+      "viewport": 390
+    }
+  ],
+  "errors": []
+}
