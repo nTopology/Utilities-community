@@ -1,0 +1,1230 @@
+{
+  "scope": "Structured publication copy: relocate file-path metadata only. Geometry, cached objects, function chunks and display state preserved byte-for-byte. No new structural solve. Native source records remain historical.",
+  "models": [
+    {
+      "source": "spaced_structure/deliverables/Skin-layout-N.ntop",
+      "file": "rev-n-skin-layout.ntop",
+      "source_sha256": "5a96f985b708b9b9bb830245a14cc1cb542d1149d456878fafa9e9eba9f26a97",
+      "published_sha256": "38fd2b424f8726f411102d64d6223188aedc2f76fc0d57fae0bcd2203fdcd1ba",
+      "bytes": 9734726,
+      "non_index_payload_sha256": "099baae0c3822a3a5268dddf88783a397d08a3071eb448a2c91b4350fc39862f",
+      "only_index_metadata_changed": true,
+      "path_relocations": [
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/N01.stl",
+          "published": "references/panels/n01.stl",
+          "sha256": "26af8d03b6d568413f41cc73c0a100d4db8d25d7c5cc7017ea551a9e3daf27a6"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/F01UP.stl",
+          "published": "references/panels/f01up.stl",
+          "sha256": "d12a2b5e942a85eaacf4dc3251e730e0607b3a3941f8a2d1969feb1d394bf038"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/F01LP.stl",
+          "published": "references/panels/f01lp.stl",
+          "sha256": "e3def9d73264c07fcd30ab603928bc260b3e1d0034a9ac4cb9d26ffe019e808d"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/F01US.stl",
+          "published": "references/panels/f01us.stl",
+          "sha256": "8681840707f5357c6bbc4aa82d2f918b96954a793c26cf044263418d63485967"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/F01LS.stl",
+          "published": "references/panels/f01ls.stl",
+          "sha256": "08eb24f578680cb1da0cdda6d063fd6c9a5977a8be42cceda51c2b8aab3c976a"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/F02UP.stl",
+          "published": "references/panels/f02up.stl",
+          "sha256": "0909f1fc03ec3a0c07f2bd16c83e4c4639ca8027bf74b3d80333310f0c915128"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/B02UP.stl",
+          "published": "references/panels/b02up.stl",
+          "sha256": "091a7b822375189723422d6548a758b264b6ef7f4557a9089cb1b205d1e1bd4e"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/F02LP.stl",
+          "published": "references/panels/f02lp.stl",
+          "sha256": "ba1cf05973ef7e8a1ec8269105fe99f5ec1093e59304cacf1e5f356bf74a51fe"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/B02LP.stl",
+          "published": "references/panels/b02lp.stl",
+          "sha256": "309c01bdb428fba006e2b610bf72b6a036340b2ea67e44d5967bbc74b5d98982"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/F02US.stl",
+          "published": "references/panels/f02us.stl",
+          "sha256": "3525cc874fa436c67b9f3eeda3ac6831b630099d3a4b516a69084d14836d4c62"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/B02US.stl",
+          "published": "references/panels/b02us.stl",
+          "sha256": "7004ac3eca551878d1b50c19929b79c534bd2c62ec74eabea2d4872fe30b83e6"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/F02LS.stl",
+          "published": "references/panels/f02ls.stl",
+          "sha256": "f028f7d1b0a65e5a8e3f594f8c8957f0491bb2c4c7e2a1822c110daea21df5f0"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/B02LS.stl",
+          "published": "references/panels/b02ls.stl",
+          "sha256": "f1f7dd10f5553be650ca41ad4bc985893878b242319f05794d9c6bd3df417db4"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/F03UP.stl",
+          "published": "references/panels/f03up.stl",
+          "sha256": "3bf00b978b250298853bc12702a032ecb6f7325afcd3bd9531494ad96352eef8"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/B03UP.stl",
+          "published": "references/panels/b03up.stl",
+          "sha256": "5f61ee3e84c128ce71f8c8902c8f5fc17d2161958fc5641719551a0e6325f0df"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/F03LP.stl",
+          "published": "references/panels/f03lp.stl",
+          "sha256": "eec1e1619dc4bfe438af0fe33f2bc4df27bd4c12d54e86f8e1759ece82e46e07"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/B03LP.stl",
+          "published": "references/panels/b03lp.stl",
+          "sha256": "5ed4acb113c79b7a54e4d40816c8332417249361b9aecf2d901a7e7fe53b5fc7"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/F01.stl",
+          "published": "references/panels/f01.stl",
+          "sha256": "455bc7149470aaf63c194d38a21c4a1e0b348f7178e1a7197662505633594b82"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/B01.stl",
+          "published": "references/panels/b01.stl",
+          "sha256": "194b557d19654b4dba26f3db036bf60a752caa94b08fcfb1a2fdabfbd6e02f59"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/F03LS.stl",
+          "published": "references/panels/f03ls.stl",
+          "sha256": "ec10e425d1e83f83a91fb1f8d22c07995925183eb921c73edddc847d0de08ca9"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/B03LS.stl",
+          "published": "references/panels/b03ls.stl",
+          "sha256": "611860a10617e40a4719b5bae3376b116c6e893838794c961869b2be5f22dc3d"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/F04UP.stl",
+          "published": "references/panels/f04up.stl",
+          "sha256": "139e77bab021b4d4ad83c9351525e49a8004fc3f59a5a247d5251c1fe5b3ab27"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/B04UP.stl",
+          "published": "references/panels/b04up.stl",
+          "sha256": "98acd182c4b54578474362f9871bd384a607e9d046e246d5d9ec873aa53f52cb"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/F04LP.stl",
+          "published": "references/panels/f04lp.stl",
+          "sha256": "14ed09e035508177d0166aa9e22c97525626b0234b5084f54bd392861d87eec8"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/B04LP.stl",
+          "published": "references/panels/b04lp.stl",
+          "sha256": "9c585a0b687a74f4b6ae3572379c9126e88265475209ae6414214fcffe4d8202"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/F04US.stl",
+          "published": "references/panels/f04us.stl",
+          "sha256": "0a90646e8a354df24c9a2715f581e2f3372ff3bfb9214bc7510fa438bd70c6cc"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/B04US.stl",
+          "published": "references/panels/b04us.stl",
+          "sha256": "cc527dbdd4f77a5c0914835e83f64c589ea57db22f4cc5eac6918507c4bf1823"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/F04LS.stl",
+          "published": "references/panels/f04ls.stl",
+          "sha256": "96bbb8114806d0a51580db7ca14bd5fead831dcf9b85fc47785976a49dade819"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/B04LS.stl",
+          "published": "references/panels/b04ls.stl",
+          "sha256": "13e19069f3f3a3b97d5be443b59a578f3c23df9ac890437a036c39761aa3fd85"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/F05UP.stl",
+          "published": "references/panels/f05up.stl",
+          "sha256": "335504a7e09a6afbd900067cb43bfbae2b36f45d1cc24d6583b4b4e69c2a76ff"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/F05LP.stl",
+          "published": "references/panels/f05lp.stl",
+          "sha256": "f14aa753259991b4acf4685acd8e0028754b83179c58c76435a196e3bd3ee920"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/F05US.stl",
+          "published": "references/panels/f05us.stl",
+          "sha256": "c1b31a6428ca22a06323e3573d6ac2bf04622f091ad5ff7861aa6a0862d8377e"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/F05LS.stl",
+          "published": "references/panels/f05ls.stl",
+          "sha256": "42f66b539567853a7f3d715dbdcd9534fe741dc2d0e110b210d6769312593576"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/F06UPA.stl",
+          "published": "references/panels/f06upa.stl",
+          "sha256": "1bf3b70c7a9e770fcf624dd59aaed9c0f22b86bc7ca36c284f01193819451c47"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/F06UPB.stl",
+          "published": "references/panels/f06upb.stl",
+          "sha256": "cbf2816ab8c2bdedbfa1dd3675d2f78cbf28f57a64359110215381a359a09b3a"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/F06LPA.stl",
+          "published": "references/panels/f06lpa.stl",
+          "sha256": "e659acc210196505a963e40242a91e76bb8da7cd41929a0eb42818f078d3c011"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/F06LPB.stl",
+          "published": "references/panels/f06lpb.stl",
+          "sha256": "1a73cfa16d4366f57cab981677cfaa1f009d09a365df7b76404ead0944b65972"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/F06USA.stl",
+          "published": "references/panels/f06usa.stl",
+          "sha256": "a8e23a929b7515c0e3f1b1a4a9101690cad4e074d8fe77b3f0abcd9d396b853c"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/F06USB.stl",
+          "published": "references/panels/f06usb.stl",
+          "sha256": "48f2b25920e1d8328a552da8a8459c612ef032080927114c5614d4c66c82011e"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/F06LSA.stl",
+          "published": "references/panels/f06lsa.stl",
+          "sha256": "e3a10af1669843a83b7bb8cc014659e2c0c127d6f64165490650f73d21a32645"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/F06LSB.stl",
+          "published": "references/panels/f06lsb.stl",
+          "sha256": "cafc3203a54b2924bef185a442d081baf8bfea2f620a7c4746d2236be5104f75"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/F07UP.stl",
+          "published": "references/panels/f07up.stl",
+          "sha256": "064903edeaf662b6c4e85cae3e13cc9f1dce4d8667708e2c194b4e47e6fbaa90"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/F07LPA.stl",
+          "published": "references/panels/f07lpa.stl",
+          "sha256": "67cb1dd9f502fd7681c722db070b900fd2bf981bf8deb6c025324195291d763e"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/F07LPB.stl",
+          "published": "references/panels/f07lpb.stl",
+          "sha256": "b59462ec72e570aada49ff1a2f1f10a1ed37b2a8774d0289fbc57157a87ded7c"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/F07US.stl",
+          "published": "references/panels/f07us.stl",
+          "sha256": "ecf69777c368d13a7a28f51c613c95445e292ab61d32f5feb83a8b2ff5587dab"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/F07LSA.stl",
+          "published": "references/panels/f07lsa.stl",
+          "sha256": "19cbe5d7f51fbe8aa28d91bc5aff3037b642d6f921c6339b3b771680839480a7"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/F07LSB.stl",
+          "published": "references/panels/f07lsb.stl",
+          "sha256": "8d8cc4c921bedff639a6a2d2f91454c9af4ee2f174d2347fcd7833c44fe342b7"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/WTP.stl",
+          "published": "references/panels/wtp.stl",
+          "sha256": "319540cb1b882fbbf4d61287aa2a8ed0f0de2ef3787ecf840e8cd077008473ea"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/W-LE-P.stl",
+          "published": "references/panels/w-le-p.stl",
+          "sha256": "228cce84baf0beae99e49a02c112e80309f36435ac0c22284f5d02a64d642039"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/W-TE-P.stl",
+          "published": "references/panels/w-te-p.stl",
+          "sha256": "d59a0c48aaf3cda981999849106e27878796b48f5352a56a276c60b0385a6b82"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/W01BUP.stl",
+          "published": "references/panels/w01bup.stl",
+          "sha256": "1b9462b4b805a20282005ef7912df27d91cfc4dcaf72e9a831fe505f133f2576"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/W01BLP.stl",
+          "published": "references/panels/w01blp.stl",
+          "sha256": "8951b0c62117124b0498fc2841bf0d932c0379714a15e65e6eb7d09de4ef6e6d"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/W02BUP.stl",
+          "published": "references/panels/w02bup.stl",
+          "sha256": "9fdf2147501b31798835f645308afd818bb562a53a38284569b85d19150eec5a"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/W02BLP.stl",
+          "published": "references/panels/w02blp.stl",
+          "sha256": "6ed9dcab0dd49a8a2f7042f9d783c05769ffb52031b6ff4d80f020663c0b1def"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/W03BUP.stl",
+          "published": "references/panels/w03bup.stl",
+          "sha256": "bcf5c287fc426da1966e74c224c26b37ad6d23a9149d3702c41609f11fa9758d"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/W03BLP.stl",
+          "published": "references/panels/w03blp.stl",
+          "sha256": "6fb073b29cd333574a280b48325f40326a447dfec6c83986caa2728a124bedc8"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/W04BUP.stl",
+          "published": "references/panels/w04bup.stl",
+          "sha256": "fb7d81080cc4ccae44e6281e5055e952763beb9df78c2ff2e3f5ebe636b12656"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/W04BLP.stl",
+          "published": "references/panels/w04blp.stl",
+          "sha256": "2452a9dba7f08e1ee86a2bbc9bad5ec2ac1e92ace2f79935b8e2e350c63c6399"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/WTS.stl",
+          "published": "references/panels/wts.stl",
+          "sha256": "25450e50d63982d12509e169648f016f74373a04a39a36550a324df41dbb0f72"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/W-LE-S.stl",
+          "published": "references/panels/w-le-s.stl",
+          "sha256": "1173cf0f6c0e90a112cf6ea5cbe2d706e91c5c9fe6c489d403591c3d12b7015e"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/W-TE-S.stl",
+          "published": "references/panels/w-te-s.stl",
+          "sha256": "e2748f5c454980727c1d85a6acd238795f07479967d61a3bba4a2c93e94b7e22"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/W01BUS.stl",
+          "published": "references/panels/w01bus.stl",
+          "sha256": "04b65833beacbf3ed64d52ad7dbb299c52f08c349b37c7bc78dd517a59fa7865"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/W01BLS.stl",
+          "published": "references/panels/w01bls.stl",
+          "sha256": "98e49da0ed3572fa7e67571b1b5069b9df1b2aeea701c8db973ed4236b8943a7"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/W02BUS.stl",
+          "published": "references/panels/w02bus.stl",
+          "sha256": "9437869e0b90ef79215705d869b84473e6c62aa96d837026e9f279bb538a9f04"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/W02BLS.stl",
+          "published": "references/panels/w02bls.stl",
+          "sha256": "5f1a516aca2aed32d60da0d536c7bde4ae63a8170b8f908b01ca468868bd73af"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/W03BUS.stl",
+          "published": "references/panels/w03bus.stl",
+          "sha256": "361c05ee1fa357158ae5e763de3875d10d795e013bc270b197488e126f5064fc"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/W03BLS.stl",
+          "published": "references/panels/w03bls.stl",
+          "sha256": "1a586fc1beec2fa00aa11ff71f1bd37c9d0dedb12c5824ac6478708e523f2324"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/W04BUS.stl",
+          "published": "references/panels/w04bus.stl",
+          "sha256": "4ab8dcd8e4ecd52e9afea61ec0ec7947b95f025174126d9913075cd33982f208"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/W04BLS.stl",
+          "published": "references/panels/w04bls.stl",
+          "sha256": "d22d94511d1a8fd9da316546051dc19475f5d277d96ced2978e4b78cf9fc24fc"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/T-LE-P.stl",
+          "published": "references/panels/t-le-p.stl",
+          "sha256": "e124dd4d92577e0135ed613cf839d386daa8a154fc1fcc9f7f393c14d84bc0a0"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/T-TE-P.stl",
+          "published": "references/panels/t-te-p.stl",
+          "sha256": "5da7e16fdad8ef29493921d9e72a127db5a4fc388e6d4d75337398435df6c795"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/T-MID-O-P.stl",
+          "published": "references/panels/t-mid-o-p.stl",
+          "sha256": "29e4103bc765d016e6d1484dde681337e05f9ce6c3008297bb2ae7946646638e"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/T-MID-I-P.stl",
+          "published": "references/panels/t-mid-i-p.stl",
+          "sha256": "ecfe748c8fa099c1e7af5ead08b03388e8bf245e77e463a2b1175d28d843a3e3"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/T-LE-S.stl",
+          "published": "references/panels/t-le-s.stl",
+          "sha256": "22e817506b02f076813a68450e03e5bb6b974538e4f7b71b6c324daf419ff458"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/T-TE-S.stl",
+          "published": "references/panels/t-te-s.stl",
+          "sha256": "4841a9c85ec2d0ff07d17fa737761fcdd515d58e1c783c5a5024f4f39b44b40e"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/T-MID-O-S.stl",
+          "published": "references/panels/t-mid-o-s.stl",
+          "sha256": "2151bba17f85583a59d2efd5ff11316bd02975719d86dbf49af1db9a8549b4f8"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/T-MID-I-S.stl",
+          "published": "references/panels/t-mid-i-s.stl",
+          "sha256": "e31efc7d3aa7d5940536971f0574ee2a42dcc5a7226f887edfcb28d5c279fe39"
+        }
+      ],
+      "new_native_execution": false
+    },
+    {
+      "source": "tail_alignment/deliverables/Aircraft-skin-installed-O-quality.ntop",
+      "file": "rev-o-installed-skins.ntop",
+      "source_sha256": "3e12b2cbc92fb3ac725fc046030b3a895bfce8b50191d81025fef683301eef72",
+      "published_sha256": "d8fa77aa42921051bae0916b193debfde8b33db5aba6d0a8766238fa27811edf",
+      "bytes": 77734540,
+      "non_index_payload_sha256": "04970de2a6f59c3dd4d90124cc9aecc746db88a4efed7e949ec29a79255645d7",
+      "only_index_metadata_changed": true,
+      "path_relocations": [
+        {
+          "source_relative": "references/naca64a010-il.dat",
+          "published": "references/naca64a010-il.dat",
+          "sha256": "90fe8533e30b8af9d1592f40b067d995e264da75247c3998920e56c2859c0ed4"
+        },
+        {
+          "source_relative": "references/PW1211-il.dat",
+          "published": "references/pw1211-il.dat",
+          "sha256": "1847d16f442621d332ae1ca4b1306261b2829620f2a8ca35871f41c0f2e28dd3"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/N01.stl",
+          "published": "references/panels/n01.stl",
+          "sha256": "26af8d03b6d568413f41cc73c0a100d4db8d25d7c5cc7017ea551a9e3daf27a6"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/F01UP.stl",
+          "published": "references/panels/f01up.stl",
+          "sha256": "d12a2b5e942a85eaacf4dc3251e730e0607b3a3941f8a2d1969feb1d394bf038"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/F01LP.stl",
+          "published": "references/panels/f01lp.stl",
+          "sha256": "e3def9d73264c07fcd30ab603928bc260b3e1d0034a9ac4cb9d26ffe019e808d"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/F01US.stl",
+          "published": "references/panels/f01us.stl",
+          "sha256": "8681840707f5357c6bbc4aa82d2f918b96954a793c26cf044263418d63485967"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/F01LS.stl",
+          "published": "references/panels/f01ls.stl",
+          "sha256": "08eb24f578680cb1da0cdda6d063fd6c9a5977a8be42cceda51c2b8aab3c976a"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/F02UP.stl",
+          "published": "references/panels/f02up.stl",
+          "sha256": "0909f1fc03ec3a0c07f2bd16c83e4c4639ca8027bf74b3d80333310f0c915128"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/B02UP.stl",
+          "published": "references/panels/b02up.stl",
+          "sha256": "091a7b822375189723422d6548a758b264b6ef7f4557a9089cb1b205d1e1bd4e"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/F02LP.stl",
+          "published": "references/panels/f02lp.stl",
+          "sha256": "ba1cf05973ef7e8a1ec8269105fe99f5ec1093e59304cacf1e5f356bf74a51fe"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/B02LP.stl",
+          "published": "references/panels/b02lp.stl",
+          "sha256": "309c01bdb428fba006e2b610bf72b6a036340b2ea67e44d5967bbc74b5d98982"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/F02US.stl",
+          "published": "references/panels/f02us.stl",
+          "sha256": "3525cc874fa436c67b9f3eeda3ac6831b630099d3a4b516a69084d14836d4c62"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/B02US.stl",
+          "published": "references/panels/b02us.stl",
+          "sha256": "7004ac3eca551878d1b50c19929b79c534bd2c62ec74eabea2d4872fe30b83e6"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/F02LS.stl",
+          "published": "references/panels/f02ls.stl",
+          "sha256": "f028f7d1b0a65e5a8e3f594f8c8957f0491bb2c4c7e2a1822c110daea21df5f0"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/B02LS.stl",
+          "published": "references/panels/b02ls.stl",
+          "sha256": "f1f7dd10f5553be650ca41ad4bc985893878b242319f05794d9c6bd3df417db4"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/F03UP.stl",
+          "published": "references/panels/f03up.stl",
+          "sha256": "3bf00b978b250298853bc12702a032ecb6f7325afcd3bd9531494ad96352eef8"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/B03UP.stl",
+          "published": "references/panels/b03up.stl",
+          "sha256": "5f61ee3e84c128ce71f8c8902c8f5fc17d2161958fc5641719551a0e6325f0df"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/F03LP.stl",
+          "published": "references/panels/f03lp.stl",
+          "sha256": "eec1e1619dc4bfe438af0fe33f2bc4df27bd4c12d54e86f8e1759ece82e46e07"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/B03LP.stl",
+          "published": "references/panels/b03lp.stl",
+          "sha256": "5ed4acb113c79b7a54e4d40816c8332417249361b9aecf2d901a7e7fe53b5fc7"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/F01.stl",
+          "published": "references/panels/f01.stl",
+          "sha256": "455bc7149470aaf63c194d38a21c4a1e0b348f7178e1a7197662505633594b82"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/B01.stl",
+          "published": "references/panels/b01.stl",
+          "sha256": "194b557d19654b4dba26f3db036bf60a752caa94b08fcfb1a2fdabfbd6e02f59"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/F03LS.stl",
+          "published": "references/panels/f03ls.stl",
+          "sha256": "ec10e425d1e83f83a91fb1f8d22c07995925183eb921c73edddc847d0de08ca9"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/B03LS.stl",
+          "published": "references/panels/b03ls.stl",
+          "sha256": "611860a10617e40a4719b5bae3376b116c6e893838794c961869b2be5f22dc3d"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/F04UP.stl",
+          "published": "references/panels/f04up.stl",
+          "sha256": "139e77bab021b4d4ad83c9351525e49a8004fc3f59a5a247d5251c1fe5b3ab27"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/B04UP.stl",
+          "published": "references/panels/b04up.stl",
+          "sha256": "98acd182c4b54578474362f9871bd384a607e9d046e246d5d9ec873aa53f52cb"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/F04LP.stl",
+          "published": "references/panels/f04lp.stl",
+          "sha256": "14ed09e035508177d0166aa9e22c97525626b0234b5084f54bd392861d87eec8"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/B04LP.stl",
+          "published": "references/panels/b04lp.stl",
+          "sha256": "9c585a0b687a74f4b6ae3572379c9126e88265475209ae6414214fcffe4d8202"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/F04US.stl",
+          "published": "references/panels/f04us.stl",
+          "sha256": "0a90646e8a354df24c9a2715f581e2f3372ff3bfb9214bc7510fa438bd70c6cc"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/B04US.stl",
+          "published": "references/panels/b04us.stl",
+          "sha256": "cc527dbdd4f77a5c0914835e83f64c589ea57db22f4cc5eac6918507c4bf1823"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/F04LS.stl",
+          "published": "references/panels/f04ls.stl",
+          "sha256": "96bbb8114806d0a51580db7ca14bd5fead831dcf9b85fc47785976a49dade819"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/B04LS.stl",
+          "published": "references/panels/b04ls.stl",
+          "sha256": "13e19069f3f3a3b97d5be443b59a578f3c23df9ac890437a036c39761aa3fd85"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/F05UP.stl",
+          "published": "references/panels/f05up.stl",
+          "sha256": "335504a7e09a6afbd900067cb43bfbae2b36f45d1cc24d6583b4b4e69c2a76ff"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/F05LP.stl",
+          "published": "references/panels/f05lp.stl",
+          "sha256": "f14aa753259991b4acf4685acd8e0028754b83179c58c76435a196e3bd3ee920"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/F05US.stl",
+          "published": "references/panels/f05us.stl",
+          "sha256": "c1b31a6428ca22a06323e3573d6ac2bf04622f091ad5ff7861aa6a0862d8377e"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/F05LS.stl",
+          "published": "references/panels/f05ls.stl",
+          "sha256": "42f66b539567853a7f3d715dbdcd9534fe741dc2d0e110b210d6769312593576"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/F06UPA.stl",
+          "published": "references/panels/f06upa.stl",
+          "sha256": "1bf3b70c7a9e770fcf624dd59aaed9c0f22b86bc7ca36c284f01193819451c47"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/F06UPB.stl",
+          "published": "references/panels/f06upb.stl",
+          "sha256": "cbf2816ab8c2bdedbfa1dd3675d2f78cbf28f57a64359110215381a359a09b3a"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/F06LPA.stl",
+          "published": "references/panels/f06lpa.stl",
+          "sha256": "e659acc210196505a963e40242a91e76bb8da7cd41929a0eb42818f078d3c011"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/F06LPB.stl",
+          "published": "references/panels/f06lpb.stl",
+          "sha256": "1a73cfa16d4366f57cab981677cfaa1f009d09a365df7b76404ead0944b65972"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/F06USA.stl",
+          "published": "references/panels/f06usa.stl",
+          "sha256": "a8e23a929b7515c0e3f1b1a4a9101690cad4e074d8fe77b3f0abcd9d396b853c"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/F06USB.stl",
+          "published": "references/panels/f06usb.stl",
+          "sha256": "48f2b25920e1d8328a552da8a8459c612ef032080927114c5614d4c66c82011e"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/F06LSA.stl",
+          "published": "references/panels/f06lsa.stl",
+          "sha256": "e3a10af1669843a83b7bb8cc014659e2c0c127d6f64165490650f73d21a32645"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/F06LSB.stl",
+          "published": "references/panels/f06lsb.stl",
+          "sha256": "cafc3203a54b2924bef185a442d081baf8bfea2f620a7c4746d2236be5104f75"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/F07UP.stl",
+          "published": "references/panels/f07up.stl",
+          "sha256": "064903edeaf662b6c4e85cae3e13cc9f1dce4d8667708e2c194b4e47e6fbaa90"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/F07LPA.stl",
+          "published": "references/panels/f07lpa.stl",
+          "sha256": "67cb1dd9f502fd7681c722db070b900fd2bf981bf8deb6c025324195291d763e"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/F07LPB.stl",
+          "published": "references/panels/f07lpb.stl",
+          "sha256": "b59462ec72e570aada49ff1a2f1f10a1ed37b2a8774d0289fbc57157a87ded7c"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/F07US.stl",
+          "published": "references/panels/f07us.stl",
+          "sha256": "ecf69777c368d13a7a28f51c613c95445e292ab61d32f5feb83a8b2ff5587dab"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/F07LSA.stl",
+          "published": "references/panels/f07lsa.stl",
+          "sha256": "19cbe5d7f51fbe8aa28d91bc5aff3037b642d6f921c6339b3b771680839480a7"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/F07LSB.stl",
+          "published": "references/panels/f07lsb.stl",
+          "sha256": "8d8cc4c921bedff639a6a2d2f91454c9af4ee2f174d2347fcd7833c44fe342b7"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/WTP.stl",
+          "published": "references/panels/wtp.stl",
+          "sha256": "319540cb1b882fbbf4d61287aa2a8ed0f0de2ef3787ecf840e8cd077008473ea"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/W-LE-P.stl",
+          "published": "references/panels/w-le-p.stl",
+          "sha256": "228cce84baf0beae99e49a02c112e80309f36435ac0c22284f5d02a64d642039"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/W-TE-P.stl",
+          "published": "references/panels/w-te-p.stl",
+          "sha256": "d59a0c48aaf3cda981999849106e27878796b48f5352a56a276c60b0385a6b82"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/W01BUP.stl",
+          "published": "references/panels/w01bup.stl",
+          "sha256": "1b9462b4b805a20282005ef7912df27d91cfc4dcaf72e9a831fe505f133f2576"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/W01BLP.stl",
+          "published": "references/panels/w01blp.stl",
+          "sha256": "8951b0c62117124b0498fc2841bf0d932c0379714a15e65e6eb7d09de4ef6e6d"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/W02BUP.stl",
+          "published": "references/panels/w02bup.stl",
+          "sha256": "9fdf2147501b31798835f645308afd818bb562a53a38284569b85d19150eec5a"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/W02BLP.stl",
+          "published": "references/panels/w02blp.stl",
+          "sha256": "6ed9dcab0dd49a8a2f7042f9d783c05769ffb52031b6ff4d80f020663c0b1def"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/W03BUP.stl",
+          "published": "references/panels/w03bup.stl",
+          "sha256": "bcf5c287fc426da1966e74c224c26b37ad6d23a9149d3702c41609f11fa9758d"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/W03BLP.stl",
+          "published": "references/panels/w03blp.stl",
+          "sha256": "6fb073b29cd333574a280b48325f40326a447dfec6c83986caa2728a124bedc8"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/W04BUP.stl",
+          "published": "references/panels/w04bup.stl",
+          "sha256": "fb7d81080cc4ccae44e6281e5055e952763beb9df78c2ff2e3f5ebe636b12656"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/W04BLP.stl",
+          "published": "references/panels/w04blp.stl",
+          "sha256": "2452a9dba7f08e1ee86a2bbc9bad5ec2ac1e92ace2f79935b8e2e350c63c6399"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/WTS.stl",
+          "published": "references/panels/wts.stl",
+          "sha256": "25450e50d63982d12509e169648f016f74373a04a39a36550a324df41dbb0f72"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/W-LE-S.stl",
+          "published": "references/panels/w-le-s.stl",
+          "sha256": "1173cf0f6c0e90a112cf6ea5cbe2d706e91c5c9fe6c489d403591c3d12b7015e"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/W-TE-S.stl",
+          "published": "references/panels/w-te-s.stl",
+          "sha256": "e2748f5c454980727c1d85a6acd238795f07479967d61a3bba4a2c93e94b7e22"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/W01BUS.stl",
+          "published": "references/panels/w01bus.stl",
+          "sha256": "04b65833beacbf3ed64d52ad7dbb299c52f08c349b37c7bc78dd517a59fa7865"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/W01BLS.stl",
+          "published": "references/panels/w01bls.stl",
+          "sha256": "98e49da0ed3572fa7e67571b1b5069b9df1b2aeea701c8db973ed4236b8943a7"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/W02BUS.stl",
+          "published": "references/panels/w02bus.stl",
+          "sha256": "9437869e0b90ef79215705d869b84473e6c62aa96d837026e9f279bb538a9f04"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/W02BLS.stl",
+          "published": "references/panels/w02bls.stl",
+          "sha256": "5f1a516aca2aed32d60da0d536c7bde4ae63a8170b8f908b01ca468868bd73af"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/W03BUS.stl",
+          "published": "references/panels/w03bus.stl",
+          "sha256": "361c05ee1fa357158ae5e763de3875d10d795e013bc270b197488e126f5064fc"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/W03BLS.stl",
+          "published": "references/panels/w03bls.stl",
+          "sha256": "1a586fc1beec2fa00aa11ff71f1bd37c9d0dedb12c5824ac6478708e523f2324"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/W04BUS.stl",
+          "published": "references/panels/w04bus.stl",
+          "sha256": "4ab8dcd8e4ecd52e9afea61ec0ec7947b95f025174126d9913075cd33982f208"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/W04BLS.stl",
+          "published": "references/panels/w04bls.stl",
+          "sha256": "d22d94511d1a8fd9da316546051dc19475f5d277d96ced2978e4b78cf9fc24fc"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/T-LE-P.stl",
+          "published": "references/panels/t-le-p.stl",
+          "sha256": "e124dd4d92577e0135ed613cf839d386daa8a154fc1fcc9f7f393c14d84bc0a0"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/T-TE-P.stl",
+          "published": "references/panels/t-te-p.stl",
+          "sha256": "5da7e16fdad8ef29493921d9e72a127db5a4fc388e6d4d75337398435df6c795"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/T-MID-O-P.stl",
+          "published": "references/panels/t-mid-o-p.stl",
+          "sha256": "29e4103bc765d016e6d1484dde681337e05f9ce6c3008297bb2ae7946646638e"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/T-MID-I-P.stl",
+          "published": "references/panels/t-mid-i-p.stl",
+          "sha256": "ecfe748c8fa099c1e7af5ead08b03388e8bf245e77e463a2b1175d28d843a3e3"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/T-LE-S.stl",
+          "published": "references/panels/t-le-s.stl",
+          "sha256": "22e817506b02f076813a68450e03e5bb6b974538e4f7b71b6c324daf419ff458"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/T-TE-S.stl",
+          "published": "references/panels/t-te-s.stl",
+          "sha256": "4841a9c85ec2d0ff07d17fa737761fcdd515d58e1c783c5a5024f4f39b44b40e"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/T-MID-O-S.stl",
+          "published": "references/panels/t-mid-o-s.stl",
+          "sha256": "2151bba17f85583a59d2efd5ff11316bd02975719d86dbf49af1db9a8549b4f8"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/T-MID-I-S.stl",
+          "published": "references/panels/t-mid-i-s.stl",
+          "sha256": "e31efc7d3aa7d5940536971f0574ee2a42dcc5a7226f887edfcb28d5c279fe39"
+        }
+      ],
+      "new_native_execution": false
+    },
+    {
+      "source": "tail_alignment/deliverables/Aircraft-skin-exploded-O-quality.ntop",
+      "file": "rev-o-exploded-skins.ntop",
+      "source_sha256": "a3a4f821eecbdb69b2609fe1bfb11ad583904f829e332744c81f224760553a59",
+      "published_sha256": "f50a191b6d83a428d52ef4678801205b7b6bc534a58372884149bc5851cdc66f",
+      "bytes": 77737904,
+      "non_index_payload_sha256": "ab6406799e30035d6a82db729e534c8ef734270c451a7404c7cad3c01089111d",
+      "only_index_metadata_changed": true,
+      "path_relocations": [
+        {
+          "source_relative": "references/naca64a010-il.dat",
+          "published": "references/naca64a010-il.dat",
+          "sha256": "90fe8533e30b8af9d1592f40b067d995e264da75247c3998920e56c2859c0ed4"
+        },
+        {
+          "source_relative": "references/PW1211-il.dat",
+          "published": "references/pw1211-il.dat",
+          "sha256": "1847d16f442621d332ae1ca4b1306261b2829620f2a8ca35871f41c0f2e28dd3"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/N01.stl",
+          "published": "references/panels/n01.stl",
+          "sha256": "26af8d03b6d568413f41cc73c0a100d4db8d25d7c5cc7017ea551a9e3daf27a6"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/F01UP.stl",
+          "published": "references/panels/f01up.stl",
+          "sha256": "d12a2b5e942a85eaacf4dc3251e730e0607b3a3941f8a2d1969feb1d394bf038"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/F01LP.stl",
+          "published": "references/panels/f01lp.stl",
+          "sha256": "e3def9d73264c07fcd30ab603928bc260b3e1d0034a9ac4cb9d26ffe019e808d"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/F01US.stl",
+          "published": "references/panels/f01us.stl",
+          "sha256": "8681840707f5357c6bbc4aa82d2f918b96954a793c26cf044263418d63485967"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/F01LS.stl",
+          "published": "references/panels/f01ls.stl",
+          "sha256": "08eb24f578680cb1da0cdda6d063fd6c9a5977a8be42cceda51c2b8aab3c976a"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/F02UP.stl",
+          "published": "references/panels/f02up.stl",
+          "sha256": "0909f1fc03ec3a0c07f2bd16c83e4c4639ca8027bf74b3d80333310f0c915128"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/B02UP.stl",
+          "published": "references/panels/b02up.stl",
+          "sha256": "091a7b822375189723422d6548a758b264b6ef7f4557a9089cb1b205d1e1bd4e"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/F02LP.stl",
+          "published": "references/panels/f02lp.stl",
+          "sha256": "ba1cf05973ef7e8a1ec8269105fe99f5ec1093e59304cacf1e5f356bf74a51fe"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/B02LP.stl",
+          "published": "references/panels/b02lp.stl",
+          "sha256": "309c01bdb428fba006e2b610bf72b6a036340b2ea67e44d5967bbc74b5d98982"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/F02US.stl",
+          "published": "references/panels/f02us.stl",
+          "sha256": "3525cc874fa436c67b9f3eeda3ac6831b630099d3a4b516a69084d14836d4c62"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/B02US.stl",
+          "published": "references/panels/b02us.stl",
+          "sha256": "7004ac3eca551878d1b50c19929b79c534bd2c62ec74eabea2d4872fe30b83e6"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/F02LS.stl",
+          "published": "references/panels/f02ls.stl",
+          "sha256": "f028f7d1b0a65e5a8e3f594f8c8957f0491bb2c4c7e2a1822c110daea21df5f0"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/B02LS.stl",
+          "published": "references/panels/b02ls.stl",
+          "sha256": "f1f7dd10f5553be650ca41ad4bc985893878b242319f05794d9c6bd3df417db4"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/F03UP.stl",
+          "published": "references/panels/f03up.stl",
+          "sha256": "3bf00b978b250298853bc12702a032ecb6f7325afcd3bd9531494ad96352eef8"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/B03UP.stl",
+          "published": "references/panels/b03up.stl",
+          "sha256": "5f61ee3e84c128ce71f8c8902c8f5fc17d2161958fc5641719551a0e6325f0df"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/F03LP.stl",
+          "published": "references/panels/f03lp.stl",
+          "sha256": "eec1e1619dc4bfe438af0fe33f2bc4df27bd4c12d54e86f8e1759ece82e46e07"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/B03LP.stl",
+          "published": "references/panels/b03lp.stl",
+          "sha256": "5ed4acb113c79b7a54e4d40816c8332417249361b9aecf2d901a7e7fe53b5fc7"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/F01.stl",
+          "published": "references/panels/f01.stl",
+          "sha256": "455bc7149470aaf63c194d38a21c4a1e0b348f7178e1a7197662505633594b82"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/B01.stl",
+          "published": "references/panels/b01.stl",
+          "sha256": "194b557d19654b4dba26f3db036bf60a752caa94b08fcfb1a2fdabfbd6e02f59"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/F03LS.stl",
+          "published": "references/panels/f03ls.stl",
+          "sha256": "ec10e425d1e83f83a91fb1f8d22c07995925183eb921c73edddc847d0de08ca9"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/B03LS.stl",
+          "published": "references/panels/b03ls.stl",
+          "sha256": "611860a10617e40a4719b5bae3376b116c6e893838794c961869b2be5f22dc3d"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/F04UP.stl",
+          "published": "references/panels/f04up.stl",
+          "sha256": "139e77bab021b4d4ad83c9351525e49a8004fc3f59a5a247d5251c1fe5b3ab27"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/B04UP.stl",
+          "published": "references/panels/b04up.stl",
+          "sha256": "98acd182c4b54578474362f9871bd384a607e9d046e246d5d9ec873aa53f52cb"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/F04LP.stl",
+          "published": "references/panels/f04lp.stl",
+          "sha256": "14ed09e035508177d0166aa9e22c97525626b0234b5084f54bd392861d87eec8"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/B04LP.stl",
+          "published": "references/panels/b04lp.stl",
+          "sha256": "9c585a0b687a74f4b6ae3572379c9126e88265475209ae6414214fcffe4d8202"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/F04US.stl",
+          "published": "references/panels/f04us.stl",
+          "sha256": "0a90646e8a354df24c9a2715f581e2f3372ff3bfb9214bc7510fa438bd70c6cc"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/B04US.stl",
+          "published": "references/panels/b04us.stl",
+          "sha256": "cc527dbdd4f77a5c0914835e83f64c589ea57db22f4cc5eac6918507c4bf1823"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/F04LS.stl",
+          "published": "references/panels/f04ls.stl",
+          "sha256": "96bbb8114806d0a51580db7ca14bd5fead831dcf9b85fc47785976a49dade819"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/B04LS.stl",
+          "published": "references/panels/b04ls.stl",
+          "sha256": "13e19069f3f3a3b97d5be443b59a578f3c23df9ac890437a036c39761aa3fd85"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/F05UP.stl",
+          "published": "references/panels/f05up.stl",
+          "sha256": "335504a7e09a6afbd900067cb43bfbae2b36f45d1cc24d6583b4b4e69c2a76ff"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/F05LP.stl",
+          "published": "references/panels/f05lp.stl",
+          "sha256": "f14aa753259991b4acf4685acd8e0028754b83179c58c76435a196e3bd3ee920"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/F05US.stl",
+          "published": "references/panels/f05us.stl",
+          "sha256": "c1b31a6428ca22a06323e3573d6ac2bf04622f091ad5ff7861aa6a0862d8377e"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/F05LS.stl",
+          "published": "references/panels/f05ls.stl",
+          "sha256": "42f66b539567853a7f3d715dbdcd9534fe741dc2d0e110b210d6769312593576"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/F06UPA.stl",
+          "published": "references/panels/f06upa.stl",
+          "sha256": "1bf3b70c7a9e770fcf624dd59aaed9c0f22b86bc7ca36c284f01193819451c47"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/F06UPB.stl",
+          "published": "references/panels/f06upb.stl",
+          "sha256": "cbf2816ab8c2bdedbfa1dd3675d2f78cbf28f57a64359110215381a359a09b3a"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/F06LPA.stl",
+          "published": "references/panels/f06lpa.stl",
+          "sha256": "e659acc210196505a963e40242a91e76bb8da7cd41929a0eb42818f078d3c011"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/F06LPB.stl",
+          "published": "references/panels/f06lpb.stl",
+          "sha256": "1a73cfa16d4366f57cab981677cfaa1f009d09a365df7b76404ead0944b65972"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/F06USA.stl",
+          "published": "references/panels/f06usa.stl",
+          "sha256": "a8e23a929b7515c0e3f1b1a4a9101690cad4e074d8fe77b3f0abcd9d396b853c"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/F06USB.stl",
+          "published": "references/panels/f06usb.stl",
+          "sha256": "48f2b25920e1d8328a552da8a8459c612ef032080927114c5614d4c66c82011e"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/F06LSA.stl",
+          "published": "references/panels/f06lsa.stl",
+          "sha256": "e3a10af1669843a83b7bb8cc014659e2c0c127d6f64165490650f73d21a32645"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/F06LSB.stl",
+          "published": "references/panels/f06lsb.stl",
+          "sha256": "cafc3203a54b2924bef185a442d081baf8bfea2f620a7c4746d2236be5104f75"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/F07UP.stl",
+          "published": "references/panels/f07up.stl",
+          "sha256": "064903edeaf662b6c4e85cae3e13cc9f1dce4d8667708e2c194b4e47e6fbaa90"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/F07LPA.stl",
+          "published": "references/panels/f07lpa.stl",
+          "sha256": "67cb1dd9f502fd7681c722db070b900fd2bf981bf8deb6c025324195291d763e"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/F07LPB.stl",
+          "published": "references/panels/f07lpb.stl",
+          "sha256": "b59462ec72e570aada49ff1a2f1f10a1ed37b2a8774d0289fbc57157a87ded7c"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/F07US.stl",
+          "published": "references/panels/f07us.stl",
+          "sha256": "ecf69777c368d13a7a28f51c613c95445e292ab61d32f5feb83a8b2ff5587dab"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/F07LSA.stl",
+          "published": "references/panels/f07lsa.stl",
+          "sha256": "19cbe5d7f51fbe8aa28d91bc5aff3037b642d6f921c6339b3b771680839480a7"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/F07LSB.stl",
+          "published": "references/panels/f07lsb.stl",
+          "sha256": "8d8cc4c921bedff639a6a2d2f91454c9af4ee2f174d2347fcd7833c44fe342b7"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/WTP.stl",
+          "published": "references/panels/wtp.stl",
+          "sha256": "319540cb1b882fbbf4d61287aa2a8ed0f0de2ef3787ecf840e8cd077008473ea"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/W-LE-P.stl",
+          "published": "references/panels/w-le-p.stl",
+          "sha256": "228cce84baf0beae99e49a02c112e80309f36435ac0c22284f5d02a64d642039"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/W-TE-P.stl",
+          "published": "references/panels/w-te-p.stl",
+          "sha256": "d59a0c48aaf3cda981999849106e27878796b48f5352a56a276c60b0385a6b82"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/W01BUP.stl",
+          "published": "references/panels/w01bup.stl",
+          "sha256": "1b9462b4b805a20282005ef7912df27d91cfc4dcaf72e9a831fe505f133f2576"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/W01BLP.stl",
+          "published": "references/panels/w01blp.stl",
+          "sha256": "8951b0c62117124b0498fc2841bf0d932c0379714a15e65e6eb7d09de4ef6e6d"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/W02BUP.stl",
+          "published": "references/panels/w02bup.stl",
+          "sha256": "9fdf2147501b31798835f645308afd818bb562a53a38284569b85d19150eec5a"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/W02BLP.stl",
+          "published": "references/panels/w02blp.stl",
+          "sha256": "6ed9dcab0dd49a8a2f7042f9d783c05769ffb52031b6ff4d80f020663c0b1def"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/W03BUP.stl",
+          "published": "references/panels/w03bup.stl",
+          "sha256": "bcf5c287fc426da1966e74c224c26b37ad6d23a9149d3702c41609f11fa9758d"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/W03BLP.stl",
+          "published": "references/panels/w03blp.stl",
+          "sha256": "6fb073b29cd333574a280b48325f40326a447dfec6c83986caa2728a124bedc8"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/W04BUP.stl",
+          "published": "references/panels/w04bup.stl",
+          "sha256": "fb7d81080cc4ccae44e6281e5055e952763beb9df78c2ff2e3f5ebe636b12656"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/W04BLP.stl",
+          "published": "references/panels/w04blp.stl",
+          "sha256": "2452a9dba7f08e1ee86a2bbc9bad5ec2ac1e92ace2f79935b8e2e350c63c6399"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/WTS.stl",
+          "published": "references/panels/wts.stl",
+          "sha256": "25450e50d63982d12509e169648f016f74373a04a39a36550a324df41dbb0f72"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/W-LE-S.stl",
+          "published": "references/panels/w-le-s.stl",
+          "sha256": "1173cf0f6c0e90a112cf6ea5cbe2d706e91c5c9fe6c489d403591c3d12b7015e"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/W-TE-S.stl",
+          "published": "references/panels/w-te-s.stl",
+          "sha256": "e2748f5c454980727c1d85a6acd238795f07479967d61a3bba4a2c93e94b7e22"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/W01BUS.stl",
+          "published": "references/panels/w01bus.stl",
+          "sha256": "04b65833beacbf3ed64d52ad7dbb299c52f08c349b37c7bc78dd517a59fa7865"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/W01BLS.stl",
+          "published": "references/panels/w01bls.stl",
+          "sha256": "98e49da0ed3572fa7e67571b1b5069b9df1b2aeea701c8db973ed4236b8943a7"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/W02BUS.stl",
+          "published": "references/panels/w02bus.stl",
+          "sha256": "9437869e0b90ef79215705d869b84473e6c62aa96d837026e9f279bb538a9f04"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/W02BLS.stl",
+          "published": "references/panels/w02bls.stl",
+          "sha256": "5f1a516aca2aed32d60da0d536c7bde4ae63a8170b8f908b01ca468868bd73af"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/W03BUS.stl",
+          "published": "references/panels/w03bus.stl",
+          "sha256": "361c05ee1fa357158ae5e763de3875d10d795e013bc270b197488e126f5064fc"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/W03BLS.stl",
+          "published": "references/panels/w03bls.stl",
+          "sha256": "1a586fc1beec2fa00aa11ff71f1bd37c9d0dedb12c5824ac6478708e523f2324"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/W04BUS.stl",
+          "published": "references/panels/w04bus.stl",
+          "sha256": "4ab8dcd8e4ecd52e9afea61ec0ec7947b95f025174126d9913075cd33982f208"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/W04BLS.stl",
+          "published": "references/panels/w04bls.stl",
+          "sha256": "d22d94511d1a8fd9da316546051dc19475f5d277d96ced2978e4b78cf9fc24fc"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/T-LE-P.stl",
+          "published": "references/panels/t-le-p.stl",
+          "sha256": "e124dd4d92577e0135ed613cf839d386daa8a154fc1fcc9f7f393c14d84bc0a0"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/T-TE-P.stl",
+          "published": "references/panels/t-te-p.stl",
+          "sha256": "5da7e16fdad8ef29493921d9e72a127db5a4fc388e6d4d75337398435df6c795"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/T-MID-O-P.stl",
+          "published": "references/panels/t-mid-o-p.stl",
+          "sha256": "29e4103bc765d016e6d1484dde681337e05f9ce6c3008297bb2ae7946646638e"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/T-MID-I-P.stl",
+          "published": "references/panels/t-mid-i-p.stl",
+          "sha256": "ecfe748c8fa099c1e7af5ead08b03388e8bf245e77e463a2b1175d28d843a3e3"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/T-LE-S.stl",
+          "published": "references/panels/t-le-s.stl",
+          "sha256": "22e817506b02f076813a68450e03e5bb6b974538e4f7b71b6c324daf419ff458"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/T-TE-S.stl",
+          "published": "references/panels/t-te-s.stl",
+          "sha256": "4841a9c85ec2d0ff07d17fa737761fcdd515d58e1c783c5a5024f4f39b44b40e"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/T-MID-O-S.stl",
+          "published": "references/panels/t-mid-o-s.stl",
+          "sha256": "2151bba17f85583a59d2efd5ff11316bd02975719d86dbf49af1db9a8549b4f8"
+        },
+        {
+          "source_relative": "spaced_structure/exports/panels-connected/T-MID-I-S.stl",
+          "published": "references/panels/t-mid-i-s.stl",
+          "sha256": "e31efc7d3aa7d5940536971f0574ee2a42dcc5a7226f887edfcb28d5c279fe39"
+        }
+      ],
+      "new_native_execution": false
+    }
+  ],
+  "native_pilot": {
+    "returncode": 0,
+    "seconds": 3.7251998000065214,
+    "stdout": "14:36:03 [I]: Login successful\n14:36:04 [I]: nTop successfully built.\n14:36:04 [I]: Logout successful\n",
+    "stderr": "",
+    "native_version": "6.1.0-rc build 42926",
+    "scope": "Native extended readback of relocated 77-panel notebook; not structural analysis",
+    "input_sha256": "38fd2b424f8726f411102d64d6223188aedc2f76fc0d57fae0bcd2203fdcd1ba"
+  },
+  "limitations": [
+    "The complete installed/exploded publication copies have not been rerun in nTop. Non-index native payloads match their source files exactly.",
+    "Only the 77-panel layout received new native extended readback. This is not structural or manufacturing validation.",
+    "Separate source-only canonical/structure presentations and raw analysis records are not duplicated in this compact current download. The full structural definitions are embedded in both complete skin presentations."
+  ]
+}

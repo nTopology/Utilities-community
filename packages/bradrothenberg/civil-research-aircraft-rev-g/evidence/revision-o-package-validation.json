@@ -1,0 +1,54 @@
+{
+  "pass": true,
+  "errors": [],
+  "native_models": 3,
+  "panel_meshes": 77,
+  "panel_schedule_rows": 77,
+  "bundle_files": 99,
+  "bundle_bytes": 28309804,
+  "bundle_sha256": "36b1bf3fec34280bf35bb834e0a1293493ea19cb508968902c5e17d893465498",
+  "checked_local_html_references": 9,
+  "relocated_dependency_hashes_verified": true,
+  "native_pilot": {
+    "returncode": 0,
+    "seconds": 3.7251998000065214,
+    "stdout": "14:36:03 [I]: Login successful\n14:36:04 [I]: nTop successfully built.\n14:36:04 [I]: Logout successful\n",
+    "stderr": "",
+    "native_version": "6.1.0-rc build 42926",
+    "scope": "Native extended readback of relocated 77-panel notebook; not structural analysis",
+    "input_sha256": "38fd2b424f8726f411102d64d6223188aedc2f76fc0d57fae0bcd2203fdcd1ba"
+  },
+  "desktop_and_phone": {
+    "results": [
+      {
+        "name": "desktop",
+        "title": "Revision O with 77 skin panels",
+        "images": [
+          {
+            "loaded": true,
+            "width": 3840,
+            "height": 2400
+          }
+        ],
+        "panelRows": 77,
+        "pageWidth": 1440,
+        "viewport": 1440
+      },
+      {
+        "name": "phone",
+        "title": "Revision O with 77 skin panels",
+        "images": [
+          {
+            "loaded": true,
+            "width": 3840,
+            "height": 2400
+          }
+        ],
+        "panelRows": 77,
+        "pageWidth": 390,
+        "viewport": 390
+      }
+    ],
+    "errors": []
+  }
+}

@@ -1,3 +1,6 @@
 *.exe filter=lfs diff=lfs merge=lfs -text
 *.msi filter=lfs diff=lfs merge=lfs -text
 packages/bradrothenberg/marine-return-loop-propeller-r5/marine-return-loop-propeller-r5.ntop filter=lfs diff=lfs merge=lfs -text
+packages/bradrothenberg/civil-research-aircraft-rev-g/rev-o-installed-skins.ntop filter=lfs diff=lfs merge=lfs -text
+packages/bradrothenberg/civil-research-aircraft-rev-g/rev-o-exploded-skins.ntop filter=lfs diff=lfs merge=lfs -text
+packages/bradrothenberg/civil-research-aircraft-rev-g/rev-n-skin-layout.ntop filter=lfs diff=lfs merge=lfs -text

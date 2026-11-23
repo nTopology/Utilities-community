@@ -1,11 +1,11 @@
 {
   "id": "civil-research-aircraft-rev-g",
   "type": "Bundle",
-  "title": "Civil research aircraft: Revision G and design studies",
-  "summary": "Explore the Revision G native aircraft assembly, editable lug joints and station parts, and eight reports tracing the structural geometry and analysis studies.",
+  "title": "Civil research aircraft: Revision O and 77 skin panels",
+  "summary": "Explore the complete Revision O aircraft with installed and exploded skins, the 77-panel layout, bundled imports and recorded tail changes. Earlier Revision G work remains available.",
   "author": "bradrothenberg",
   "org": "nTop",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "ntopVersion": "6.1",
   "license": "MIT",
   "domain": "Aerospace",
@@ -13,14 +13,14 @@
   "complexity": "Advanced",
   "tags": [
     "aircraft",
-    "notebook-api",
+    "skin-panels",
     "assembly",
-    "bulkheads",
-    "lug-joints",
+    "tail-structure",
+    "notebook-api",
     "structural-study",
     "astra"
   ],
   "preview": "geometry",
   "coverImage": "cover.png",
-  "packageFile": "civil-research-aircraft-rev-g.ntop"
+  "packageFile": "civil-research-aircraft-rev-o-skins.zip"
 }
