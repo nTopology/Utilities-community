@@ -1,0 +1,20 @@
+{
+    "id": "mass-flow-rate",
+    "type": "Block",
+    "title": "Mass Flow Rate",
+    "summary": "Translates a mass flow rate to a velocity boundary conditioin",
+    "author": "mandygolden",
+    "version": "1.0.0",
+    "ntopVersion": "6.4.3",
+    "license": "MIT",
+    "domain": "Simulation",
+    "complexity": "Beginner",
+    "tags": [
+        "cfd",
+        "boundary-condition",
+        "flow",
+        "custom-block"
+    ],
+    "preview": "graph",
+    "packageFile": "Mass Flow Rate.ntop"
+}

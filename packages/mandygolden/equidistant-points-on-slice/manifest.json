@@ -1,0 +1,22 @@
+{
+    "id": "equidistant-points-on-slice",
+    "type": "Block",
+    "title": "Equidistant Points on Slice",
+    "summary": "Creates a lattice (graph) from the closed curves of a slice, with points spaced by the increment along each curve.",
+    "author": "mandygolden",
+    "version": "1.0.0",
+    "ntopVersion": "6.4.3",
+    "license": "MIT",
+    "domain": "Geometry",
+    "complexity": "Intermediate",
+    "tags": [
+        "slices",
+        "lattice",
+        "points",
+        "graph",
+        "custom-block"
+    ],
+    "preview": "geometry",
+    "coverImage": "cover.png",
+    "packageFile": "Equidistant Points On Slice.ntop"
+}

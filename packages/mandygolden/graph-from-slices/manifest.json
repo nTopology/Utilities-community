@@ -1,0 +1,21 @@
+{
+    "id": "graph-from-slices",
+    "type": "Block",
+    "title": "Graph from Slices",
+    "summary": "Creates a lattice (graph) from the closed and open curves of a slice, with points spaced by the increment along each curve.",
+    "author": "mandygolden",
+    "version": "1.0.0",
+    "ntopVersion": "6.4.3",
+    "license": "MIT",
+    "domain": "Geometry",
+    "complexity": "Intermediate",
+    "tags": [
+        "slices",
+        "lattice",
+        "graph",
+        "custom-block"
+    ],
+    "preview": "geometry",
+    "coverImage": "cover.png",
+    "packageFile": "Graph from Slices.ntop"
+}

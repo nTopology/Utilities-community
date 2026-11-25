@@ -1,0 +1,21 @@
+{
+    "id": "arrow-from-line-segment",
+    "type": "Block",
+    "title": "Arrow from Line Segment",
+    "summary": "Creates an arrow body from an origin, a direction and a length. The shaft is a cylinder and the head is a cone, combined with a union.",
+    "author": "mandygolden",
+    "version": "1.0.0",
+    "ntopVersion": "6.4.3",
+    "license": "MIT",
+    "domain": "Geometry",
+    "complexity": "Beginner",
+    "tags": [
+        "visualization",
+        "arrow",
+        "vectors",
+        "custom-block"
+    ],
+    "preview": "geometry",
+    "coverImage": "cover.png",
+    "packageFile": "Arrow from Line Segment.ntop"
+}

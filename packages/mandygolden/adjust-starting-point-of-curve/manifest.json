@@ -1,0 +1,19 @@
+{
+    "id": "adjust-starting-point-of-curve",
+    "type": "Block",
+    "title": "Adjust Starting Point of Curve",
+    "summary": "Change the starting point of a curve to match a given element number.",
+    "author": "mandygolden",
+    "version": "1.0.0",
+    "ntopVersion": "6.4.3",
+    "license": "MIT",
+    "domain": "Geometry",
+    "complexity": "Beginner",
+    "tags": [
+        "curves",
+        "polycurve",
+        "custom-block"
+    ],
+    "preview": "graph",
+    "packageFile": "Adjust Starting Point of Curve.ntop"
+}

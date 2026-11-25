@@ -1,0 +1,21 @@
+{
+    "id": "color-point-map-on-body",
+    "type": "Block",
+    "title": "Color Point Map on Body",
+    "summary": "Creates a point map in one color on the part of the body.",
+    "author": "mandygolden",
+    "version": "1.0.0",
+    "ntopVersion": "6.4.3",
+    "license": "MIT",
+    "domain": "Geometry",
+    "complexity": "Beginner",
+    "tags": [
+        "point-map",
+        "visualization",
+        "color",
+        "custom-block"
+    ],
+    "preview": "geometry",
+    "coverImage": "cover.png",
+    "packageFile": "Color Point Map on Body.ntop"
+}

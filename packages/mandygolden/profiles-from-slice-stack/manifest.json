@@ -1,0 +1,20 @@
+{
+    "id": "profiles-from-slice-stack",
+    "type": "Block",
+    "title": "Profiles from Slice Stack",
+    "summary": "Generates a list of profiles for each slice in a given slice stack",
+    "author": "mandygolden",
+    "version": "1.0.0",
+    "ntopVersion": "6.4.3",
+    "license": "MIT",
+    "domain": "Geometry",
+    "complexity": "Beginner",
+    "tags": [
+        "profiles",
+        "slices",
+        "custom-block"
+    ],
+    "preview": "geometry",
+    "coverImage": "cover.png",
+    "packageFile": "Profile from Slice Stack.ntop"
+}

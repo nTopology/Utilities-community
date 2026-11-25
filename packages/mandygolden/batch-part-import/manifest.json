@@ -1,0 +1,21 @@
+{
+    "id": "batch-part-import",
+    "type": "Block",
+    "title": "Batch Part Import",
+    "summary": "Imports a Mesh List to files to a directory with a specified file name.",
+    "author": "mandygolden",
+    "version": "1.0.0",
+    "ntopVersion": "6.4.3",
+    "license": "MIT",
+    "domain": "Geometry",
+    "complexity": "Intermediate",
+    "tags": [
+        "import",
+        "cad",
+        "batch",
+        "interop",
+        "custom-block"
+    ],
+    "preview": "graph",
+    "packageFile": "Batch Part Import.ntop"
+}

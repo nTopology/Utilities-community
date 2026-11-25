@@ -1,0 +1,20 @@
+{
+    "id": "filter-zero-bodies",
+    "type": "Block",
+    "title": "Filter Zero Bodies",
+    "summary": "Removes bodies from a list when their bounding box is not larger than the tolerance in X, Y or Z.",
+    "author": "mandygolden",
+    "version": "1.0.0",
+    "ntopVersion": "6.4.3",
+    "license": "MIT",
+    "domain": "Geometry",
+    "complexity": "Beginner",
+    "tags": [
+        "lists",
+        "filter",
+        "implicit",
+        "custom-block"
+    ],
+    "preview": "graph",
+    "packageFile": "Filter Zero Bodies.ntop"
+}

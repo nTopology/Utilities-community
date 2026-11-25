@@ -1,0 +1,21 @@
+{
+    "id": "ordered-points-in-a-body",
+    "type": "Block",
+    "title": "Ordered Points in a Body",
+    "summary": "Generates an ordered list of points within in an implicit body following a rectangular cell map.",
+    "author": "mandygolden",
+    "version": "1.0.0",
+    "ntopVersion": "6.4.3",
+    "license": "MIT",
+    "domain": "Geometry",
+    "complexity": "Intermediate",
+    "tags": [
+        "points",
+        "cell-map",
+        "ordering",
+        "custom-block"
+    ],
+    "preview": "geometry",
+    "coverImage": "cover.png",
+    "packageFile": "Ordered Points in a Body.ntop"
+}

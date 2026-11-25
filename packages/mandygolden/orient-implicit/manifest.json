@@ -1,0 +1,21 @@
+{
+    "id": "orient-implicit",
+    "type": "Block",
+    "title": "Orient Implicit",
+    "summary": "Orients an implicit body to a destination plane by remapping its coordinates onto the frame of that plane.",
+    "author": "mandygolden",
+    "version": "1.0.0",
+    "ntopVersion": "6.4.3",
+    "license": "MIT",
+    "domain": "Geometry",
+    "complexity": "Beginner",
+    "tags": [
+        "transform",
+        "planes",
+        "implicit",
+        "custom-block"
+    ],
+    "preview": "geometry",
+    "coverImage": "cover.png",
+    "packageFile": "Orient Implicit.ntop"
+}

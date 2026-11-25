@@ -1,0 +1,20 @@
+{
+    "id": "treelike-supports",
+    "type": "Block",
+    "title": "Treelike Supports",
+    "summary": "Creates tree-like support structures for a part.",
+    "author": "mandygolden",
+    "version": "1.0.0",
+    "ntopVersion": "6.4.3",
+    "license": "MIT",
+    "domain": "Additive Manufacturing",
+    "complexity": "Advanced",
+    "tags": [
+        "supports",
+        "tree-supports",
+        "additive-manufacturing",
+        "custom-block"
+    ],
+    "preview": "graph",
+    "packageFile": "Treelike supports.ntop"
+}

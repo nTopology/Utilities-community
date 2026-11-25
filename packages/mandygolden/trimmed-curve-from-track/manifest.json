@@ -1,0 +1,21 @@
+{
+    "id": "trimmed-curve-from-track",
+    "type": "Block",
+    "title": "Trimmed Curve from Track",
+    "summary": "Trims a polycurve at a location found with a midsurface curve and extends the trimmed end.",
+    "author": "mandygolden",
+    "version": "1.0.0",
+    "ntopVersion": "6.4.3",
+    "license": "MIT",
+    "domain": "Geometry",
+    "complexity": "Advanced",
+    "tags": [
+        "curves",
+        "trim",
+        "extend",
+        "polycurve",
+        "custom-block"
+    ],
+    "preview": "graph",
+    "packageFile": "Trimmed Curve from Track.ntop"
+}

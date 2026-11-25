@@ -1,0 +1,21 @@
+{
+    "id": "lattice-by-relative-density",
+    "type": "Block",
+    "title": "Lattice by Relative Density",
+    "summary": "Creates a beam lattice which is defined by the Unit Cell, Unit Cell Size, and a Relative Density value. These are used to calculate the beam thickness needed to achieve the correct relative density defined by the user.",
+    "author": "mandygolden",
+    "version": "1.0.0",
+    "ntopVersion": "6.4.3",
+    "license": "MIT",
+    "domain": "Geometry",
+    "complexity": "Intermediate",
+    "tags": [
+        "lattice",
+        "relative-density",
+        "beams",
+        "custom-block"
+    ],
+    "preview": "geometry",
+    "coverImage": "cover.png",
+    "packageFile": "Lattice by Relative Density.ntop"
+}

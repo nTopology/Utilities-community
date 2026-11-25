@@ -1,0 +1,20 @@
+{
+    "id": "cell-size-from-number-of-cells",
+    "type": "Block",
+    "title": "Cell Size from Number of Cells",
+    "summary": "Calculates the cell size that fits approximately the requested number of cells into the bounding box of a model.",
+    "author": "mandygolden",
+    "version": "1.0.0",
+    "ntopVersion": "6.4.3",
+    "license": "MIT",
+    "domain": "Geometry",
+    "complexity": "Beginner",
+    "tags": [
+        "lattice",
+        "cell-size",
+        "calculation",
+        "custom-block"
+    ],
+    "preview": "graph",
+    "packageFile": "Cell Size from Number of Cells.ntop"
+}

@@ -1,0 +1,21 @@
+{
+    "id": "closest-point-to-body-no-tolerance",
+    "type": "Block",
+    "title": "Closest Point to Body (No Tolerance)",
+    "summary": "Translates points to the closest point on a body by translating a point by the magnitude of its distance field multiplied by the negative unit vector of it's gradient",
+    "author": "mandygolden",
+    "version": "1.0.0",
+    "ntopVersion": "6.4.3",
+    "license": "MIT",
+    "domain": "Geometry",
+    "complexity": "Intermediate",
+    "tags": [
+        "points",
+        "projection",
+        "fields",
+        "custom-block"
+    ],
+    "preview": "geometry",
+    "coverImage": "cover.png",
+    "packageFile": "Closest Point to Body (No Tolerance).ntop"
+}

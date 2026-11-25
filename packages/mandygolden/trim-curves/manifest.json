@@ -1,0 +1,21 @@
+{
+    "id": "trim-curves",
+    "type": "Block",
+    "title": "Trim Curves",
+    "summary": "Trims a list of curves with a body.",
+    "author": "mandygolden",
+    "version": "1.0.0",
+    "ntopVersion": "6.4.3",
+    "license": "MIT",
+    "domain": "Geometry",
+    "complexity": "Beginner",
+    "tags": [
+        "curves",
+        "trim",
+        "lists",
+        "custom-block"
+    ],
+    "preview": "geometry",
+    "coverImage": "cover.png",
+    "packageFile": "Trim Curves.ntop"
+}

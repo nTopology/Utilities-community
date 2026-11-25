@@ -1,0 +1,21 @@
+{
+    "id": "spline-from-polyline",
+    "type": "Block",
+    "title": "Spline from Polyline",
+    "summary": "Fit a spline to a polyline with an approximate control of vertex rounding.",
+    "author": "mandygolden",
+    "version": "1.0.0",
+    "ntopVersion": "6.4.3",
+    "license": "MIT",
+    "domain": "Geometry",
+    "complexity": "Beginner",
+    "tags": [
+        "splines",
+        "curves",
+        "polyline",
+        "custom-block"
+    ],
+    "preview": "geometry",
+    "coverImage": "cover.png",
+    "packageFile": "spline from polyline.ntop"
+}

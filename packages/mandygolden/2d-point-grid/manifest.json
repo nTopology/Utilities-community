@@ -1,0 +1,21 @@
+{
+    "id": "2d-point-grid",
+    "type": "Block",
+    "title": "2D Point Grid",
+    "summary": "Produces a 2D or 3D grid of points based on the given number of points along the x,y and z axis and the distance between those points.",
+    "author": "mandygolden",
+    "version": "1.0.0",
+    "ntopVersion": "6.4.3",
+    "license": "MIT",
+    "domain": "Geometry",
+    "complexity": "Beginner",
+    "tags": [
+        "points",
+        "grid",
+        "pattern",
+        "custom-block"
+    ],
+    "preview": "geometry",
+    "coverImage": "cover.png",
+    "packageFile": "2D Point Grid.ntop"
+}

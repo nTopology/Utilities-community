@@ -1,0 +1,21 @@
+{
+    "id": "export-temperature-point-map",
+    "type": "Block",
+    "title": "Export Temperature Point Map",
+    "summary": "Exports a temperature point map as a CSV Table",
+    "author": "mandygolden",
+    "version": "1.0.0",
+    "ntopVersion": "6.4.3",
+    "license": "MIT",
+    "domain": "Thermal",
+    "complexity": "Beginner",
+    "tags": [
+        "export",
+        "csv",
+        "temperature",
+        "point-map",
+        "custom-block"
+    ],
+    "preview": "graph",
+    "packageFile": "Export Temperature Point Map.ntop"
+}

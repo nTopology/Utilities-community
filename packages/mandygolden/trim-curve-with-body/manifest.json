@@ -1,0 +1,21 @@
+{
+    "id": "trim-curve-with-body",
+    "type": "Block",
+    "title": "Trim Curve with Body",
+    "summary": "Trims a curve with a body either inside or ouside the body",
+    "author": "mandygolden",
+    "version": "1.0.0",
+    "ntopVersion": "6.4.3",
+    "license": "MIT",
+    "domain": "Geometry",
+    "complexity": "Beginner",
+    "tags": [
+        "curves",
+        "trim",
+        "implicit",
+        "custom-block"
+    ],
+    "preview": "geometry",
+    "coverImage": "cover.png",
+    "packageFile": "Trim Curve with Body.ntop"
+}

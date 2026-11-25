@@ -1,0 +1,19 @@
+{
+    "id": "repeating-point-list",
+    "type": "Block",
+    "title": "Repeating Point List",
+    "summary": "Creates a list that repeats a point a given number of times.",
+    "author": "mandygolden",
+    "version": "1.0.0",
+    "ntopVersion": "6.4.3",
+    "license": "MIT",
+    "domain": "Geometry",
+    "complexity": "Beginner",
+    "tags": [
+        "points",
+        "lists",
+        "custom-block"
+    ],
+    "preview": "graph",
+    "packageFile": "Repeating Point List.ntop"
+}

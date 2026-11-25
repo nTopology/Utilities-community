@@ -1,0 +1,20 @@
+{
+    "id": "ramped-points-on-curve",
+    "type": "Block",
+    "title": "Ramped Points on Curve",
+    "summary": "Creates points along a curve with a spacing that ramps between Out Min and Out Max as the position along the curve moves from In Min to In Max.",
+    "author": "mandygolden",
+    "version": "1.0.0",
+    "ntopVersion": "6.4.3",
+    "license": "MIT",
+    "domain": "Geometry",
+    "complexity": "Advanced",
+    "tags": [
+        "points",
+        "curves",
+        "spacing",
+        "custom-block"
+    ],
+    "preview": "graph",
+    "packageFile": "Ramped Points on Curve.ntop"
+}

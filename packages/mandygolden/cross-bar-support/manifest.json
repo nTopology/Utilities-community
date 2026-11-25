@@ -1,0 +1,22 @@
+{
+    "id": "cross-bar-support",
+    "type": "Block",
+    "title": "Cross Bar Support",
+    "summary": "Produces cross bar mesh supports at areas of overhang of a given part.",
+    "author": "mandygolden",
+    "version": "1.0.0",
+    "ntopVersion": "6.4.3",
+    "license": "MIT",
+    "domain": "Additive Manufacturing",
+    "complexity": "Advanced",
+    "tags": [
+        "supports",
+        "overhang",
+        "additive-manufacturing",
+        "mesh",
+        "custom-block"
+    ],
+    "preview": "geometry",
+    "coverImage": "cover.png",
+    "packageFile": "Cross Bar Support.ntop"
+}

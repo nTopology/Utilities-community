@@ -1,0 +1,21 @@
+{
+    "id": "find-axis-from-edge",
+    "type": "Block",
+    "title": "Find Axis from Edge",
+    "summary": "This blocks enables users to find the axis of full or partial cylindrical features with their edge as the input",
+    "author": "mandygolden",
+    "version": "1.0.0",
+    "ntopVersion": "6.4.3",
+    "license": "MIT",
+    "domain": "Geometry",
+    "complexity": "Beginner",
+    "tags": [
+        "cad",
+        "axis",
+        "edges",
+        "cylinders",
+        "custom-block"
+    ],
+    "preview": "graph",
+    "packageFile": "Find Axis from Edge.ntop"
+}

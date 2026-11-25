@@ -1,0 +1,20 @@
+{
+    "id": "sharp-remove-mesh-faces-by-body",
+    "type": "Block",
+    "title": "Sharp Remove Mesh Faces by Body",
+    "summary": "Removes the part of a mesh that lies inside a body and returns a mesh with sharp edges, by converting through an implicit body.",
+    "author": "mandygolden",
+    "version": "1.0.0",
+    "ntopVersion": "6.4.3",
+    "license": "MIT",
+    "domain": "Geometry",
+    "complexity": "Intermediate",
+    "tags": [
+        "mesh",
+        "trim",
+        "implicit",
+        "custom-block"
+    ],
+    "preview": "graph",
+    "packageFile": "Sharp Remove Mesh Faces by Body.ntop"
+}

@@ -1,0 +1,20 @@
+{
+    "id": "subdivide-lattice-a-percentage-down",
+    "type": "Block",
+    "title": "Subdivide Lattice a Percentage Down",
+    "summary": "Adds a vertex in the center of each beam of lattice. Nest this block in additional instances of the same block to subdivide further.",
+    "author": "mandygolden",
+    "version": "1.0.0",
+    "ntopVersion": "6.4.3",
+    "license": "MIT",
+    "domain": "Geometry",
+    "complexity": "Intermediate",
+    "tags": [
+        "lattice",
+        "beams",
+        "subdivide",
+        "custom-block"
+    ],
+    "preview": "graph",
+    "packageFile": "Subdivide Lattice a Percentage Down.ntop"
+}

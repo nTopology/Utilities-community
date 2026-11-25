@@ -1,0 +1,20 @@
+{
+    "id": "plane-aligned-with-two-fields",
+    "type": "Block",
+    "title": "Plane Aligned with Two Fields",
+    "summary": "Produce a plane that is normal to a given field and aligned to an additional field.",
+    "author": "mandygolden",
+    "version": "1.0.0",
+    "ntopVersion": "6.4.3",
+    "license": "MIT",
+    "domain": "Geometry",
+    "complexity": "Intermediate",
+    "tags": [
+        "planes",
+        "fields",
+        "alignment",
+        "custom-block"
+    ],
+    "preview": "graph",
+    "packageFile": "Plane Aligned with Two Fields.ntop"
+}

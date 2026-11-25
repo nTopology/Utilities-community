@@ -1,0 +1,20 @@
+{
+    "id": "plane-from-cad-face",
+    "type": "Block",
+    "title": "Plane from CAD Face",
+    "summary": "Locates a plane on a given CAD Face. It needs supplied a CAD Face which denotes the origin point of the plane, and two CAD Edges, which define the axis of the plane.",
+    "author": "mandygolden",
+    "version": "1.0.0",
+    "ntopVersion": "6.4.3",
+    "license": "MIT",
+    "domain": "Geometry",
+    "complexity": "Beginner",
+    "tags": [
+        "cad",
+        "planes",
+        "faces",
+        "custom-block"
+    ],
+    "preview": "graph",
+    "packageFile": "Plane from CAD Face.ntop"
+}

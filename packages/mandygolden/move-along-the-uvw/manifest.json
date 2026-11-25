@@ -1,0 +1,21 @@
+{
+    "id": "move-along-the-uvw",
+    "type": "Block",
+    "title": "Move Along the UVW",
+    "summary": "Take an implicit body and move it based on a new coordinate system.",
+    "author": "mandygolden",
+    "version": "1.0.0",
+    "ntopVersion": "6.4.3",
+    "license": "MIT",
+    "domain": "Geometry",
+    "complexity": "Intermediate",
+    "tags": [
+        "transform",
+        "coordinates",
+        "implicit",
+        "custom-block"
+    ],
+    "preview": "geometry",
+    "coverImage": "cover.png",
+    "packageFile": "CB Move Along the UVW.ntop"
+}

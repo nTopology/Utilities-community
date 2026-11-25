@@ -1,0 +1,20 @@
+{
+    "id": "remove-zero-bodies",
+    "type": "Block",
+    "title": "Remove Zero Bodies",
+    "summary": "Removes empty (zero size) bodies from a list of implicit bodies.",
+    "author": "mandygolden",
+    "version": "1.0.0",
+    "ntopVersion": "6.4.3",
+    "license": "MIT",
+    "domain": "Geometry",
+    "complexity": "Beginner",
+    "tags": [
+        "lists",
+        "filter",
+        "implicit",
+        "custom-block"
+    ],
+    "preview": "graph",
+    "packageFile": "Remove Zero Bodies.ntop"
+}

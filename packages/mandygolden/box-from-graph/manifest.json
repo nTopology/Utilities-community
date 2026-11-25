@@ -1,0 +1,22 @@
+{
+    "id": "box-from-graph",
+    "type": "Block",
+    "title": "Box from Graph",
+    "summary": "Creates a box that determines its height based on two points. Acts very similar to the cylinder block.",
+    "author": "mandygolden",
+    "version": "1.0.0",
+    "ntopVersion": "6.4.3",
+    "license": "MIT",
+    "domain": "Geometry",
+    "complexity": "Intermediate",
+    "tags": [
+        "lattice",
+        "graph",
+        "boxes",
+        "beams",
+        "custom-block"
+    ],
+    "preview": "geometry",
+    "coverImage": "cover.png",
+    "packageFile": "Box from Graph.ntop"
+}

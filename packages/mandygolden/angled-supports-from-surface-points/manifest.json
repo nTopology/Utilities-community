@@ -1,0 +1,22 @@
+{
+    "id": "angled-supports-from-surface-points",
+    "type": "Block",
+    "title": "Angled Supports from Surface Points",
+    "summary": "Finds the shortest angled support line from a surface point. Rays are cast from the point at the support angle to the build direction, spaced evenly around it by the rotation count, and the shortest resulting line segment is returned.",
+    "author": "mandygolden",
+    "version": "1.0.0",
+    "ntopVersion": "6.4.3",
+    "license": "MIT",
+    "domain": "Additive Manufacturing",
+    "complexity": "Intermediate",
+    "tags": [
+        "supports",
+        "overhang",
+        "additive-manufacturing",
+        "lines",
+        "custom-block"
+    ],
+    "preview": "geometry",
+    "coverImage": "cover.png",
+    "packageFile": "Angled Supports from Surface Points.ntop"
+}
