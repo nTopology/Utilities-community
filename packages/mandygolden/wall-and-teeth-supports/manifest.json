@@ -1,0 +1,18 @@
+{
+    "id": "wall-and-teeth-supports",
+    "type": "Block",
+    "title": "Wall and Teeth Supports",
+    "summary": "Wall supports with teeth and diamond cut-outs for any implicit body. The overhang shadow on the build plane gives footprint loops; each loop fills with nested toothed walls that run from the part to the plate.",
+    "author": "mandygolden",
+    "version": "1.0.24",
+    "ntopVersion": "6.4.3",
+    "license": "MIT",
+    "domain": "Additive Manufacturing",
+    "complexity": "Advanced",
+    "tags": ["supports", "wall-supports", "teeth", "overhang", "lattice", "additive-manufacturing", "ai-assisted"],
+    "preview": "geometry",
+    "coverImage": "cover.png",
+    "packageFile": "Wall and Teeth Supports.ntop",
+    "application": "Metal AM support structures",
+    "aiModel": "Claude"
+}
