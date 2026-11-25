@@ -1,0 +1,21 @@
+{
+    "id": "sections-along-curve",
+    "type": "Block",
+    "title": "Sections along Curve",
+    "summary": "Extracts profiles from a body at evenly spaced planes along a curve.",
+    "author": "mandygolden",
+    "version": "1.0.0",
+    "ntopVersion": "6.4.3",
+    "license": "MIT",
+    "domain": "Geometry",
+    "complexity": "Intermediate",
+    "tags": [
+        "profiles",
+        "sections",
+        "curves",
+        "custom-block"
+    ],
+    "preview": "geometry",
+    "coverImage": "cover.png",
+    "packageFile": "sections_along_curve.ntop"
+}

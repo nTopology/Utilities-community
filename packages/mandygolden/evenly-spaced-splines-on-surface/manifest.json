@@ -1,0 +1,21 @@
+{
+    "id": "evenly-spaced-splines-on-surface",
+    "type": "Block",
+    "title": "Evenly Spaced Splines on Surface",
+    "summary": "Creates evenly spaced splines across an upper and a lower CAD face, guided by a reference curve, and trims them against an avoidance region.",
+    "author": "mandygolden",
+    "version": "1.0.0",
+    "ntopVersion": "6.4.3",
+    "license": "MIT",
+    "domain": "Geometry",
+    "complexity": "Advanced",
+    "tags": [
+        "splines",
+        "cad",
+        "faces",
+        "curves",
+        "custom-block"
+    ],
+    "preview": "graph",
+    "packageFile": "Evenly Spaced Splines on Surface.ntop"
+}

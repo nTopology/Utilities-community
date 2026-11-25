@@ -1,0 +1,22 @@
+{
+    "id": "add-implicit-draft",
+    "type": "Block",
+    "title": "Add Implicit Draft",
+    "summary": "Adds implicit draft and performs a distance field correction. Note that material will be added or removed everywhere, so it's best to trim to the final height after this step rather than before.",
+    "author": "mandygolden",
+    "version": "1.0.0",
+    "ntopVersion": "6.4.3",
+    "license": "MIT",
+    "domain": "Mechanical",
+    "complexity": "Intermediate",
+    "tags": [
+        "draft",
+        "implicit",
+        "casting",
+        "molding",
+        "custom-block"
+    ],
+    "preview": "geometry",
+    "coverImage": "cover.png",
+    "packageFile": "Add Implicit Draft.ntop"
+}

@@ -1,0 +1,20 @@
+{
+    "id": "midcurve-between-two-curves",
+    "type": "Block",
+    "title": "Midcurve Between Two Curves",
+    "summary": "Creates a curve midway between two curves by sampling points on each curve, joining matching points with lines and fitting a curve through the midpoints.",
+    "author": "mandygolden",
+    "version": "1.0.0",
+    "ntopVersion": "6.4.3",
+    "license": "MIT",
+    "domain": "Geometry",
+    "complexity": "Intermediate",
+    "tags": [
+        "curves",
+        "midcurve",
+        "interpolation",
+        "custom-block"
+    ],
+    "preview": "graph",
+    "packageFile": "Midcurve Between Two Curves.ntop"
+}

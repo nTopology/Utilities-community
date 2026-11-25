@@ -1,0 +1,21 @@
+{
+    "id": "closest-cad-face-to-point",
+    "type": "Block",
+    "title": "Closest CAD Face to Point",
+    "summary": "Finds the closest CAD face in a CAD body to a given point. Useful in circumstances where the face IDs in a CAD part may change (and colored faces aren't available). Works with point lists, too.",
+    "author": "mandygolden",
+    "version": "1.0.0",
+    "ntopVersion": "6.4.3",
+    "license": "MIT",
+    "domain": "Geometry",
+    "complexity": "Intermediate",
+    "tags": [
+        "cad",
+        "faces",
+        "points",
+        "selection",
+        "custom-block"
+    ],
+    "preview": "graph",
+    "packageFile": "Closest CAD Face to Point.ntop"
+}

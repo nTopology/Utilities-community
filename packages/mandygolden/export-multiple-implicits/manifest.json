@@ -1,0 +1,21 @@
+{
+    "id": "export-multiple-implicits",
+    "type": "Block",
+    "title": "Export Multiple Implicits",
+    "summary": "Export one or more mesh files. If the input mesh is list of n meshes, then n mesh files will be saved.",
+    "author": "mandygolden",
+    "version": "1.0.0",
+    "ntopVersion": "6.4.3",
+    "license": "MIT",
+    "domain": "Geometry",
+    "complexity": "Beginner",
+    "tags": [
+        "export",
+        "implicit",
+        "batch",
+        "interop",
+        "custom-block"
+    ],
+    "preview": "graph",
+    "packageFile": "Export Multiple Implicits.ntop"
+}

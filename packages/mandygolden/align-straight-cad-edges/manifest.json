@@ -1,0 +1,21 @@
+{
+    "id": "align-straight-cad-edges",
+    "type": "Block",
+    "title": "Align Straight CAD Edges",
+    "summary": "Align two cad bodies based on an edge from each and face next to that edge at the centroid of that edge. To change rotation of the part, change the angle.",
+    "author": "mandygolden",
+    "version": "1.0.0",
+    "ntopVersion": "6.4.3",
+    "license": "MIT",
+    "domain": "Geometry",
+    "complexity": "Intermediate",
+    "tags": [
+        "cad",
+        "alignment",
+        "assembly",
+        "edges",
+        "custom-block"
+    ],
+    "preview": "graph",
+    "packageFile": "Align Straight CAD Edges.ntop"
+}

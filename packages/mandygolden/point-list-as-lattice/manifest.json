@@ -1,0 +1,20 @@
+{
+    "id": "point-list-as-lattice",
+    "type": "Block",
+    "title": "Point List as Lattice",
+    "summary": "Creates a branched lattice body that connects a list of points with beams of a given thickness.",
+    "author": "mandygolden",
+    "version": "1.0.0",
+    "ntopVersion": "6.4.3",
+    "license": "MIT",
+    "domain": "Geometry",
+    "complexity": "Beginner",
+    "tags": [
+        "lattice",
+        "points",
+        "beams",
+        "custom-block"
+    ],
+    "preview": "graph",
+    "packageFile": "Point List as Lattice.ntop"
+}

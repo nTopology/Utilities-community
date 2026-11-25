@@ -1,0 +1,20 @@
+{
+    "id": "move-point-along-a-vector",
+    "type": "Block",
+    "title": "Move Point along a Vector",
+    "summary": "Move a point a given distance along a vector",
+    "author": "mandygolden",
+    "version": "1.0.0",
+    "ntopVersion": "6.4.3",
+    "license": "MIT",
+    "domain": "Geometry",
+    "complexity": "Beginner",
+    "tags": [
+        "points",
+        "vectors",
+        "transform",
+        "custom-block"
+    ],
+    "preview": "graph",
+    "packageFile": "Move Point along a Vector.ntop"
+}

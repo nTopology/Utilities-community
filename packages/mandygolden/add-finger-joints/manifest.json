@@ -1,0 +1,22 @@
+{
+    "id": "add-finger-joints",
+    "type": "Block",
+    "title": "Add Finger Joints",
+    "summary": "Creates finger joints along a profile edge. Evenly spaced fingers are placed along the profile curve (trimmed against the area to avoid), turned into a finger profile and extruded to form a solid body.",
+    "author": "mandygolden",
+    "version": "1.0.0",
+    "ntopVersion": "6.4.3",
+    "license": "MIT",
+    "domain": "Mechanical",
+    "complexity": "Advanced",
+    "tags": [
+        "joints",
+        "profiles",
+        "extrude",
+        "assembly",
+        "custom-block"
+    ],
+    "preview": "geometry",
+    "coverImage": "cover.png",
+    "packageFile": "Add Finger Joints.ntop"
+}

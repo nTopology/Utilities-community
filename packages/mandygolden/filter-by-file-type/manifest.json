@@ -1,0 +1,21 @@
+{
+    "id": "filter-by-file-type",
+    "type": "Block",
+    "title": "Filter by File Type",
+    "summary": "Filter by file type.",
+    "author": "mandygolden",
+    "version": "1.0.0",
+    "ntopVersion": "6.4.3",
+    "license": "MIT",
+    "domain": "Geometry",
+    "complexity": "Beginner",
+    "tags": [
+        "files",
+        "filter",
+        "text",
+        "batch",
+        "custom-block"
+    ],
+    "preview": "graph",
+    "packageFile": "Filter by File Type.ntop"
+}

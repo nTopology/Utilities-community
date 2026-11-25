@@ -1,0 +1,21 @@
+{
+    "id": "multiple-profiles-from-curve-list",
+    "type": "Block",
+    "title": "Multiple Profiles from Curve List",
+    "summary": "Creates a profile from each curve in a list.",
+    "author": "mandygolden",
+    "version": "1.0.0",
+    "ntopVersion": "6.4.3",
+    "license": "MIT",
+    "domain": "Geometry",
+    "complexity": "Beginner",
+    "tags": [
+        "profiles",
+        "curves",
+        "lists",
+        "custom-block"
+    ],
+    "preview": "geometry",
+    "coverImage": "cover.png",
+    "packageFile": "Multiple Profiles from Curve List.ntop"
+}

@@ -1,0 +1,21 @@
+{
+    "id": "move-mesh",
+    "type": "Block",
+    "title": "Move Mesh",
+    "summary": "Moves the Mesh's center to the new location provided and rotates the object if you choose.",
+    "author": "mandygolden",
+    "version": "1.0.0",
+    "ntopVersion": "6.4.3",
+    "license": "MIT",
+    "domain": "Geometry",
+    "complexity": "Beginner",
+    "tags": [
+        "mesh",
+        "transform",
+        "rotate",
+        "custom-block"
+    ],
+    "preview": "geometry",
+    "coverImage": "cover.png",
+    "packageFile": "CB Move Mesh.ntop"
+}

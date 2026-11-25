@@ -1,0 +1,21 @@
+{
+    "id": "union-profiles",
+    "type": "Block",
+    "title": "Union Profiles",
+    "summary": "Unions a list of profiles by extruding them, combining the bodies and extracting a section.",
+    "author": "mandygolden",
+    "version": "1.0.0",
+    "ntopVersion": "6.4.3",
+    "license": "MIT",
+    "domain": "Geometry",
+    "complexity": "Intermediate",
+    "tags": [
+        "profiles",
+        "boolean",
+        "union",
+        "custom-block"
+    ],
+    "preview": "geometry",
+    "coverImage": "cover.png",
+    "packageFile": "Union Profiles.ntop"
+}

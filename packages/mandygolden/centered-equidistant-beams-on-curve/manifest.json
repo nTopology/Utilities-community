@@ -1,0 +1,21 @@
+{
+    "id": "centered-equidistant-beams-on-curve",
+    "type": "Block",
+    "title": "Centered Equidistant Beams on Curve",
+    "summary": "Creates a lattice of beams at equal spacing along a curve. The beams are centered on the curve and extend in both directions.",
+    "author": "mandygolden",
+    "version": "1.0.0",
+    "ntopVersion": "6.4.3",
+    "license": "MIT",
+    "domain": "Geometry",
+    "complexity": "Intermediate",
+    "tags": [
+        "lattice",
+        "beams",
+        "curves",
+        "custom-block"
+    ],
+    "preview": "geometry",
+    "coverImage": "cover.png",
+    "packageFile": "Centered Equidistant Beams on Curve.ntop"
+}

@@ -1,0 +1,21 @@
+{
+    "id": "multi-body-part-from-assembly",
+    "type": "Block",
+    "title": "Multi-Body Part from Assembly",
+    "summary": "Turn a part that has a list of CAD components in nTop into a part that is one list of CAD bodies instead. A separate file with the same name will be added to the same directory but with a .x_t extension",
+    "author": "mandygolden",
+    "version": "1.0.0",
+    "ntopVersion": "6.4.3",
+    "license": "MIT",
+    "domain": "Geometry",
+    "complexity": "Intermediate",
+    "tags": [
+        "cad",
+        "import",
+        "assembly",
+        "interop",
+        "custom-block"
+    ],
+    "preview": "graph",
+    "packageFile": "Multi-Body Part from Assembly.ntop"
+}

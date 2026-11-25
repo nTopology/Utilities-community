@@ -1,0 +1,21 @@
+{
+    "id": "equidistant-beams-on-curve",
+    "type": "Block",
+    "title": "Equidistant Beams on Curve",
+    "summary": "Creates a lattice of beams starting at equally spaced points along a curve, with direction and length driven by scalar fields.",
+    "author": "mandygolden",
+    "version": "1.0.0",
+    "ntopVersion": "6.4.3",
+    "license": "MIT",
+    "domain": "Geometry",
+    "complexity": "Intermediate",
+    "tags": [
+        "lattice",
+        "beams",
+        "curves",
+        "custom-block"
+    ],
+    "preview": "geometry",
+    "coverImage": "cover.png",
+    "packageFile": "Equidistant Beams on Curve.ntop"
+}

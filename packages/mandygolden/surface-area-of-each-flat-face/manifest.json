@@ -1,0 +1,21 @@
+{
+    "id": "surface-area-of-each-flat-face",
+    "type": "Block",
+    "title": "Surface Area of Each Flat Face",
+    "summary": "Calculates the surface area of each flat face of a mesh.",
+    "author": "mandygolden",
+    "version": "1.0.0",
+    "ntopVersion": "6.4.3",
+    "license": "MIT",
+    "domain": "Geometry",
+    "complexity": "Beginner",
+    "tags": [
+        "mesh",
+        "measurement",
+        "area",
+        "custom-block"
+    ],
+    "preview": "geometry",
+    "coverImage": "cover.png",
+    "packageFile": "Surface Area of Each Flat Face.ntop"
+}

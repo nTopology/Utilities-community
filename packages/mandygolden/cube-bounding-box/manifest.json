@@ -1,0 +1,21 @@
+{
+    "id": "cube-bounding-box",
+    "type": "Block",
+    "title": "Cube Bounding Box",
+    "summary": "Creates a bounding box in the shape of a cube from a center point and a size.",
+    "author": "mandygolden",
+    "version": "1.0.0",
+    "ntopVersion": "6.4.3",
+    "license": "MIT",
+    "domain": "Geometry",
+    "complexity": "Beginner",
+    "tags": [
+        "bounding-box",
+        "cube",
+        "utility",
+        "custom-block"
+    ],
+    "preview": "geometry",
+    "coverImage": "cover.png",
+    "packageFile": "Cube Bounding Box.ntop"
+}

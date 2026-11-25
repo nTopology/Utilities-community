@@ -1,0 +1,21 @@
+{
+    "id": "move-along-plane",
+    "type": "Block",
+    "title": "Move Along Plane",
+    "summary": "Take an implicit body and move it based on a new coordinate system. IF the UVW Translation is <0,0,0>, the body will be centered on the origin of the starting plane.",
+    "author": "mandygolden",
+    "version": "1.0.0",
+    "ntopVersion": "6.4.3",
+    "license": "MIT",
+    "domain": "Geometry",
+    "complexity": "Intermediate",
+    "tags": [
+        "transform",
+        "planes",
+        "implicit",
+        "custom-block"
+    ],
+    "preview": "geometry",
+    "coverImage": "cover.png",
+    "packageFile": "Move Along Plane.ntop"
+}

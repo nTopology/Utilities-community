@@ -1,0 +1,20 @@
+{
+    "id": "cast-curve-from-line-segment",
+    "type": "Block",
+    "title": "Cast Curve from Line Segment",
+    "summary": "Converts a line segment into a curve by interpolating a curve through its start and end points.",
+    "author": "mandygolden",
+    "version": "1.0.0",
+    "ntopVersion": "6.4.3",
+    "license": "MIT",
+    "domain": "Geometry",
+    "complexity": "Beginner",
+    "tags": [
+        "curves",
+        "lines",
+        "conversion",
+        "custom-block"
+    ],
+    "preview": "graph",
+    "packageFile": "Cast Curve from Line Segment.ntop"
+}

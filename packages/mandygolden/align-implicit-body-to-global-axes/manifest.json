@@ -1,0 +1,21 @@
+{
+    "id": "align-implicit-body-to-global-axes",
+    "type": "Block",
+    "title": "Align Implicit Body to Global Axes",
+    "summary": "Rotates an implicit body so that it's principal Z axis lines up with the global Z axis and so its principal X/Y axes line up with the global X/Y axes.",
+    "author": "mandygolden",
+    "version": "1.0.0",
+    "ntopVersion": "6.4.3",
+    "license": "MIT",
+    "domain": "Geometry",
+    "complexity": "Intermediate",
+    "tags": [
+        "alignment",
+        "transform",
+        "implicit",
+        "custom-block"
+    ],
+    "preview": "geometry",
+    "coverImage": "cover.png",
+    "packageFile": "Align Implicit Body to Global Axes.ntop"
+}

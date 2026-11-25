@@ -1,0 +1,20 @@
+{
+    "id": "alternating-1-and-1-values",
+    "type": "Block",
+    "title": "Alternating -1 and 1 Values",
+    "summary": "Creates a list of integers that alternates between -1 and 1.",
+    "author": "mandygolden",
+    "version": "1.0.0",
+    "ntopVersion": "6.4.3",
+    "license": "MIT",
+    "domain": "Geometry",
+    "complexity": "Beginner",
+    "tags": [
+        "lists",
+        "logic",
+        "integers",
+        "custom-block"
+    ],
+    "preview": "graph",
+    "packageFile": "Alternating -1 and 1 Values.ntop"
+}

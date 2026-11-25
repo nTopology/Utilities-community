@@ -1,0 +1,21 @@
+{
+    "id": "top-opt-supports",
+    "type": "Block",
+    "title": "Top Opt Supports",
+    "summary": "Attempts to use the topology optimizer to create support structures and/or self supporting geometry for a given part. This CB is mainly meant to package this method into a sharable form. Users are highly encouraged to bring parts \"under...",
+    "author": "mandygolden",
+    "version": "1.0.0",
+    "ntopVersion": "6.4.3",
+    "license": "MIT",
+    "domain": "Additive Manufacturing",
+    "complexity": "Advanced",
+    "tags": [
+        "supports",
+        "topology-optimization",
+        "additive-manufacturing",
+        "overhang",
+        "custom-block"
+    ],
+    "preview": "graph",
+    "packageFile": "Top Opt Supports.ntop"
+}

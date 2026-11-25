@@ -1,0 +1,21 @@
+{
+    "id": "overhang-surfaces",
+    "type": "Block",
+    "title": "Overhang Surfaces",
+    "summary": "Locates regions that require support based on a given overhang angle and direction.",
+    "author": "mandygolden",
+    "version": "1.0.0",
+    "ntopVersion": "6.4.3",
+    "license": "MIT",
+    "domain": "Additive Manufacturing",
+    "complexity": "Intermediate",
+    "tags": [
+        "overhang",
+        "supports",
+        "additive-manufacturing",
+        "mesh",
+        "custom-block"
+    ],
+    "preview": "graph",
+    "packageFile": "Overhang Surfaces.ntop"
+}

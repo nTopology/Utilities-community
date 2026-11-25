@@ -1,0 +1,20 @@
+{
+    "id": "filter-and-combine-curves-by-body",
+    "type": "Block",
+    "title": "Filter and Combine Curves by Body",
+    "summary": "Filters a list of curves using a body, then joins the curves that are kept into one polycurve.",
+    "author": "mandygolden",
+    "version": "1.0.0",
+    "ntopVersion": "6.4.3",
+    "license": "MIT",
+    "domain": "Geometry",
+    "complexity": "Intermediate",
+    "tags": [
+        "curves",
+        "filter",
+        "polycurve",
+        "custom-block"
+    ],
+    "preview": "graph",
+    "packageFile": "Filter and Combine Curves by Body.ntop"
+}

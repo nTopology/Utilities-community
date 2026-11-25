@@ -1,0 +1,19 @@
+{
+    "id": "offsetting-profile",
+    "type": "Block",
+    "title": "Offsetting Profile",
+    "summary": "Offsets a profile by a given distance and returns the offset profile.",
+    "author": "mandygolden",
+    "version": "1.0.0",
+    "ntopVersion": "6.4.3",
+    "license": "MIT",
+    "domain": "Geometry",
+    "complexity": "Intermediate",
+    "tags": [
+        "profiles",
+        "offset",
+        "custom-block"
+    ],
+    "preview": "graph",
+    "packageFile": "Offsetting Profile - mod.ntop"
+}

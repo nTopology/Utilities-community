@@ -1,0 +1,20 @@
+{
+    "id": "two-profile-sweep",
+    "type": "Block",
+    "title": "Two Profile Sweep",
+    "summary": "Generates a sweep with one profile on one side and transitions to a different profile on the other end of the curve.",
+    "author": "mandygolden",
+    "version": "1.0.0",
+    "ntopVersion": "6.4.3",
+    "license": "MIT",
+    "domain": "Geometry",
+    "complexity": "Intermediate",
+    "tags": [
+        "sweep",
+        "profiles",
+        "splines",
+        "custom-block"
+    ],
+    "preview": "graph",
+    "packageFile": "Two Profile Sweep.ntop"
+}

@@ -1,0 +1,20 @@
+{
+    "id": "align-plane-to-axis",
+    "type": "Block",
+    "title": "Align Plane to Axis",
+    "summary": "Align a plane to a given axis.",
+    "author": "mandygolden",
+    "version": "1.0.0",
+    "ntopVersion": "6.4.3",
+    "license": "MIT",
+    "domain": "Geometry",
+    "complexity": "Beginner",
+    "tags": [
+        "planes",
+        "alignment",
+        "transform",
+        "custom-block"
+    ],
+    "preview": "graph",
+    "packageFile": "Align Plane to Axis.ntop"
+}
